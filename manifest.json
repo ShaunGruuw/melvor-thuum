@@ -1,0 +1,5 @@
+{
+    "namespace": "namespace_thuum",
+    "setup": "setup.mjs",
+    "icon": "assets/logo.png"
+}

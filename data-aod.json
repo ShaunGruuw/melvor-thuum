@@ -1,0 +1,259 @@
+{
+    "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+    "namespace": "namespace_thuum",
+    "data": {
+        "ancientRelics": [
+            {
+                "id": "ThruumRelic1",
+                "name": "Thruum Relic 1",
+                "skillID": "namespace_thuum:Thruum",
+                "number": 1,
+                "description": "A relic from the ancient times of Thruum.",
+                "modifiers": {
+                    "increasedMasteryXP": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 50
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "ThruumRelic2",
+                "name": "Thruum Relic 2",
+                "skillID": "namespace_thuum:Thruum",
+                "number": 2,
+                "description": "A relic from the ancient times of Thruum.",
+                "modifiers": {
+                    "increasedChanceToObtainShrimpWhileTrainingThruum": 10
+                }
+            },
+            {
+                "id": "ThruumRelic3",
+                "name": "Thruum Relic 3",
+                "skillID": "namespace_thuum:Thruum",
+                "number": 3,
+                "description": "A relic from the ancient times of Thruum.",
+                "modifiers": {
+                    "increasedChanceToLocateAncientRelic": 1
+                }
+            },
+            {
+                "id": "ThruumRelic4",
+                "name": "Thruum Relic 4",
+                "skillID": "namespace_thuum:Thruum",
+                "number": 4,
+                "description": "A relic from the ancient times of Thruum.",
+                "modifiers": {
+                    "increasedGPGlobal": 50
+                }
+            },
+            {
+                "id": "ThruumRelic5",
+                "name": "Thruum Relic 5",
+                "skillID": "namespace_thuum:Thruum",
+                "number": 5,
+                "description": "A relic from the ancient times of Thruum.",
+                "modifiers": {
+                    "decreasedSkillIntervalPercent": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 20
+                        }
+                    ]
+                }
+            }
+        ],
+        "bankSortOrder": [
+            {
+                "insertAt": "After",
+                "afterID": "melvorAoD:Astrology_Lesser_Relic",
+                "ids": ["namespace_thuum:Thruum_Lesser_Relic"]
+            }
+        ],
+        "items": [
+            {
+                "itemType": "Equipment",
+                "id": "Thruum_Lesser_Relic",
+                "name": "Thruum Lesser Relic",
+                "category": "Combat",
+                "type": "Consumable",
+                "media": "assets/items/thruum-lesser-relic.png",
+                "tier": "none",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 1,
+                "validSlots": ["Consumable"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [],
+                "modifiers": {
+                    "decreasedSkillIntervalPercent": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 5
+                        }
+                    ],
+                    "increasedThruumGP": 5,
+                    "increasedMagicMaxHit": 10
+                },
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    },
+                    {
+                        "type": "PlayerAttack"
+                    }
+                ]
+            }
+        ],
+        "skillData": [
+            {
+                "skillID": "namespace_thuum:Thruum",
+                "data": {
+                    "rareDrops": [
+                        {
+                            "itemID": "namespace_thuum:Thruum_Lesser_Relic",
+                            "quantity": 300,
+                            "requirements": [],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.1
+                            },
+                            "gamemodes": ["melvorAoD:AncientRelics"]
+                        }
+                    ],
+                    "completedAncientRelic": "namespace_thuum:ThruumRelic6",
+                    "ancientRelics": [
+                        {
+                            "relicID": "namespace_thuum:ThruumRelic1",
+                            "requirements": [],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.0005
+                            }
+                        },
+                        {
+                            "relicID": "namespace_thuum:ThruumRelic2",
+                            "requirements": [],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.0005
+                            }
+                        },
+                        {
+                            "relicID": "namespace_thuum:ThruumRelic3",
+                            "requirements": [],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.0005
+                            }
+                        },
+                        {
+                            "relicID": "namespace_thuum:ThruumRelic4",
+                            "requirements": [],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.0005
+                            }
+                        },
+                        {
+                            "relicID": "namespace_thuum:ThruumRelic5",
+                            "requirements": [],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.0005
+                            }
+                        }
+                    ],
+                    "teachers": [
+                        {
+                            "id": "Flute",
+                            "name": "Flute",
+                            "media": "assets/teachers/flute.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 41,
+                            "maxGP": 325,
+                            "productId": "namespace_thuum:Flute",
+                            "level": 45,
+                            "skills": ["melvorAoD:Archaeology", "melvorAoD:Cartography"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedChanceToPreserveMapCharges",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSurveyInterval",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedMapRefinementCost",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMinimumItemsFoundInArchaeology",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedGPPerArchaeologyLevelNoArtefact",
+                                    "value": 15
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedChanceToPreserveMapCharges",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSurveyInterval",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedMapRefinementCost",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMinimumItemsFoundInArchaeology",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedGPPerArchaeologyLevelNoArtefact",
+                                    "value": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "skillID": "melvorD:Summoning",
+                "data": {
+                    "synergies": [
+                        {
+                            "summonIDs": ["melvorAoD:Barrier", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedBarrierSummonDamage": 25
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

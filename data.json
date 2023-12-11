@@ -1,0 +1,2667 @@
+{
+    "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+    "namespace": "namespace_thuum",
+    "modifications": {
+        "items": [
+            {
+                "id": "melvorF:Potion_Box_II",
+                "dropTable": {
+                    "add": [
+                        {
+                            "itemID": "namespace_thuum:Generous_Gratuity_Potion_I",
+                            "minQuantity": 422,
+                            "maxQuantity": 422,
+                            "weight": 10
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "melvorD:Aorpheats_Signet_Ring",
+                "modifiers": {
+                    "add": {
+                        "increasedThruumGP": 100
+                    }
+                }
+            },
+            {
+                "id": "melvorF:Max_Skillcape",
+                "modifiers": {
+                    "add": {
+                        "decreasedSkillInterval": [
+                            {
+                                "skillID": "namespace_thuum:Thruum",
+                                "value": 500
+                            }
+                        ],
+                        "decreasedThruumHireCost": 5,
+                        "increasedThruumGP": 5
+                    }
+                }
+            },
+            {
+                "id": "melvorF:Cape_of_Completion",
+                "modifiers": {
+                    "add": {
+                        "decreasedSkillInterval": [
+                            {
+                                "skillID": "namespace_thuum:Thruum",
+                                "value": 500
+                            }
+                        ],
+                        "decreasedThruumHireCost": 5,
+                        "increasedThruumGP": 5
+                    }
+                }
+            }
+        ]
+    },
+    "data": {
+        "pages": [
+            {
+                "id": "Thruum",
+                "media": "assets/teachers/guitar.png",
+                "containerID": "thruum-container",
+                "headerBgClass": "bg-thruum",
+                "hasGameGuide": false,
+                "canBeDefault": true,
+                "action": "namespace_thuum:Thruum",
+                "skills": ["namespace_thuum:Thruum"]
+            }
+        ],
+        "bankSortOrder": [
+            {
+                "insertAt": "After",
+                "afterID": "melvorF:Farming_Potion_IV",
+                "ids": [
+                    "namespace_thuum:Generous_Gratuity_Potion_I",
+                    "namespace_thuum:Generous_Gratuity_Potion_II",
+                    "namespace_thuum:Generous_Gratuity_Potion_III",
+                    "namespace_thuum:Generous_Gratuity_Potion_IV"
+                ]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorD:Mining_Skillcape",
+                "ids": ["namespace_thuum:Thruum_Skillcape"]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorF:Star_Gazing_Boots",
+                "ids": [
+                    "namespace_thuum:Shouts_Hat",
+                    "namespace_thuum:Shouts_Body",
+                    "namespace_thuum:Shouts_Leggings",
+                    "namespace_thuum:Shouts_Boots"
+                ]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorD:Diamond",
+                "ids": [
+                    "namespace_thuum:Sheet_Thruum",
+                    "namespace_thuum:Essence_Of_Thruum",
+                    "namespace_thuum:Polished_Topaz_Gem",
+                    "namespace_thuum:Polished_Ruby_Gem",
+                    "namespace_thuum:Polished_Sapphire_Gem",
+                    "namespace_thuum:Diamond_String",
+                    "namespace_thuum:Pristine_Leather",
+                    "namespace_thuum:Mystic_Oil",
+                    "namespace_thuum:Enchanted_Essence",
+                    "namespace_thuum:Mystic_Essence",
+                    "namespace_thuum:Guitar",
+                    "namespace_thuum:Enchanted_Guitar",
+                    "namespace_thuum:Mystic_Guitar"
+                ]
+            }
+        ],
+        "attacks": [
+            {
+                "id": "Lesser_Prank",
+                "defaultChance": 5,
+                "damage": [
+                    {
+                        "damageType": "Normal",
+                        "amplitude": 75
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectType": "Custom",
+                        "type": "Sleep",
+                        "turns": 1,
+                        "chance": 100
+                    }
+                ],
+                "cantMiss": true,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Lesser Prank",
+                "description": "The enemy plays a prank on you and applies sleep for ${onHitEffect0turns} turn (Unavoidable). If you are already asleep perform a Normal Attack instead.",
+                "descriptionGenerator": "<Attacker> plays a prank on you, <hitEffect> (<Avoidable>). If <target> <taris> already asleep perform a Normal Attack instead.",
+                "usesRunesPerProc": false
+            },
+            {
+                "id": "Prank",
+                "defaultChance": 5,
+                "damage": [
+                    {
+                        "damageType": "Normal",
+                        "amplitude": 100
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectType": "Custom",
+                        "type": "Sleep",
+                        "turns": 1,
+                        "chance": 100
+                    }
+                ],
+                "cantMiss": true,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Prank",
+                "description": "The enemy plays a prank on you and applies sleep for ${onHitEffect0turns} turn (Unavoidable). If you are already asleep perform a Normal Attack instead.",
+                "descriptionGenerator": "<Attacker> plays a prank on you, <hitEffect> (<Avoidable>). If <target> <taris> already asleep perform a Normal Attack instead.",
+                "usesRunesPerProc": false
+            },
+            {
+                "id": "Greater_Prank",
+                "defaultChance": 5,
+                "damage": [
+                    {
+                        "damageType": "Normal",
+                        "amplitude": 125
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectType": "Custom",
+                        "type": "Sleep",
+                        "turns": 1,
+                        "chance": 100
+                    }
+                ],
+                "cantMiss": true,
+                "attackCount": 1,
+                "attackInterval": 50,
+                "lifesteal": 0,
+                "name": "Greater Prank",
+                "description": "The enemy plays a prank on you and applies sleep for ${onHitEffect0turns} turn (Unavoidable). If you are already asleep perform a Normal Attack instead.",
+                "descriptionGenerator": "<Attacker> plays a prank on you, <hitEffect> (<Avoidable>). If <target> <taris> already asleep perform a Normal Attack instead.",
+                "usesRunesPerProc": false
+            },
+            {
+                "id": "Guitar_Riff",
+                "defaultChance": 40,
+                "damage": [
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "maxRoll": "Fixed",
+                        "maxPercent": 4,
+                        "roll": false
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [],
+                "cantMiss": true,
+                "attackCount": 5,
+                "attackInterval": 150,
+                "lifesteal": 0,
+                "name": "Guitar Riff",
+                "description": "An unavoidable attack that deals ${attackDamageMaxValue0}x${hitCount} damage over ${duration}s.",
+                "descriptionGenerator": "An <avoidable> attack that deals <damage>x<count> damage over <duration>.",
+                "isDragonbreath": false,
+                "usesRunesPerProc": false
+            },
+            {
+                "id": "Face_Melting_Guitar_Solo",
+                "defaultChance": 40,
+                "damage": [
+                    {
+                        "damageType": "Custom",
+                        "character": "Attacker",
+                        "maxRoll": "Fixed",
+                        "maxPercent": 12,
+                        "roll": false
+                    }
+                ],
+                "prehitEffects": [],
+                "onhitEffects": [
+                    {
+                        "effectType": "Burn",
+                        "chance": 25
+                    }
+                ],
+                "cantMiss": true,
+                "attackCount": 5,
+                "attackInterval": 150,
+                "lifesteal": 0,
+                "name": "Face Melting Guitar Solo",
+                "description": "An unavoidable attack that deals ${attackDamageMaxValue0}x${hitCount} damage over ${duration}s. On a hit, has a ${onHitEffect0chance}% chance to inflict Burn that deals ${onHitEffect0DamageMaxValue0}% of your current hitpoints as damage over ${onHitEffect0duration}s.",
+                "descriptionGenerator": "An <avoidable> attack that deals <damage>x<count> damage over <duration>. On a hit, <hitEffect>.",
+                "isDragonbreath": false,
+                "usesRunesPerProc": false
+            }
+        ],
+        "items": [
+            {
+                "itemType": "Item",
+                "id": "Sheet_Thruum",
+                "name": "Sheet Thruum",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/sheet-thruum.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Used for Thruum upgrades.",
+                "sellsFor": 100
+            },
+            {
+                "itemType": "Item",
+                "id": "Essence_Of_Thruum",
+                "name": "Essence of Thruum",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/essence-of-thruum.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Used to upgrade mastered shout teachers. Unlocks a 5th modifier.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Polished_Topaz_Gem",
+                "name": "Polished Topaz Gem",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/polished-topaz-gem.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Can be socketed into mastered shout teachers. Grants +5% Thruum GP.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Polished_Ruby_Gem",
+                "name": "Polished Ruby Gem",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/polished-ruby-gem.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Can be socketed into mastered shout teachers. Grants +5% Thruum Skill XP.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Polished_Sapphire_Gem",
+                "name": "Polished Sapphire Gem",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/polished-Sapphire-gem.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Can be socketed into mastered shout teachers. Grants +5% Thruum Mastery XP.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Diamond_String",
+                "name": "Diamond String",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/diamond-string.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Can be applied to mastered shout teachers. Grants +5% Sheet Thruum drop chance.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Pristine_Leather",
+                "name": "Pristine Leather",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/pristine-leather.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Can be applied to mastered shout teachers. Grants -5% Thruum Interval.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Mystic_Oil",
+                "name": "Mystic Oil",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/mystic-oil.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Can be applied to mastered shout teachers. Rolls an additional time for rewards while training Thruum.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Enchanted_Essence",
+                "name": "Enchanted Essence",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/enchanted-essence.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Used to upgrade a Guitar.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Item",
+                "id": "Mystic_Essence",
+                "name": "Mystic Essence",
+                "category": "Thruum",
+                "type": "Misc",
+                "media": "assets/items/mystic-essence.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "customDescription": "Used to upgrade an Enchanted Guitar.",
+                "sellsFor": 500
+            },
+            {
+                "itemType": "Weapon",
+                "attackType": "melee",
+                "id": "Guitar",
+                "name": "Guitar",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/items/guitar.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 100,
+                "tier": "none",
+                "validSlots": ["Weapon"],
+                "occupiesSlots": ["Shield"],
+                "equipRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Attack",
+                        "level": 10
+                    },
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "namespace_thuum:Thruum",
+                        "level": 10
+                    }
+                ],
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 3600
+                    },
+                    {
+                        "key": "stabAttackBonus",
+                        "value": -4
+                    },
+                    {
+                        "key": "slashAttackBonus",
+                        "value": 42
+                    },
+                    {
+                        "key": "blockAttackBonus",
+                        "value": 42
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 47
+                    }
+                ],
+                "modifiers": {}
+            },
+            {
+                "itemType": "Weapon",
+                "attackType": "melee",
+                "id": "Enchanted_Guitar",
+                "name": "Enchanted Guitar",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/items/enchanted-guitar.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 2000,
+                "tier": "none",
+                "validSlots": ["Weapon"],
+                "occupiesSlots": ["Shield"],
+                "equipRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Attack",
+                        "level": 50
+                    },
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "namespace_thuum:Thruum",
+                        "level": 50
+                    }
+                ],
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 3600
+                    },
+                    {
+                        "key": "stabAttackBonus",
+                        "value": -4
+                    },
+                    {
+                        "key": "slashAttackBonus",
+                        "value": 101
+                    },
+                    {
+                        "key": "blockAttackBonus",
+                        "value": 101
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 145
+                    }
+                ],
+                "modifiers": {},
+                "specialAttacks": ["namespace_thuum:Guitar_Riff"]
+            },
+            {
+                "itemType": "Weapon",
+                "attackType": "melee",
+                "id": "Mystic_Guitar",
+                "name": "Mystic Guitar",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/items/mystic-guitar.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 500000,
+                "tier": "none",
+                "validSlots": ["Weapon"],
+                "occupiesSlots": ["Shield"],
+                "equipRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Attack",
+                        "level": 80
+                    },
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "namespace_thuum:Thruum",
+                        "level": 80
+                    }
+                ],
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 3600
+                    },
+                    {
+                        "key": "stabAttackBonus",
+                        "value": -4
+                    },
+                    {
+                        "key": "slashAttackBonus",
+                        "value": 138
+                    },
+                    {
+                        "key": "blockAttackBonus",
+                        "value": 138
+                    },
+                    {
+                        "key": "meleeStrengthBonus",
+                        "value": 275
+                    },
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 21
+                    }
+                ],
+                "modifiers": {},
+                "specialAttacks": ["namespace_thuum:Face_Melting_Guitar_Solo"]
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Shouts_Hat",
+                "name": "Shouts Hat",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/township/skilling-outfit-hat-thruum.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 2000,
+                "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
+                "tier": "none",
+                "validSlots": ["Helmet"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [],
+                "modifiers": {
+                    "increasedSkillXP": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 2
+                        }
+                    ]
+                }
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Shouts_Body",
+                "name": "Shouts Body",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/township/skilling-outfit-body-thruum.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 2000,
+                "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
+                "tier": "none",
+                "validSlots": ["Platebody"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [],
+                "modifiers": {
+                    "increasedSkillXP": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 2
+                        }
+                    ]
+                }
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Shouts_Leggings",
+                "name": "Shouts Leggings",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/township/skilling-outfit-leggings-thruum.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 2000,
+                "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
+                "tier": "none",
+                "validSlots": ["Platelegs"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [],
+                "modifiers": {
+                    "increasedSkillXP": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 2
+                        }
+                    ]
+                }
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Shouts_Boots",
+                "name": "Shouts Boots",
+                "category": "Thruum",
+                "type": "Equipment",
+                "media": "assets/township/skilling-outfit-boots-thruum.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 2000,
+                "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
+                "tier": "none",
+                "validSlots": ["Boots"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [],
+                "modifiers": {
+                    "increasedSkillXP": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 2
+                        }
+                    ]
+                }
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Thruum_Scroll_Of_XP",
+                "name": "Thruum Scroll of XP",
+                "category": "Township",
+                "type": "Equipment",
+                "media": "assets/township/thruum-scroll-of-xp.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 80,
+                "tier": "none",
+                "validSlots": ["Consumable"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [],
+                "modifiers": {
+                    "increasedSkillXP": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 3
+                        }
+                    ]
+                },
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    }
+                ]
+            },
+            {
+                "id": "Generous_Gratuity_Potion_I",
+                "name": "Generous Gratuity Potion I",
+                "category": "Herblore",
+                "type": "Potion",
+                "media": "assets/potion/thruum-potion-i.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 50,
+                "itemType": "Potion",
+                "modifiers": {
+                    "increasedThruumGP": 10
+                },
+                "charges": 15,
+                "tier": 0,
+                "action": "namespace_thuum:Thruum",
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    }
+                ]
+            },
+            {
+                "id": "Generous_Gratuity_Potion_II",
+                "name": "Generous Gratuity Potion II",
+                "category": "Herblore",
+                "type": "Potion",
+                "media": "assets/potion/thruum-potion-ii.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 100,
+                "itemType": "Potion",
+                "modifiers": {
+                    "increasedThruumGP": 20
+                },
+                "charges": 25,
+                "tier": 1,
+                "action": "namespace_thuum:Thruum",
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    }
+                ]
+            },
+            {
+                "id": "Generous_Gratuity_Potion_III",
+                "name": "Generous Gratuity Potion III",
+                "category": "Herblore",
+                "type": "Potion",
+                "media": "assets/potion/thruum-potion-iii.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 150,
+                "itemType": "Potion",
+                "modifiers": {
+                    "increasedThruumGP": 30
+                },
+                "charges": 35,
+                "tier": 2,
+                "action": "namespace_thuum:Thruum",
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    }
+                ]
+            },
+            {
+                "id": "Generous_Gratuity_Potion_IV",
+                "name": "Generous Gratuity Potion IV",
+                "category": "Herblore",
+                "type": "Potion",
+                "media": "assets/potion/thruum-potion-iv.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 200,
+                "itemType": "Potion",
+                "modifiers": {
+                    "increasedThruumGP": 50
+                },
+                "charges": 50,
+                "tier": 3,
+                "action": "namespace_thuum:Thruum",
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    }
+                ]
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Summoning_Familiar_Shout",
+                "name": "Shout",
+                "category": "Summoning",
+                "type": "Familiar",
+                "media": "assets/summoning/shout-tablet.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 0,
+                "tier": "Tier 1 Summon",
+                "validSlots": ["Summon1", "Summon2"],
+                "occupiesSlots": [],
+                "equipRequirements": [],
+                "equipmentStats": [
+                    {
+                        "key": "summoningMaxhit",
+                        "value": 19.2
+                    }
+                ],
+                "modifiers": {
+                    "increasedThruumGP": 5
+                },
+                "consumesOn": [
+                    {
+                        "type": "ThruumAction"
+                    },
+                    {
+                        "type": "PlayerSummonAttack"
+                    }
+                ]
+            },
+            {
+                "id": "Mastery_Token_Thruum",
+                "name": "Mastery Token (Thruum)",
+                "category": "Mastery",
+                "type": "Token",
+                "media": "assets/mastery-token.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 1500,
+                "itemType": "Token",
+                "modifiers": {
+                    "masteryToken": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 0.1
+                        }
+                    ]
+                }
+            },
+            {
+                "itemType": "Equipment",
+                "id": "Thruum_Skillcape",
+                "name": "Thruum Skillcape",
+                "category": "Combat",
+                "type": "Armour",
+                "media": "assets/thruum-skillcape.png",
+                "ignoreCompletion": true,
+                "obtainFromItemLog": false,
+                "golbinRaidExclusive": false,
+                "sellsFor": 250000,
+                "tier": "Skillcape",
+                "validSlots": ["Cape"],
+                "occupiesSlots": [],
+                "equipRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "namespace_thuum:Thruum",
+                        "level": 99
+                    }
+                ],
+                "equipmentStats": [
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 9
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": 9
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": 9
+                    }
+                ],
+                "modifiers": {
+                    "decreasedSkillInterval": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 500
+                        }
+                    ],
+                    "decreasedThruumHireCost": 5,
+                    "increasedThruumGP": 5
+                }
+            }
+        ],
+        "itemUpgrades": [
+            {
+                "upgradedItemID": "namespace_thuum:Generous_Gratuity_Potion_II",
+                "gpCost": 0,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "namespace_thuum:Generous_Gratuity_Potion_I",
+                        "quantity": 3
+                    }
+                ],
+                "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_I"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Generous_Gratuity_Potion_III",
+                "gpCost": 0,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "namespace_thuum:Generous_Gratuity_Potion_II",
+                        "quantity": 3
+                    }
+                ],
+                "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_II"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Generous_Gratuity_Potion_IV",
+                "gpCost": 0,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "namespace_thuum:Generous_Gratuity_Potion_III",
+                        "quantity": 3
+                    }
+                ],
+                "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_III"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Essence_Of_Thruum",
+                "gpCost": 1000000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 50
+                    }
+                ],
+                "rootItemIDs": ["namespace_thuum:Sheet_Thruum"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Polished_Topaz_Gem",
+                "gpCost": 50000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "melvorD:Topaz",
+                        "quantity": 50
+                    },
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 10
+                    }
+                ],
+                "rootItemIDs": ["melvorD:Topaz"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Polished_Ruby_Gem",
+                "gpCost": 50000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "melvorD:Ruby",
+                        "quantity": 50
+                    },
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 10
+                    }
+                ],
+                "rootItemIDs": ["melvorD:Ruby"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Polished_Sapphire_Gem",
+                "gpCost": 50000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "melvorD:Sapphire",
+                        "quantity": 50
+                    },
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 10
+                    }
+                ],
+                "rootItemIDs": ["melvorD:Sapphire"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Diamond_String",
+                "gpCost": 50000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "melvorD:Bowstring",
+                        "quantity": 100
+                    },
+                    {
+                        "id": "melvorD:Diamond",
+                        "quantity": 100
+                    },
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 50
+                    }
+                ],
+                "rootItemIDs": ["melvorD:Bowstring"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Pristine_Leather",
+                "gpCost": 50000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "melvorD:Leather",
+                        "quantity": 100
+                    },
+                    {
+                        "id": "melvorD:Diamond",
+                        "quantity": 100
+                    },
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 50
+                    }
+                ],
+                "rootItemIDs": ["melvorD:Leather"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Mystic_Oil",
+                "gpCost": 50000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "melvorD:Weird_Gloop",
+                        "quantity": 100
+                    },
+                    {
+                        "id": "melvorD:Diamond",
+                        "quantity": 100
+                    },
+                    {
+                        "id": "namespace_thuum:Sheet_Thruum",
+                        "quantity": 50
+                    }
+                ],
+                "rootItemIDs": ["melvorD:Weird_Gloop"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Enchanted_Guitar",
+                "gpCost": 100000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "namespace_thuum:Guitar",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "namespace_thuum:Enchanted_Essence",
+                        "quantity": 50
+                    }
+                ],
+                "rootItemIDs": ["namespace_thuum:Enchanted_Essence", "namespace_thuum:Guitar"],
+                "isDowngrade": false
+            },
+            {
+                "upgradedItemID": "namespace_thuum:Mystic_Guitar",
+                "gpCost": 1000000,
+                "scCost": 0,
+                "itemCosts": [
+                    {
+                        "id": "namespace_thuum:Enchanted_Guitar",
+                        "quantity": 1
+                    },
+                    {
+                        "id": "namespace_thuum:Mystic_Essence",
+                        "quantity": 50
+                    }
+                ],
+                "rootItemIDs": ["namespace_thuum:Mystic_Essence", "namespace_thuum:Enchanted_Guitar"],
+                "isDowngrade": false
+            }
+        ],
+        "monsters": [
+            {
+                "id": "Jester",
+                "name": "Jester",
+                "media": "assets/combat/jester.png",
+                "levels": {
+                    "Hitpoints": 30,
+                    "Attack": 30,
+                    "Strength": 30,
+                    "Defence": 30,
+                    "Ranged": 1,
+                    "Magic": 1
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 3000
+                    }
+                ],
+                "ignoreCompletion": true,
+                "attackType": "melee",
+                "specialAttacks": ["namespace_thuum:Lesser_Prank"],
+                "passives": [],
+                "lootChance": 10,
+                "lootTable": [
+                    {
+                        "itemID": "namespace_thuum:Guitar",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Sheet_Thruum",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    }
+                ],
+                "gpDrops": {
+                    "min": 20,
+                    "max": 80
+                },
+                "canSlayer": true,
+                "isBoss": false,
+                "selectedSpell": "melvorD:WindStrike",
+                "bones": {
+                    "itemID": "melvorD:Bones",
+                    "quantity": 1
+                }
+            },
+            {
+                "id": "Enchanted_Jester",
+                "name": "Enchanted Jester",
+                "media": "assets/combat/enchanted-jester.png",
+                "levels": {
+                    "Hitpoints": 110,
+                    "Attack": 90,
+                    "Strength": 90,
+                    "Defence": 90,
+                    "Ranged": 90,
+                    "Magic": 90
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 2400
+                    },
+                    {
+                        "key": "damageReduction",
+                        "value": 5
+                    },
+                    {
+                        "key": "magicAttackBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "magicDamageBonus",
+                        "value": 7
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": 70
+                    }
+                ],
+                "ignoreCompletion": true,
+                "attackType": "magic",
+                "specialAttacks": ["namespace_thuum:Prank"],
+                "passives": [],
+                "lootChance": 10,
+                "lootTable": [
+                    {
+                        "itemID": "namespace_thuum:Enchanted_Essence",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 6
+                    },
+                    {
+                        "itemID": "namespace_thuum:Essence_Of_Thruum",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Polished_Topaz_Gem",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Polished_Ruby_Gem",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Polished_Sapphire_Gem",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    }
+                ],
+                "gpDrops": {
+                    "min": 100,
+                    "max": 250
+                },
+                "canSlayer": true,
+                "isBoss": false,
+                "selectedSpell": "melvorD:FireBolt",
+                "bones": {
+                    "itemID": "melvorD:Magic_Bones",
+                    "quantity": 1
+                }
+            },
+            {
+                "id": "Mystic_Jester",
+                "name": "Mystic Jester",
+                "media": "assets/combat/mystic-jester.png",
+                "levels": {
+                    "Hitpoints": 310,
+                    "Attack": 1,
+                    "Strength": 1,
+                    "Defence": 150,
+                    "Ranged": 1,
+                    "Magic": 260
+                },
+                "equipmentStats": [
+                    {
+                        "key": "attackSpeed",
+                        "value": 2400
+                    },
+                    {
+                        "key": "damageReduction",
+                        "value": 15
+                    },
+                    {
+                        "key": "magicAttackBonus",
+                        "value": 15
+                    },
+                    {
+                        "key": "meleeDefenceBonus",
+                        "value": 50
+                    },
+                    {
+                        "key": "rangedDefenceBonus",
+                        "value": 10
+                    },
+                    {
+                        "key": "magicDefenceBonus",
+                        "value": 15
+                    },
+                    {
+                        "key": "magicDamageBonus",
+                        "value": 15
+                    }
+                ],
+                "ignoreCompletion": true,
+                "attackType": "magic",
+                "specialAttacks": ["namespace_thuum:Greater_Prank"],
+                "passives": [],
+                "lootChance": 10,
+                "lootTable": [
+                    {
+                        "itemID": "namespace_thuum:Mystic_Essence",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 6
+                    },
+                    {
+                        "itemID": "namespace_thuum:Essence_Of_Thruum",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Diamond_String",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Pristine_Leather",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    },
+                    {
+                        "itemID": "namespace_thuum:Mystic_Oil",
+                        "minQuantity": 1,
+                        "maxQuantity": 1,
+                        "weight": 1
+                    }
+                ],
+                "gpDrops": {
+                    "min": 250,
+                    "max": 750
+                },
+                "canSlayer": true,
+                "isBoss": false,
+                "selectedSpell": "melvorD:WindBlast",
+                "bones": {
+                    "itemID": "melvorD:Magic_Bones",
+                    "quantity": 1
+                }
+            }
+        ],
+        "combatAreas": [
+            {
+                "id": "The_Circus",
+                "name": "The Circus",
+                "media": "assets/combat/the-circus.png",
+                "monsterIDs": ["namespace_thuum:Jester", "namespace_thuum:Enchanted_Jester", "namespace_thuum:Mystic_Jester"],
+                "difficulty": [1, 5],
+                "entryRequirements": []
+            }
+        ],
+        "combatAreaDisplayOrder": [
+            {
+                "insertAt": "After",
+                "afterID": "melvorD:ElerineBattlegrounds",
+                "ids": ["namespace_thuum:The_Circus"]
+            }
+        ],
+        "shopPurchases": [
+            {
+                "id": "Thruum_Skillcape",
+                "media": "assets/thruum-skillcape.png",
+                "category": "melvorD:Skillcapes",
+                "contains": {
+                    "items": [
+                        {
+                            "id": "namespace_thuum:Thruum_Skillcape",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "cost": {
+                    "gp": {
+                        "type": "Fixed",
+                        "cost": 1000000
+                    },
+                    "slayerCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    },
+                    "items": [],
+                    "raidCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    }
+                },
+                "allowQuantityPurchase": false,
+                "unlockRequirements": [],
+                "purchaseRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "namespace_thuum:Thruum",
+                        "level": 99
+                    }
+                ],
+                "defaultBuyLimit": 1,
+                "buyLimitOverrides": [],
+                "showBuyLimit": false
+            },
+            {
+                "id": "Shouts_Hat",
+                "media": "assets/township/skilling-outfit-hat-thruum.png",
+                "category": "melvorF:Township",
+                "contains": {
+                    "items": [
+                        {
+                            "id": "namespace_thuum:Shouts_Hat",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "cost": {
+                    "gp": {
+                        "type": "Fixed",
+                        "cost": 100000
+                    },
+                    "slayerCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    },
+                    "items": [],
+                    "raidCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    }
+                },
+                "allowQuantityPurchase": false,
+                "unlockRequirements": [],
+                "purchaseRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Township",
+                        "level": 10
+                    },
+                    {
+                        "type": "TownshipTask",
+                        "count": 20
+                    }
+                ],
+                "defaultBuyLimit": 0,
+                "buyLimitOverrides": [],
+                "showBuyLimit": false
+            },
+            {
+                "id": "Shouts_Body",
+                "media": "assets/township/skilling-outfit-body-thruum.png",
+                "category": "melvorF:Township",
+                "contains": {
+                    "items": [
+                        {
+                            "id": "namespace_thuum:Shouts_Body",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "cost": {
+                    "gp": {
+                        "type": "Fixed",
+                        "cost": 100000
+                    },
+                    "slayerCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    },
+                    "items": [],
+                    "raidCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    }
+                },
+                "allowQuantityPurchase": false,
+                "unlockRequirements": [],
+                "purchaseRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Township",
+                        "level": 20
+                    },
+                    {
+                        "type": "TownshipTask",
+                        "count": 40
+                    }
+                ],
+                "defaultBuyLimit": 0,
+                "buyLimitOverrides": [],
+                "showBuyLimit": false
+            },
+            {
+                "id": "Shouts_Leggings",
+                "media": "assets/township/skilling-outfit-leggings-thruum.png",
+                "category": "melvorF:Township",
+                "contains": {
+                    "items": [
+                        {
+                            "id": "namespace_thuum:Shouts_Leggings",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "cost": {
+                    "gp": {
+                        "type": "Fixed",
+                        "cost": 100000
+                    },
+                    "slayerCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    },
+                    "items": [],
+                    "raidCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    }
+                },
+                "allowQuantityPurchase": false,
+                "unlockRequirements": [],
+                "purchaseRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Township",
+                        "level": 40
+                    },
+                    {
+                        "type": "TownshipTask",
+                        "count": 60
+                    }
+                ],
+                "defaultBuyLimit": 0,
+                "buyLimitOverrides": [],
+                "showBuyLimit": false
+            },
+            {
+                "id": "Shouts_Boots",
+                "media": "assets/township/skilling-outfit-boots-thruum.png",
+                "category": "melvorF:Township",
+                "contains": {
+                    "items": [
+                        {
+                            "id": "namespace_thuum:Shouts_Boots",
+                            "quantity": 1
+                        }
+                    ]
+                },
+                "cost": {
+                    "gp": {
+                        "type": "Fixed",
+                        "cost": 100000
+                    },
+                    "slayerCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    },
+                    "items": [],
+                    "raidCoins": {
+                        "type": "Fixed",
+                        "cost": 0
+                    }
+                },
+                "allowQuantityPurchase": false,
+                "unlockRequirements": [],
+                "purchaseRequirements": [
+                    {
+                        "type": "SkillLevel",
+                        "skillID": "melvorD:Township",
+                        "level": 60
+                    },
+                    {
+                        "type": "TownshipTask",
+                        "count": 80
+                    }
+                ],
+                "defaultBuyLimit": 0,
+                "buyLimitOverrides": [],
+                "showBuyLimit": false
+            }
+        ],
+        "shopDisplayOrder": [
+            {
+                "insertAt": "After",
+                "afterID": "melvorD:Mining_Skillcape",
+                "ids": ["namespace_thuum:Thruum_Skillcape"]
+            },
+            {
+                "insertAt": "After",
+                "afterID": "melvorF:Star_Gazing_Boots",
+                "ids": [
+                    "namespace_thuum:Shouts_Hat",
+                    "namespace_thuum:Shouts_Body",
+                    "namespace_thuum:Shouts_Leggings",
+                    "namespace_thuum:Shouts_Boots"
+                ]
+            }
+        ],
+        "pets": [
+            {
+                "id": "Muse",
+                "name": "Muse",
+                "media": "assets/muse.png",
+                "ignoreCompletion": true,
+                "modifiers": {
+                    "decreasedSkillInterval": [
+                        {
+                            "skillID": "namespace_thuum:Thruum",
+                            "value": 150
+                        }
+                    ]
+                },
+                "activeInRaid": false,
+                "scaleChanceWithMasteryPool": true,
+                "skillID": "namespace_thuum:Thruum"
+            }
+        ],
+        "skillData": [
+            {
+                "skillID": "namespace_thuum:Thruum",
+                "data": {
+                    "pets": ["namespace_thuum:Muse"],
+                    "rareDrops": [
+                        {
+                            "itemID": "melvorD:Gold_Topaz_Ring",
+                            "altItemID": "melvorD:Signet_Ring_Half_A",
+                            "quantity": 1,
+                            "requirements": [],
+                            "chance": {
+                                "type": "LevelScaling",
+                                "maxChance": 100,
+                                "baseChance": 0,
+                                "scalingFactor": 0.000006060606060606061
+                            }
+                        },
+                        {
+                            "itemID": "melvorD:Circlet_of_Rhaelyx",
+                            "quantity": 1,
+                            "requirements": [],
+                            "chance": {
+                                "type": "TotalMasteryScaling",
+                                "maxChance": 0.001,
+                                "baseChance": 0.00001,
+                                "scalingFactor": 4e-8
+                            }
+                        },
+                        {
+                            "itemID": "melvorD:Mysterious_Stone",
+                            "quantity": 1,
+                            "requirements": [
+                                {
+                                    "type": "ItemFound",
+                                    "itemID": "melvorD:Crown_of_Rhaelyx"
+                                }
+                            ],
+                            "chance": {
+                                "type": "Fixed",
+                                "chance": 0.025
+                            }
+                        }
+                    ],
+                    "minibar": {
+                        "defaultItems": ["namespace_thuum:Thruum_Skillcape"],
+                        "upgrades": [],
+                        "pets": ["namespace_thuum:Muse"]
+                    },
+                    "masteryTokenID": "namespace_thuum:Mastery_Token_Thruum",
+                    "masteryLevelUnlocks": [
+                        {
+                            "level": "1",
+                            "descriptionID": 0,
+                            "description": "Each level provides +10 GP acquired for this teacher only."
+                        },
+                        {
+                            "level": "1",
+                            "descriptionID": 1,
+                            "description": "First Master modifier."
+                        },
+                        {
+                            "level": "40",
+                            "descriptionID": 2,
+                            "description": "Ability to unlock the second Master modifier."
+                        },
+                        {
+                            "level": "75",
+                            "descriptionID": 3,
+                            "description": "Ability to unlock the third Master modifier."
+                        },
+                        {
+                            "level": "90",
+                            "descriptionID": 4,
+                            "description": "-5% Shout Hire Cost for this teacher only."
+                        },
+                        {
+                            "level": "99",
+                            "descriptionID": 5,
+                            "description": "Ability to unlock the fourth Master modifier."
+                        }
+                    ],
+                    "teachers": [
+                        {
+                            "id": "Guitar",
+                            "name": "Guitar",
+                            "media": "assets/teachers/guitar.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 5,
+                            "maxGP": 141,
+                            "productId": "namespace_thuum:Guitar",
+                            "level": 1,
+                            "skills": ["melvorD:Woodcutting", "melvorD:Firemaking"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedBirdNestDropRate",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedMasteryXP",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 15
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMinBirdNestQuantity",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "freeBonfires",
+                                    "value": 1
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedBirdNestDropRate",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedMasteryXP",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMinBirdNestQuantity",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "freeBonfires",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Animal_Allegiance",
+                            "name": "Animal Allegiance",
+                            "media": "assets/teachers/Animal_Allegiance.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 13,
+                            "maxGP": 182,
+                            "productId": "namespace_thuum:Animal_Allegiance",
+                            "level": 10,
+                            "skills": ["melvorD:Fishing", "melvorD:Cooking"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedSkillInterval",
+                                    "skill": "melvorD:Fishing",
+                                    "value": 500
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Cooking",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedPassiveCookInterval",
+                                    "value": 30
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedChanceToFindLostChest",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedFishingCookedChance",
+                                    "value": 25
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedSkillInterval",
+                                    "skill": "melvorD:Fishing",
+                                    "value": 200
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Cooking",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedPassiveCookInterval",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedChanceToFindLostChest",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedFishingCookedChance",
+                                    "value": 5
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Drum",
+                            "name": "Snare Drum",
+                            "media": "assets/teachers/drum.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 21,
+                            "maxGP": 223,
+                            "productId": "namespace_thuum:Drum",
+                            "level": 20,
+                            "skills": ["melvorD:Mining", "melvorD:Smithing"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedSkillInterval",
+                                    "skill": "melvorD:Mining",
+                                    "value": 200
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSkillInterval",
+                                    "skill": "melvorD:Smithing",
+                                    "value": 200
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedFlatSmithingCoalCost",
+                                    "value": 3
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "doubleOresMining",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "doubleRuneEssenceMining",
+                                    "value": 2
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedSkillInterval",
+                                    "skill": "melvorD:Mining",
+                                    "value": 100
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedSkillInterval",
+                                    "skill": "melvorD:Smithing",
+                                    "value": 100
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedFlatSmithingCoalCost",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "doubleOresMining",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "doubleRuneEssenceMining",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Accordion",
+                            "name": "Accordion",
+                            "media": "assets/teachers/accordion.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 29,
+                            "maxGP": 264,
+                            "productId": "namespace_thuum:Accordion",
+                            "level": 30,
+                            "skills": ["melvorD:Hitpoints"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedHitpointRegeneration",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedAutoEatEfficiency",
+                                    "value": 15
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedEnemyDamageReduction",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedAutoEatThreshold",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedChanceToDoubleLootCombat",
+                                    "value": 5
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedHitpointRegeneration",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedAutoEatEfficiency",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedEnemyDamageReduction",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedAutoEatThreshold",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedChanceToDoubleLootCombat",
+                                    "value": 2
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Bouzouki",
+                            "name": "Bouzouki",
+                            "media": "assets/teachers/bouzouki.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 37,
+                            "maxGP": 305,
+                            "productId": "namespace_thuum:Bouzouki",
+                            "level": 40,
+                            "skills": ["melvorD:Woodcutting", "melvorD:Mining", "melvorD:Firemaking"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedGlobalPreservationChance",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedGPGlobal",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedChanceToDoubleItemsGlobal",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedOffItemChance",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedGPFlat",
+                                    "value": 100
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedGlobalPreservationChance",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedGPGlobal",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedChanceToDoubleItemsGlobal",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedOffItemChance",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedGPFlat",
+                                    "value": 25
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Maraca",
+                            "name": "Maracas",
+                            "media": "assets/teachers/maraca.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 45,
+                            "maxGP": 346,
+                            "productId": "namespace_thuum:Maraca",
+                            "level": 50,
+                            "skills": ["melvorD:Fletching", "melvorD:Crafting"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedSkillXP",
+                                    "skill": "melvorD:Crafting",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedSkillXP",
+                                    "skill": "melvorD:Fletching",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "doubleItemsSkill",
+                                    "skill": "melvorD:Fletching",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "doubleItemsSkill",
+                                    "skill": "melvorD:Crafting",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedJavelinProduction",
+                                    "value": 2
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedSkillXP",
+                                    "skill": "melvorD:Crafting",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedSkillXP",
+                                    "skill": "melvorD:Fletching",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "doubleItemsSkill",
+                                    "skill": "melvorD:Fletching",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "doubleItemsSkill",
+                                    "skill": "melvorD:Crafting",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedJavelinProduction",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Xylophone",
+                            "name": "Xylophone",
+                            "media": "assets/teachers/xylophone.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 53,
+                            "maxGP": 387,
+                            "productId": "namespace_thuum:Xylophone",
+                            "level": 60,
+                            "skills": ["melvorD:Agility"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedAgilityObstacleCost",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedGPFromAgility",
+                                    "value": 15
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Agility",
+                                    "value": 15
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "decreasedAgilityPillarCost",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedGPFromAgilityPerActiveObstacle",
+                                    "value": 25
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedAgilityObstacleCost",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedGPFromAgility",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Agility",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "decreasedAgilityPillarCost",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedGPFromAgilityPerActiveObstacle",
+                                    "value": 5
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Saxophone",
+                            "name": "Saxophone",
+                            "media": "assets/teachers/saxophone.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 61,
+                            "maxGP": 428,
+                            "productId": "namespace_thuum:Saxophone",
+                            "level": 70,
+                            "skills": ["melvorD:Defence", "melvorD:Hitpoints"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedGlobalEvasion",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedLifesteal",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedDamageReduction",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMaxHitpoints",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedFlatMaxHitpoints",
+                                    "value": 5
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedGlobalEvasion",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedLifesteal",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedDamageReduction",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMaxHitpoints",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedFlatMaxHitpoints",
+                                    "value": 1
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Violin",
+                            "name": "Violin",
+                            "media": "assets/teachers/violin.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 69,
+                            "maxGP": 469,
+                            "productId": "namespace_thuum:Violin",
+                            "level": 80,
+                            "skills": ["melvorD:Runecrafting", "melvorD:Prayer"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedRunecraftingEssencePreservation",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedPrayerPointsWhenHit",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedAdditionalRunecraftCountRunes",
+                                    "value": 6
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedFlatPrayerCostReduction",
+                                    "value": 3
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedChanceForElementalRune",
+                                    "value": 50
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "increasedRunecraftingEssencePreservation",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedPrayerPointsWhenHit",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedAdditionalRunecraftCountRunes",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedFlatPrayerCostReduction",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedChanceForElementalRune",
+                                    "value": 5
+                                }
+                            ]
+                        },
+                        {
+                            "id": "Bongo",
+                            "name": "Djembe",
+                            "media": "assets/teachers/bongo.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 81,
+                            "maxGP": 510,
+                            "productId": "namespace_thuum:Bongo",
+                            "level": 90,
+                            "skills": ["melvorD:Slayer"],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedSlayerTaskMonsterAccuracy",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedDamageToSlayerTasks",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedSlayerCoins",
+                                    "value": 40
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedSlayerAreaEffectNegationFlat",
+                                    "value": 25
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedSkillXP",
+                                    "skill": "melvorD:Slayer",
+                                    "value": 20
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedSlayerTaskMonsterAccuracy",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedDamageToSlayerTasks",
+                                    "value": 2
+                                },
+                                {
+                                    "level": 75,
+                                    "key": "increasedSlayerCoins",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedSlayerAreaEffectNegationFlat",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 999,
+                                    "key": "increasedSkillXP",
+                                    "skill": "melvorD:Slayer",
+                                    "value": 5
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "skillID": "melvorD:Herblore",
+                "data": {
+                    "recipes": [
+                        {
+                            "id": "Generous_Gratuity_Potion",
+                            "name": "Generous Gratuity Potion",
+                            "level": 80,
+                            "potionIDs": [
+                                "namespace_thuum:Generous_Gratuity_Potion_I",
+                                "namespace_thuum:Generous_Gratuity_Potion_II",
+                                "namespace_thuum:Generous_Gratuity_Potion_III",
+                                "namespace_thuum:Generous_Gratuity_Potion_IV"
+                            ],
+                            "baseExperience": 140,
+                            "categoryID": "melvorF:SkillPotions",
+                            "itemCosts": [
+                                {
+                                    "id": "melvorF:Pigtayle_Herb",
+                                    "quantity": 1
+                                }
+                            ],
+                            "gpCost": 1000,
+                            "scCost": 0
+                        }
+                    ]
+                }
+            },
+            {
+                "skillID": "melvorD:Summoning",
+                "data": {
+                    "recipes": [
+                        {
+                            "id": "Shout",
+                            "level": 90,
+                            "productID": "namespace_thuum:Summoning_Familiar_Shout",
+                            "baseQuantity": 25,
+                            "baseExperience": 41,
+                            "categoryID": "melvorD:TabletsFamiliars",
+                            "itemCosts": [
+                                {
+                                    "id": "melvorF:Summoning_Shard_Green",
+                                    "quantity": 10
+                                },
+                                {
+                                    "id": "melvorF:Summoning_Shard_Silver",
+                                    "quantity": 8
+                                },
+                                {
+                                    "id": "melvorF:Summoning_Shard_Black",
+                                    "quantity": 6
+                                }
+                            ],
+                            "gpCost": 1000,
+                            "scCost": 0,
+                            "markMedia": "assets/summoning/shout-mark.png",
+                            "nonShardItemCosts": [],
+                            "tier": 3,
+                            "skillIDs": ["namespace_thuum:Thruum"]
+                        }
+                    ],
+                    "synergies": [
+                        {
+                            "summonIDs": ["melvorF:GolbinThief", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedGPOnEnemyHit": 30,
+                                "increasedGPFromMonstersFlat": 175
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Occultist", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedGlobalEvasion": 10
+                            },
+                            "enemyModifiers": {
+                                "decreasedGlobalEvasion": 10
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Wolf", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedLifesteal": 2
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Ent", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedChanceAdditionalSkillResource": [
+                                    {
+                                        "skillID": "melvorD:Woodcutting",
+                                        "value": 30
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "WoodcuttingAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Mole", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedChanceAdditionalSkillResource": [
+                                    {
+                                        "skillID": "melvorD:Mining",
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "MiningAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Octopus", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedChanceAdditionalSkillResource": [
+                                    {
+                                        "skillID": "melvorD:Fishing",
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "FishingAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Minotaur", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedMeleeMaxHit": 3,
+                                "increasedMeleeAccuracyBonus": 3
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Centaur", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedRangedMaxHit": 3,
+                                "increasedRangedAccuracyBonus": 3
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Witch", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedMagicMaxHit": 3,
+                                "increasedMagicAccuracyBonus": 3
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Pig", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedSkillPreservationChance": [
+                                    {
+                                        "skillID": "melvorD:Cooking",
+                                        "value": 25
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "CookingAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Crow", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedAdditionalRunecraftCountRunes": 2
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "RunecraftingAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Leprechaun", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedGPFromThievingFlat": 50
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "ThievingAction",
+                                    "succesful": true
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Cyclops", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedSlayerCoins": 10
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Yak", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedDamageReduction": 1
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                },
+                                {
+                                    "type": "ThievingAction",
+                                    "succesful": false
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Unicorn", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedHitpointRegeneration": 50
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Dragon", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedChanceToApplyBurn": 10
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "PlayerSummonAttack"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Monkey", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedChanceToDoubleItemsSkill": [
+                                    {
+                                        "skillID": "melvorD:Crafting",
+                                        "value": 10
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "CraftingAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Salamander", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedSkillPreservationChance": [
+                                    {
+                                        "skillID": "melvorD:Smithing",
+                                        "value": 25
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "SmithingAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Bear", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "increasedSkillPreservationChance": [
+                                    {
+                                        "skillID": "melvorD:Herblore",
+                                        "value": 5
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "HerbloreAction"
+                                }
+                            ]
+                        },
+                        {
+                            "summonIDs": ["melvorF:Devil", "namespace_thuum:Shout"],
+                            "modifiers": {
+                                "decreasedSkillIntervalPercent": [
+                                    {
+                                        "skillID": "melvorD:Firemaking",
+                                        "value": 5
+                                    }
+                                ]
+                            },
+                            "consumesOn": [
+                                {
+                                    "type": "FiremakingAction"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
