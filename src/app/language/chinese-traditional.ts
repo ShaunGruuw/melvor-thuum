@@ -44,7 +44,7 @@ export const zhTW = {
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Positive: '在音樂訓練期間獲得蝦的機會增加了${value}%',
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Negative: '在音樂訓練期間獲得蝦的機會減少了${value}%',
     Increased_Mastery_XP_Per_Variel: '+${value}% ${skillName} 精通經驗值，來自占星術中 Variel 星座的滿星',
-    Teacher_Guitar: '吉他',
+    Teacher_Unrelenting_Force: '吉他',
     Teacher_Drum: '班卓琴',
     Teacher_Animal_Allegiance: '小军鼓',
     Teacher_Accordion: '手風琴',

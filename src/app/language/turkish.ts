@@ -48,7 +48,7 @@ export const tr = {
         'Müzik eğitimi sırasında -%${value} oranında Karides elde etme şansı',
     Increased_Mastery_XP_Per_Variel:
         'Astrolojideki Variel takımyıldızının her bir yıldızı için +%${value} ${skillName} Ustalık XP',
-    Teacher_Guitar: 'Gitar',
+    Teacher_Unrelenting_Force: 'Gitar',
     Teacher_Drum: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Davul',
     Teacher_Accordion: 'Akordion',

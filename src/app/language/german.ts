@@ -48,7 +48,7 @@ export const de = {
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Negative: '-${value}% Chance, beim Musiktraining Garnelen zu erhalten',
     Increased_Mastery_XP_Per_Variel:
         '+${value}% ${skillName} Meisterschafts-XP pro maximalem Stern im Variel-Konstellation in Astrologie',
-    Teacher_Guitar: 'Gitarre',
+    Teacher_Unrelenting_Force: 'Gitarre',
     Teacher_Drum: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Snare Drum',
     Teacher_Accordion: 'Akkordeon',

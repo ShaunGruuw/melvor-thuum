@@ -1649,13 +1649,13 @@
                     ],
                     "teachers": [
                         {
-                            "id": "Guitar",
-                            "name": "Guitar",
-                            "media": "assets/teachers/guitar.png",
+                            "id": "Unrelenting_Force",
+                            "name": "Unrelenting Force",
+                            "media": "assets/teachers/Unrelenting_Force.png",
                             "baseInterval": 3000,
                             "baseExperience": 5,
                             "maxGP": 141,
-                            "productId": "namespace_thuum:Guitar",
+                            "productId": "namespace_thuum:Unrelenting_Force",
                             "level": 1,
                             "skills": ["melvorD:Woodcutting", "melvorD:Firemaking"],
                             "standardModifiers": [

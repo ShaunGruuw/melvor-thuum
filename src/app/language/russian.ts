@@ -48,7 +48,7 @@ export const ru = {
         '-${value}% шанс получить креветку во время тренировки музыки',
     Increased_Mastery_XP_Per_Variel:
         '+${value}% XP мастерства ${skillName} за каждую максимизированную звезду в созвездии Вариэль в Астрологии',
-    Teacher_Guitar: 'Гитара',
+    Teacher_Unrelenting_Force: 'Гитара',
     Teacher_Drum: 'Банджо',
     Teacher_Animal_Allegiance: 'Барабан',
     Teacher_Accordion: 'Аккордеон',

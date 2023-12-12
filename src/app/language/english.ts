@@ -46,7 +46,7 @@ export const en = {
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Negative: '-${value}% chance to obtain Shrimp while training Thruum',
     Increased_Mastery_XP_Per_Variel:
         '+${value}% ${skillName} Mastery XP per maxed Star in Variel constellation in Astrology',
-    Teacher_Guitar: 'Guitar',
+    Teacher_Unrelenting_Force: 'Unrelenting Force',
     Teacher_Drum: 'Snare Drum',
     Teacher_Animal_Allegiance: 'Animal Allegiance',
     Teacher_Accordion: 'Accordion',

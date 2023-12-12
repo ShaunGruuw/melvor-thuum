@@ -48,7 +48,7 @@ export const it = {
         "Probabilità del -${value}% di ottenere Gamberetti durante l'allenamento in Thruuma",
     Increased_Mastery_XP_Per_Variel:
         '+${value}% XP Maestria ${skillName} per ogni Stella massimizzata nella costellazione Variel in Astrologia',
-    Teacher_Guitar: 'Chitarra',
+    Teacher_Unrelenting_Force: 'Chitarra',
     Teacher_Drum: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Tamburo a Cilindro',
     Teacher_Accordion: 'Fisarmonica',

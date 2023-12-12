@@ -50,7 +50,7 @@ export const fr = {
         "-${value}% de chance d'obtenir des crevettes pendant l'entraînement thruumal",
     Increased_Mastery_XP_Per_Variel:
         '+${value}% ${skillName} XP de Maîtrise par étoile maximisée dans la constellation de Variel en astrologie',
-    Teacher_Guitar: 'Guitare',
+    Teacher_Unrelenting_Force: 'Guitare',
     Teacher_Drum: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Tambour',
     Teacher_Accordion: 'Accordéon',

@@ -46,7 +46,7 @@ export const ko = {
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Negative: '음악 훈련 중 새우 획득 확률 -${value}%',
     Increased_Mastery_XP_Per_Variel:
         '점성술의 바리엘 성좌에서 각 별 달성 시 ${value}% 추가 ${skillName} 전문 기술 경험치 획득',
-    Teacher_Guitar: '기타',
+    Teacher_Unrelenting_Force: '기타',
     Teacher_Drum: '반주',
     Teacher_Animal_Allegiance: '스네어 드럼',
     Teacher_Accordion: '아코디언',

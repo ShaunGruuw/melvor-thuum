@@ -48,7 +48,7 @@ export const pt = {
         '-${value}% de chance de obter Camarão durante o treinamento de Música',
     Increased_Mastery_XP_Per_Variel:
         '+${value}% de XP de Mestre ${skillName} por Estrela máxima na constelação de Variel em Astrologia',
-    Teacher_Guitar: 'Guitarra',
+    Teacher_Unrelenting_Force: 'Guitarra',
     Teacher_Drum: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Tamborim',
     Teacher_Accordion: 'Acordeão',
