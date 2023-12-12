@@ -74,7 +74,7 @@ export function MasteryComponent(game: Game, thruum: Thruum, teacher: Teacher) {
             }
         },
         unlock: function (modifier: ShoutModifier) {
-            game.bank.removeItemQuantityByID('namespace_thuum:Essence_Of_Thruum', 1, true);
+            game.bank.removeItemQuantityByID('namespace_thuum:Dragon_Soul', 1, true);
             game.gp.remove(this.unlockGPCost);
 
             const teacherRef = thruum.actions.find(action => action.id === teacher.id);
@@ -91,7 +91,7 @@ export function MasteryComponent(game: Game, thruum: Thruum, teacher: Teacher) {
             this.completeUpgrade();
         },
         updateCosts: function () {
-            const item = game.items.getObjectByID(`namespace_thuum:Essence_Of_Thruum`);
+            const item = game.items.getObjectByID(`namespace_thuum:Dragon_Soul`);
 
             this.essenceOfThruum = {
                 item,

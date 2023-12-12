@@ -11,7 +11,7 @@ export class ThruumManager {
     }
 
     public get essenceOfThruumIcon() {
-        return this.game.items.getObjectByID('namespace_thuum:Essence_Of_Thruum')?.media;
+        return this.game.items.getObjectByID('namespace_thuum:Dragon_Soul')?.media;
     }
 
     constructor(private readonly thruum: Thruum, private readonly game: Game) {}

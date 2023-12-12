@@ -100,7 +100,7 @@
                 "afterID": "melvorD:Diamond",
                 "ids": [
                     "namespace_thuum:Sheet_Thruum",
-                    "namespace_thuum:Essence_Of_Thruum",
+                    "namespace_thuum:Dragon_Soul",
                     "namespace_thuum:Polished_Topaz_Gem",
                     "namespace_thuum:Polished_Ruby_Gem",
                     "namespace_thuum:Polished_Sapphire_Gem",
@@ -267,11 +267,11 @@
             },
             {
                 "itemType": "Item",
-                "id": "Essence_Of_Thruum",
-                "name": "Essence of Thruum",
+                "id": "Dragon_Soul",
+                "name": "Dragon Soul",
                 "category": "Thruum",
                 "type": "Misc",
-                "media": "assets/items/essence-of-thruum.png",
+                "media": "assets/items/dragon_soul.png",
                 "ignoreCompletion": true,
                 "obtainFromItemLog": false,
                 "golbinRaidExclusive": false,
@@ -908,7 +908,7 @@
                 "isDowngrade": false
             },
             {
-                "upgradedItemID": "namespace_thuum:Essence_Of_Thruum",
+                "upgradedItemID": "namespace_thuum:Dragon_Soul",
                 "gpCost": 1000000,
                 "scCost": 0,
                 "itemCosts": [
@@ -1166,7 +1166,7 @@
                         "weight": 6
                     },
                     {
-                        "itemID": "namespace_thuum:Essence_Of_Thruum",
+                        "itemID": "namespace_thuum:Dragon_Soul",
                         "minQuantity": 1,
                         "maxQuantity": 1,
                         "weight": 1
@@ -1257,7 +1257,7 @@
                         "weight": 6
                     },
                     {
-                        "itemID": "namespace_thuum:Essence_Of_Thruum",
+                        "itemID": "namespace_thuum:Dragon_Soul",
                         "minQuantity": 1,
                         "maxQuantity": 1,
                         "weight": 1

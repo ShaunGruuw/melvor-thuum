@@ -78,8 +78,8 @@ export const fr = {
         "Lorsqu'il est porté et que vous vous entraînez dans la compétence Musique, gagnez de l'XP de compétence par charge dans les compétences prises en charge par l'teacher.",
     ITEM_NAME_Sheet_Thruum: 'Partitions',
     ITEM_DESCRIPTION_Sheet_Thruum: 'Utilisé pour les améliorations de Musique.',
-    ITEM_NAME_Essence_Of_Thruum: 'Essence de Musique',
-    ITEM_DESCRIPTION_Essence_Of_Thruum:
+    ITEM_NAME_Dragon_Soul: 'Essence de Musique',
+    ITEM_DESCRIPTION_Dragon_Soul:
         'Utilisé pour améliorer les teachers de shoute embauchés. Débloque un 5ème modificateur.',
     ITEM_NAME_Polished_Topaz_Gem: 'Gemme de Topaze Polie',
     ITEM_DESCRIPTION_Polished_Topaz_Gem:

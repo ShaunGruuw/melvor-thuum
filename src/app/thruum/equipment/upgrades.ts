@@ -1,7 +1,7 @@
 import { Thruum } from '../thruum';
 
 export enum UpgradeType {
-    EssenceOfThruum = 'Essence_Of_Thruum',
+    EssenceOfThruum = 'Dragon_Soul',
     PolishedTopazGem = 'Polished_Topaz_Gem',
     PolishedRubyGem = 'Polished_Ruby_Gem',
     PolishedSapphireGem = 'Polished_Sapphire_Gem',
