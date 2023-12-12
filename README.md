@@ -397,14 +397,14 @@ Snare Drum: Unlocked at skill level 20
 * Mastery Level 99: x4 Ores received from Mining
 * Upgrade: x4 Rune Essence received from Mining
 
-Accordion: Unlocked at skill level 30
+Become_Ethereal: Unlocked at skill level 30
 * Mastery Level 1: +5% Hitpoint Regeneration
 * Mastery Level 40: +15% Auto Eat Efficiency
 * Mastery Level 75: Target Damage Reduction is decreased by flat 10%
 * Mastery Level 99: +5% Auto Eat Threshold
 * Upgrade: +5% Chance To Double Loot in Combat
 
-Bouzouki: Unlocked at skill level 40
+Kynes_Peace: Unlocked at skill level 40
 * Mastery Level 1: +10% Chance to Preserve Resources in Skills
 * Mastery Level 40: +10% Global GP (except Item Sales)
 * Mastery Level 75: +10% Chance to Double Items Globally
@@ -418,7 +418,7 @@ Flute: Unlocked at skill level 45 (AoD only)
 * Mastery Level 99: +2 minimum Items found in Archaeology
 * Upgrade: Gain GP equal to +15 per Archaeology Skill Level per excavation action that locates no Artefacts
 
-Maracas: Unlocked at skill level 50
+Slow_Times: Unlocked at skill level 50
 * Mastery Level 1: +5% Crafting Skill XP
 * Mastery Level 40: +5% Fletching Skill XP
 * Mastery Level 75: x4 Items received from Fletching
@@ -439,7 +439,7 @@ Saxaphone: Unlocked at skill level 70
 * Mastery Level 99: +5% Maximum Hitpoints
 * Upgrade: +50 Maximum Hitpoints
 
-Violin: Unlocked at skill level 80
+Dismay: Unlocked at skill level 80
 * Mastery Level 1: +10% chance to preserve resources when Runecrafting runes
 * Mastery Level 40: Gain +1 Prayer Points for each successful Enemy hit on you
 * Mastery Level 75: Create +6 Additional Runes of the same type in Runecrafting
@@ -506,14 +506,14 @@ Snare Drum: Unlocked at skill level 20
 * Mastery Level 99: x2 Ores received from Mining
 * Upgrade: x2 Rune Essence received from Mining
 
-Accordion: Unlocked at skill level 30
+Become_Ethereal: Unlocked at skill level 30
 * Mastery Level 1: +2% Hitpoint Regeneration
 * Mastery Level 40: +5% Auto Eat Efficiency
 * Mastery Level 75: Target Damage Reduction is decreased by flat 2%
 * Mastery Level 99: +2% Auto Eat Threshold
 * Upgrade: +2% Chance To Double Loot in Combat
 
-Bouzouki: Unlocked at skill level 40
+Kynes_Peace: Unlocked at skill level 40
 * Mastery Level 1: +5% Chance to Preserve Resources in Skills
 * Mastery Level 40: +5% Global GP (except Item Sales)
 * Mastery Level 75: +2% Chance to Double Items Globally
@@ -527,7 +527,7 @@ Flute: Unlocked at skill level 45 (AoD only)
 * Mastery Level 99: +1 minimum Items found in Archaeology
 * Upgrade: Gain GP equal to +5 per Archaeology Skill Level per excavation action that locates no Artefacts
 
-Maracas: Unlocked at skill level 50
+Slow_Times: Unlocked at skill level 50
 * Mastery Level 1: +5% Crafting Skill XP
 * Mastery Level 40: +5% Fletching Skill XP
 * Mastery Level 75: x2 Items received from Fletching
@@ -548,7 +548,7 @@ Saxaphone: Unlocked at skill level 70
 * Mastery Level 99: +2% Maximum Hitpoints
 * Upgrade: +10 Maximum Hitpoints
 
-Violin: Unlocked at skill level 80
+Dismay: Unlocked at skill level 80
 * Mastery Level 1: +5% chance to preserve resources when Runecrafting runes
 * Mastery Level 40: Gain +1 Prayer Points for each successful Enemy hit on you
 * Mastery Level 75: Create +2 Additional Runes of the same type in Runecrafting
@@ -608,7 +608,7 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 * fixed thruum gp gains not considering flat gp increases such as golden wreath
 
 # 1.13.8
-* replaced Bouzouki upgrade modifier from GP From Sales to GP gained when earning GP, except Alt. Magic and Item Sales
+* replaced Kynes_Peace upgrade modifier from GP From Sales to GP gained when earning GP, except Alt. Magic and Item Sales
 
 # 1.13.7
 * added summoning synergy for tortoise + shout
@@ -645,7 +645,7 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 ## 1.12.0
 * added settings to control the base shout Master cost
 * added a hardcore setting which significantly reduces the power of mastered shout modifiers
-* fixed djembe being named bongo, it is now correctly labelled as a djembe again
+* fixed djembe being named Battle_Fury, it is now correctly labelled as a djembe again
 
 ## 1.11.2
 * fixed german translations being in dutch
@@ -661,13 +661,13 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 * switched and reduced the power of some teacher modifiers:
   * Animal_Allegiance (75) now provides Passive Cook Interval
   * Animal_Allegiance (99) now provides Chance to find a Lost Chest while Fishing and reduced from 15% to 10%
-  * Accordion (75) now provides Target Damage Reduction is decreased by flat
-  * Accordion (99) now provides Auto Eat Threshold and reduced from 10% to 5%
-  * Accordion (U) now provides Chance To Double Loot in Combat and reduced from 10% to 5%
-  * Bouzouki (75) Chance to Double Items Globally reduced from 15% to 10%
-  * Saxophone (75) now provides Damage Reduction and reduced from 10% to 5%
-  * Saxophone (99) now provides +5% Maximum Hitpoints
-  * Saxophone (U) now provides + Maximum Hitpoints and reduced from +100 to +50
+  * Become_Ethereal (75) now provides Target Damage Reduction is decreased by flat
+  * Become_Ethereal (99) now provides Auto Eat Threshold and reduced from 10% to 5%
+  * Become_Ethereal (U) now provides Chance To Double Loot in Combat and reduced from 10% to 5%
+  * Kynes_Peace (75) Chance to Double Items Globally reduced from 15% to 10%
+  * Throw_Voice (75) now provides Damage Reduction and reduced from 10% to 5%
+  * Throw_Voice (99) now provides +5% Maximum Hitpoints
+  * Throw_Voice (U) now provides + Maximum Hitpoints and reduced from +100 to +50
 * adjusted some of the shout syngergies
   * Golbin Thief + Shout synergy now also grants +175 GP on monster kill
   * Ent + Shout synergy increased from 10% to 30%
@@ -716,8 +716,8 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
   * the Animal_Allegiance now benefits fishing and cooking and is still unlocked at level 10
   * the drum now benefits mining and smithing and is still unlocked at level 20
 * renamed the drum to snare drum
-* renamed the bongo to djembe
-* renamed the maraca to maracas
+* renamed the Battle_Fury to djembe
+* renamed the Slow_Time to Slow_Times
 
 ### 1.6.5
 * added the ability to see the next available teacher in a locked state; like in Woodcutting and Mining
@@ -757,14 +757,14 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 
 ### 1.4.0
 * reduced tips (GP) scaling from mastery level from +15 GP each level to +10 GP each level, base teacher GP is no longer the same across all teachers, higher level teachers have a higher base GP than lower level teachers. This should hopefully make higher teachers feel a little better, this does result in less GP from lower teachers than the previous version.
-* added three more teachers; the accordion, bouzouki and xylophone
+* added three more teachers; the Become_Ethereal, Kynes_Peace and xylophone
 * modified some teacher unlock levels and bonuses
   * drum - Unlock Level 15 -> Level 10
   * Animal_Allegiance - Unlock Level 30 -> Level 20
-  * saxophone - Unlock Level 45 -> Level 70, now focused on defensive modifiers only
-  * maraca - Unlock Level 60 -> Level 50
-  * violin - Unlock Level 75 -> Level 80
-  * bongo - now focused entirely on slayer, agility has been moved to xylophone
+  * Throw_Voice - Unlock Level 45 -> Level 70, now focused on defensive modifiers only
+  * Slow_Time - Unlock Level 60 -> Level 50
+  * Dismay - Unlock Level 75 -> Level 80
+  * Battle_Fury - now focused entirely on slayer, agility has been moved to xylophone
   * french horn - switched level 1 and 40 modifier bonuses
   * tambourine - increased level 1 farming yield % from 5 to 10 and level 40 flat farming yield from 5 to 15
   * trumpet - now focused on damage dealing only
@@ -785,7 +785,7 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 * updated exponential calculation to clamp mastery between level 1 and 99 instead of throwing an error if outside this range
 * adjusted the level that teachers are available at
 * adjusted the experience gained from training. The time it takes to level should be roughly equivalent to Astrology, assuming no interval increases, xp modifiers, etc and you train the highest level teacher available
-* added 3 new teachers; the harp, tambourine and maraca
+* added 3 new teachers; the harp, tambourine and Slow_Time
 
 ### 1.1.0
 
@@ -794,7 +794,7 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 
 ### 1.0.3
 
-* fixed violin 99 mastery bonus to reduce prayer cost instead of increase it
+* fixed Dismay 99 mastery bonus to reduce prayer cost instead of increase it
 
 ### 1.0.2
 
@@ -802,7 +802,7 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 
 ### 1.0.1
 
-* fixed the spelling of saxophone
+* fixed the spelling of Throw_Voice
 * removed mastery token, capes and pet from being required for completion log
 * removed thruum from being required for max and superior max capes
 * skill cape now also reduces shout Master cost by 5% and increased gold earned from thruum by 5%

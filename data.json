@@ -1029,13 +1029,13 @@
                             ]
                         },
                         {
-                            "id": "Accordion",
-                            "name": "Accordion",
-                            "media": "assets/teachers/accordion.png",
+                            "id": "Become_Ethereal",
+                            "name": "Become Ethereal",
+                            "media": "assets/teachers/Become_Ethereal.png",
                             "baseInterval": 3000,
                             "baseExperience": 29,
                             "maxGP": 264,
-                            "productId": "namespace_thuum:Accordion",
+                            "productId": "namespace_thuum:Become_Ethereal",
                             "level": 30,
                             "skills": ["melvorD:Hitpoints"],
                             "standardModifiers": [
@@ -1094,13 +1094,13 @@
                             ]
                         },
                         {
-                            "id": "Bouzouki",
-                            "name": "Bouzouki",
-                            "media": "assets/teachers/bouzouki.png",
+                            "id": "Kynes_Peace",
+                            "name": "Kyne's Peace",
+                            "media": "assets/teachers/Kynes_Peace.png",
                             "baseInterval": 3000,
                             "baseExperience": 37,
                             "maxGP": 305,
-                            "productId": "namespace_thuum:Bouzouki",
+                            "productId": "namespace_thuum:Kynes_Peace",
                             "level": 40,
                             "skills": ["melvorD:Woodcutting", "melvorD:Mining", "melvorD:Firemaking"],
                             "standardModifiers": [
@@ -1159,13 +1159,13 @@
                             ]
                         },
                         {
-                            "id": "Maraca",
-                            "name": "Maracas",
-                            "media": "assets/teachers/maraca.png",
+                            "id": "Slow_Time",
+                            "name": "Slow_Times",
+                            "media": "assets/teachers/Slow_Time.png",
                             "baseInterval": 3000,
                             "baseExperience": 45,
                             "maxGP": 346,
-                            "productId": "namespace_thuum:Maraca",
+                            "productId": "namespace_thuum:Slow_Time",
                             "level": 50,
                             "skills": ["melvorD:Fletching", "melvorD:Crafting"],
                             "standardModifiers": [
@@ -1299,13 +1299,13 @@
                             ]
                         },
                         {
-                            "id": "Saxophone",
-                            "name": "Saxophone",
-                            "media": "assets/teachers/saxophone.png",
+                            "id": "Throw_Voice",
+                            "name": "Throw_Voice",
+                            "media": "assets/teachers/Throw_Voice.png",
                             "baseInterval": 3000,
                             "baseExperience": 61,
                             "maxGP": 428,
-                            "productId": "namespace_thuum:Saxophone",
+                            "productId": "namespace_thuum:Throw_Voice",
                             "level": 70,
                             "skills": ["melvorD:Defence", "melvorD:Hitpoints"],
                             "standardModifiers": [
@@ -1364,13 +1364,13 @@
                             ]
                         },
                         {
-                            "id": "Violin",
-                            "name": "Violin",
-                            "media": "assets/teachers/violin.png",
+                            "id": "Dismay",
+                            "name": "Dismay",
+                            "media": "assets/teachers/Dismay.png",
                             "baseInterval": 3000,
                             "baseExperience": 69,
                             "maxGP": 469,
-                            "productId": "namespace_thuum:Violin",
+                            "productId": "namespace_thuum:Dismay",
                             "level": 80,
                             "skills": ["melvorD:Runecrafting", "melvorD:Prayer"],
                             "standardModifiers": [
@@ -1429,13 +1429,13 @@
                             ]
                         },
                         {
-                            "id": "Bongo",
-                            "name": "Djembe",
-                            "media": "assets/teachers/bongo.png",
+                            "id": "Battle_Fury",
+                            "name": "Battle Fury",
+                            "media": "assets/teachers/Battle_Fury.png",
                             "baseInterval": 3000,
                             "baseExperience": 81,
                             "maxGP": 510,
-                            "productId": "namespace_thuum:Bongo",
+                            "productId": "namespace_thuum:Battle_Fury",
                             "level": 90,
                             "skills": ["melvorD:Slayer"],
                             "standardModifiers": [
