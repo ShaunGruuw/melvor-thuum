@@ -960,13 +960,13 @@
                             ]
                         },
                         {
-                            "id": "Whirlwind_Sprint",
-                            "name": "Whirlwind Sprint",
-                            "media": "assets/teachers/Whirlwind_Sprint.png",
+                            "id": "Cyclone",
+                            "name": "Cyclone",
+                            "media": "assets/teachers/Cyclone.png",
                             "baseInterval": 3000,
                             "baseExperience": 21,
                             "maxGP": 223,
-                            "productId": "namespace_thuum:Whirlwind_Sprint",
+                            "productId": "namespace_thuum:Cyclone",
                             "level": 20,
                             "skills": ["melvorD:Mining", "melvorD:Smithing"],
                             "standardModifiers": [
@@ -1232,13 +1232,13 @@
                             ]
                         },
                         {
-                            "id": "Xylophone",
-                            "name": "Xylophone",
-                            "media": "assets/teachers/xylophone.png",
+                            "id": "Whirlwind_Sprint",
+                            "name": "Whirlwind_Sprint",
+                            "media": "assets/teachers/Whirlwind_Sprint.png",
                             "baseInterval": 3000,
                             "baseExperience": 53,
                             "maxGP": 387,
-                            "productId": "namespace_thuum:Xylophone",
+                            "productId": "namespace_thuum:Whirlwind_Sprint",
                             "level": 60,
                             "skills": ["melvorD:Agility"],
                             "standardModifiers": [
