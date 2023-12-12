@@ -49,7 +49,7 @@ export const ru = {
     Increased_Mastery_XP_Per_Variel:
         '+${value}% XP мастерства ${skillName} за каждую максимизированную звезду в созвездии Вариэль в Астрологии',
     Teacher_Unrelenting_Force: 'Гитара',
-    Teacher_Drum: 'Банджо',
+    teacher_Whirlwind_Sprint: 'Банджо',
     Teacher_Animal_Allegiance: 'Барабан',
     Teacher_Accordion: 'Аккордеон',
     Teacher_Bouzouki: 'Бузуки',

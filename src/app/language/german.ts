@@ -49,8 +49,8 @@ export const de = {
     Increased_Mastery_XP_Per_Variel:
         '+${value}% ${skillName} Meisterschafts-XP pro maximalem Stern im Variel-Konstellation in Astrologie',
     Teacher_Unrelenting_Force: 'Gitarre',
-    Teacher_Drum: 'Animal_Allegiance',
-    Teacher_Animal_Allegiance: 'Snare Drum',
+    teacher_Whirlwind_Sprint: 'Animal_Allegiance',
+    Teacher_Animal_Allegiance: 'Whirlwind Sprint',
     Teacher_Accordion: 'Akkordeon',
     Teacher_Bouzouki: 'Bouzouki',
     Teacher_Flute: 'Flöte',

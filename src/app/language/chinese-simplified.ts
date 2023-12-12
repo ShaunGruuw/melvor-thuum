@@ -43,7 +43,7 @@ export const zhCN = {
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Negative: '音乐训练期间获得虾的机会减少了${value}%',
     Increased_Mastery_XP_Per_Variel: '+${value}% 占星术中Variel星座的最大星数每一级提高 ${skillName} 精通XP',
     Teacher_Unrelenting_Force: '吉他',
-    Teacher_Drum: '班卓琴',
+    teacher_Whirlwind_Sprint: '班卓琴',
     Teacher_Animal_Allegiance: '小军鼓',
     Teacher_Accordion: '手风琴',
     Teacher_Bouzouki: '布祖基',

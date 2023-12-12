@@ -47,7 +47,7 @@ export const ko = {
     Increased_Mastery_XP_Per_Variel:
         '점성술의 바리엘 성좌에서 각 별 달성 시 ${value}% 추가 ${skillName} 전문 기술 경험치 획득',
     Teacher_Unrelenting_Force: '기타',
-    Teacher_Drum: '반주',
+    teacher_Whirlwind_Sprint: '반주',
     Teacher_Animal_Allegiance: '스네어 드럼',
     Teacher_Accordion: '아코디언',
     Teacher_Bouzouki: '부조키',

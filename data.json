@@ -960,13 +960,13 @@
                             ]
                         },
                         {
-                            "id": "Drum",
-                            "name": "Snare Drum",
-                            "media": "assets/teachers/drum.png",
+                            "id": "Whirlwind_Sprint",
+                            "name": "Whirlwind Sprint",
+                            "media": "assets/teachers/Whirlwind_Sprint.png",
                             "baseInterval": 3000,
                             "baseExperience": 21,
                             "maxGP": 223,
-                            "productId": "namespace_thuum:Drum",
+                            "productId": "namespace_thuum:Whirlwind_Sprint",
                             "level": 20,
                             "skills": ["melvorD:Mining", "melvorD:Smithing"],
                             "standardModifiers": [

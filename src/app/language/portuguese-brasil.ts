@@ -50,7 +50,7 @@ export const ptBR = {
     Increased_Mastery_XP_Per_Variel:
         '+${value}% XP de Mestre ${skillName} por estrela máxima na constelação de Variel na Astrologia',
     Teacher_Unrelenting_Force: 'Guitarra',
-    Teacher_Drum: 'Animal_Allegiance',
+    teacher_Whirlwind_Sprint: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Tambor',
     Teacher_Accordion: 'Acordeão',
     Teacher_Bouzouki: 'Bouzouki',

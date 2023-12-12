@@ -46,7 +46,7 @@ export const ja = {
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Negative: '音楽のトレーニング中にエビを入手する確率 -${value}%',
     Increased_Mastery_XP_Per_Variel: '占星術のVariel星座の満点スターごとに+${value}% ${skillName}マスタリーXP',
     Teacher_Unrelenting_Force: 'ギター',
-    Teacher_Drum: 'バンジョー',
+    teacher_Whirlwind_Sprint: 'バンジョー',
     Teacher_Animal_Allegiance: 'スネアドラム',
     Teacher_Accordion: 'アコーディオン',
     Teacher_Bouzouki: 'ブズーキ',

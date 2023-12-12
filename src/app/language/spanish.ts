@@ -49,7 +49,7 @@ export const es = {
     Increased_Mastery_XP_Per_Variel:
         '+${value}% XP de Maestría ${skillName} por cada Estrella máxima en la constelación de Variel en Astrología',
     Teacher_Unrelenting_Force: 'Guitarra',
-    Teacher_Drum: 'Animal_Allegiance',
+    teacher_Whirlwind_Sprint: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Batería',
     Teacher_Accordion: 'Acordeón',
     Teacher_Bouzouki: 'Bouzouki',

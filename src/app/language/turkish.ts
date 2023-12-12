@@ -49,7 +49,7 @@ export const tr = {
     Increased_Mastery_XP_Per_Variel:
         'Astrolojideki Variel takımyıldızının her bir yıldızı için +%${value} ${skillName} Ustalık XP',
     Teacher_Unrelenting_Force: 'Gitar',
-    Teacher_Drum: 'Animal_Allegiance',
+    teacher_Whirlwind_Sprint: 'Animal_Allegiance',
     Teacher_Animal_Allegiance: 'Davul',
     Teacher_Accordion: 'Akordion',
     Teacher_Bouzouki: 'Buzuki',
