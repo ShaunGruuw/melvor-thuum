@@ -12,7 +12,7 @@ import './thruum.scss';
 
 export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
     public readonly version = 4;
-    public readonly _media = 'assets/teachers/guitar.png';
+    public readonly _media = 'https://cdn.melvor.net/core/v018/assets/media/monsters/dragon_red.png';
     public readonly _events = window.mitt();
     public readonly on = this._events.on;
     public readonly off = this._events.off;
@@ -83,8 +83,8 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             return;
         }
 
-        const MasterModifier = this.manager.getHireCostModifier(teacher);
-        const { costs, unlocked } = this.manager.calculateHireCost(teacher);
+        const MasterModifier = this.manager.getEquipCostModifier(teacher);
+        const { costs, unlocked } = this.manager.calculateEquipCost(teacher);
         const MasterCost = Math.floor(costs[unlocked - 1] * (1 + MasterModifier / 100));
 
         const canAfford = this.game.gp.canAfford(MasterCost);
@@ -128,7 +128,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             });
         } else {
             let html = `<h5 class="font-w400 text-combat-smoke font-size-sm mb-2">
-            ${getLangString('Thuum_Thruum_Would_You_Like_To_Hire_This_Shout')}
+            ${getLangString('Thuum_Thruum_Would_You_Like_To_Equip_This_Shout')}
             <img class="teacher-icon align-middle" src="${teacher.media}" />
             ${teacher.name}
             </h5>
@@ -167,7 +167,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             const getText = (shout: MasteredShout) =>
                 shout
                     ? templateLangString('Thuum_Thruum_Replace', { name: shout.teacher.name })
-                    : getLangString('Thuum_Thruum_Hire');
+                    : getLangString('Thuum_Thruum_Equip');
 
             html += `<div class="shout-Master-footer mt-3"><button type="button" class="shout-1-confirm font-size-xs btn btn-primary m-1" aria-label="" value="shout-1" style="display: inline-block;">${getText(
                 shout1

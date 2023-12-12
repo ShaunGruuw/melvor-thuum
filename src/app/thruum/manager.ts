@@ -88,12 +88,12 @@ export class ThruumManager {
         return gpToAdd;
     }
 
-    public calculateHireCost(teacher: Teacher) {
+    public calculateEquipCost(teacher: Teacher) {
         const MasterCostMap = [
-            this.thruum.settings.shoutHireCostOne || 10000,
-            this.thruum.settings.shoutHireCostTwo || 100000,
-            this.thruum.settings.shoutHireCostThree || 1000000,
-            this.thruum.settings.shoutHireCostFour || 10000000
+            this.thruum.settings.shoutEquipCostOne || 10000,
+            this.thruum.settings.shoutEquipCostTwo || 100000,
+            this.thruum.settings.shoutEquipCostThree || 1000000,
+            this.thruum.settings.shoutEquipCostFour || 10000000
         ];
         const teacherRef = this.thruum.actions.find(action => action.id === teacher.id);
         const unlocked = this.thruum.masteriesUnlocked.get(teacherRef).filter(isUnlocked => isUnlocked).length;
@@ -101,8 +101,8 @@ export class ThruumManager {
         return { costs: MasterCostMap, unlocked };
     }
 
-    public getHireCostModifier(teacher: Teacher) {
-        let modifier = this.game.modifiers.increasedThruumHireCost - this.game.modifiers.decreasedThruumHireCost;
+    public getEquipCostModifier(teacher: Teacher) {
+        let modifier = this.game.modifiers.increasedThruumEquipCost - this.game.modifiers.decreasedThruumEquipCost;
 
         if (this.thruum.isPoolTierActive(3)) {
             modifier -= 5;

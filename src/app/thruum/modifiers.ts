@@ -1,7 +1,7 @@
 declare global {
     interface StandardModifierObject<Standard> extends CombatModifierObject<Standard> {
-        increasedThruumHireCost: Standard;
-        decreasedThruumHireCost: Standard;
+        increasedThruumEquipCost: Standard;
+        decreasedThruumEquipCost: Standard;
         increasedThruumGP: Standard;
         decreasedThruumGP: Standard;
         increasedChanceToObtainShrimpWhileTrainingThruum: Standard;
@@ -17,8 +17,8 @@ declare global {
     }
 
     interface PlayerModifiers {
-        increasedThruumHireCost: number;
-        decreasedThruumHireCost: number;
+        increasedThruumEquipCost: number;
+        decreasedThruumEquipCost: number;
         increasedThruumGP: number;
         decreasedThruumGP: number;
         increasedChanceToObtainShrimpWhileTrainingThruum: number;
@@ -33,21 +33,21 @@ declare global {
 
 export class ThuumModifiers {
     public registerModifiers() {
-        modifierData.increasedThruumHireCost = {
+        modifierData.increasedThruumEquipCost = {
             get langDescription() {
-                return getLangString('Thuum_Thruum_Shout_Hire_Cost_Positive');
+                return getLangString('Thuum_Thruum_Shout_Equip_Cost_Positive');
             },
-            description: '+${value}% Shout Hire Cost',
+            description: '+${value}% Shout Equip Cost',
             isSkill: false,
             isNegative: true,
             tags: []
         };
 
-        modifierData.decreasedThruumHireCost = {
+        modifierData.decreasedThruumEquipCost = {
             get langDescription() {
-                return getLangString('Thuum_Thruum_Shout_Hire_Cost_Negative');
+                return getLangString('Thuum_Thruum_Shout_Equip_Cost_Negative');
             },
-            description: '-${value}% Shout Hire Cost',
+            description: '-${value}% Shout Equip Cost',
             isSkill: false,
             isNegative: false,
             tags: []

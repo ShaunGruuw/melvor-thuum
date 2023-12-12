@@ -13,7 +13,7 @@
                                 "value": 800
                             }
                         ],
-                        "decreasedThruumHireCost": 10,
+                        "decreasedThruumEquipCost": 10,
                         "increasedThruumGP": 10,
                         "increasedMasteryXP": [
                             {
@@ -34,7 +34,7 @@
                                 "value": 800
                             }
                         ],
-                        "decreasedThruumHireCost": 10,
+                        "decreasedThruumEquipCost": 10,
                         "increasedThruumGP": 10,
                         "increasedMasteryXP": [
                             {
@@ -147,7 +147,7 @@
                             "value": 800
                         }
                     ],
-                    "decreasedThruumHireCost": 10,
+                    "decreasedThruumEquipCost": 10,
                     "increasedThruumGP": 10,
                     "increasedMasteryXP": [
                         {

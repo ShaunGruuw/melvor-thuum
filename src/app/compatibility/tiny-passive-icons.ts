@@ -2,8 +2,8 @@ import { Thruum } from '../thruum/thruum';
 
 export class TinyPassiveIconsCompatibility {
     private readonly tinyIconTags = {
-        increasedThruumHireCost: ['thuum', 'gp'],
-        decreasedThruumHireCost: ['thuum', 'gp'],
+        increasedThruumEquipCost: ['thuum', 'gp'],
+        decreasedThruumEquipCost: ['thuum', 'gp'],
         increasedThruumGP: ['thuum', 'gp'],
         decreasedThruumGP: ['thuum', 'gp'],
         increasedChanceToObtainShrimpWhileTrainingThruum: ['thuum', 'shrimp'],

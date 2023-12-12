@@ -43,8 +43,8 @@ export function MasteryComponent(game: Game, thruum: Thruum, teacher: Teacher) {
 
             return masteryLevel >= modifier.level;
         },
-        getNextHireCost: function () {
-            const { costs, unlocked } = thruum.manager.calculateHireCost(teacher);
+        getNextEquipCost: function () {
+            const { costs, unlocked } = thruum.manager.calculateEquipCost(teacher);
 
             return formatNumber(costs[unlocked]);
         },

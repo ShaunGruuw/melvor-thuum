@@ -1,5 +1,5 @@
 export enum ChangeType {
-    ShoutHireCost,
+    ShoutEquipCost,
     Modifiers
 }
 
@@ -8,11 +8,11 @@ export enum ModifierType {
     Hardcore = 'hardcore'
 }
 
-export type ShoutHireCostCallback = (value: number, previousValue: number) => void;
+export type ShoutEquipCostCallback = (value: number, previousValue: number) => void;
 export type ModifierCallback = (value: ModifierType, previousValue: ModifierType) => void;
 
 export class ThruumSettings {
-    private shoutHireCostCallbacks: ShoutHireCostCallback[] = [];
+    private shoutEquipCostCallbacks: ShoutEquipCostCallback[] = [];
     private modifierCallbacks: ModifierCallback[] = [];
 
     constructor(private readonly context: Modding.ModContext) {}
@@ -20,11 +20,11 @@ export class ThruumSettings {
     public init() {
         const that = this;
 
-        this.context.settings.section(getLangString('Thuum_Thruum_Settings_Shout_Hire_Cost')).add([
+        this.context.settings.section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost')).add([
             {
                 type: 'number',
                 name: 'one-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Hire_Cost_1'),
+                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_1'),
                 hint: '',
                 default: 10000,
                 min: 100,
@@ -38,13 +38,13 @@ export class ThruumSettings {
                         return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
                     }
 
-                    that.emitChange(ChangeType.ShoutHireCost, value, previousValue);
+                    that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
                 }
             } as Modding.Settings.NumberConfig,
             {
                 type: 'number',
                 name: 'two-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Hire_Cost_2'),
+                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_2'),
                 hint: '',
                 default: 100000,
                 min: 100,
@@ -58,13 +58,13 @@ export class ThruumSettings {
                         return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
                     }
 
-                    that.emitChange(ChangeType.ShoutHireCost, value, previousValue);
+                    that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
                 }
             } as Modding.Settings.NumberConfig,
             {
                 type: 'number',
                 name: 'three-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Hire_Cost_3'),
+                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_3'),
                 hint: '',
                 default: 1000000,
                 min: 100,
@@ -78,13 +78,13 @@ export class ThruumSettings {
                         return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
                     }
 
-                    that.emitChange(ChangeType.ShoutHireCost, value, previousValue);
+                    that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
                 }
             } as Modding.Settings.NumberConfig,
             {
                 type: 'number',
                 name: 'four-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Hire_Cost_4'),
+                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_4'),
                 hint: '',
                 default: 10000000,
                 min: 100,
@@ -98,7 +98,7 @@ export class ThruumSettings {
                         return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
                     }
 
-                    that.emitChange(ChangeType.ShoutHireCost, value, previousValue);
+                    that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
                 }
             } as Modding.Settings.NumberConfig
         ]);
@@ -125,27 +125,27 @@ export class ThruumSettings {
         } as Modding.Settings.DropdownConfig);
     }
 
-    public get shoutHireCostOne() {
+    public get shoutEquipCostOne() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Hire_Cost'))
+            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
             .get('one-mastery') as number;
     }
 
-    public get shoutHireCostTwo() {
+    public get shoutEquipCostTwo() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Hire_Cost'))
+            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
             .get('two-mastery') as number;
     }
 
-    public get shoutHireCostThree() {
+    public get shoutEquipCostThree() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Hire_Cost'))
+            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
             .get('three-mastery') as number;
     }
 
-    public get shoutHireCostFour() {
+    public get shoutEquipCostFour() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Hire_Cost'))
+            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
             .get('four-mastery') as number;
     }
 
@@ -155,12 +155,12 @@ export class ThruumSettings {
             .get('modifiers') as ModifierType;
     }
 
-    public onChange(type: ChangeType.ShoutHireCost, callback: ShoutHireCostCallback): void;
+    public onChange(type: ChangeType.ShoutEquipCost, callback: ShoutEquipCostCallback): void;
     public onChange(type: ChangeType.Modifiers, callback: ModifierCallback): void;
-    public onChange(type: ChangeType, callback: ShoutHireCostCallback | ModifierCallback) {
+    public onChange(type: ChangeType, callback: ShoutEquipCostCallback | ModifierCallback) {
         switch (type) {
-            case ChangeType.ShoutHireCost:
-                this.shoutHireCostCallbacks.push(callback as ShoutHireCostCallback);
+            case ChangeType.ShoutEquipCost:
+                this.shoutEquipCostCallbacks.push(callback as ShoutEquipCostCallback);
                 break;
             case ChangeType.Modifiers:
                 this.modifierCallbacks.push(callback as ModifierCallback);
@@ -170,8 +170,8 @@ export class ThruumSettings {
 
     private emitChange(type: ChangeType, value: unknown, previousValue: unknown) {
         switch (type) {
-            case ChangeType.ShoutHireCost:
-                for (const callback of this.shoutHireCostCallbacks) {
+            case ChangeType.ShoutEquipCost:
+                for (const callback of this.shoutEquipCostCallbacks) {
                     try {
                         callback(value as number, previousValue as number);
                     } catch {}

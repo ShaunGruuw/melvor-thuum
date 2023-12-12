@@ -64,7 +64,7 @@ The cost for hiring a shout is as follows (assuming no Master cost reduction)
 * 3rd Mastery Unlocked - 1,000,000 GP
 * 4th Mastery Unlocked - 10,000,000 GP
 
-![Hire a Shout](images/Master-shout.png)
+![Equip a Shout](images/Master-shout.png)
 
 ### Drops
 
@@ -350,7 +350,7 @@ Thruum has Ancient Relics
 #3: 1% increased chance to locate Ancient Relics
 #4: +50% Global GP (except Item Sales)
 #5: -20% Thruum Interval
-Master Relic: +1 Shout Hire Limit
+Master Relic: +1 Shout Equip Limit
 
 (Yes, this means you can have 3 mastered shouts)
 

@@ -34,7 +34,7 @@
                                 "value": 500
                             }
                         ],
-                        "decreasedThruumHireCost": 5,
+                        "decreasedThruumEquipCost": 5,
                         "increasedThruumGP": 5
                     }
                 }
@@ -49,7 +49,7 @@
                                 "value": 500
                             }
                         ],
-                        "decreasedThruumHireCost": 5,
+                        "decreasedThruumEquipCost": 5,
                         "increasedThruumGP": 5
                     }
                 }
@@ -60,7 +60,7 @@
         "pages": [
             {
                 "id": "Thruum",
-                "media": "assets/teachers/guitar.png",
+                "media": "https://cdn.melvor.net/core/v018/assets/media/monsters/dragon_red.png",
                 "containerID": "thruum-container",
                 "headerBgClass": "bg-thruum",
                 "hasGameGuide": false,
@@ -862,7 +862,7 @@
                             "value": 500
                         }
                     ],
-                    "decreasedThruumHireCost": 5,
+                    "decreasedThruumEquipCost": 5,
                     "increasedThruumGP": 5
                 }
             }
@@ -1639,7 +1639,7 @@
                         {
                             "level": "90",
                             "descriptionID": 4,
-                            "description": "-5% Shout Hire Cost for this teacher only."
+                            "description": "-5% Shout Equip Cost for this teacher only."
                         },
                         {
                             "level": "99",
