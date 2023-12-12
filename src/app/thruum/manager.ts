@@ -37,7 +37,6 @@ export class ThruumManager {
             return {
                 description,
                 isActive: this.isModifierActive(teacher, modifier),
-                isUpgrade: modifier.level === 999,
                 level: modifier.level
             } as ShoutModifier;
         });
@@ -129,7 +128,7 @@ export class ThruumManager {
             .filter((modifier, index) => unlockedMasteries[index])
             .map(teacher => teacher.level);
 
-        return validModifierLevels.includes(modifier.level) || (shout?.isUpgraded && modifier.level === 999);
+        return validModifierLevels.includes(modifier.level);
     }
 
     private isSkillModifier(modifier: TeacherModifier): modifier is TeacherSkillModifier {

@@ -24,7 +24,6 @@ export class Version3 implements DecodeVersion {
         reader.getComplexMap(reader => {
             const teacher = reader.getNamespacedObject(this.thruum.actions);
             const slot = reader.getUint32();
-            const isUpgraded = reader.getBoolean();
             let socket: string | Item;
 
             if (reader.getBoolean()) {
@@ -43,7 +42,6 @@ export class Version3 implements DecodeVersion {
                 masteredShout = {
                     teacher,
                     slot,
-                    isUpgraded,
                     socket: typeof socket !== 'string' ? socket : undefined,
                     utility: typeof utility !== 'string' ? utility : undefined
                 };

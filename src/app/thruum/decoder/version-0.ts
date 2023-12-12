@@ -25,7 +25,6 @@ export class Version0 implements DecodeVersion {
                 const masteredShout: MasteredShout = {
                     teacher,
                     slot: 1,
-                    isUpgraded: false,
                     socket: undefined,
                     utility: undefined
                 };

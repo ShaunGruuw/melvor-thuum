@@ -197,7 +197,7 @@
                                     "value": 15
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedSummoningMaxHit",
                                     "value": 35
                                 }
@@ -226,7 +226,7 @@
                                     "value": 3
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedSummoningMaxHit",
                                     "value": 5
                                 }
@@ -265,7 +265,7 @@
                                     "value": 15
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedChanceToDoubleItemsSkill",
                                     "skill": "melvorD:Thieving",
                                     "value": 20
@@ -294,7 +294,7 @@
                                     "value": 2
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedChanceToDoubleItemsSkill",
                                     "skill": "melvorD:Thieving",
                                     "value": 2
@@ -333,7 +333,7 @@
                                     "value": 50
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedChanceDoubleHarvest",
                                     "value": 25
                                 }
@@ -360,7 +360,7 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedChanceDoubleHarvest",
                                     "value": 5
                                 }
@@ -398,7 +398,7 @@
                                     "value": 500
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedChanceToApplyDecayCurse",
                                     "value": 20
                                 }
@@ -425,7 +425,7 @@
                                     "value": 100
                                 },
                                 {
-                                    "level": 999,
+                                    "level": 120,
                                     "key": "increasedChanceToApplyDecayCurse",
                                     "value": 1
                                 }

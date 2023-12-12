@@ -67,7 +67,10 @@ export class App {
         this.game.thruum = this.game.registerSkill(this.game.registeredNamespaces.getNamespace('namespace_thuum'), Thruum);
 
         await this.context.gameData.addPackage('data.json');
-
+        const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
+        if(kcm) {
+            
+        }
         if (cloudManager.hasTotHEntitlement) {
             await this.context.gameData.addPackage('data-toth.json');
 

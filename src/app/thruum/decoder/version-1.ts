@@ -39,14 +39,9 @@ export class Version1 implements DecodeVersion {
                 const masteredShout: MasteredShout = {
                     teacher,
                     slot: 1,
-                    isUpgraded: false,
                     socket: undefined,
                     utility: undefined
                 };
-
-                if (reader.getBoolean()) {
-                    masteredShout.isUpgraded = true;
-                }
 
                 this.thruum.shouts.set(teacher, masteredShout);
 
@@ -63,14 +58,9 @@ export class Version1 implements DecodeVersion {
                 const masteredShout: MasteredShout = {
                     teacher,
                     slot: 2,
-                    isUpgraded: false,
                     socket: undefined,
                     utility: undefined
                 };
-
-                if (reader.getBoolean()) {
-                    masteredShout.isUpgraded = true;
-                }
 
                 this.thruum.shouts.set(teacher, masteredShout);
             }

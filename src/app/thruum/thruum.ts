@@ -101,17 +101,13 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             for (const modifier of this.manager.getModifiers(teacher)) {
                 html += `<small class="${modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
 
-                if (!modifier.isActive && !modifier.isUpgrade) {
+                if (!modifier.isActive) {
                     html += `
                     <span>
                         (<img class="skill-icon-xxs mr-1"
                                src="${cdnMedia('assets/media/main/mastery_header.svg')}" />
                                ${modifier.level})
                     </span>`;
-                }
-
-                if (modifier.isUpgrade) {
-                    html += `<img class="skill-icon-xxs mr-1" src="${this.manager.essenceOfThruumIcon}" />`;
                 }
 
                 html += `<span>${modifier.description}</span></small><br />`;
@@ -137,17 +133,13 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             for (const modifier of this.manager.getModifiers(teacher)) {
                 html += `<small class="${modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
 
-                if (!modifier.isActive && !modifier.isUpgrade) {
+                if (!modifier.isActive) {
                     html += `
                     <span>
                         (<img class="skill-icon-xxs mr-1"
                         src="${cdnMedia('assets/media/main/mastery_header.svg')}" />
                         ${modifier.level})
                     </span>`;
-                }
-
-                if (modifier.isUpgrade) {
-                    html += `<img class="skill-icon-xxs mr-1" src="${this.manager.essenceOfThruumIcon}" />`;
                 }
 
                 html += `<span>${modifier.description}</span></small><br />`;
@@ -197,7 +189,6 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
                                 const masteredShout: MasteredShout = {
                                     teacher,
                                     slot: shout?.slot ?? index + 1,
-                                    isUpgraded: false,
                                     socket: undefined,
                                     utility: undefined
                                 };
@@ -571,7 +562,6 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
         writer.writeComplexMap(this.shouts.shouts, (key, value, writer) => {
             writer.writeNamespacedObject(key);
             writer.writeUint32(value.slot);
-            writer.writeBoolean(value.isUpgraded);
 
             writer.writeBoolean(value.socket !== undefined);
 

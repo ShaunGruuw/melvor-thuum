@@ -3,7 +3,6 @@ import { ModifierType } from './settings';
 export interface ShoutModifier {
     description: string;
     isActive: boolean;
-    isUpgrade: boolean;
     level: number;
 }
 
@@ -39,7 +38,6 @@ export interface TeacherData extends BasicSkillRecipeData {
 export interface MasteredShout {
     teacher: Teacher;
     slot: number;
-    isUpgraded: boolean;
     socket: Item;
     utility: Item;
 }
