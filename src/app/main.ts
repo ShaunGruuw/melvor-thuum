@@ -55,7 +55,6 @@ export class App {
         await this.context.loadTemplates('thruum/thruum.html');
         await this.context.loadTemplates('thruum/teacher/teacher.html');
         await this.context.loadTemplates('thruum/shout/shout.html');
-        await this.context.loadTemplates('thruum/equipment/equipment.html');
         await this.context.loadTemplates('thruum/mastery/mastery.html');
         await this.context.loadTemplates('thruum/locked/locked.html');
 

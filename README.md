@@ -822,8 +822,6 @@ Images obtained from the following sources, attribution provided.
 
 <a href="https://www.flaticon.com/free-icons/troubadour">Troubadour icons created by Freepik - Flaticon</a>
 
-<a href="https://www.flaticon.com/free-icons/sheet-thruum" title="sheet thruum icons">Sheet thruum icons created by Freepik - Flaticon</a>
-
 <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Dragon Icons - Flaticon</a>
 
 <a href="https://www.flaticon.com/free-icons/gemstone" title="gemstone icons">Gemstone icons created by Kroffle - Flaticon</a>

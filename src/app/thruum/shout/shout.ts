@@ -1,4 +1,3 @@
-import { EquipmentComponent } from '../equipment/equipment';
 import { Thruum } from '../thruum';
 import { ShoutModifier, MasteredShout } from '../thruum.types';
 
@@ -35,19 +34,6 @@ export function ShoutComponent(thruum: Thruum) {
             if (this.shout) {
                 this.modifiers = thruum.manager.getModifiers(this.shout.teacher);
             }
-        },
-        equipment: function () {
-            const shout = this.shout;
-
-            SwalLocale.fire({
-                html: '<div id="thuum-equipment-container"></div>',
-                showConfirmButton: false,
-                showCancelButton: false,
-                showDenyButton: false,
-                didOpen: popup => {
-                    ui.create(EquipmentComponent(thruum, shout), popup.querySelector('#thuum-equipment-container'));
-                }
-            });
         }
     };
 }

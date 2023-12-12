@@ -6,8 +6,6 @@ declare global {
         decreasedThruumGP: Standard;
         increasedChanceToObtainShrimpWhileTrainingThruum: Standard;
         decreasedChanceToObtainShrimpWhileTrainingThruum: Standard;
-        increasedSheetThruumDropRate: Standard;
-        decreasedSheetThruumDropRate: Standard;
         increasedThruumAdditionalRewardRoll: Standard;
         decreasedThruumAdditionalRewardRoll: Standard;
     }
@@ -23,8 +21,6 @@ declare global {
         decreasedThruumGP: number;
         increasedChanceToObtainShrimpWhileTrainingThruum: number;
         decreasedChanceToObtainShrimpWhileTrainingThruum: number;
-        increasedSheetThruumDropRate: number;
-        decreasedSheetThruumDropRate: number;
         increasedThruumAdditionalRewardRoll: number;
         decreasedThruumAdditionalRewardRoll: number;
         increasedSkillMasteryXPPerVariel: number;
@@ -90,26 +86,6 @@ export class ThuumModifiers {
             description: '-${value}% chance to obtain Shrimp while training Thruum',
             isSkill: false,
             isNegative: false,
-            tags: []
-        };
-
-        modifierData.increasedSheetThruumDropRate = {
-            get langDescription() {
-                return getLangString('Thuum_Thruum_Sheet_Thruum_Drop_Chance_Positive');
-            },
-            description: '+${value}% Sheet Thruum drop chance',
-            isSkill: false,
-            isNegative: false,
-            tags: []
-        };
-
-        modifierData.decreasedSheetThruumDropRate = {
-            get langDescription() {
-                return getLangString('Thuum_Thruum_Sheet_Thruum_Drop_Chance_Negative');
-            },
-            description: '-${value}% Sheet Thruum drop chance',
-            isSkill: false,
-            isNegative: true,
             tags: []
         };
 

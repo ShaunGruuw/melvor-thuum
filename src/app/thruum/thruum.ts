@@ -5,7 +5,6 @@ import { ThruumManager } from './manager';
 import { MasteredShout, Teacher, ThruumSkillData } from './thruum.types';
 import { Decoder } from './decoder/decoder';
 import { MasteredShouts } from './mastered-shouts';
-import { Upgrades } from './equipment/upgrades';
 import { ChangeType, ThruumSettings } from './settings';
 
 import './thruum.scss';
@@ -26,10 +25,8 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
     public masteriesUnlocked = new Map<Teacher, boolean[]>();
 
     private renderedProgressBar?: ProgressBar;
-    private sheetThruumChance = 2;
 
     public readonly manager = new ThruumManager(this, this.game);
-    public upgrades: Upgrades;
 
     constructor(namespace: DataNamespace, public readonly game: Game) {
         super(namespace, 'Thruum', game);
@@ -327,7 +324,6 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
         this.milestones.push(...this.actions.allObjects);
 
         this.sortMilestones();
-        this.upgrades = new Upgrades(this, this.game);
 
         for (const action of this.actions.allObjects) {
             this.masteriesUnlocked.set(action, [true, false, false, false]);
@@ -370,26 +366,6 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
         for (const shout of this.shouts.all()) {
             const modifiers = this.manager.getModifiersForApplication(shout.teacher);
             this.modifiers.addArrayModifiers(modifiers);
-
-            if (shout.socket) {
-                const upgrade = this.upgrades.modifiers.find(
-                    modifier => `namespace_thuum:${modifier.itemId}` === shout.socket.id
-                );
-
-                if (upgrade) {
-                    this.modifiers.addArrayModifiers(upgrade.modifiers);
-                }
-            }
-
-            if (shout.utility) {
-                const upgrade = this.upgrades.modifiers.find(
-                    modifier => `namespace_thuum:${modifier.itemId}` === shout.utility.id
-                );
-
-                if (upgrade) {
-                    this.modifiers.addArrayModifiers(upgrade.modifiers);
-                }
-            }
         }
 
         if (updatePlayer) {
@@ -404,19 +380,6 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
         rewards.setActionInterval(this.actionInterval);
         rewards.addXP(this, this.activeTeacher.baseExperience);
         rewards.addGP(this.manager.getGoldToAward(this.activeTeacher));
-
-        let sheetThruumChance = this.sheetThruumChance;
-
-        for (const shout of this.shouts.all()) {
-            if (shout?.socket?.id === 'namespace_thuum:Diamond_String') {
-                sheetThruumChance +=
-                    this.game.modifiers.increasedSheetThruumDropRate - this.game.modifiers.decreasedSheetThruumDropRate;
-            }
-        }
-
-        if (rollPercentage(sheetThruumChance)) {
-            rewards.addItemByID('namespace_thuum:Sheet_Thruum', 1);
-        }
 
         const shrimpChance =
             this.game.modifiers.increasedChanceToObtainShrimpWhileTrainingThruum -

@@ -99,7 +99,6 @@
                 "insertAt": "After",
                 "afterID": "melvorD:Diamond",
                 "ids": [
-                    "namespace_thuum:Sheet_Thruum",
                     "namespace_thuum:Dragon_Soul",
                     "namespace_thuum:Polished_Topaz_Gem",
                     "namespace_thuum:Polished_Ruby_Gem",
@@ -113,19 +112,6 @@
             }
         ],
         "items": [
-            {
-                "itemType": "Item",
-                "id": "Sheet_Thruum",
-                "name": "Sheet Thruum",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/sheet-thruum.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Used for Thruum upgrades.",
-                "sellsFor": 100
-            },
             {
                 "itemType": "Item",
                 "id": "Dragon_Soul",
@@ -188,7 +174,7 @@
                 "ignoreCompletion": true,
                 "obtainFromItemLog": false,
                 "golbinRaidExclusive": false,
-                "customDescription": "Can be applied to mastered shout teachers. Grants +5% Sheet Thruum drop chance.",
+                "customDescription": "Can be applied to mastered shout teachers.",
                 "sellsFor": 500
             },
             {
@@ -607,133 +593,6 @@
                     }
                 ],
                 "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_III"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Dragon_Soul",
-                "gpCost": 1000000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 50
-                    }
-                ],
-                "rootItemIDs": ["namespace_thuum:Sheet_Thruum"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Polished_Topaz_Gem",
-                "gpCost": 50000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "melvorD:Topaz",
-                        "quantity": 50
-                    },
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 10
-                    }
-                ],
-                "rootItemIDs": ["melvorD:Topaz"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Polished_Ruby_Gem",
-                "gpCost": 50000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "melvorD:Ruby",
-                        "quantity": 50
-                    },
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 10
-                    }
-                ],
-                "rootItemIDs": ["melvorD:Ruby"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Polished_Sapphire_Gem",
-                "gpCost": 50000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "melvorD:Sapphire",
-                        "quantity": 50
-                    },
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 10
-                    }
-                ],
-                "rootItemIDs": ["melvorD:Sapphire"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Diamond_String",
-                "gpCost": 50000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "melvorD:Bowstring",
-                        "quantity": 100
-                    },
-                    {
-                        "id": "melvorD:Diamond",
-                        "quantity": 100
-                    },
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 50
-                    }
-                ],
-                "rootItemIDs": ["melvorD:Bowstring"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Pristine_Leather",
-                "gpCost": 50000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "melvorD:Leather",
-                        "quantity": 100
-                    },
-                    {
-                        "id": "melvorD:Diamond",
-                        "quantity": 100
-                    },
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 50
-                    }
-                ],
-                "rootItemIDs": ["melvorD:Leather"],
-                "isDowngrade": false
-            },
-            {
-                "upgradedItemID": "namespace_thuum:Mystic_Oil",
-                "gpCost": 50000,
-                "scCost": 0,
-                "itemCosts": [
-                    {
-                        "id": "melvorD:Weird_Gloop",
-                        "quantity": 100
-                    },
-                    {
-                        "id": "melvorD:Diamond",
-                        "quantity": 100
-                    },
-                    {
-                        "id": "namespace_thuum:Sheet_Thruum",
-                        "quantity": 50
-                    }
-                ],
-                "rootItemIDs": ["melvorD:Weird_Gloop"],
                 "isDowngrade": false
             }
         ],

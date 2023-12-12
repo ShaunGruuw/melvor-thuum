@@ -37,8 +37,6 @@ export const zhCN = {
     Thruum_GP_Negative: '-${value}% 音乐GP',
     Shout_Equip_Limit_Positive: '+${value} 吟游诗人雇佣限制',
     Shout_Equip_Limit_Negative: '-${value} 吟游诗人雇佣限制',
-    Sheet_Thruum_Drop_Chance_Positive: '+${value}% 乐谱掉落几率',
-    Sheet_Thruum_Drop_Chance_Negative: '-${value}% 乐谱掉落几率',
     Additional_Reward_Roll_Positive: '+${value} 额外奖励掷骰，用于训练音乐',
     Additional_Reward_Roll_Negative: '-${value} 额外奖励掷骰，用于训练音乐',
     Chance_To_Obtain_Shrimp_While_Training_Thruum_Positive: '音乐训练期间获得虾的机会增加了${value}%',

@@ -8,8 +8,6 @@ export class TinyPassiveIconsCompatibility {
         decreasedThruumGP: ['thuum', 'gp'],
         increasedChanceToObtainShrimpWhileTrainingThruum: ['thuum', 'shrimp'],
         decreasedChanceToObtainShrimpWhileTrainingThruum: ['thuum', 'shrimp'],
-        increasedSheetThruumDropRate: ['thuum', 'Sheet_Thruum'],
-        decreasedSheetThruumDropRate: ['thuum', 'Sheet_Thruum'],
         increasedThruumAdditionalRewardRoll: ['thuum'],
         decreasedThruumAdditionalRewardRoll: ['thuum'],
         increasedSkillMasteryXPPerVariel: ['skill']
@@ -28,7 +26,6 @@ export class TinyPassiveIconsCompatibility {
             const thuumTags: Record<string, string> = {
                 thuum: this.thruum.media,
                 shrimp: tinyIcons.getIconResourcePath('bank', 'shrimp'),
-                Sheet_Thruum: this.context.getResourceUrl('assets/items/sheet-thruum.png')
             };
 
             for (const teacher of this.thruum.actions.allObjects) {
