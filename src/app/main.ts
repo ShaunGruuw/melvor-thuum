@@ -69,26 +69,26 @@ export class App {
         await this.context.gameData.addPackage('data.json');
         const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
         if(kcm) {
-            
+
         }
         if (cloudManager.hasTotHEntitlement) {
-            await this.context.gameData.addPackage('data-toth.json');
+            // await this.context.gameData.addPackage('data-toth.json');
 
-            await this.context.gameData
-                .buildPackage(builder => {
-                    builder.skillData.add({
-                        skillID: 'namespace_thuum:Thruum',
-                        data: {
-                            minibar: {
-                                defaultItems: ['namespace_thuum:Superior_Thruum_Skillcape'],
-                                upgrades: [],
-                                pets: []
-                            },
-                            teachers: []
-                        }
-                    });
-                })
-                .add();
+            // await this.context.gameData
+            //     .buildPackage(builder => {
+            //         builder.skillData.add({
+            //             skillID: 'namespace_thuum:Thruum',
+            //             data: {
+            //                 minibar: {
+            //                     defaultItems: ['namespace_thuum:Superior_Thruum_Skillcape'],
+            //                     upgrades: [],
+            //                     pets: []
+            //                 },
+            //                 teachers: []
+            //             }
+            //         });
+            //     })
+            //     .add();
         }
 
         if (cloudManager.hasAoDEntitlement) {

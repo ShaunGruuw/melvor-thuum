@@ -99,15 +99,7 @@
                 "insertAt": "After",
                 "afterID": "melvorD:Diamond",
                 "ids": [
-                    "namespace_thuum:Dragon_Soul",
-                    "namespace_thuum:Polished_Topaz_Gem",
-                    "namespace_thuum:Polished_Ruby_Gem",
-                    "namespace_thuum:Polished_Sapphire_Gem",
-                    "namespace_thuum:Diamond_String",
-                    "namespace_thuum:Pristine_Leather",
-                    "namespace_thuum:Mystic_Oil",
-                    "namespace_thuum:Enchanted_Essence",
-                    "namespace_thuum:Mystic_Essence"
+                    "namespace_thuum:Dragon_Soul"
                 ]
             }
         ],
@@ -123,110 +115,6 @@
                 "obtainFromItemLog": false,
                 "golbinRaidExclusive": false,
                 "customDescription": "Used to upgrade mastered shout teachers. Unlocks a 5th modifier.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Polished_Topaz_Gem",
-                "name": "Polished Topaz Gem",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/polished-topaz-gem.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Can be socketed into mastered shout teachers. Grants +5% Thruum GP.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Polished_Ruby_Gem",
-                "name": "Polished Ruby Gem",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/polished-ruby-gem.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Can be socketed into mastered shout teachers. Grants +5% Thruum Skill XP.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Polished_Sapphire_Gem",
-                "name": "Polished Sapphire Gem",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/polished-Sapphire-gem.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Can be socketed into mastered shout teachers. Grants +5% Thruum Mastery XP.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Diamond_String",
-                "name": "Diamond String",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/diamond-string.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Can be applied to mastered shout teachers.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Pristine_Leather",
-                "name": "Pristine Leather",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/pristine-leather.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Can be applied to mastered shout teachers. Grants -5% Thruum Interval.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Mystic_Oil",
-                "name": "Mystic Oil",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/mystic-oil.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Can be applied to mastered shout teachers. Rolls an additional time for rewards while training Thruum.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Enchanted_Essence",
-                "name": "Enchanted Essence",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/enchanted-essence.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Used to upgrade a Guitar.",
-                "sellsFor": 500
-            },
-            {
-                "itemType": "Item",
-                "id": "Mystic_Essence",
-                "name": "Mystic Essence",
-                "category": "Thruum",
-                "type": "Misc",
-                "media": "assets/items/mystic-essence.png",
-                "ignoreCompletion": true,
-                "obtainFromItemLog": false,
-                "golbinRaidExclusive": false,
-                "customDescription": "Used to upgrade an Enchanted Guitar.",
                 "sellsFor": 500
             },
             {
