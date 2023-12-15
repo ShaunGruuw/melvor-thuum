@@ -1245,7 +1245,7 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedAgilityObstacleCost",
+                                    "key": "decreasedFarmingYield",
                                     "value": 10
                                 },
                                 {
@@ -1254,13 +1254,13 @@
                                     "value": 15
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedSkillIntervalPercent",
                                     "skill": "melvorD:Agility",
                                     "value": 15
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "decreasedAgilityPillarCost",
                                     "value": 10
                                 },
@@ -1273,8 +1273,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedAgilityObstacleCost",
-                                    "value": 5
+                                    "key": "decreasedFarmingYield",
+                                    "value": 25
                                 },
                                 {
                                     "level": 40,
@@ -1282,13 +1282,13 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedSkillIntervalPercent",
                                     "skill": "melvorD:Agility",
                                     "value": 5
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "decreasedAgilityPillarCost",
                                     "value": 5
                                 },
@@ -1312,7 +1312,7 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalEvasion",
+                                    "key": "decreasedAccuracyIfCursed",
                                     "value": 5
                                 },
                                 {
@@ -1321,12 +1321,12 @@
                                     "value": 10
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedDamageReduction",
                                     "value": 5
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedMaxHitpoints",
                                     "value": 5
                                 },
@@ -1339,8 +1339,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalEvasion",
-                                    "value": 2
+                                    "key": "decreasedAccuracyIfCursed",
+                                    "value": 12
                                 },
                                 {
                                     "level": 40,
@@ -1348,12 +1348,12 @@
                                     "value": 2
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedDamageReduction",
                                     "value": 2
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedMaxHitpoints",
                                     "value": 2
                                 },
@@ -1377,7 +1377,7 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedRunecraftingEssencePreservation",
+                                    "key": "decreasedSummoningCreationCharges",
                                     "value": 10
                                 },
                                 {
@@ -1386,12 +1386,12 @@
                                     "value": 1
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedAdditionalRunecraftCountRunes",
                                     "value": 6
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedFlatPrayerCostReduction",
                                     "value": 3
                                 },
@@ -1404,8 +1404,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedRunecraftingEssencePreservation",
-                                    "value": 5
+                                    "key": "decreasedSummoningCreationCharges",
+                                    "value": 20
                                 },
                                 {
                                     "level": 40,
@@ -1413,12 +1413,12 @@
                                     "value": 1
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedAdditionalRunecraftCountRunes",
                                     "value": 2
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedFlatPrayerCostReduction",
                                     "value": 1
                                 },
@@ -1442,8 +1442,8 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedSlayerTaskMonsterAccuracy",
-                                    "value": 5
+                                    "key": "decreasedGPGlobal",
+                                    "value": 2
                                 },
                                 {
                                     "level": 40,
@@ -1451,12 +1451,12 @@
                                     "value": 10
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedSlayerCoins",
                                     "value": 40
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedSlayerAreaEffectNegationFlat",
                                     "value": 25
                                 },
@@ -1470,8 +1470,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedSlayerTaskMonsterAccuracy",
-                                    "value": 2
+                                    "key": "decreasedGPGlobal",
+                                    "value": 10
                                 },
                                 {
                                     "level": 40,
@@ -1479,12 +1479,12 @@
                                     "value": 2
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedSlayerCoins",
                                     "value": 5
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedSlayerAreaEffectNegationFlat",
                                     "value": 5
                                 },
