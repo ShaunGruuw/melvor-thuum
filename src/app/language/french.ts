@@ -65,7 +65,7 @@ export const fr = {
     Teacher_Harp: 'Harpe',
     Teacher_Tambourine: 'Tambourin',
     Teacher_Trumpet: 'Trompette',
-    PET_NAME_Muse: 'Muse',
+    PET_NAME_Dragon: 'Dragon',
     ITEM_NAME_Summoning_Familiar_Shout: 'Shoute',
     ITEM_NAME_Thruum_Skillcape: 'Cape de Musique',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Cape de Musique supérieure',

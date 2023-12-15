@@ -63,7 +63,7 @@ export const es = {
     Teacher_Harp: 'Arpa',
     Teacher_Tambourine: 'Pandereta',
     Teacher_Trumpet: 'Trompeta',
-    PET_NAME_Muse: 'Musa',
+    PET_NAME_Dragon: 'Musa',
     ITEM_NAME_Summoning_Familiar_Shout: 'Shouto',
     ITEM_NAME_Thruum_Skillcape: 'Capa de Habilidad Thruumal',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Capa de Habilidad Thruumal Superior',

@@ -61,7 +61,7 @@ export const ko = {
     Teacher_Harp: '하프',
     Teacher_Tambourine: '탬버린',
     Teacher_Trumpet: '트럼펫',
-    PET_NAME_Muse: '뮤즈',
+    PET_NAME_Dragon: '뮤즈',
     ITEM_NAME_Summoning_Familiar_Shout: '바드',
     ITEM_NAME_Thruum_Skillcape: '음악 스킬케이프',
     ITEM_NAME_Superior_Thruum_Skillcape: '우수한 음악 스킬케이프',

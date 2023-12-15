@@ -63,7 +63,7 @@ export const ru = {
     Teacher_Harp: 'Арфа',
     Teacher_Tambourine: 'Тамбурин',
     Teacher_Trumpet: 'Труба',
-    PET_NAME_Muse: 'Муза',
+    PET_NAME_Dragon: 'Муза',
     ITEM_NAME_Summoning_Familiar_Shout: 'Бард',
     ITEM_NAME_Thruum_Skillcape: 'Мантия музыкального мастерства',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Превосходная мантия музыкального мастерства',

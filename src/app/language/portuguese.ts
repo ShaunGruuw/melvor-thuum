@@ -63,7 +63,7 @@ export const pt = {
     Teacher_Harp: 'Harpa',
     Teacher_Tambourine: 'Pandeireta',
     Teacher_Trumpet: 'Trompete',
-    PET_NAME_Muse: 'Musa',
+    PET_NAME_Dragon: 'Musa',
     ITEM_NAME_Summoning_Familiar_Shout: 'Shouto',
     ITEM_NAME_Thruum_Skillcape: 'Capa de Habilidade de Música',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Capa Superior de Habilidade de Música',

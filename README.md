@@ -221,9 +221,9 @@ The Superior Thruum Skill Cape
 
 ## Pet
 
-The Thruum skill also contains a pet: Muse which provides -0.15s Thruum Interval
+The Thruum skill also contains a pet: Dragon which provides -0.15s Thruum Interval
 
-![Muse](images/muse-pet.png)
+![Dragon](images/dragon-pet.png)
 
 ## Herblore
 
@@ -727,7 +727,7 @@ Trumpet: Unlocked at skill level 115 (TotH Only)
 
 ### 1.6.3
 * fixed concert pass halves dropping more often then intended
-* adjusted the Thruum pet, Muse, to provide a flat -0.15s Thruum Interval from -1% Thruum Interval
+* adjusted the Thruum pet, Dragon, to provide a flat -0.15s Thruum Interval from -1% Thruum Interval
 
 ### 1.6.2
 * fixed message when the concert pass runs out to be more context specific

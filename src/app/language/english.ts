@@ -59,7 +59,7 @@ export const en = {
     Teacher_Harp: 'Harp',
     Teacher_Tambourine: 'Tambourine',
     Teacher_Trumpet: 'Trumpet',
-    PET_NAME_Muse: 'Muse',
+    PET_NAME_Dragon: 'Dragon',
     ITEM_NAME_Summoning_Familiar_Shout: 'Shout',
     ITEM_NAME_Thruum_Skillcape: 'Thruum Skillcape',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Superior Thruum Skillcape',

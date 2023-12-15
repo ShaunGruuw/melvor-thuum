@@ -59,7 +59,7 @@ export const zhTW = {
     Teacher_Harp: '豎琴',
     Teacher_Tambourine: '鈴鼓',
     Teacher_Trumpet: '小號',
-    PET_NAME_Muse: '繆斯',
+    PET_NAME_Dragon: '繆斯',
     ITEM_NAME_Summoning_Familiar_Shout: '吟游诗人',
     ITEM_NAME_Thruum_Skillcape: '音樂技能披肩',
     ITEM_NAME_Superior_Thruum_Skillcape: '高級音樂技能披肩',

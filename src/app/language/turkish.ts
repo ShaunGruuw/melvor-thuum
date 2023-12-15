@@ -63,7 +63,7 @@ export const tr = {
     Teacher_Harp: 'Arp',
     Teacher_Tambourine: 'Zil',
     Teacher_Trumpet: 'Trompet',
-    PET_NAME_Muse: 'Muse',
+    PET_NAME_Dragon: 'Dragon',
     ITEM_NAME_Summoning_Familiar_Shout: 'Shout',
     ITEM_NAME_Thruum_Skillcape: 'Müzik Beceri Pelerini',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Üstün Müzik Beceri Pelerini',

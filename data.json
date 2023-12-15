@@ -721,9 +721,9 @@
         ],
         "pets": [
             {
-                "id": "Muse",
-                "name": "Muse",
-                "media": "assets/muse.png",
+                "id": "Dragon",
+                "name": "Dragon",
+                "media": "assets/dragon.png",
                 "ignoreCompletion": true,
                 "modifiers": {
                     "decreasedSkillInterval": [
@@ -742,7 +742,7 @@
             {
                 "skillID": "namespace_thuum:Thruum",
                 "data": {
-                    "pets": ["namespace_thuum:Muse"],
+                    "pets": ["namespace_thuum:Dragon"],
                     "rareDrops": [
                         {
                             "itemID": "melvorD:Gold_Topaz_Ring",
@@ -785,7 +785,7 @@
                     "minibar": {
                         "defaultItems": ["namespace_thuum:Thruum_Skillcape"],
                         "upgrades": [],
-                        "pets": ["namespace_thuum:Muse"]
+                        "pets": ["namespace_thuum:Dragon"]
                     },
                     "masteryTokenID": "namespace_thuum:Mastery_Token_Thruum",
                     "masteryLevelUnlocks": [

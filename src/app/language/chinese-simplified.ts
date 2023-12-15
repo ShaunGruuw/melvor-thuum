@@ -57,7 +57,7 @@ export const zhCN = {
     Teacher_Harp: '竖琴',
     Teacher_Tambourine: '铃鼓',
     Teacher_Trumpet: '小号',
-    PET_NAME_Muse: '慕斯',
+    PET_NAME_Dragon: '慕斯',
     ITEM_NAME_Summoning_Familiar_Shout: '吟游诗人',
     ITEM_NAME_Thruum_Skillcape: '音乐技能披风',
     ITEM_NAME_Superior_Thruum_Skillcape: '高级音乐技能披风',

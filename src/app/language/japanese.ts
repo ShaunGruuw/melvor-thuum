@@ -60,7 +60,7 @@ export const ja = {
     Teacher_Harp: 'ハープ',
     Teacher_Tambourine: 'タンバリン',
     Teacher_Trumpet: 'トランペット',
-    PET_NAME_Muse: 'ミューズ',
+    PET_NAME_Dragon: 'ミューズ',
     ITEM_NAME_Summoning_Familiar_Shout: 'バード',
     ITEM_NAME_Thruum_Skillcape: '音楽スキルケープ',
     ITEM_NAME_Superior_Thruum_Skillcape: '上位音楽スキルケープ',
