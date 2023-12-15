@@ -834,30 +834,31 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedBirdNestDropRate",
+                                    "key": "",
                                     "value": 5
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillIntervalPercent",
+                                    "key": "increasedMinBirdNestQuantity",
                                     "skill": "melvorD:Firemaking",
-                                    "value": 10
+                                    "value": 2
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedMasteryXP",
                                     "skill": "melvorD:Firemaking",
                                     "value": 15
                                 },
                                 {
-                                    "level": 99,
-                                    "key": "increasedMinBirdNestQuantity",
-                                    "value": 2
+                                    "level": 80,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 10
                                 },
                                 {
                                     "level": 99,
-                                    "key": "freeBonfires",
-                                    "value": 1
+                                    "key": "increasedBirdNestDropRate",
+                                    "value": 5
                                 }
                             ],
                             "hardcoreModifiers": [
