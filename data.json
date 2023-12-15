@@ -1044,7 +1044,7 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedHitpointRegeneration",
+                                    "key": "decreasedDamageDealtIfPoisoned",
                                     "value": 5
                                 },
                                 {
@@ -1053,12 +1053,12 @@
                                     "value": 15
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedEnemyDamageReduction",
                                     "value": 10
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedAutoEatThreshold",
                                     "value": 5
                                 },
@@ -1071,8 +1071,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedHitpointRegeneration",
-                                    "value": 2
+                                    "key": "decreasedDamageDealtIfPoisoned",
+                                    "value": 10
                                 },
                                 {
                                     "level": 40,
@@ -1080,12 +1080,12 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedEnemyDamageReduction",
                                     "value": 2
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedAutoEatThreshold",
                                     "value": 2
                                 },
@@ -1109,7 +1109,7 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalPreservationChance",
+                                    "key": "decreasedGlobalPreservationChance",
                                     "value": 10
                                 },
                                 {
@@ -1118,12 +1118,12 @@
                                     "value": 10
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedChanceToDoubleItemsGlobal",
                                     "value": 10
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedOffItemChance",
                                     "value": 10
                                 },
@@ -1136,8 +1136,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalPreservationChance",
-                                    "value": 5
+                                    "key": "decreasedGlobalPreservationChance",
+                                    "value": 20
                                 },
                                 {
                                     "level": 40,
@@ -1145,12 +1145,12 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedChanceToDoubleItemsGlobal",
                                     "value": 2
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "increasedOffItemChance",
                                     "value": 2
                                 },
@@ -1174,9 +1174,8 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedSkillXP",
-                                    "skill": "melvorD:Crafting",
-                                    "value": 5
+                                    "key": "decreasedAltMagicRunePreservation",
+                                    "value": 15
                                 },
                                 {
                                     "level": 40,
@@ -1185,13 +1184,13 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "doubleItemsSkill",
                                     "skill": "melvorD:Fletching",
                                     "value": 2
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "doubleItemsSkill",
                                     "skill": "melvorD:Crafting",
                                     "value": 2
@@ -1205,9 +1204,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedSkillXP",
-                                    "skill": "melvorD:Crafting",
-                                    "value": 5
+                                    "key": "decreasedAltMagicRunePreservation",
+                                    "value": 25
                                 },
                                 {
                                     "level": 40,
@@ -1216,13 +1214,13 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "doubleItemsSkill",
                                     "skill": "melvorD:Fletching",
                                     "value": 1
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "key": "doubleItemsSkill",
                                     "skill": "melvorD:Crafting",
                                     "value": 1
