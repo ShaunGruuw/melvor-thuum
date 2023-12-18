@@ -49,7 +49,7 @@ declare global {
 }
 
 export class App {
-    constructor(private readonly context: Modding.ModContext, private readonly game: Game) {}
+    constructor(private readonly context: Modding.ModContext, private readonly game: Game) { }
 
     public async init() {
         await this.context.loadTemplates('thruum/thruum.html');
@@ -67,12 +67,28 @@ export class App {
         this.game.thruum = this.game.registerSkill(this.game.registeredNamespaces.getNamespace('namespace_thuum'), Thruum);
 
         await this.context.gameData.addPackage('data.json');
-        const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
-        if(kcm) {
 
-        }
+        const DragonList: any[] = [
+            "melvorD:PratTheProtectorOfSecrets",
+            "melvorD:GreenDragon",
+            "melvorD:BlueDragon",
+            "melvorD:RedDragon",
+            "melvorD:BlackDragon",
+            "melvorD:MalcsTheGuardianOfMelvor",
+            "melvorF:ElderDragon",
+            "melvorF:ChaoticGreaterDragon",
+            "melvorF:HuntingGreaterDragon",
+            "melvorF:WickedGreaterDragon",
+            "melvorF:MalcsTheLeaderOfDragons",
+            "melvorF:GreaterSkeletalDragon",
+        ]
+
         if (cloudManager.hasTotHEntitlement) {
             // await this.context.gameData.addPackage('data-toth.json');
+
+            DragonList.push(
+                "melvorTotH:Kongamato", "melvorTotH:GretYun", "melvorTotH:RaZu",
+            )
 
             // await this.context.gameData
             //     .buildPackage(builder => {
@@ -94,6 +110,53 @@ export class App {
         if (cloudManager.hasAoDEntitlement) {
             // await this.context.gameData.addPackage('data-aod.json');
         }
+
+        this.context.onCharacterLoaded(async () => {
+            const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
+            if (kcm) {
+                const cmim = mod.api.customModifiersInMelvor;
+                cmim.addMonsters("Dragon", DragonList)
+                cmim.forceBaseModTypeActive("Dragon");
+                const cmimDragonList = await cmim.getDragons();
+                const initialPackage = this.context.gameData.buildPackage(builder => {
+                    for (let index = 0; index < cmimDragonList.length; index++) {
+                        builder.monsters.modify({
+                            "id": cmimDragonList[index],
+                            "lootTable": {
+                                "add": [
+                                    {
+                                        "itemID": "namespace_thuum:Dragon_Soul",
+                                        "maxQuantity": 1,
+                                        "minQuantity": 1,
+                                        "weight": 1
+                                    }
+                                ]
+                            }
+                        });
+                    }
+                })
+                initialPackage.add();
+                // this.game.thruum.changesMade = initialPackage
+            } else {
+                for (let index = 0; index < DragonList.length; index++) {
+                    await this.context.gameData.buildPackage(builder => {
+                        builder.monsters.modify({
+                            "id": DragonList[index],
+                            "lootTable": {
+                                "add": [
+                                    {
+                                        "itemID": "namespace_thuum:Dragon_Soul",
+                                        "maxQuantity": 1,
+                                        "minQuantity": 1,
+                                        "weight": 1
+                                    }
+                                ]
+                            }
+                        });
+                    }).add();
+                }
+            }
+        })
 
         this.patchGamemodes(this.game.thruum);
         this.patchUnlock(this.game.thruum);

@@ -122,7 +122,6 @@ export const es = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Poción Generosa de Propina III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Poción Generosa de Propina IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Ficha de Maestría (Música)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Reliquia Thruumal Menor',
     MASTERY_BONUS_Thruum_0: 'Cada nivel proporciona +10 GP adquiridos solo para este teachero.',
     MASTERY_BONUS_Thruum_1: 'Primer modificador de contratación.',
     MASTERY_BONUS_Thruum_2: 'Habilidad para desbloquear el segundo modificador de contratación.',

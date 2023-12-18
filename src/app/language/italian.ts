@@ -124,7 +124,6 @@ export const it = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Pozione di Generosa Gratitudine III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Pozione di Generosa Gratitudine IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Token di Maestria (Thruuma)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Reliquia Minore della Thruuma',
     MASTERY_BONUS_Thruum_0: 'Ogni livello fornisce +10 GP acquisiti solo per questo strumento.',
     MASTERY_BONUS_Thruum_1: 'Primo modificatore di assunzione.',
     MASTERY_BONUS_Thruum_2: 'Abilità di sbloccare il secondo modificatore di assunzione.',

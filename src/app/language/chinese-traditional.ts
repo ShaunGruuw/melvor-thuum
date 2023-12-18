@@ -110,7 +110,6 @@ export const zhTW = {
     ITEM_NAME_Generous_Gratuity_Potion_III: '慷慨小費藥劑 III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: '慷慨小費藥劑 IV',
     ITEM_NAME_Mastery_Token_Thruum: '精通令牌 (音樂)',
-    ITEM_NAME_Thruum_Lesser_Relic: '音樂次級遺物',
     MASTERY_BONUS_Thruum_0: '每個等級僅為此樂器提供 +10 黃金。',
     MASTERY_BONUS_Thruum_1: '首次雇用修飾符。',
     MASTERY_BONUS_Thruum_2: '能夠解鎖第二個雇用修飾符。',

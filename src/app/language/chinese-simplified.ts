@@ -108,7 +108,6 @@ export const zhCN = {
     ITEM_NAME_Generous_Gratuity_Potion_III: '慷慨小费药剂 III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: '慷慨小费药剂 IV',
     ITEM_NAME_Mastery_Token_Thruum: '精通令牌 (音乐)',
-    ITEM_NAME_Thruum_Lesser_Relic: '音乐次级遗物',
     MASTERY_BONUS_Thruum_0: '每级仅提供此乐器的+10 GP。',
     MASTERY_BONUS_Thruum_1: '第一个雇佣修饰符。',
     MASTERY_BONUS_Thruum_2: '解锁第二个雇佣修饰符的能力。',

@@ -113,7 +113,6 @@ export const ko = {
     ITEM_NAME_Generous_Gratuity_Potion_III: '관대한 선물 물약 III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: '관대한 선물 물약 IV',
     ITEM_NAME_Mastery_Token_Thruum: '숙련 토큰 (음악)',
-    ITEM_NAME_Thruum_Lesser_Relic: '음악 작은 유물',
     MASTERY_BONUS_Thruum_0: '각 레벨마다 이 악기에 획득한 GP를 +10 부여합니다.',
     MASTERY_BONUS_Thruum_1: '첫 번째 고용 수정자입니다.',
     MASTERY_BONUS_Thruum_2: '두 번째 고용 수정자를 잠금 해제할 수 있습니다.',

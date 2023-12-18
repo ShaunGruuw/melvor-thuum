@@ -122,7 +122,6 @@ export const pt = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Poção Generosa de Gratificação III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Poção Generosa de Gratificação IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Ficha de Mestria (Música)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Relíquia Menor de Música',
     MASTERY_BONUS_Thruum_0: 'Cada nível concede +10 GP adquirido apenas para este teachero.',
     MASTERY_BONUS_Thruum_1: 'Primeiro modificador de contratação.',
     MASTERY_BONUS_Thruum_2: 'Habilidade para desbloquear o segundo modificador de contratação.',

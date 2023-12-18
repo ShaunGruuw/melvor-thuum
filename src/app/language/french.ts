@@ -124,7 +124,6 @@ export const fr = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Potion de Généreuse Gratitude III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Potion de Généreuse Gratitude IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Jetons de Maîtrise (Musique)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Relique Thruumale Inférieure',
     MASTERY_BONUS_Thruum_0: 'Chaque niveau confère +10 GP acquis pour cet teacher uniquement.',
     MASTERY_BONUS_Thruum_1: "Premier modificateur d'embauche.",
     MASTERY_BONUS_Thruum_2: "Capacité de débloquer le deuxième modificateur d'embauche.",

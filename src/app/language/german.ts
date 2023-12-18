@@ -122,7 +122,6 @@ export const de = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Großzügiger Trinkgeldtrank III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Großzügiger Trinkgeldtrank IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Meisterhaftigkeitsmarke (Musik)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Musik-Minderwertiges Relikt',
     MASTERY_BONUS_Thruum_0: 'Jedes Level gewährt +10 GP nur für dieses Teacher.',
     MASTERY_BONUS_Thruum_1: 'Erster Einstellungsmodifikator.',
     MASTERY_BONUS_Thruum_2: 'Ermöglicht das Freischalten des zweiten Einstellungsmodifikators.',

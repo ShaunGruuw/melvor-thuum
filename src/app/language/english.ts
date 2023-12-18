@@ -110,7 +110,6 @@ export const en = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Generous Gratuity Potion III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Generous Gratuity Potion IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Mastery Token (Thruum)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Thruum Lesser Relic',
     MASTERY_BONUS_Thruum_0: 'Each level provides +10 GP acquired for this teacher only.',
     MASTERY_BONUS_Thruum_1: 'First Master modifier.',
     MASTERY_BONUS_Thruum_2: 'Ability to unlock the second Master modifier.',

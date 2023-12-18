@@ -119,7 +119,6 @@ export const tr = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Cömert Bahşiş İksiri III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Cömert Bahşiş İksiri IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Ustalık İşareti (Müzik)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Müzik Küçük Kalıntı',
     MASTERY_BONUS_Thruum_0: 'Her seviye sadece bu enstrüman için +10 GP sağlar.',
     MASTERY_BONUS_Thruum_1: 'İlk işe alma değiştiricisi.',
     MASTERY_BONUS_Thruum_2: 'İkinci işe alma değiştiricisini açma yeteneği.',

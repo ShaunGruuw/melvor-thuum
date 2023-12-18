@@ -66,7 +66,9 @@
                 "hasGameGuide": false,
                 "canBeDefault": true,
                 "action": "namespace_thuum:Thruum",
-                "skills": ["namespace_thuum:Thruum"]
+                "skills": [
+                    "namespace_thuum:Thruum"
+                ]
             }
         ],
         "bankSortOrder": [
@@ -83,7 +85,9 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorD:Mining_Skillcape",
-                "ids": ["namespace_thuum:Thruum_Skillcape"]
+                "ids": [
+                    "namespace_thuum:Thruum_Skillcape"
+                ]
             },
             {
                 "insertAt": "After",
@@ -130,7 +134,9 @@
                 "sellsFor": 2000,
                 "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
                 "tier": "none",
-                "validSlots": ["Helmet"],
+                "validSlots": [
+                    "Helmet"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [],
                 "equipmentStats": [],
@@ -156,7 +162,9 @@
                 "sellsFor": 2000,
                 "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
                 "tier": "none",
-                "validSlots": ["Platebody"],
+                "validSlots": [
+                    "Platebody"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [],
                 "equipmentStats": [],
@@ -182,7 +190,9 @@
                 "sellsFor": 2000,
                 "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
                 "tier": "none",
-                "validSlots": ["Platelegs"],
+                "validSlots": [
+                    "Platelegs"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [],
                 "equipmentStats": [],
@@ -208,7 +218,9 @@
                 "sellsFor": 2000,
                 "customDescription": "+2% Thruum Skill XP<br><span class=\"text-warning\">With all four Shouts Outfit equipped: +8% Thruum Mastery XP</span>",
                 "tier": "none",
-                "validSlots": ["Boots"],
+                "validSlots": [
+                    "Boots"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [],
                 "equipmentStats": [],
@@ -233,7 +245,9 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 80,
                 "tier": "none",
-                "validSlots": ["Consumable"],
+                "validSlots": [
+                    "Consumable"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [],
                 "equipmentStats": [],
@@ -355,7 +369,10 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 0,
                 "tier": "Tier 1 Summon",
-                "validSlots": ["Summon1", "Summon2"],
+                "validSlots": [
+                    "Summon1",
+                    "Summon2"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [],
                 "equipmentStats": [
@@ -408,7 +425,9 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 250000,
                 "tier": "Skillcape",
-                "validSlots": ["Cape"],
+                "validSlots": [
+                    "Cape"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [
                     {
@@ -454,7 +473,9 @@
                         "quantity": 3
                     }
                 ],
-                "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_I"],
+                "rootItemIDs": [
+                    "namespace_thuum:Generous_Gratuity_Potion_I"
+                ],
                 "isDowngrade": false
             },
             {
@@ -467,7 +488,9 @@
                         "quantity": 3
                     }
                 ],
-                "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_II"],
+                "rootItemIDs": [
+                    "namespace_thuum:Generous_Gratuity_Potion_II"
+                ],
                 "isDowngrade": false
             },
             {
@@ -480,7 +503,9 @@
                         "quantity": 3
                     }
                 ],
-                "rootItemIDs": ["namespace_thuum:Generous_Gratuity_Potion_III"],
+                "rootItemIDs": [
+                    "namespace_thuum:Generous_Gratuity_Potion_III"
+                ],
                 "isDowngrade": false
             }
         ],
@@ -706,7 +731,9 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorD:Mining_Skillcape",
-                "ids": ["namespace_thuum:Thruum_Skillcape"]
+                "ids": [
+                    "namespace_thuum:Thruum_Skillcape"
+                ]
             },
             {
                 "insertAt": "After",
@@ -742,7 +769,9 @@
             {
                 "skillID": "namespace_thuum:Thruum",
                 "data": {
-                    "pets": ["namespace_thuum:Dragon"],
+                    "pets": [
+                        "namespace_thuum:Dragon"
+                    ],
                     "rareDrops": [
                         {
                             "itemID": "melvorD:Gold_Topaz_Ring",
@@ -783,9 +812,13 @@
                         }
                     ],
                     "minibar": {
-                        "defaultItems": ["namespace_thuum:Thruum_Skillcape"],
+                        "defaultItems": [
+                            "namespace_thuum:Thruum_Skillcape"
+                        ],
                         "upgrades": [],
-                        "pets": ["namespace_thuum:Dragon"]
+                        "pets": [
+                            "namespace_thuum:Dragon"
+                        ]
                     },
                     "masteryTokenID": "namespace_thuum:Mastery_Token_Thruum",
                     "masteryLevelUnlocks": [
@@ -830,7 +863,10 @@
                             "maxGP": 141,
                             "productId": "namespace_thuum:Unrelenting_Force",
                             "level": 1,
-                            "skills": ["melvorD:Woodcutting", "melvorD:Firemaking"],
+                            "skills": [
+                                "melvorD:Woodcutting",
+                                "melvorD:Firemaking"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -901,7 +937,10 @@
                             "maxGP": 182,
                             "productId": "namespace_thuum:Animal_Allegiance",
                             "level": 10,
-                            "skills": ["melvorD:Fishing", "melvorD:Cooking"],
+                            "skills": [
+                                "melvorD:Fishing",
+                                "melvorD:Cooking"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -970,7 +1009,10 @@
                             "maxGP": 223,
                             "productId": "namespace_thuum:Cyclone",
                             "level": 20,
-                            "skills": ["melvorD:Mining", "melvorD:Smithing"],
+                            "skills": [
+                                "melvorD:Mining",
+                                "melvorD:Smithing"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1040,7 +1082,9 @@
                             "maxGP": 264,
                             "productId": "namespace_thuum:Become_Ethereal",
                             "level": 30,
-                            "skills": ["melvorD:Hitpoints"],
+                            "skills": [
+                                "melvorD:Hitpoints"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1105,7 +1149,11 @@
                             "maxGP": 305,
                             "productId": "namespace_thuum:Kynes_Peace",
                             "level": 40,
-                            "skills": ["melvorD:Woodcutting", "melvorD:Mining", "melvorD:Firemaking"],
+                            "skills": [
+                                "melvorD:Woodcutting",
+                                "melvorD:Mining",
+                                "melvorD:Firemaking"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1170,7 +1218,10 @@
                             "maxGP": 346,
                             "productId": "namespace_thuum:Slow_Time",
                             "level": 50,
-                            "skills": ["melvorD:Fletching", "melvorD:Crafting"],
+                            "skills": [
+                                "melvorD:Fletching",
+                                "melvorD:Crafting"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1241,7 +1292,9 @@
                             "maxGP": 387,
                             "productId": "namespace_thuum:Whirlwind_Sprint",
                             "level": 60,
-                            "skills": ["melvorD:Agility"],
+                            "skills": [
+                                "melvorD:Agility"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1308,7 +1361,10 @@
                             "maxGP": 428,
                             "productId": "namespace_thuum:Throw_Voice",
                             "level": 70,
-                            "skills": ["melvorD:Defence", "melvorD:Hitpoints"],
+                            "skills": [
+                                "melvorD:Defence",
+                                "melvorD:Hitpoints"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1373,7 +1429,10 @@
                             "maxGP": 469,
                             "productId": "namespace_thuum:Dismay",
                             "level": 80,
-                            "skills": ["melvorD:Runecrafting", "melvorD:Prayer"],
+                            "skills": [
+                                "melvorD:Runecrafting",
+                                "melvorD:Prayer"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1438,7 +1497,9 @@
                             "maxGP": 510,
                             "productId": "namespace_thuum:Battle_Fury",
                             "level": 90,
-                            "skills": ["melvorD:Slayer"],
+                            "skills": [
+                                "melvorD:Slayer"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -1557,12 +1618,17 @@
                             "markMedia": "assets/summoning/shout-mark.png",
                             "nonShardItemCosts": [],
                             "tier": 3,
-                            "skillIDs": ["namespace_thuum:Thruum"]
+                            "skillIDs": [
+                                "namespace_thuum:Thruum"
+                            ]
                         }
                     ],
                     "synergies": [
                         {
-                            "summonIDs": ["melvorF:GolbinThief", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:GolbinThief",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedGPOnEnemyHit": 30,
                                 "increasedGPFromMonstersFlat": 175
@@ -1574,7 +1640,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Occultist", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Occultist",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedGlobalEvasion": 10
                             },
@@ -1588,7 +1657,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Wolf", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Wolf",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedLifesteal": 2
                             },
@@ -1599,7 +1671,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Ent", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Ent",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedChanceAdditionalSkillResource": [
                                     {
@@ -1615,7 +1690,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Mole", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Mole",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedChanceAdditionalSkillResource": [
                                     {
@@ -1631,7 +1709,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Octopus", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Octopus",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedChanceAdditionalSkillResource": [
                                     {
@@ -1647,7 +1728,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Minotaur", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Minotaur",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedMeleeMaxHit": 3,
                                 "increasedMeleeAccuracyBonus": 3
@@ -1659,7 +1743,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Centaur", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Centaur",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedRangedMaxHit": 3,
                                 "increasedRangedAccuracyBonus": 3
@@ -1671,7 +1758,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Witch", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Witch",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedMagicMaxHit": 3,
                                 "increasedMagicAccuracyBonus": 3
@@ -1683,7 +1773,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Pig", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Pig",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedSkillPreservationChance": [
                                     {
@@ -1699,7 +1792,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Crow", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Crow",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedAdditionalRunecraftCountRunes": 2
                             },
@@ -1710,7 +1806,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Leprechaun", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Leprechaun",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedGPFromThievingFlat": 50
                             },
@@ -1722,7 +1821,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Cyclops", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Cyclops",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedSlayerCoins": 10
                             },
@@ -1733,7 +1835,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Yak", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Yak",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedDamageReduction": 1
                             },
@@ -1748,7 +1853,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Unicorn", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Unicorn",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedHitpointRegeneration": 50
                             },
@@ -1759,7 +1867,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Dragon", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Dragon",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedChanceToApplyBurn": 10
                             },
@@ -1770,7 +1881,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Monkey", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Monkey",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedChanceToDoubleItemsSkill": [
                                     {
@@ -1786,7 +1900,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Salamander", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Salamander",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedSkillPreservationChance": [
                                     {
@@ -1802,7 +1919,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Bear", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Bear",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "increasedSkillPreservationChance": [
                                     {
@@ -1818,7 +1938,10 @@
                             ]
                         },
                         {
-                            "summonIDs": ["melvorF:Devil", "namespace_thuum:Shout"],
+                            "summonIDs": [
+                                "melvorF:Devil",
+                                "namespace_thuum:Shout"
+                            ],
                             "modifiers": {
                                 "decreasedSkillIntervalPercent": [
                                     {

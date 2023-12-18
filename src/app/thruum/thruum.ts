@@ -23,6 +23,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
     public settings: ThruumSettings;
     public modifiers = new MappedModifiers();
     public masteriesUnlocked = new Map<Teacher, boolean[]>();
+    public changesMade: any;
 
     private renderedProgressBar?: ProgressBar;
 

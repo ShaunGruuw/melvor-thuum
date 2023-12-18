@@ -124,7 +124,6 @@ export const ru = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Зелье щедрой чаевой III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Зелье щедрой чаевой IV',
     ITEM_NAME_Mastery_Token_Thruum: 'Жетон мастерства (музыка)',
-    ITEM_NAME_Thruum_Lesser_Relic: 'Музыкальная меньшая реликвия',
     MASTERY_BONUS_Thruum_0: 'Каждый уровень дает +10 GP только для этого инструмента.',
     MASTERY_BONUS_Thruum_1: 'Первый модификатор при найме.',
     MASTERY_BONUS_Thruum_2: 'Возможность разблокировать второй модификатор при найме.',
