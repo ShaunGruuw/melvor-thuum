@@ -166,6 +166,7 @@ export const ru = {
     Settings_Base_Shout_Equip_Cost_2: 'Базовая стоимость найма барда с разблокированными 2 модификаторами',
     Settings_Base_Shout_Equip_Cost_3: 'Базовая стоимость найма барда с разблокированными 3 модификаторами',
     Settings_Base_Shout_Equip_Cost_4: 'Базовая стоимость найма барда с разблокированными 4 модификаторами',
+    Settings_Base_Shout_Equip_Cost_5: 'Базовая стоимость найма барда с разблокированными 5 модификаторами',
     Settings_Must_Be_Larger_Then: 'Значение должно быть больше 99',
     Settings_Must_Be_Smaller_Then: 'Значение должно быть меньше 1 000 000 000 000'
 };

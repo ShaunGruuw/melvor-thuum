@@ -108,7 +108,7 @@ export class App {
         }
 
         if (cloudManager.hasAoDEntitlement) {
-            // await this.context.gameData.addPackage('data-aod.json');
+            await this.context.gameData.addPackage('data-aod.json');
         }
 
         this.context.onCharacterLoaded(async () => {

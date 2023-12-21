@@ -89,10 +89,11 @@ export class ThruumManager {
 
     public calculateEquipCost(teacher: Teacher) {
         const MasterCostMap = [
-            this.thruum.settings.shoutEquipCostOne || 10000,
-            this.thruum.settings.shoutEquipCostTwo || 100000,
-            this.thruum.settings.shoutEquipCostThree || 1000000,
-            this.thruum.settings.shoutEquipCostFour || 10000000
+            this.thruum.settings.shoutEquipCostOne || 1000,
+            this.thruum.settings.shoutEquipCostTwo || 10000,
+            this.thruum.settings.shoutEquipCostThree || 100000,
+            this.thruum.settings.shoutEquipCostFour || 10000000,
+            this.thruum.settings.shoutEquipCostFive || 10000000
         ];
         const teacherRef = this.thruum.actions.find(action => action.id === teacher.id);
         const unlocked = this.thruum.masteriesUnlocked.get(teacherRef).filter(isUnlocked => isUnlocked).length;

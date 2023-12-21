@@ -150,6 +150,7 @@ export const zhCN = {
     Settings_Base_Shout_Equip_Cost_2: '两个修饰符解锁时的基础吟游诗人雇佣成本',
     Settings_Base_Shout_Equip_Cost_3: '三个修饰符解锁时的基础吟游诗人雇佣成本',
     Settings_Base_Shout_Equip_Cost_4: '四个修饰符解锁时的基础吟游诗人雇佣成本',
+    Settings_Base_Shout_Equip_Cost_5: '五个修饰符解锁时的基础吟游诗人雇佣成本',
     Settings_Must_Be_Larger_Then: '值必须大于99',
     Settings_Must_Be_Smaller_Then: '值必须小于1,000,000,000,000'
 };

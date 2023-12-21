@@ -100,6 +100,26 @@ export class ThruumSettings {
 
                     that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
                 }
+            } as Modding.Settings.NumberConfig,
+            {
+                type: 'number',
+                name: 'five-mastery',
+                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_5'),
+                hint: '',
+                default: 10000000,
+                min: 100,
+                max: 999999999999,
+                onChange(value: number, previousValue: number) {
+                    if (value < 100) {
+                        return getLangString('Thuum_Thruum_Settings_Must_Be_Larger_Then');
+                    }
+
+                    if (value > 999999999999) {
+                        return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
+                    }
+
+                    that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
+                }
             } as Modding.Settings.NumberConfig
         ]);
 
@@ -147,6 +167,12 @@ export class ThruumSettings {
         return this.context.settings
             .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
             .get('four-mastery') as number;
+    }
+
+    public get shoutEquipCostFive() {
+        return this.context.settings
+            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
+            .get('five-mastery') as number;
     }
 
     public get modifierType() {

@@ -838,12 +838,12 @@
                             "description": "Ability to unlock the second Master modifier."
                         },
                         {
-                            "level": "75",
+                            "level": "60",
                             "descriptionID": 3,
                             "description": "Ability to unlock the third Master modifier."
                         },
                         {
-                            "level": "90",
+                            "level": "80",
                             "descriptionID": 4,
                             "description": "-5% Shout Equip Cost for this teacher only."
                         },
@@ -954,7 +954,7 @@
                                     "value": 10
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedPassiveCookInterval",
                                     "value": 30
                                 },
@@ -983,7 +983,7 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedPassiveCookInterval",
                                     "value": 10
                                 },

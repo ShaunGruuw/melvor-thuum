@@ -164,6 +164,7 @@ export const de = {
     Settings_Base_Shout_Equip_Cost_2: 'Basis Shouten Einstellungskosten mit 2 freigeschalteten Modifikatoren',
     Settings_Base_Shout_Equip_Cost_3: 'Basis Shouten Einstellungskosten mit 3 freigeschalteten Modifikatoren',
     Settings_Base_Shout_Equip_Cost_4: 'Basis Shouten Einstellungskosten mit 4 freigeschalteten Modifikatoren',
+    Settings_Base_Shout_Equip_Cost_5: 'Basis Shouten Einstellungskosten mit 4 freigeschalteten Modifikatoren',
     Settings_Must_Be_Larger_Then: 'Der Wert muss größer als 99 sein',
     Settings_Must_Be_Smaller_Then: 'Der Wert muss kleiner als 1.000.000.000.000 sein'
 };

@@ -161,6 +161,7 @@ export const tr = {
     Settings_Base_Shout_Equip_Cost_2: '2 değiştirici açıldığında temel shouto işe alma maliyeti',
     Settings_Base_Shout_Equip_Cost_3: '3 değiştirici açıldığında temel shouto işe alma maliyeti',
     Settings_Base_Shout_Equip_Cost_4: '4 değiştirici açıldığında temel shouto işe alma maliyeti',
+    Settings_Base_Shout_Equip_Cost_5: '5 değiştirici açıldığında temel shouto işe alma maliyeti',
     Settings_Must_Be_Larger_Then: "Değer 99'dan büyük olmalıdır",
     Settings_Must_Be_Smaller_Then: "Değer 1.000.000.000.000'den küçük olmalıdır"
 };

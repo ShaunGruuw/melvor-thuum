@@ -152,6 +152,7 @@ export const zhTW = {
     Settings_Base_Shout_Equip_Cost_2: '解鎖2個修飾符的基本吟遊詩人雇用成本',
     Settings_Base_Shout_Equip_Cost_3: '解鎖3個修飾符的基本吟遊詩人雇用成本',
     Settings_Base_Shout_Equip_Cost_4: '解鎖4個修飾符的基本吟遊詩人雇用成本',
+    Settings_Base_Shout_Equip_Cost_5: '解鎖5個修飾符的基本吟遊詩人雇用成本',
     Settings_Must_Be_Larger_Then: '值必須大於99',
     Settings_Must_Be_Smaller_Then: '值必須小於1,000,000,000,000'
 };

@@ -166,6 +166,7 @@ export const it = {
     Settings_Base_Shout_Equip_Cost_2: 'Costo di assunzione di base del shouto con 2 modificatori sbloccati',
     Settings_Base_Shout_Equip_Cost_3: 'Costo di assunzione di base del shouto con 3 modificatori sbloccati',
     Settings_Base_Shout_Equip_Cost_4: 'Costo di assunzione di base del shouto con 4 modificatori sbloccati',
+    Settings_Base_Shout_Equip_Cost_5: 'Costo di assunzione di base del shouto con 5 modificatori sbloccati',
     Settings_Must_Be_Larger_Then: 'Il valore deve essere maggiore di 99',
     Settings_Must_Be_Smaller_Then: 'Il valore deve essere minore di 1.000.000.000.000'
 };

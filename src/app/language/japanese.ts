@@ -157,6 +157,8 @@ export const ja = {
     Settings_Base_Shout_Equip_Cost_2: '2つの修飾子が解除された状態での基本バード雇用コスト',
     Settings_Base_Shout_Equip_Cost_3: '3つの修飾子が解除された状態での基本バード雇用コスト',
     Settings_Base_Shout_Equip_Cost_4: '4つの修飾子が解除された状態での基本バード雇用コスト',
+    Settings_Base_Shout_Equip_Cost_5: '5つの修飾子が解除された状態での基本バード雇用コスト',
+
     Settings_Must_Be_Larger_Then: '値は99より大きい必要があります',
     Settings_Must_Be_Smaller_Then: '値は1,000,000,000,000より小さくなる必要があります'
 };

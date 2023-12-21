@@ -155,6 +155,7 @@ export const ko = {
     Settings_Base_Shout_Equip_Cost_2: '2개의 수정자가 해제된 상태의 기본 바드 고용 비용',
     Settings_Base_Shout_Equip_Cost_3: '3개의 수정자가 해제된 상태의 기본 바드 고용 비용',
     Settings_Base_Shout_Equip_Cost_4: '4개의 수정자가 해제된 상태의 기본 바드 고용 비용',
+    Settings_Base_Shout_Equip_Cost_5: '5개의 수정자가 해제된 상태의 기본 바드 고용 비용',
     Settings_Must_Be_Larger_Then: '값은 99보다 커야 합니다',
     Settings_Must_Be_Smaller_Then: '값은 1,000,000,000,000보다 작아야 합니다'
 };

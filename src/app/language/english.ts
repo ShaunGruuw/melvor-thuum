@@ -152,6 +152,7 @@ export const en = {
     Settings_Base_Shout_Equip_Cost_2: 'Base shout Master cost with 2 modifiers unlocked',
     Settings_Base_Shout_Equip_Cost_3: 'Base shout Master cost with 3 modifiers unlocked',
     Settings_Base_Shout_Equip_Cost_4: 'Base shout Master cost with 4 modifiers unlocked',
+    Settings_Base_Shout_Equip_Cost_5: 'Base shout Master cost with 5 modifiers unlocked',
     Settings_Must_Be_Larger_Then: 'Value must be larger then 99',
     Settings_Must_Be_Smaller_Then: 'Value must be smaller then 1,000,000,000,000'
 };

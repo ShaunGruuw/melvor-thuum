@@ -164,6 +164,7 @@ export const pt = {
     Settings_Base_Shout_Equip_Cost_2: 'Custo base de contratação do shouto com 2 modificadores desbloqueados',
     Settings_Base_Shout_Equip_Cost_3: 'Custo base de contratação do shouto com 3 modificadores desbloqueados',
     Settings_Base_Shout_Equip_Cost_4: 'Custo base de contratação do shouto com 4 modificadores desbloqueados',
+    Settings_Base_Shout_Equip_Cost_5: 'Custo base de contratação do shouto com 5 modificadores desbloqueados',
     Settings_Must_Be_Larger_Then: 'O valor deve ser maior que 99',
     Settings_Must_Be_Smaller_Then: 'O valor deve ser menor que 1.000.000.000.000'
 };
