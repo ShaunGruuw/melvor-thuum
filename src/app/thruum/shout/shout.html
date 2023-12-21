@@ -17,7 +17,7 @@
                         <span v-if="!modifier.isActive">
                             (
                             <img class="skill-icon-xxs mr-1" :src="cdnMedia('assets/media/main/mastery_header.svg')" />
-                            <span :class="{ 'text-success': currentMasteryLevel >= modifier.level }">
+                            <span :class="{ 'text-danger' : modifier.level === 1, 'text-success': currentMasteryLevel >= modifier.level }">
                                 {{ modifier.level }}
                             </span>
                             )

@@ -14,7 +14,7 @@
             >
                 <div
                     class="thuum-info font-size-sm"
-                    :class="{ 'text-success': isUnlocked(index), 'thuum-text-grey': !isUnlocked(index) }"
+                    :class="{ 'text-danger': modifier.level === 1, 'text-success': isUnlocked(index), 'thuum-text-grey': !isUnlocked(index) }"
                 >
                     <span v-if="!isUnlocked(index)">
                         (<img class="skill-icon-xxs mr-1" :src="cdnMedia('assets/media/main/mastery_header.svg')" />

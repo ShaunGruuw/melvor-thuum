@@ -100,7 +100,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             </h5>`;
 
             for (const modifier of this.manager.getModifiers(teacher)) {
-                html += `<small class="${modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
+                html += `<small class="${modifier.level === 1 ? 'text-danger' : modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
 
                 if (!modifier.isActive) {
                     html += `
@@ -132,7 +132,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             </h5>`;
 
             for (const modifier of this.manager.getModifiers(teacher)) {
-                html += `<small class="${modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
+                html += `<small class="${modifier.level === 1 ? 'text-danger' : modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
 
                 if (!modifier.isActive) {
                     html += `
