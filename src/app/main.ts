@@ -117,7 +117,7 @@ export class App {
                 const cmim = mod.api.customModifiersInMelvor;
                 cmim.addMonsters("Dragon", DragonList)
                 cmim.forceBaseModTypeActive("Dragon");
-                const cmimDragonList = await cmim.getDragons();
+                const cmimDragonList = await cmim.getMonstersOfType('Dragon');
                 const initialPackage = this.context.gameData.buildPackage(builder => {
                     for (let index = 0; index < cmimDragonList.length; index++) {
                         builder.monsters.modify({
