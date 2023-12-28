@@ -69,43 +69,6 @@ export const fr = {
     ITEM_NAME_Summoning_Familiar_Shout: 'Shoute',
     ITEM_NAME_Thruum_Skillcape: 'Cape de Musique',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Cape de Musique supérieure',
-    ITEM_NAME_Concert_Pass_Half_A: 'Pass Concert Demi (A)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_A: 'Utilisé avec le Pass Concert Demi (B) pour acheter un Pass Concert.',
-    ITEM_NAME_Concert_Pass_Half_B: 'Pass Concert Demi (B)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_B: 'Utilisé avec le Pass Concert Demi (A) pour acheter un Pass Concert.',
-    ITEM_NAME_Concert_Pass: 'Laissez-passer de concert',
-    ITEM_DESCRIPTION_Concert_Pass:
-        "Lorsqu'il est porté et que vous vous entraînez dans la compétence Musique, gagnez de l'XP de compétence par charge dans les compétences prises en charge par l'teacher.",
-    ITEM_NAME_Sheet_Thruum: 'Partitions',
-    ITEM_DESCRIPTION_Sheet_Thruum: 'Utilisé pour les améliorations de Musique.',
-    ITEM_NAME_Dragon_Soul: 'Essence de Musique',
-    ITEM_DESCRIPTION_Dragon_Soul:
-        'Utilisé pour améliorer les teachers de shoute embauchés. Débloque un 5ème modificateur.',
-    ITEM_NAME_Polished_Topaz_Gem: 'Gemme de Topaze Polie',
-    ITEM_DESCRIPTION_Polished_Topaz_Gem:
-        'Peut être insérée dans les teachers de shoute embauchés. Octroie +5% de GP de Musique.',
-    ITEM_NAME_Polished_Ruby_Gem: 'Gemme de Rubis Polie',
-    ITEM_DESCRIPTION_Polished_Ruby_Gem:
-        "Peut être insérée dans les teachers de shoute embauchés. Octroie +5% d'XP de Compétence Musique.",
-    ITEM_NAME_Polished_Sapphire_Gem: 'Gemme de Saphir Polie',
-    ITEM_DESCRIPTION_Polished_Sapphire_Gem:
-        "Peut être insérée dans les teachers de shoute embauchés. Octroie +5% d'XP de Maîtrise Musique.",
-    ITEM_NAME_Diamond_String: 'Corde de Diamant',
-    ITEM_DESCRIPTION_Diamond_String:
-        'Peut être appliquée aux teachers de shoute embauchés. Octroie +5% de chance de chute de Partitions.',
-    ITEM_NAME_Pristine_Leather: 'Cuir Pristine',
-    ITEM_DESCRIPTION_Pristine_Leather:
-        "Peut être appliqué aux teachers de shoute embauchés. Octroie -5% d'Intervalle de Musique.",
-    ITEM_NAME_Mystic_Oil: 'Huile Mystique',
-    ITEM_DESCRIPTION_Mystic_Oil:
-        "Peut être appliquée aux teachers de shoute embauchés. Effectue un lancer supplémentaire pour les récompenses pendant l'entraînement de la Musique.",
-    ITEM_NAME_Enchanted_Essence: 'Essence Enchantée',
-    ITEM_DESCRIPTION_Enchanted_Essence: 'Utilisée pour améliorer une Guitare.',
-    ITEM_NAME_Mystic_Essence: 'Essence Mystique',
-    ITEM_DESCRIPTION_Mystic_Essence: 'Utilisée pour améliorer une Guitare Enchantée.',
-    ITEM_NAME_Guitar: 'Guitare',
-    ITEM_NAME_Enchanted_Guitar: 'Guitare Enchantée',
-    ITEM_NAME_Mystic_Guitar: 'Guitare Mystique',
     ITEM_NAME_Shouts_Hat: 'Chapeau de Shoute',
     ITEM_DESCRIPTION_Shouts_Hat:
         '+2% d\'XP de Compétence Musique<br><span class="text-warning">Avec les quatre pièces de la Tenue de Shoute équipées : +8% d\'XP de Maîtrise Musique</span>',
@@ -135,8 +98,6 @@ export const fr = {
     MASTERY_CHECKPOINT_Thruum_2: 'Intervalle de Musique réduit de 0.25s',
     MASTERY_CHECKPOINT_Thruum_3: "-5% de coût d'embauche de shoute",
     POTION_NAME_Generous_Gratuity_Potion: 'Potion de Généreuse Gratitude',
-    SHOP_NAME_Band_Practice: 'Pratique de groupe',
-    SHOP_DESCRIPTION_Band_Practice: "Débloquez la capacité d'embaucher un shoute supplémentaire en Musique.",
     COMBAT_AREA_NAME_The_Circus: 'Le Cirque',
     MONSTER_NAME_Jester: 'Bouffon',
     MONSTER_NAME_Enchanted_Jester: 'Bouffon Enchanté',

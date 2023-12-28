@@ -68,43 +68,7 @@ export const ptBR = {
     ITEM_NAME_Summoning_Familiar_Shout: 'Shouto',
     ITEM_NAME_Thruum_Skillcape: 'Capa de Habilidade de Música',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Capa Superior de Habilidade de Música',
-    ITEM_NAME_Concert_Pass_Half_A: 'Meio Passe de Concerto (A)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_A: 'Usado com Meio Passe de Concerto (B) para comprar um Passe de Concerto.',
-    ITEM_NAME_Concert_Pass_Half_B: 'Meio Passe de Concerto (B)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_B: 'Usado com Meio Passe de Concerto (A) para comprar um Passe de Concerto.',
-    ITEM_NAME_Concert_Pass: 'Passe de Concerto',
-    ITEM_DESCRIPTION_Concert_Pass:
-        'Ao usar e treinar a habilidade de Música, ganhe XP de Habilidade por carga nas habilidades que o teachero suporta.',
-    ITEM_NAME_Sheet_Thruum: 'Partitura',
-    ITEM_DESCRIPTION_Sheet_Thruum: 'Usado para melhorias de Música.',
-    ITEM_NAME_Essence_Of_Thruum: 'Essência da Música',
-    ITEM_DESCRIPTION_Essence_Of_Thruum:
-        'Usado para melhorar teacheros de shoutos contratados. Destrava um 5º modificador.',
-    ITEM_NAME_Polished_Topaz_Gem: 'Gema de Topázio Polida',
-    ITEM_DESCRIPTION_Polished_Topaz_Gem:
-        'Pode ser engastada em teacheros de shoutos contratados. Concede +5% de GP de Música.',
-    ITEM_NAME_Polished_Ruby_Gem: 'Gema de Rubi Polida',
-    ITEM_DESCRIPTION_Polished_Ruby_Gem:
-        'Pode ser engastada em teacheros de shoutos contratados. Concede +5% de XP de Habilidade de Música.',
-    ITEM_NAME_Polished_Sapphire_Gem: 'Gema de Safira Polida',
-    ITEM_DESCRIPTION_Polished_Sapphire_Gem:
-        'Pode ser engastada em teacheros de shoutos contratados. Concede +5% de XP de Mestre de Música.',
-    ITEM_NAME_Diamond_String: 'Corda de Diamante',
-    ITEM_DESCRIPTION_Diamond_String:
-        'Pode ser aplicada em teacheros de shoutos contratados. Concede +5% de chance de obtenção de Partitura.',
-    ITEM_NAME_Pristine_Leather: 'Couro Impecável',
-    ITEM_DESCRIPTION_Pristine_Leather:
-        'Pode ser aplicado em teacheros de shoutos contratados. Concede -5% de Intervalo de Música.',
-    ITEM_NAME_Mystic_Oil: 'Óleo Místico',
-    ITEM_DESCRIPTION_Mystic_Oil:
-        'Pode ser aplicado em teacheros de shoutos contratados. Faz uma rolagem adicional para recompensas durante o treinamento de Música.',
-    ITEM_NAME_Enchanted_Essence: 'Essência Encantada',
-    ITEM_DESCRIPTION_Enchanted_Essence: 'Usado para melhorar uma Guitarra.',
-    ITEM_NAME_Mystic_Essence: 'Essência Mística',
-    ITEM_DESCRIPTION_Mystic_Essence: 'Usado para melhorar uma Guitarra Encantada.',
-    ITEM_NAME_Guitar: 'Guitarra',
-    ITEM_NAME_Enchanted_Guitar: 'Guitarra Encantada',
-    ITEM_NAME_Mystic_Guitar: 'Guitarra Mística',
+    
     ITEM_NAME_Shouts_Hat: 'Chapéu de Shouto',
     ITEM_DESCRIPTION_Shouts_Hat:
         "+2% de XP de Habilidade de Música<br><span class='text-warning'>Com o conjunto completo de Roupas de Shouto equipadas: +8% de XP de Mestre de Música</span>",
@@ -134,8 +98,6 @@ export const ptBR = {
     MASTERY_CHECKPOINT_Thruum_2: 'Intervalo de Música reduzido em 0.25s',
     MASTERY_CHECKPOINT_Thruum_3: '-5% de Custo de Contratação de Shouto',
     POTION_NAME_Generous_Gratuity_Potion: 'Poção de Gratificação Generosa',
-    SHOP_NAME_Band_Practice: 'Prática de Banda',
-    SHOP_DESCRIPTION_Band_Practice: 'Desbloqueie a habilidade de contratar um shouto adicional na Música.',
     COMBAT_AREA_NAME_The_Circus: 'O Circo',
     MONSTER_NAME_Jester: 'Bobo da Corte',
     MONSTER_NAME_Enchanted_Jester: 'Bobo da Corte Encantado',

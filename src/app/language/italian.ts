@@ -67,45 +67,6 @@ export const it = {
     ITEM_NAME_Summoning_Familiar_Shout: 'Shouto',
     ITEM_NAME_Thruum_Skillcape: 'Cappa della Thruuma',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Cappa Superiore della Thruuma',
-    ITEM_NAME_Concert_Pass_Half_A: 'Passaggio per Concerto Metà (A)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_A:
-        'Utilizzato con Passaggio per Concerto Metà (B) per acquistare un Passaggio per Concerto.',
-    ITEM_NAME_Concert_Pass_Half_B: 'Passaggio per Concerto Metà (B)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_B:
-        'Utilizzato con Passaggio per Concerto Metà (A) per acquistare un Passaggio per Concerto.',
-    ITEM_NAME_Concert_Pass: 'Passaggio per Concerto',
-    ITEM_DESCRIPTION_Concert_Pass:
-        "Indossato durante l'allenamento della skill Thruuma, ottieni XP della skill per carica nelle skill supportate dallo strumento.",
-    ITEM_NAME_Sheet_Thruum: 'Partitura',
-    ITEM_DESCRIPTION_Sheet_Thruum: 'Usata per potenziare la Thruuma.',
-    ITEM_NAME_Essence_Of_Thruum: 'Essenza della Thruuma',
-    ITEM_DESCRIPTION_Essence_Of_Thruum:
-        'Usata per potenziare gli strumenti dei shouti assunti. Sblocca un quinto modificatore.',
-    ITEM_NAME_Polished_Topaz_Gem: 'Gemma di Topazio Lucidata',
-    ITEM_DESCRIPTION_Polished_Topaz_Gem:
-        'Può essere incastonata negli strumenti dei shouti assunti. Conferisce +5% di GP Thruuma.',
-    ITEM_NAME_Polished_Ruby_Gem: 'Gemma di Rubino Lucidata',
-    ITEM_DESCRIPTION_Polished_Ruby_Gem:
-        'Può essere incastonata negli strumenti dei shouti assunti. Conferisce +5% di XP Skill Thruuma.',
-    ITEM_NAME_Polished_Sapphire_Gem: 'Gemma di Zaffiro Lucidata',
-    ITEM_DESCRIPTION_Polished_Sapphire_Gem:
-        'Può essere incastonata negli strumenti dei shouti assunti. Conferisce +5% di XP Maestria Thruuma.',
-    ITEM_NAME_Diamond_String: 'Corda di Diamante',
-    ITEM_DESCRIPTION_Diamond_String:
-        'Può essere applicata agli strumenti dei shouti assunti. Conferisce +5% di possibilità di rilascio Partiture.',
-    ITEM_NAME_Pristine_Leather: 'Pelle Pristine',
-    ITEM_DESCRIPTION_Pristine_Leather:
-        'Può essere applicata agli strumenti dei shouti assunti. Conferisce -5% di Intervallo Thruuma.',
-    ITEM_NAME_Mystic_Oil: 'Olio Mistico',
-    ITEM_DESCRIPTION_Mystic_Oil:
-        "Può essere applicato agli strumenti dei shouti assunti. Esegue un rilancio aggiuntivo per le ricompense durante l'allenamento della Thruuma.",
-    ITEM_NAME_Enchanted_Essence: 'Essenza Incantata',
-    ITEM_DESCRIPTION_Enchanted_Essence: 'Usata per potenziare una Chitarra.',
-    ITEM_NAME_Mystic_Essence: 'Essenza Mistica',
-    ITEM_DESCRIPTION_Mystic_Essence: 'Usata per potenziare una Chitarra Incantata.',
-    ITEM_NAME_Guitar: 'Chitarra',
-    ITEM_NAME_Enchanted_Guitar: 'Chitarra Incantata',
-    ITEM_NAME_Mystic_Guitar: 'Chitarra Mistica',
     ITEM_NAME_Shouts_Hat: 'Cappello dei Shouti',
     ITEM_DESCRIPTION_Shouts_Hat:
         '+2% di XP Skill Thruuma<br><span class="text-warning">Con tutti e quattro gli indumenti dei Shouti equipaggiati: +8% di XP Maestria Thruuma</span>',
@@ -135,8 +96,6 @@ export const it = {
     MASTERY_CHECKPOINT_Thruum_2: 'Intervallo Thruuma ridotto di 0,25 secondi',
     MASTERY_CHECKPOINT_Thruum_3: '-5% di costo di assunzione dei shouti',
     POTION_NAME_Generous_Gratuity_Potion: 'Pozione di Generosa Gratitudine',
-    SHOP_NAME_Band_Practice: 'Esercitazione Band',
-    SHOP_DESCRIPTION_Band_Practice: 'Sblocca la capacità di assumere un shout aggiuntivo in Thruuma.',
     COMBAT_AREA_NAME_The_Circus: 'Il Circo',
     MONSTER_NAME_Jester: 'Giullare',
     MONSTER_NAME_Enchanted_Jester: 'Giullare Incantato',

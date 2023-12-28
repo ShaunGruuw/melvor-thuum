@@ -67,43 +67,6 @@ export const de = {
     ITEM_NAME_Summoning_Familiar_Shout: 'Shoutenbeschwörung',
     ITEM_NAME_Thruum_Skillcape: 'Musik-Fertigkeitscape',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Überlegenes Musik-Fertigkeitscape',
-    ITEM_NAME_Concert_Pass_Half_A: 'Konzertpass (Hälfte A)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_A: 'Wird mit Konzertpass (Hälfte B) verwendet, um einen Konzertpass zu kaufen.',
-    ITEM_NAME_Concert_Pass_Half_B: 'Konzertpass (Hälfte B)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_B: 'Wird mit Konzertpass (Hälfte A) verwendet, um einen Konzertpass zu kaufen.',
-    ITEM_NAME_Concert_Pass: 'Konzertpass',
-    ITEM_DESCRIPTION_Concert_Pass:
-        'Beim Tragen und Trainieren der Musikfertigkeit erhält man Fertigkeits-EP pro Ladung in den Fertigkeiten, die das Teacher unterstützt.',
-    ITEM_NAME_Sheet_Thruum: 'Notenblatt',
-    ITEM_DESCRIPTION_Sheet_Thruum: 'Wird für Musik-Upgrades verwendet.',
-    ITEM_NAME_Essence_Of_Thruum: 'Essenz der Musik',
-    ITEM_DESCRIPTION_Essence_Of_Thruum:
-        'Wird verwendet, um angestellte Shouten-Teachere aufzuwerten. Schaltet einen 5. Modifikator frei.',
-    ITEM_NAME_Polished_Topaz_Gem: 'Geschliffener Topas-Edelstein',
-    ITEM_DESCRIPTION_Polished_Topaz_Gem:
-        'Kann in angestellte Shouten-Teachere eingesetzt werden. Gewährt +5 % Musik-GP.',
-    ITEM_NAME_Polished_Ruby_Gem: 'Geschliffener Rubin-Edelstein',
-    ITEM_DESCRIPTION_Polished_Ruby_Gem:
-        'Kann in angestellte Shouten-Teachere eingesetzt werden. Gewährt +5 % Musik-Fertigkeits-EP.',
-    ITEM_NAME_Polished_Sapphire_Gem: 'Geschliffener Saphir-Edelstein',
-    ITEM_DESCRIPTION_Polished_Sapphire_Gem:
-        'Kann in angestellte Shouten-Teachere eingesetzt werden. Gewährt +5 % Musik-Meisterung-EP.',
-    ITEM_NAME_Diamond_String: 'Diamantsaite',
-    ITEM_DESCRIPTION_Diamond_String:
-        'Kann auf angestellte Shouten-Teachere aufgebracht werden. Gewährt +5 % Notenblatt-Drop-Chance.',
-    ITEM_NAME_Pristine_Leather: 'Makelloses Leder',
-    ITEM_DESCRIPTION_Pristine_Leather:
-        'Kann auf angestellte Shouten-Teachere aufgebracht werden. Gewährt -5 % Musik-Intervall.',
-    ITEM_NAME_Mystic_Oil: 'Mystisches Öl',
-    ITEM_DESCRIPTION_Mystic_Oil:
-        'Kann auf angestellte Shouten-Teachere aufgebracht werden. Wirft beim Musizieren zusätzlich nach Belohnungen.',
-    ITEM_NAME_Enchanted_Essence: 'Verzauberte Essenz',
-    ITEM_DESCRIPTION_Enchanted_Essence: 'Wird verwendet, um eine Gitarre aufzuwerten.',
-    ITEM_NAME_Mystic_Essence: 'Mystische Essenz',
-    ITEM_DESCRIPTION_Mystic_Essence: 'Wird verwendet, um eine verzauberte Gitarre aufzuwerten.',
-    ITEM_NAME_Guitar: 'Gitarre',
-    ITEM_NAME_Enchanted_Guitar: 'Verzauberte Gitarre',
-    ITEM_NAME_Mystic_Guitar: 'Mystische Gitarre',
     ITEM_NAME_Shouts_Hat: 'Shoutenhut',
     ITEM_DESCRIPTION_Shouts_Hat:
         '+2 % Musik-Fertigkeits-EP<br><span class="text-warning">Bei Tragen des vollständigen Shouten-Outfits: +8 % Musik-Meisterung-EP</span>',
@@ -133,8 +96,6 @@ export const de = {
     MASTERY_CHECKPOINT_Thruum_2: 'Verringerung des Musik-Intervalls um 0,25 s',
     MASTERY_CHECKPOINT_Thruum_3: '-5 % Shouten-Einstellungskosten',
     POTION_NAME_Generous_Gratuity_Potion: 'Großzügiger Trinkgeldtrank',
-    SHOP_NAME_Band_Practice: 'Bandprobe',
-    SHOP_DESCRIPTION_Band_Practice: 'Freischaltung der Möglichkeit, einen zusätzlichen Shoute in der Musik anzuheuern.',
     COMBAT_AREA_NAME_The_Circus: 'Der Zirkus',
     MONSTER_NAME_Jester: 'Hofnarr',
     MONSTER_NAME_Enchanted_Jester: 'Verzauberter Hofnarr',

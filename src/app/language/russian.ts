@@ -67,45 +67,7 @@ export const ru = {
     ITEM_NAME_Summoning_Familiar_Shout: 'Бард',
     ITEM_NAME_Thruum_Skillcape: 'Мантия музыкального мастерства',
     ITEM_NAME_Superior_Thruum_Skillcape: 'Превосходная мантия музыкального мастерства',
-    ITEM_NAME_Concert_Pass_Half_A: 'Пропуск на концерт (половина A)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_A:
-        'Используется с пропуском на концерт (половина B) для покупки пропуска на концерт.',
-    ITEM_NAME_Concert_Pass_Half_B: 'Пропуск на концерт (половина B)',
-    ITEM_DESCRIPTION_Concert_Pass_Half_B:
-        'Используется с пропуском на концерт (половина A) для покупки пропуска на концерт.',
-    ITEM_NAME_Concert_Pass: 'Пропуск на концерт',
-    ITEM_DESCRIPTION_Concert_Pass:
-        'Когда надет и проходит обучение умения Музыка, получите опыт умения за каждое заряд в умениях, которые поддерживает инструмент.',
-    ITEM_NAME_Sheet_Thruum: 'Ноты',
-    ITEM_DESCRIPTION_Sheet_Thruum: 'Используются для улучшения музыки.',
-    ITEM_NAME_Essence_Of_Thruum: 'Сущность музыки',
-    ITEM_DESCRIPTION_Essence_Of_Thruum:
-        'Используется для улучшения нанятых инструментов барда. Разблокирует 5-й модификатор.',
-    ITEM_NAME_Polished_Topaz_Gem: 'Полированный топазовый камень',
-    ITEM_DESCRIPTION_Polished_Topaz_Gem:
-        'Может быть установлен в нанятые инструменты барда. Предоставляет +5% GP музыки.',
-    ITEM_NAME_Polished_Ruby_Gem: 'Полированный рубиновый камень',
-    ITEM_DESCRIPTION_Polished_Ruby_Gem:
-        'Может быть установлен в нанятые инструменты барда. Предоставляет +5% XP музыки.',
-    ITEM_NAME_Polished_Sapphire_Gem: 'Полированный сапфировый камень',
-    ITEM_DESCRIPTION_Polished_Sapphire_Gem:
-        'Может быть установлен в нанятые инструменты барда. Предоставляет +5% XP мастерства музыки.',
-    ITEM_NAME_Diamond_String: 'Алмазная струна',
-    ITEM_DESCRIPTION_Diamond_String:
-        'Может быть применена к нанятым инструментам барда. Предоставляет +5% шанс выпадения нотного листа.',
-    ITEM_NAME_Pristine_Leather: 'Безупречная кожа',
-    ITEM_DESCRIPTION_Pristine_Leather:
-        'Может быть применена к нанятым инструментам барда. Предоставляет -5% интервал музыки.',
-    ITEM_NAME_Mystic_Oil: 'Мистическое масло',
-    ITEM_DESCRIPTION_Mystic_Oil:
-        'Может быть применено к нанятым инструментам барда. Прокрутка дополнительного раза для наград при обучении музыки.',
-    ITEM_NAME_Enchanted_Essence: 'Зачарованная сущность',
-    ITEM_DESCRIPTION_Enchanted_Essence: 'Используется для улучшения гитары.',
-    ITEM_NAME_Mystic_Essence: 'Мистическая сущность',
-    ITEM_DESCRIPTION_Mystic_Essence: 'Используется для улучшения зачарованной гитары.',
-    ITEM_NAME_Guitar: 'Гитара',
-    ITEM_NAME_Enchanted_Guitar: 'Зачарованная гитара',
-    ITEM_NAME_Mystic_Guitar: 'Мистическая гитара',
+    
     ITEM_NAME_Shouts_Hat: 'Шляпа барда',
     ITEM_DESCRIPTION_Shouts_Hat:
         "+2% XP музыки<br><span class='text-warning'>Если надет весь комплект Барда: +8% XP мастерства музыки</span>",
@@ -135,8 +97,6 @@ export const ru = {
     MASTERY_CHECKPOINT_Thruum_2: 'Сокращен интервал музыки на 0,25 секунды.',
     MASTERY_CHECKPOINT_Thruum_3: '-5% стоимость найма барда',
     POTION_NAME_Generous_Gratuity_Potion: 'Зелье щедрой чаевой',
-    SHOP_NAME_Band_Practice: 'Репетиция группы',
-    SHOP_DESCRIPTION_Band_Practice: 'Разблокирует возможность найма дополнительного барда в музыке.',
     COMBAT_AREA_NAME_The_Circus: 'Цирк',
     MONSTER_NAME_Jester: 'Шут',
     MONSTER_NAME_Enchanted_Jester: 'Зачарованный шут',
