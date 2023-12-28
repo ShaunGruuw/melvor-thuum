@@ -870,12 +870,12 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedChanceGoldenStardust",
-                                    "value": 10
+                                    "key": "decreasedThievingStealth",
+                                    "value": 100
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedMinBirdNestQuantity",
+                                    "key": "increasedChanceForArrowShaftsWoodcutting",
                                     "skill": "melvorD:Woodcutting",
                                     "value": 2
                                 },
@@ -893,7 +893,8 @@
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedBirdNestDropRate",
+                                    "key": "increasedWoodcuttingGemChance",
+                                    "skill": "melvorD:Woodcutting",
                                     "value": 5
                                 }
                             ],
