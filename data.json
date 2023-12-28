@@ -876,7 +876,7 @@
                                 {
                                     "level": 40,
                                     "key": "increasedMinBirdNestQuantity",
-                                    "skill": "melvorD:Firemaking",
+                                    "skill": "melvorD:Woodcutting",
                                     "value": 2
                                 },
                                 {
@@ -906,7 +906,7 @@
                                 {
                                     "level": 40,
                                     "key": "increasedMinBirdNestQuantity",
-                                    "skill": "melvorD:Firemaking",
+                                    "skill": "melvorD:Woodcutting",
                                     "value": 1
                                 },
                                 {

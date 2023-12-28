@@ -71,6 +71,22 @@ export class ThruumManager {
             });
     }
 
+    public getGoldToTake(teacher: Teacher) {
+        const component = this.thruum.userInterface.teachers.get(teacher);
+        const minRoll = component.getMinGPRoll();
+        const maxRoll = component.getMaxGPRoll();
+
+        let gpToTake = rollInteger(minRoll, maxRoll);
+        let gpMultiplier = 1;
+
+        const increasedGPModifier = component.getGPModifier();
+
+        gpMultiplier *= 1 + increasedGPModifier / 100;
+        gpToTake = Math.floor((gpToTake/gpMultiplier)  - this.game.modifiers.increasedGPFlat);
+
+        return gpToTake;
+    }
+
     public getGoldToAward(teacher: Teacher) {
         const component = this.thruum.userInterface.teachers.get(teacher);
         const minRoll = component.getMinGPRoll();

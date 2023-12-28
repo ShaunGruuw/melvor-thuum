@@ -368,29 +368,15 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
     public get actionRewards() {
         const rewards = new Rewards(this.game);
         const actionEvent = new ThruumActionEvent(this, this.activeTeacher);
+        const costs = new Costs(this.game);
 
         rewards.setActionInterval(this.actionInterval);
         rewards.addXP(this, this.activeTeacher.baseExperience);
-        rewards.addGP(this.manager.getGoldToAward(this.activeTeacher));
-
-        const shrimpChance =
-            this.game.modifiers.increasedChanceToObtainShrimpWhileTrainingThruum -
-            this.game.modifiers.decreasedChanceToObtainShrimpWhileTrainingThruum;
-
-        if (rollPercentage(shrimpChance)) {
-            rewards.addItemByID('melvorD:Shrimp', 1);
-        }
-
+        // rewards.addGP(this.manager.getGoldToAward(this.activeTeacher));
+        costs.addGP(this.manager.getGoldToTake(this.activeTeacher))        
+        costs.consumeCosts()
+        
         this.addCommonRewards(rewards);
-
-        for (const shout of this.shouts.all()) {
-            if (shout?.socket?.id === 'namespace_thuum:Mystic_Oil') {
-                this.rollForRareDrops(this.actionLevel, rewards);
-                this.addMasteryToken(rewards);
-                this.rollForPets(this.currentActionInterval);
-                this.game.summoning.rollMarksForSkill(this, this.masteryModifiedInterval);
-            }
-        }
 
         actionEvent.interval = this.currentActionInterval;
         this._events.emit('action', actionEvent);
