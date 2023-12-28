@@ -1,9 +1,9 @@
-import { Thruum } from '../thruum';
-import { Teacher } from '../thruum.types';
+import { Thuum } from '../thuum';
+import { Teacher } from '../thuum.types';
 
 import './teacher.scss';
 
-export function TeacherComponent(thruum: Thruum, teacher: Teacher, game: Game) {
+export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
     return {
         $template: '#thuum-teacher',
         teacher,
@@ -62,16 +62,16 @@ export function TeacherComponent(thruum: Thruum, teacher: Teacher, game: Game) {
             this.maxGP = maxGP;
         },
         train: function () {
-            thruum.train(teacher);
+            thuum.train(teacher);
         },
         Master: function () {
-            thruum.Master(teacher);
+            thuum.Master(teacher);
         },
         mastery: function () {
-            thruum.unlockMastery(teacher);
+            thuum.unlockMastery(teacher);
         },
         updateDisabled: function () {
-            this.disabled = thruum.shouts.isMastered(teacher);
+            this.disabled = thuum.shouts.isMastered(teacher);
         },
         getSkillIcons: function () {
             return teacher.skills.map(skillId => {
@@ -82,11 +82,12 @@ export function TeacherComponent(thruum: Thruum, teacher: Teacher, game: Game) {
             return Math.max(1, Math.floor(this.getMaxGPRoll() / 100));
         },
         getMaxGPRoll: function () {
-            return teacher.maxGP + thruum.getMasteryLevel(teacher) * 10;
+            // Each levels provides + 10 GP is here [thuum.getMasteryLevel(teacher) * 10;]
+            return teacher.maxGP + thuum.getMasteryLevel(teacher) * 10;
         },
         getGPModifier: function () {
             let increasedGPModifier = game.modifiers.increasedGPGlobal - game.modifiers.decreasedGPGlobal;
-            increasedGPModifier += game.modifiers.increasedThruumGP - game.modifiers.decreasedThruumGP;
+            increasedGPModifier += game.modifiers.increasedThuumGP - game.modifiers.decreasedThuumGP;
 
             return increasedGPModifier;
         }

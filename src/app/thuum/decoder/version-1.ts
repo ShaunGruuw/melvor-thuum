@@ -1,5 +1,5 @@
-import { Thruum } from '../thruum';
-import { MasteredShout } from '../thruum.types';
+import { Thuum } from '../thuum';
+import { MasteredShout } from '../thuum.types';
 import { DecodeVersion } from './version.base';
 
 /**
@@ -7,7 +7,7 @@ import { DecodeVersion } from './version.base';
  * Had to do save version as string so I could read it properly.
  */
 export class Version1 implements DecodeVersion {
-    constructor(private readonly thruum: Thruum) {}
+    constructor(private readonly thuum: Thuum) {}
 
     public decode(reader: SaveWriter) {
         const skillVersionString = reader.getString();
@@ -21,20 +21,20 @@ export class Version1 implements DecodeVersion {
         }
 
         if (reader.getBoolean()) {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
 
-            if (typeof teacher === 'string' || teacher.level > this.thruum.level) {
-                this.thruum.shouldResetAction = true;
+            if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
+                this.thuum.shouldResetAction = true;
             } else {
-                this.thruum.activeTeacher = teacher;
+                this.thuum.activeTeacher = teacher;
             }
         }
 
         if (reader.getBoolean()) {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
 
-            if (typeof teacher === 'string' || teacher.level > this.thruum.level) {
-                this.thruum.shouldResetAction = true;
+            if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
+                this.thuum.shouldResetAction = true;
             } else {
                 const masteredShout: MasteredShout = {
                     teacher,
@@ -43,17 +43,17 @@ export class Version1 implements DecodeVersion {
                     utility: undefined
                 };
 
-                this.thruum.shouts.set(teacher, masteredShout);
+                this.thuum.shouts.set(teacher, masteredShout);
 
-                this.thruum.userInterface.shout1.setShout(masteredShout);
+                this.thuum.userInterface.shout1.setShout(masteredShout);
             }
         }
 
         if (reader.getBoolean()) {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
 
-            if (typeof teacher === 'string' || teacher.level > this.thruum.level) {
-                this.thruum.shouldResetAction = true;
+            if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
+                this.thuum.shouldResetAction = true;
             } else {
                 const masteredShout: MasteredShout = {
                     teacher,
@@ -62,12 +62,12 @@ export class Version1 implements DecodeVersion {
                     utility: undefined
                 };
 
-                this.thruum.shouts.set(teacher, masteredShout);
+                this.thuum.shouts.set(teacher, masteredShout);
             }
         }
 
-        if (this.thruum.shouldResetAction) {
-            this.thruum.resetActionState();
+        if (this.thuum.shouldResetAction) {
+            this.thuum.resetActionState();
         }
     }
 }

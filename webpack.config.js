@@ -32,6 +32,7 @@ module.exports = {
                 { from: 'data.json', to: 'data.json', noErrorOnMissing: true },
                 { from: 'data-toth.json', to: 'data-toth.json', noErrorOnMissing: true },
                 { from: 'data-aod.json', to: 'data-aod.json', noErrorOnMissing: true },
+                { from: 'data-cmim.json', to: 'data-cmim.json', noErrorOnMissing: true },
                 { from: 'src/assets', to: 'assets', noErrorOnMissing: true }
             ]
         })

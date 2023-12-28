@@ -1,7 +1,7 @@
-import { Thruum } from './thruum';
-import { ShoutModifier, Teacher, TeacherModifier, TeacherSkillModifier } from './thruum.types';
+import { Thuum } from './thuum';
+import { ShoutModifier, Teacher, TeacherModifier, TeacherSkillModifier } from './thuum.types';
 
-export class ThruumManager {
+export class ThuumManager {
     public get elements() {
         const fragment = new DocumentFragment();
 
@@ -10,11 +10,11 @@ export class ThruumManager {
         return [...fragment.children];
     }
 
-    public get essenceOfThruumIcon() {
+    public get essenceOfThuumIcon() {
         return this.game.items.getObjectByID('namespace_thuum:Dragon_Soul')?.media;
     }
 
-    constructor(private readonly thruum: Thruum, private readonly game: Game) {}
+    constructor(private readonly thuum: Thuum, private readonly game: Game) {}
 
     /** Gets modifier metadata. */
     public getModifiers(teacher: Teacher) {
@@ -22,7 +22,7 @@ export class ThruumManager {
             return [] as ShoutModifier[];
         }
 
-        return teacher.modifiers(this.thruum.settings.modifierType).map(modifier => {
+        return teacher.modifiers(this.thuum.settings.modifierType).map(modifier => {
             let description = '';
 
             if (this.isSkillModifier(modifier)) {
@@ -44,12 +44,12 @@ export class ThruumManager {
 
     /** Gets modifiers and constructs object needed to apply the modifier to the player. */
     public getModifiersForApplication(teacher: Teacher) {
-        if (this.thruum.level < teacher.level) {
+        if (this.thuum.level < teacher.level) {
             return [];
         }
 
         return teacher
-            .modifiers(this.thruum.settings.modifierType)
+            .modifiers(this.thuum.settings.modifierType)
             .filter(modifier => this.isModifierActive(teacher, modifier))
             .map(modifier => {
                 if ('skill' in modifier) {
@@ -72,7 +72,7 @@ export class ThruumManager {
     }
 
     public getGoldToTake(teacher: Teacher) {
-        const component = this.thruum.userInterface.teachers.get(teacher);
+        const component = this.thuum.userInterface.teachers.get(teacher);
         const minRoll = component.getMinGPRoll();
         const maxRoll = component.getMaxGPRoll();
 
@@ -88,7 +88,7 @@ export class ThruumManager {
     }
 
     public getGoldToAward(teacher: Teacher) {
-        const component = this.thruum.userInterface.teachers.get(teacher);
+        const component = this.thuum.userInterface.teachers.get(teacher);
         const minRoll = component.getMinGPRoll();
         const maxRoll = component.getMaxGPRoll();
 
@@ -105,26 +105,26 @@ export class ThruumManager {
 
     public calculateEquipCost(teacher: Teacher) {
         const MasterCostMap = [
-            this.thruum.settings.shoutEquipCostOne || 1000,
-            this.thruum.settings.shoutEquipCostTwo || 10000,
-            this.thruum.settings.shoutEquipCostThree || 100000,
-            this.thruum.settings.shoutEquipCostFour || 10000000,
-            this.thruum.settings.shoutEquipCostFive || 10000000
+            this.thuum.settings.shoutEquipCostOne || 1000,
+            this.thuum.settings.shoutEquipCostTwo || 10000,
+            this.thuum.settings.shoutEquipCostThree || 100000,
+            this.thuum.settings.shoutEquipCostFour || 10000000,
+            this.thuum.settings.shoutEquipCostFive || 10000000
         ];
-        const teacherRef = this.thruum.actions.find(action => action.id === teacher.id);
-        const unlocked = this.thruum.masteriesUnlocked.get(teacherRef).filter(isUnlocked => isUnlocked).length;
+        const teacherRef = this.thuum.actions.find(action => action.id === teacher.id);
+        const unlocked = this.thuum.masteriesUnlocked.get(teacherRef).filter(isUnlocked => isUnlocked).length;
 
         return { costs: MasterCostMap, unlocked };
     }
 
     public getEquipCostModifier(teacher: Teacher) {
-        let modifier = this.game.modifiers.increasedThruumEquipCost - this.game.modifiers.decreasedThruumEquipCost;
+        let modifier = this.game.modifiers.increasedThuumEquipCost - this.game.modifiers.decreasedThuumEquipCost;
 
-        if (this.thruum.isPoolTierActive(3)) {
+        if (this.thuum.isPoolTierActive(3)) {
             modifier -= 5;
         }
 
-        const masteryLevel = this.thruum.getMasteryLevel(teacher);
+        const masteryLevel = this.thuum.getMasteryLevel(teacher);
 
         if (masteryLevel >= 90) {
             modifier -= 5;
@@ -134,14 +134,14 @@ export class ThruumManager {
     }
 
     private isModifierActive(teacher: Teacher, modifier: TeacherModifier) {
-        teacher = this.thruum.actions.find(action => action.id === teacher.id);
+        teacher = this.thuum.actions.find(action => action.id === teacher.id);
 
-        let unlockedMasteries = this.thruum.masteriesUnlocked.get(teacher);
+        let unlockedMasteries = this.thuum.masteriesUnlocked.get(teacher);
 
-        const shout = this.thruum.shouts.get(teacher);
+        const shout = this.thuum.shouts.get(teacher);
 
         const validModifierLevels = teacher
-            .modifiers(this.thruum.settings.modifierType)
+            .modifiers(this.thuum.settings.modifierType)
             .filter((modifier, index) => unlockedMasteries[index])
             .map(teacher => teacher.level);
 

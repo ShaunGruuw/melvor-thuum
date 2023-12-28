@@ -1,39 +1,39 @@
-import { ThruumActionEvent } from './event';
+import { ThuumActionEvent } from './event';
 import { UserInterface } from './user-interface';
 import { MasteryComponent } from './mastery/mastery';
-import { ThruumManager } from './manager';
-import { MasteredShout, Teacher, ThruumSkillData } from './thruum.types';
+import { ThuumManager } from './manager';
+import { MasteredShout, Teacher, ThuumSkillData } from './thuum.types';
 import { Decoder } from './decoder/decoder';
 import { MasteredShouts } from './mastered-shouts';
-import { ChangeType, ThruumSettings } from './settings';
+import { ChangeType, ThuumSettings } from './settings';
 
-import './thruum.scss';
+import './thuum.scss';
 
-export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
+export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public readonly version = 4;
     public readonly _media = 'https://cdn.melvor.net/core/v018/assets/media/monsters/dragon_red.png';
     public readonly _events = window.mitt();
     public readonly on = this._events.on;
     public readonly off = this._events.off;
-    public readonly renderQueue = new ThruumRenderQueue();
+    public readonly renderQueue = new ThuumRenderQueue();
 
     public activeTeacher: Teacher;
     public shouts = new MasteredShouts(this);
     public userInterface: UserInterface;
-    public settings: ThruumSettings;
+    public settings: ThuumSettings;
     public modifiers = new MappedModifiers();
     public masteriesUnlocked = new Map<Teacher, boolean[]>();
     public changesMade: any;
 
     private renderedProgressBar?: ProgressBar;
 
-    public readonly manager = new ThruumManager(this, this.game);
+    public readonly manager = new ThuumManager(this, this.game);
 
     constructor(namespace: DataNamespace, public readonly game: Game) {
-        super(namespace, 'Thruum', game);
+        super(namespace, 'Thuum', game);
     }
 
-    public registerData(namespace: DataNamespace, data: ThruumSkillData) {
+    public registerData(namespace: DataNamespace, data: ThuumSkillData) {
         super.registerData(namespace, data);
 
         if (data.teachers) {
@@ -44,7 +44,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
     }
 
     public get name() {
-        return getLangString('Thuum_Thruum_Thruum');
+        return getLangString('Thuum_Thuum_Thuum');
     }
 
     public get actionLevel() {
@@ -122,7 +122,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             });
         } else {
             let html = `<h5 class="font-w400 text-combat-smoke font-size-sm mb-2">
-            ${getLangString('Thuum_Thruum_Would_You_Like_To_Equip_This_Shout')}
+            ${getLangString('Thuum_Thuum_Would_You_Like_To_Equip_This_Shout')}
             <img class="teacher-icon align-middle" src="${teacher.media}" />
             ${teacher.name}
             </h5>
@@ -147,7 +147,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
             }
 
             html += `<h5 class="font-w600 text-danger font-size-sm mt-3 mb-1">${getLangString(
-                'Thuum_Thruum_This_Will_Replace_The_Mastered_Shout'
+                'Thuum_Thuum_This_Will_Replace_The_Mastered_Shout'
             )}</h5>`;
 
             const shout1 = this.shouts.get(1);
@@ -156,8 +156,8 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
 
             const getText = (shout: MasteredShout) =>
                 shout
-                    ? templateLangString('Thuum_Thruum_Replace', { name: shout.teacher.name })
-                    : getLangString('Thuum_Thruum_Equip');
+                    ? templateLangString('Thuum_Thuum_Replace', { name: shout.teacher.name })
+                    : getLangString('Thuum_Thuum_Equip');
 
             html += `<div class="shout-Master-footer mt-3"><button type="button" class="shout-1-confirm font-size-xs btn btn-primary m-1" aria-label="" value="shout-1" style="display: inline-block;">${getText(
                 shout1
@@ -264,7 +264,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
         }
     }
 
-    public initSettings(settings: ThruumSettings) {
+    public initSettings(settings: ThuumSettings) {
         this.settings = settings;
 
         this.settings.onChange(ChangeType.Modifiers, () => {
@@ -367,7 +367,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
 
     public get actionRewards() {
         const rewards = new Rewards(this.game);
-        const actionEvent = new ThruumActionEvent(this, this.activeTeacher);
+        const actionEvent = new ThuumActionEvent(this, this.activeTeacher);
         const costs = new Costs(this.game);
 
         rewards.setActionInterval(this.actionInterval);
@@ -593,7 +593,7 @@ export class Thruum extends GatheringSkill<Teacher, ThruumSkillData> {
     }
 }
 
-export class ThruumRenderQueue extends GatheringSkillRenderQueue<Teacher> {
+export class ThuumRenderQueue extends GatheringSkillRenderQueue<Teacher> {
     grants = false;
     gpRange = false;
     shoutModifiers = false;

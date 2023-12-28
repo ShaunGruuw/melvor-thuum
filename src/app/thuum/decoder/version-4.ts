@@ -1,9 +1,9 @@
-import { Thruum } from '../thruum';
-import { MasteredShout } from '../thruum.types';
+import { Thuum } from '../thuum';
+import { MasteredShout } from '../thuum.types';
 import { DecodeVersion } from './version.base';
 
 export class Version4 implements DecodeVersion {
-    constructor(private readonly game: Game, private readonly thruum: Thruum) {}
+    constructor(private readonly game: Game, private readonly thuum: Thuum) {}
 
     public decode(reader: SaveWriter) {
         const version = reader.getUint32();
@@ -13,16 +13,16 @@ export class Version4 implements DecodeVersion {
         }
 
         if (reader.getBoolean()) {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
-            if (typeof teacher === 'string' || teacher.level > this.thruum.level) {
-                this.thruum.shouldResetAction = true;
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
+            if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
+                this.thuum.shouldResetAction = true;
             } else {
-                this.thruum.activeTeacher = teacher;
+                this.thuum.activeTeacher = teacher;
             }
         }
 
         reader.getArray(reader => {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
 
             if (typeof teacher !== 'string') {
                 const masteriesUnlocked: boolean[] = [];
@@ -32,12 +32,12 @@ export class Version4 implements DecodeVersion {
                     masteriesUnlocked.push(isUnlocked);
                 });
 
-                this.thruum.masteriesUnlocked.set(teacher, masteriesUnlocked);
+                this.thuum.masteriesUnlocked.set(teacher, masteriesUnlocked);
             }
         });
 
         reader.getComplexMap(reader => {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
             const slot = reader.getUint32();
             let socket: string | Item;
 
@@ -61,7 +61,7 @@ export class Version4 implements DecodeVersion {
                     utility: typeof utility !== 'string' ? utility : undefined
                 };
 
-                this.thruum.shouts.set(teacher, masteredShout);
+                this.thuum.shouts.set(teacher, masteredShout);
             }
 
             return {
@@ -70,8 +70,8 @@ export class Version4 implements DecodeVersion {
             };
         });
 
-        const shout1 = this.thruum.shouts.get(1);
+        const shout1 = this.thuum.shouts.get(1);
 
-        this.thruum.userInterface.shout1.setShout(shout1);
+        this.thuum.userInterface.shout1.setShout(shout1);
     }
 }

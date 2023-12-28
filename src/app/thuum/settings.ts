@@ -11,7 +11,7 @@ export enum ModifierType {
 export type ShoutEquipCostCallback = (value: number, previousValue: number) => void;
 export type ModifierCallback = (value: ModifierType, previousValue: ModifierType) => void;
 
-export class ThruumSettings {
+export class ThuumSettings {
     private shoutEquipCostCallbacks: ShoutEquipCostCallback[] = [];
     private modifierCallbacks: ModifierCallback[] = [];
 
@@ -20,22 +20,22 @@ export class ThruumSettings {
     public init() {
         const that = this;
 
-        this.context.settings.section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost')).add([
+        this.context.settings.section(getLangString('Thuum_Thuum_Settings_Shout_Equip_Cost')).add([
             {
                 type: 'number',
                 name: 'one-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_1'),
+                label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_1'),
                 hint: '',
                 default: 10000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
                     if (value < 100) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Larger_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Larger_Then');
                     }
 
                     if (value > 999999999999) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Smaller_Then');
                     }
 
                     that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
@@ -44,18 +44,18 @@ export class ThruumSettings {
             {
                 type: 'number',
                 name: 'two-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_2'),
+                label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_2'),
                 hint: '',
                 default: 100000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
                     if (value < 100) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Larger_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Larger_Then');
                     }
 
                     if (value > 999999999999) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Smaller_Then');
                     }
 
                     that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
@@ -64,18 +64,18 @@ export class ThruumSettings {
             {
                 type: 'number',
                 name: 'three-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_3'),
+                label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_3'),
                 hint: '',
                 default: 1000000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
                     if (value < 100) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Larger_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Larger_Then');
                     }
 
                     if (value > 999999999999) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Smaller_Then');
                     }
 
                     that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
@@ -84,18 +84,18 @@ export class ThruumSettings {
             {
                 type: 'number',
                 name: 'four-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_4'),
+                label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_4'),
                 hint: '',
                 default: 10000000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
                     if (value < 100) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Larger_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Larger_Then');
                     }
 
                     if (value > 999999999999) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Smaller_Then');
                     }
 
                     that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
@@ -104,18 +104,18 @@ export class ThruumSettings {
             {
                 type: 'number',
                 name: 'five-mastery',
-                label: getLangString('Thuum_Thruum_Settings_Base_Shout_Equip_Cost_5'),
+                label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_5'),
                 hint: '',
                 default: 10000000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
                     if (value < 100) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Larger_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Larger_Then');
                     }
 
                     if (value > 999999999999) {
-                        return getLangString('Thuum_Thruum_Settings_Must_Be_Smaller_Then');
+                        return getLangString('Thuum_Thuum_Settings_Must_Be_Smaller_Then');
                     }
 
                     that.emitChange(ChangeType.ShoutEquipCost, value, previousValue);
@@ -123,20 +123,20 @@ export class ThruumSettings {
             } as Modding.Settings.NumberConfig
         ]);
 
-        this.context.settings.section(getLangString('Thuum_Thruum_Settings_Modifiers')).add({
+        this.context.settings.section(getLangString('Thuum_Thuum_Settings_Modifiers')).add({
             type: 'dropdown',
             name: 'modifiers',
-            label: getLangString('Thuum_Thruum_Settings_Modifier_Scale'),
+            label: getLangString('Thuum_Thuum_Settings_Modifier_Scale'),
             hint: '',
             default: ModifierType.Standard,
             options: [
                 {
                     value: ModifierType.Standard,
-                    display: getLangString('Thuum_Thruum_Settings_Modifier_Standard')
+                    display: getLangString('Thuum_Thuum_Settings_Modifier_Standard')
                 },
                 {
                     value: ModifierType.Hardcore,
-                    display: getLangString('Thuum_Thruum_Settings_Modifier_Hardcore')
+                    display: getLangString('Thuum_Thuum_Settings_Modifier_Hardcore')
                 }
             ],
             onChange(value, previousValue) {
@@ -147,37 +147,37 @@ export class ThruumSettings {
 
     public get shoutEquipCostOne() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
+            .section(getLangString('Thuum_Thuum_Settings_Shout_Equip_Cost'))
             .get('one-mastery') as number;
     }
 
     public get shoutEquipCostTwo() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
+            .section(getLangString('Thuum_Thuum_Settings_Shout_Equip_Cost'))
             .get('two-mastery') as number;
     }
 
     public get shoutEquipCostThree() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
+            .section(getLangString('Thuum_Thuum_Settings_Shout_Equip_Cost'))
             .get('three-mastery') as number;
     }
 
     public get shoutEquipCostFour() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
+            .section(getLangString('Thuum_Thuum_Settings_Shout_Equip_Cost'))
             .get('four-mastery') as number;
     }
 
     public get shoutEquipCostFive() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Shout_Equip_Cost'))
+            .section(getLangString('Thuum_Thuum_Settings_Shout_Equip_Cost'))
             .get('five-mastery') as number;
     }
 
     public get modifierType() {
         return this.context.settings
-            .section(getLangString('Thuum_Thruum_Settings_Modifiers'))
+            .section(getLangString('Thuum_Thuum_Settings_Modifiers'))
             .get('modifiers') as ModifierType;
     }
 

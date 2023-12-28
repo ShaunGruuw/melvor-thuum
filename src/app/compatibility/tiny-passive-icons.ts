@@ -1,19 +1,19 @@
-import { Thruum } from '../thruum/thruum';
+import { Thuum } from '../thuum/thuum';
 
 export class TinyPassiveIconsCompatibility {
     private readonly tinyIconTags = {
-        increasedThruumEquipCost: ['thuum', 'gp'],
-        decreasedThruumEquipCost: ['thuum', 'gp'],
-        increasedThruumGP: ['thuum', 'gp'],
-        decreasedThruumGP: ['thuum', 'gp'],
-        increasedChanceToObtainShrimpWhileTrainingThruum: ['thuum', 'shrimp'],
-        decreasedChanceToObtainShrimpWhileTrainingThruum: ['thuum', 'shrimp'],
-        increasedThruumAdditionalRewardRoll: ['thuum'],
-        decreasedThruumAdditionalRewardRoll: ['thuum'],
+        increasedThuumEquipCost: ['thuum', 'gp'],
+        decreasedThuumEquipCost: ['thuum', 'gp'],
+        increasedThuumGP: ['thuum', 'gp'],
+        decreasedThuumGP: ['thuum', 'gp'],
+        increasedChanceToObtainShrimpWhileTrainingThuum: ['thuum', 'shrimp'],
+        decreasedChanceToObtainShrimpWhileTrainingThuum: ['thuum', 'shrimp'],
+        increasedThuumAdditionalRewardRoll: ['thuum'],
+        decreasedThuumAdditionalRewardRoll: ['thuum'],
         increasedSkillMasteryXPPerVariel: ['skill']
     };
 
-    constructor(private readonly context: Modding.ModContext, private readonly thruum: Thruum) {}
+    constructor(private readonly context: Modding.ModContext, private readonly thuum: Thuum) {}
 
     public patch() {
         this.context.onModsLoaded(() => {
@@ -24,15 +24,15 @@ export class TinyPassiveIconsCompatibility {
             const tinyIcons = mod.api.tinyIcons;
 
             const thuumTags: Record<string, string> = {
-                thuum: this.thruum.media,
+                thuum: this.thuum.media,
                 shrimp: tinyIcons.getIconResourcePath('bank', 'shrimp'),
             };
 
-            for (const teacher of this.thruum.actions.allObjects) {
+            for (const teacher of this.thuum.actions.allObjects) {
                 thuumTags[teacher.localID] = teacher.media;
             }
 
-            for (const rareDrop of this.thruum.rareDrops) {
+            for (const rareDrop of this.thuum.rareDrops) {
                 thuumTags[rareDrop.item.localID] = rareDrop.item.media;
             }
 

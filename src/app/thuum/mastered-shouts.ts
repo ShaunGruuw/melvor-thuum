@@ -1,10 +1,10 @@
-import { Thruum } from './thruum';
-import { Teacher, MasteredShout } from './thruum.types';
+import { Thuum } from './thuum';
+import { Teacher, MasteredShout } from './thuum.types';
 
 export class MasteredShouts {
     public readonly shouts = new Map<Teacher, MasteredShout>();
 
-    constructor(private readonly thruum: Thruum) {}
+    constructor(private readonly thuum: Thuum) {}
 
     public get(teacher: Teacher): MasteredShout | undefined;
     public get(slot: number): MasteredShout | undefined;
@@ -14,7 +14,7 @@ export class MasteredShouts {
         if (typeof slotOrTeacher === 'number') {
             masteredShout = Array.from(this.shouts.values()).find(shout => shout.slot === slotOrTeacher);
         } else {
-            const shout = this.thruum.actions.getObjectByID(slotOrTeacher.id);
+            const shout = this.thuum.actions.getObjectByID(slotOrTeacher.id);
 
             masteredShout = this.shouts.get(shout);
         }
@@ -23,7 +23,7 @@ export class MasteredShouts {
     }
 
     public set(key: Teacher, value: MasteredShout) {
-        const shout = this.thruum.actions.getObjectByID(key.id);
+        const shout = this.thuum.actions.getObjectByID(key.id);
 
         this.shouts.set(shout, value);
     }
@@ -33,7 +33,7 @@ export class MasteredShouts {
     }
 
     public remove(key: Teacher) {
-        const shout = this.thruum.actions.getObjectByID(key.id);
+        const shout = this.thuum.actions.getObjectByID(key.id);
 
         this.shouts.delete(shout);
     }
@@ -43,7 +43,7 @@ export class MasteredShouts {
     }
 
     public isMastered(teacher: Teacher) {
-        const shout = this.thruum.actions.getObjectByID(teacher.id);
+        const shout = this.thuum.actions.getObjectByID(teacher.id);
 
         return this.shouts.has(shout);
     }

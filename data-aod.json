@@ -4,24 +4,24 @@
     "data": {
         "ancientRelics": [
             {
-                "id": "ThruumRelic1",
-                "name": "Thruum Relic 1",
-                "skillID": "namespace_thuum:Thruum",
+                "id": "ThuumRelic1",
+                "name": "Thuum Relic 1",
+                "skillID": "namespace_thuum:Thuum",
                 "number": 1,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
                     "increasedMasteryXP": [
                         {
-                            "skillID": "namespace_thuum:Thruum",
+                            "skillID": "namespace_thuum:Thuum",
                             "value": 50
                         }
                     ]
                 }
             },
             {
-                "id": "ThruumRelic2",
-                "name": "Thruum Relic 2",
-                "skillID": "namespace_thuum:Thruum",
+                "id": "ThuumRelic2",
+                "name": "Thuum Relic 2",
+                "skillID": "namespace_thuum:Thuum",
                 "number": 2,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
@@ -29,9 +29,9 @@
                 }
             },
             {
-                "id": "ThruumRelic3",
-                "name": "Thruum Relic 3",
-                "skillID": "namespace_thuum:Thruum",
+                "id": "ThuumRelic3",
+                "name": "Thuum Relic 3",
+                "skillID": "namespace_thuum:Thuum",
                 "number": 3,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
@@ -39,9 +39,9 @@
                 }
             },
             {
-                "id": "ThruumRelic4",
-                "name": "Thruum Relic 4",
-                "skillID": "namespace_thuum:Thruum",
+                "id": "ThuumRelic4",
+                "name": "Thuum Relic 4",
+                "skillID": "namespace_thuum:Thuum",
                 "number": 4,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
@@ -49,24 +49,24 @@
                 }
             },
             {
-                "id": "ThruumRelic5",
-                "name": "Thruum Relic 5",
-                "skillID": "namespace_thuum:Thruum",
+                "id": "ThuumRelic5",
+                "name": "Thuum Relic 5",
+                "skillID": "namespace_thuum:Thuum",
                 "number": 5,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
                     "decreasedSkillIntervalPercent": [
                         {
-                            "skillID": "namespace_thuum:Thruum",
+                            "skillID": "namespace_thuum:Thuum",
                             "value": 20
                         }
                     ]
                 }
             },
             {
-                "id": "ThruumRelic6",
-                "name": "Thruum Master Relic",
-                "skillID": "namespace_thuum:Thruum",
+                "id": "ThuumRelic6",
+                "name": "Thuum Master Relic",
+                "skillID": "namespace_thuum:Thuum",
                 "number": 6,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
@@ -78,14 +78,14 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorAoD:Astrology_Lesser_Relic",
-                "ids": ["namespace_thuum:Thruum_Lesser_Relic"]
+                "ids": ["namespace_thuum:Thuum_Lesser_Relic"]
             }
         ],
         "items": [
             {
                 "itemType": "Equipment",
-                "id": "Thruum_Lesser_Relic",
-                "name": "Thruum Lesser Relic",
+                "id": "Thuum_Lesser_Relic",
+                "name": "Thuum Lesser Relic",
                 "category": "Combat",
                 "type": "Consumable",
                 "media": "assets/items/thuum-lesser-relic.png",
@@ -101,16 +101,16 @@
                 "modifiers": {
                     "decreasedSkillIntervalPercent": [
                         {
-                            "skillID": "namespace_thuum:Thruum",
+                            "skillID": "namespace_thuum:Thuum",
                             "value": 5
                         }
                     ],
-                    "increasedThruumGP": 5,
+                    "increasedThuumGP": 5,
                     "increasedMagicMaxHit": 10
                 },
                 "consumesOn": [
                     {
-                        "type": "ThruumAction"
+                        "type": "ThuumAction"
                     },
                     {
                         "type": "PlayerAttack"
@@ -120,11 +120,11 @@
         ],
         "skillData": [
             {
-                "skillID": "namespace_thuum:Thruum",
+                "skillID": "namespace_thuum:Thuum",
                 "data": {
                     "rareDrops": [
                         {
-                            "itemID": "namespace_thuum:Thruum_Lesser_Relic",
+                            "itemID": "namespace_thuum:Thuum_Lesser_Relic",
                             "quantity": 300,
                             "requirements": [],
                             "chance": {
@@ -134,10 +134,10 @@
                             "gamemodes": ["melvorAoD:AncientRelics"]
                         }
                     ],
-                    "completedAncientRelic": "namespace_thuum:ThruumRelic6",
+                    "completedAncientRelic": "namespace_thuum:ThuumRelic6",
                     "ancientRelics": [
                         {
-                            "relicID": "namespace_thuum:ThruumRelic1",
+                            "relicID": "namespace_thuum:ThuumRelic1",
                             "requirements": [],
                             "chance": {
                                 "type": "Fixed",
@@ -145,7 +145,7 @@
                             }
                         },
                         {
-                            "relicID": "namespace_thuum:ThruumRelic2",
+                            "relicID": "namespace_thuum:ThuumRelic2",
                             "requirements": [],
                             "chance": {
                                 "type": "Fixed",
@@ -153,7 +153,7 @@
                             }
                         },
                         {
-                            "relicID": "namespace_thuum:ThruumRelic3",
+                            "relicID": "namespace_thuum:ThuumRelic3",
                             "requirements": [],
                             "chance": {
                                 "type": "Fixed",
@@ -161,7 +161,7 @@
                             }
                         },
                         {
-                            "relicID": "namespace_thuum:ThruumRelic4",
+                            "relicID": "namespace_thuum:ThuumRelic4",
                             "requirements": [],
                             "chance": {
                                 "type": "Fixed",
@@ -169,7 +169,7 @@
                             }
                         },
                         {
-                            "relicID": "namespace_thuum:ThruumRelic5",
+                            "relicID": "namespace_thuum:ThuumRelic5",
                             "requirements": [],
                             "chance": {
                                 "type": "Fixed",

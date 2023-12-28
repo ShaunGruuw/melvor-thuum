@@ -16,9 +16,9 @@ export class ThuumTownship {
                                     resourceID: 'melvorF:Planks',
                                     items: [
                                         {
-                                            itemID: 'namespace_thuum:Thruum_Scroll_Of_XP',
+                                            itemID: 'namespace_thuum:Thuum_Scroll_Of_XP',
                                             unlockRequirements: [
-                                                { type: 'SkillLevel', skillID: 'namespace_thuum:Thruum', level: 15 },
+                                                { type: 'SkillLevel', skillID: 'namespace_thuum:Thuum', level: 15 },
                                                 { type: 'SkillLevel', skillID: 'melvorD:Township', level: 15 }
                                             ]
                                         }
@@ -41,7 +41,7 @@ export class ThuumTownship {
                     playerModifiers: {
                         increasedMasteryXP: [
                             {
-                                skillID: 'namespace_thuum:Thruum',
+                                skillID: 'namespace_thuum:Thuum',
                                 value: 8
                             }
                         ]
@@ -58,10 +58,10 @@ export class ThuumTownship {
         const planks = this.game.township.resources.getObjectByID('melvorF:Planks');
         const trades = this.game.township.itemConversions.fromTownship.get(planks);
 
-        const scrollOfThruumXP = trades.find(trade => trade.item.id === 'namespace_thuum:Thruum_Scroll_Of_XP');
+        const scrollOfThuumXP = trades.find(trade => trade.item.id === 'namespace_thuum:Thuum_Scroll_Of_XP');
 
-        trades.splice(trades.indexOf(scrollOfThruumXP), 1);
-        trades.splice(0, 0, scrollOfThruumXP);
+        trades.splice(trades.indexOf(scrollOfThuumXP), 1);
+        trades.splice(0, 0, scrollOfThuumXP);
 
         this.game.township.itemConversions.fromTownship.set(planks, trades);
     }

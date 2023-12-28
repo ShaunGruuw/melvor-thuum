@@ -1,8 +1,8 @@
 import { ShoutComponent } from './shout/shout';
 import { TeacherComponent } from './teacher/teacher';
 import { LockedComponent } from './locked/locked';
-import { Thruum } from './thruum';
-import { Teacher } from './thruum.types';
+import { Thuum } from './thuum';
+import { Teacher } from './thuum.types';
 
 export class UserInterface {
     public readonly teachers = new Map<Teacher, ReturnType<typeof TeacherComponent>>();
@@ -24,27 +24,27 @@ export class UserInterface {
     constructor(
         private readonly context: Modding.ModContext,
         private readonly game: Game,
-        private readonly thruum: Thruum
+        private readonly thuum: Thuum
     ) {}
 
     public init() {
         this.context.onInterfaceAvailable(async () => {
-            this.mainContainer.append(...this.thruum.manager.elements);
+            this.mainContainer.append(...this.thuum.manager.elements);
 
             this.modifySkillInfoClass(this.mainContainer);
 
-            for (const teacher of this.thruum.sortedMasteryActions) {
-                const component = TeacherComponent(this.thruum, teacher, this.game);
+            for (const teacher of this.thuum.sortedMasteryActions) {
+                const component = TeacherComponent(this.thuum, teacher, this.game);
 
                 ui.create(component, this.teachersContainer);
 
                 this.teachers.set(teacher, component);
             }
 
-            this.locked = LockedComponent(this.thruum);
+            this.locked = LockedComponent(this.thuum);
             ui.create(this.locked, this.teachersContainer);
 
-            this.shout1 = ShoutComponent(this.thruum);
+            this.shout1 = ShoutComponent(this.thuum);
 
             ui.create(this.shout1, this.shoutContainer);
         });
@@ -58,7 +58,7 @@ export class UserInterface {
             return;
         }
 
-        const skillInfo = mainContainer.querySelector('#thruum-container .thruum-skill-info');
+        const skillInfo = mainContainer.querySelector('#thuum-container .thuum-skill-info');
 
         if (!skillInfo) {
             return;

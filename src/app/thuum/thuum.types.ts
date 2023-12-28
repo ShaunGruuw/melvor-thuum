@@ -21,7 +21,7 @@ export interface TeacherStandardModifier {
     value: number;
 }
 
-export interface ThruumSkillData extends MasterySkillData {
+export interface ThuumSkillData extends MasterySkillData {
     teachers: TeacherData[];
 }
 
@@ -51,7 +51,7 @@ export class Teacher extends BasicSkillRecipe {
     private hardcoreModifiers: TeacherModifier[];
 
     public get name() {
-        return getLangString(`Thuum_Thruum_Teacher_${this.localID}`);
+        return getLangString(`Thuum_Thuum_Teacher_${this.localID}`);
     }
 
     public get media() {

@@ -1,7 +1,7 @@
 <template id="thuum-mastery">
     <div class="thuum-mastery" @vue:mounted="mounted">
         <h5 class="mb-0">
-            {{ getLangString('Thuum_Thruum_Unlock_Mastery') }}
+            {{ getLangString('Thuum_Thuum_Unlock_Mastery') }}
             <img class="skill-icon-xs ml-2 mr-1" :src="teacher.media" />
             {{ teacher.name }}
         </h5>
@@ -32,34 +32,34 @@
                     v-if="!isUnlocked(index)"
                     :disabled="!canUnlock(modifier)"
                 >
-                    {{ getLangString('Thuum_Thruum_Unlock') }}
+                    {{ getLangString('Thuum_Thuum_Unlock') }}
                 </button>
             </div>
 
             <button type="button" class="btn btn-lg btn-primary" @click="ok()">
-                {{ getLangString('Thuum_Thruum_OK') }}
+                {{ getLangString('Thuum_Thuum_OK') }}
             </button>
         </div>
 
         <!-- Unlock -->
         <div class="unlock" v-if="state === 'unlock'">
-            <h5 v-if="essenceOfThruum.quantity > 0" class="mt-3 font-w400 font-size-sm">
-                {{ getLangString('Thuum_Thruum_Would_You_Like_To_Unlock') }}
+            <h5 v-if="essenceOfThuum.quantity > 0" class="mt-3 font-w400 font-size-sm">
+                {{ getLangString('Thuum_Thuum_Would_You_Like_To_Unlock') }}
             </h5>
-            <h5 v-if="essenceOfThruum.quantity === 0" class="mt-3 font-w400 font-size-sm">
-                {{ getLangString('Thuum_Thruum_You_Do_Not_Have_Enough_Materials_Mastery') }}
+            <h5 v-if="essenceOfThuum.quantity === 0" class="mt-3 font-w400 font-size-sm">
+                {{ getLangString('Thuum_Thuum_You_Do_Not_Have_Enough_Materials_Mastery') }}
             </h5>
 
             <div>
                 <small
-                    :class="essenceOfThruum.quantity > 0 ? 'text-success' : 'thuum-text-grey'"
+                    :class="essenceOfThuum.quantity > 0 ? 'text-success' : 'thuum-text-grey'"
                     v-html="modifier.description"
                 ></small>
             </div>
 
             <div class="mt-3">
                 <small class="text-danger">
-                    {{ templateLangString('Thuum_Thruum_The_Cost_Of_Hiring', { cost: getNextEquipCost() }) }}
+                    {{ templateLangString('Thuum_Thuum_The_Cost_Of_Hiring', { cost: getNextEquipCost() }) }}
                 </small>
             </div>
 
@@ -69,10 +69,10 @@
                     {{ formatNumber(unlockGPCost) }}
                 </span>
 
-                <span :class="essenceOfThruum.quantity > 0 ? 'text-success' : 'text-danger'">1</span>
-                <img class="skill-icon-xs ml-1 mr-1" :src="essenceOfThruum.item.media" />
-                <span :class="essenceOfThruum.quantity > 0 ? 'text-success' : 'text-danger'">
-                    {{ essenceOfThruum.item.name }}
+                <span :class="essenceOfThuum.quantity > 0 ? 'text-success' : 'text-danger'">1</span>
+                <img class="skill-icon-xs ml-1 mr-1" :src="essenceOfThuum.item.media" />
+                <span :class="essenceOfThuum.quantity > 0 ? 'text-success' : 'text-danger'">
+                    {{ essenceOfThuum.item.name }}
                 </span>
             </div>
 
@@ -81,12 +81,12 @@
                     type="button"
                     class="btn btn-lg btn-primary mr-2"
                     @click="unlock(modifier)"
-                    v-if="essenceOfThruum.quantity > 0 && game.gp.amount >= unlockGPCost"
+                    v-if="essenceOfThuum.quantity > 0 && game.gp.amount >= unlockGPCost"
                 >
-                    {{ getLangString('Thuum_Thruum_Unlock') }}
+                    {{ getLangString('Thuum_Thuum_Unlock') }}
                 </button>
                 <button type="button" class="btn btn-lg btn-danger" @click="setState('view')">
-                    {{ getLangString('Thuum_Thruum_Back') }}
+                    {{ getLangString('Thuum_Thuum_Back') }}
                 </button>
             </div>
         </div>

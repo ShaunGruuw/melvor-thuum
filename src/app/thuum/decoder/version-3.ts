@@ -1,9 +1,9 @@
-import { Thruum } from '../thruum';
-import { MasteredShout } from '../thruum.types';
+import { Thuum } from '../thuum';
+import { MasteredShout } from '../thuum.types';
 import { DecodeVersion } from './version.base';
 
 export class Version3 implements DecodeVersion {
-    constructor(private readonly game: Game, private readonly thruum: Thruum) {}
+    constructor(private readonly game: Game, private readonly thuum: Thuum) {}
 
     public decode(reader: SaveWriter) {
         const version = reader.getUint32();
@@ -13,16 +13,16 @@ export class Version3 implements DecodeVersion {
         }
 
         if (reader.getBoolean()) {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
-            if (typeof teacher === 'string' || teacher.level > this.thruum.level) {
-                this.thruum.shouldResetAction = true;
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
+            if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
+                this.thuum.shouldResetAction = true;
             } else {
-                this.thruum.activeTeacher = teacher;
+                this.thuum.activeTeacher = teacher;
             }
         }
 
         reader.getComplexMap(reader => {
-            const teacher = reader.getNamespacedObject(this.thruum.actions);
+            const teacher = reader.getNamespacedObject(this.thuum.actions);
             const slot = reader.getUint32();
             let socket: string | Item;
 
@@ -46,12 +46,12 @@ export class Version3 implements DecodeVersion {
                     utility: typeof utility !== 'string' ? utility : undefined
                 };
 
-                this.thruum.shouts.set(teacher, masteredShout);
+                this.thuum.shouts.set(teacher, masteredShout);
             }
 
-            const shout1 = this.thruum.shouts.get(1);
+            const shout1 = this.thuum.shouts.get(1);
 
-            this.thruum.userInterface.shout1.setShout(shout1);
+            this.thuum.userInterface.shout1.setShout(shout1);
 
             return {
                 key: teacher,
@@ -60,14 +60,14 @@ export class Version3 implements DecodeVersion {
         });
 
         // Migrate legacy data to new unlocked state.
-        for (const action of this.thruum.actions.allObjects) {
-            const masteryLevel = this.thruum.getMasteryLevel(action);
+        for (const action of this.thuum.actions.allObjects) {
+            const masteryLevel = this.thuum.getMasteryLevel(action);
             const isUnlocked = action
-                .modifiers(this.thruum.settings.modifierType)
+                .modifiers(this.thuum.settings.modifierType)
                 .filter(modifier => modifier.level <= 100)
                 .map(modifier => modifier.level <= masteryLevel);
 
-            this.thruum.masteriesUnlocked.set(action, isUnlocked);
+            this.thuum.masteriesUnlocked.set(action, isUnlocked);
         }
     }
 }

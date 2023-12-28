@@ -1,11 +1,11 @@
 <template id="thuum-shout">
-    <div class="block block-rounded block-link-pop border-top border-thruum border-4x" v-if="isEnabled">
+    <div class="block block-rounded block-link-pop border-top border-thuum border-4x" v-if="isEnabled">
         <div class="text-center mb-1">
             <div class="row gutters-tiny">
                 <div class="col-12 pt-3 font-size-lg mb-3" v-if="shout">
                     <img class="teacher-icon" v-bind:src="shout.teacher.media" />
                     <span>
-                        {{ templateLangString('Thuum_Thruum_Shout_Title', { name: shout.teacher.name }) }}
+                        {{ templateLangString('Thuum_Thuum_Shout_Title', { name: shout.teacher.name }) }}
                     </span>
                 </div>
 
@@ -27,7 +27,7 @@
                 </div>
 
                 <div class="col-12 font-size-lg pt-3 pb-3" v-if="!shout">
-                    <span>{{ getLangString('Thuum_Thruum_Shout_Not_Currently_Mastered') }}</span>
+                    <span>{{ getLangString('Thuum_Thuum_Shout_Not_Currently_Mastered') }}</span>
                 </div>
             </div>
         </div>

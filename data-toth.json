@@ -9,15 +9,15 @@
                     "add": {
                         "decreasedSkillInterval": [
                             {
-                                "skillID": "namespace_thuum:Thruum",
+                                "skillID": "namespace_thuum:Thuum",
                                 "value": 800
                             }
                         ],
-                        "decreasedThruumEquipCost": 10,
-                        "increasedThruumGP": 10,
+                        "decreasedThuumEquipCost": 10,
+                        "increasedThuumGP": 10,
                         "increasedMasteryXP": [
                             {
-                                "skillID": "namespace_thuum:Thruum",
+                                "skillID": "namespace_thuum:Thuum",
                                 "value": 10
                             }
                         ]
@@ -30,15 +30,15 @@
                     "add": {
                         "decreasedSkillInterval": [
                             {
-                                "skillID": "namespace_thuum:Thruum",
+                                "skillID": "namespace_thuum:Thuum",
                                 "value": 800
                             }
                         ],
-                        "decreasedThruumEquipCost": 10,
-                        "increasedThruumGP": 10,
+                        "decreasedThuumEquipCost": 10,
+                        "increasedThuumGP": 10,
                         "increasedMasteryXP": [
                             {
-                                "skillID": "namespace_thuum:Thruum",
+                                "skillID": "namespace_thuum:Thuum",
                                 "value": 10
                             }
                         ]
@@ -52,18 +52,18 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorTotH:Superior_Mining_Skillcape",
-                "ids": ["namespace_thuum:Superior_Thruum_Skillcape"]
+                "ids": ["namespace_thuum:Superior_Thuum_Skillcape"]
             }
         ],
         "shopPurchases": [
             {
-                "id": "Superior_Thruum_Skillcape",
-                "media": "assets/thruum-superior-skillcape.png",
+                "id": "Superior_Thuum_Skillcape",
+                "media": "assets/thuum-superior-skillcape.png",
                 "category": "melvorTotH:SuperiorSkillcapes",
                 "contains": {
                     "items": [
                         {
-                            "id": "namespace_thuum:Superior_Thruum_Skillcape",
+                            "id": "namespace_thuum:Superior_Thuum_Skillcape",
                             "quantity": 1
                         }
                     ]
@@ -88,7 +88,7 @@
                 "purchaseRequirements": [
                     {
                         "type": "SkillLevel",
-                        "skillID": "namespace_thuum:Thruum",
+                        "skillID": "namespace_thuum:Thuum",
                         "level": 120
                     }
                 ],
@@ -101,17 +101,17 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorTotH:Superior_Mining_Skillcape",
-                "ids": ["namespace_thuum:Superior_Thruum_Skillcape"]
+                "ids": ["namespace_thuum:Superior_Thuum_Skillcape"]
             }
         ],
         "items": [
             {
                 "itemType": "Equipment",
-                "id": "Superior_Thruum_Skillcape",
-                "name": "Superior Thruum Skillcape",
+                "id": "Superior_Thuum_Skillcape",
+                "name": "Superior Thuum Skillcape",
                 "category": "Combat",
                 "type": "Armour",
-                "media": "assets/thruum-superior-skillcape.png",
+                "media": "assets/thuum-superior-skillcape.png",
                 "ignoreCompletion": true,
                 "obtainFromItemLog": false,
                 "golbinRaidExclusive": false,
@@ -122,7 +122,7 @@
                 "equipRequirements": [
                     {
                         "type": "SkillLevel",
-                        "skillID": "namespace_thuum:Thruum",
+                        "skillID": "namespace_thuum:Thuum",
                         "level": 120
                     }
                 ],
@@ -143,15 +143,15 @@
                 "modifiers": {
                     "decreasedSkillInterval": [
                         {
-                            "skillID": "namespace_thuum:Thruum",
+                            "skillID": "namespace_thuum:Thuum",
                             "value": 800
                         }
                     ],
-                    "decreasedThruumEquipCost": 10,
-                    "increasedThruumGP": 10,
+                    "decreasedThuumEquipCost": 10,
+                    "increasedThuumGP": 10,
                     "increasedMasteryXP": [
                         {
-                            "skillID": "namespace_thuum:Thruum",
+                            "skillID": "namespace_thuum:Thuum",
                             "value": 10
                         }
                     ]
@@ -160,7 +160,7 @@
         ],
         "skillData": [
             {
-                "skillID": "namespace_thuum:Thruum",
+                "skillID": "namespace_thuum:Thuum",
                 "data": {
                     "teachers": [
                         {

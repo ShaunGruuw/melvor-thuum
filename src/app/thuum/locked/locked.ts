@@ -1,14 +1,14 @@
-import { Thruum } from '../thruum';
+import { Thuum } from '../thuum';
 
 import './locked.scss';
 
-export function LockedComponent(thruum: Thruum) {
+export function LockedComponent(thuum: Thuum) {
     return {
         $template: '#thuum-teacher-locked',
         isVisible: false,
         level: 1,
         get icon() {
-            return thruum.getMediaURL('assets/locked-teacher.png');
+            return thuum.getMediaURL('assets/locked-teacher.png');
         },
         update: function () {
             const nextUnlock = this.getNextUnlock();
@@ -17,7 +17,7 @@ export function LockedComponent(thruum: Thruum) {
             this.level = nextUnlock?.level ?? 1;
         },
         getNextUnlock: function () {
-            return thruum.actions.find(action => action.level > thruum.level);
+            return thuum.actions.find(action => action.level > thuum.level);
         }
     };
 }
