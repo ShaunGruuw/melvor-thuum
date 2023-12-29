@@ -29,8 +29,13 @@
                                     "value": 20
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedDamageAgainstHumans",
+                                    "value": 20
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedDamageAgainstAnimals",
                                     "value": 20
                                 },
                                 {
@@ -56,8 +61,13 @@
                                     "value": 10
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedDamageAgainstHumans",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedDamageAgainstAnimals",
                                     "value": 10
                                 },
                                 {

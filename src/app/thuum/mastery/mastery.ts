@@ -24,7 +24,7 @@ export function MasteryComponent(game: Game, thuum: Thuum, teacher: Teacher) {
         get unlockableModifiers() {
             const modifiers = thuum.manager.getModifiers(teacher);
 
-            return modifiers.filter(modifier => modifier.level < 100);
+            return modifiers //.filter(modifier => modifier.level < 100);
         },
         get currentMasteryLevel() {
             return thuum.getMasteryLevel(teacher);

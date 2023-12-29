@@ -112,15 +112,52 @@ export class App {
         }
         const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
         if (kcm) {
-            // await this.context.gameData.addPackage('data-cmim.json');
+            await this.context.gameData.addPackage('data-cmim.json');
         }
 
+        const en_data = {
+            MODIFIER_DATA_summoningSynergy_Devil_Eagle: "While Thieving - 50% chance for +10% base Skill XP, 40% chance for 2.5x GP, and 10% chance to gain no Items or GP",
+            MONSTER_TYPE_SINGULAR_Elf: "Elf",
+            MONSTER_TYPE_PLURAL_Elf: "Elves",
+            tes_increasedDragonBreathDamage: "Increase damage taken from dragon breaths by +${value}",
+            tes_wardsave: "+${value}% (MAX: 90%) to take 0 damage from a hit.",
+            tes_increasedFlatDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}.",
+            tes_increasedPercDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}%.",
+            tes_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}.",
+            tes_bypassDamageReduction: "${value} damage, though damage reduction.",
+            PASSIVES_NAME_EventPassive1: "Unusual Passive",
+            PASSIVES_NAME_EventPassive2: "Unusual Passive",
+            PASSIVES_NAME_EventPassive3: "Unusual Passive",
+            PASSIVES_NAME_EventPassive4: "Unusual Passive",
+            PASSIVES_NAME_EventPassive5: "Unusual Passive",
+            PASSIVES_NAME_EventPassive6: "Unusual Passive",
+            PASSIVES_NAME_EventPassive7: "Unusual Passive",
+            PASSIVES_NAME_EventPassive8: "Unusual Passive",
+            PASSIVES_NAME_EventPassive9: "Unusual Passive",
+            PASSIVES_NAME_EventPassive10: "Unusual Passive",
+            PASSIVES_NAME_EventPassive11: "Unusual Passive",
+            PASSIVES_NAME_EventPassive12: "Unusual Passive",
+            MODIFIER_DATA_increasedDamageAgainstElves: 'Damage to Elves'
+          }
+          for (const [key, value] of Object.entries(en_data)) {
+            // @ts-ignore
+            loadedLangJson[key] = value;
+          }
+
         this.context.onCharacterLoaded(async () => {
-            const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
             if (kcm) {
                 const cmim = mod.api.customModifiersInMelvor;
                 cmim.addMonsters("Dragon", DragonList)
+                cmim.registerOrUpdateType("Elf", "Elves", "https://cdn.melvor.net/core/v018/assets/media/pets/elf_rock.png", [], true);
+                cmim.registerOrUpdateType("Goblin", "Goblins", "https://cdn.melvor.net/core/v018/assets/media/monsters/goblin.png", [], true);
                 cmim.forceBaseModTypeActive("Dragon");
+                cmim.forceBaseModTypeActive("Undead");
+                cmim.forceBaseModTypeActive("Human");
+                cmim.forceBaseModTypeActive("Animal");
+                cmim.forceBaseModTypeActive("Demon");
+                cmim.forceBaseModTypeActive("Elemental");
+                cmim.forceBaseModTypeActive("MythicalCreature");
+                cmim.forceBaseModTypeActive("SeaCreature");
                 const cmimDragonList = await cmim.getMonstersOfType('Dragon');
                 const initialPackage = this.context.gameData.buildPackage(builder => {
                     for (let index = 0; index < cmimDragonList.length; index++) {
@@ -301,3 +338,30 @@ export class App {
         }
     }
 }
+
+
+// {
+//     "level": 1,
+//     "key": "increasedDamageTakenFromAirSpells",
+//     "value": 20
+// },
+// {
+//     "level": 40,
+//     "key": "increasedDamageAgainstDragons",
+//     "value": 20
+// },
+// {
+//     "level": 75,
+//     "key": "increasedDamageAgainstHumans",
+//     "value": 20
+// },
+// {
+//     "level": 99,
+//     "key": "increasedDamageAgainstUndead",
+//     "value": 20
+// },
+// {
+//     "level": 120,
+//     "key": "increasedDamageAgainstElves",
+//     "value": 20
+// }

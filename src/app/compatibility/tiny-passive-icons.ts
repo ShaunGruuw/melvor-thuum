@@ -6,8 +6,6 @@ export class TinyPassiveIconsCompatibility {
         decreasedThuumEquipCost: ['thuum', 'gp'],
         increasedThuumGP: ['thuum', 'gp'],
         decreasedThuumGP: ['thuum', 'gp'],
-        increasedChanceToObtainShrimpWhileTrainingThuum: ['thuum', 'shrimp'],
-        decreasedChanceToObtainShrimpWhileTrainingThuum: ['thuum', 'shrimp'],
         increasedThuumAdditionalRewardRoll: ['thuum'],
         decreasedThuumAdditionalRewardRoll: ['thuum'],
         increasedSkillMasteryXPPerVariel: ['skill']

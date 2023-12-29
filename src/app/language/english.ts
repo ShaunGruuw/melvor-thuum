@@ -59,7 +59,7 @@ export const en = {
     Teacher_Harp: 'Harp',
     Teacher_Tambourine: 'Tambourine',
     Teacher_Trumpet: 'Trumpet',
-    Teacher_cmim_teacher: 'CMIM Teacher',
+    Teacher_cmim_teacher: 'Dragon Teacher',
     PET_NAME_Dragon: 'Dragon',
     ITEM_NAME_Summoning_Familiar_Shout: 'Shout',
     ITEM_NAME_Thuum_Skillcape: 'Thuum Skillcape',
@@ -126,5 +126,6 @@ export const en = {
     Settings_Base_Shout_Equip_Cost_4: 'Base shout Master cost with 4 modifiers unlocked',
     Settings_Base_Shout_Equip_Cost_5: 'Base shout Master cost with 5 modifiers unlocked',
     Settings_Must_Be_Larger_Then: 'Value must be larger then 99',
-    Settings_Must_Be_Smaller_Then: 'Value must be smaller then 1,000,000,000,000'
+    Settings_Must_Be_Smaller_Then: 'Value must be smaller then 1,000,000,000,000',
+    MODIFIER_DATA_increasedDamageAgainstElves: 'Damage to Elves'
 };

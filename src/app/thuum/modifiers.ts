@@ -4,8 +4,6 @@ declare global {
         decreasedThuumEquipCost: Standard;
         increasedThuumGP: Standard;
         decreasedThuumGP: Standard;
-        increasedChanceToObtainShrimpWhileTrainingThuum: Standard;
-        decreasedChanceToObtainShrimpWhileTrainingThuum: Standard;
         increasedThuumAdditionalRewardRoll: Standard;
         decreasedThuumAdditionalRewardRoll: Standard;
     }
@@ -19,8 +17,6 @@ declare global {
         decreasedThuumEquipCost: number;
         increasedThuumGP: number;
         decreasedThuumGP: number;
-        increasedChanceToObtainShrimpWhileTrainingThuum: number;
-        decreasedChanceToObtainShrimpWhileTrainingThuum: number;
         increasedThuumAdditionalRewardRoll: number;
         decreasedThuumAdditionalRewardRoll: number;
         increasedSkillMasteryXPPerVariel: number;
@@ -64,26 +60,6 @@ export class ThuumModifiers {
                 return getLangString('Thuum_Thuum_Thuum_GP_Negative');
             },
             description: '-${value}% Thuum GP',
-            isSkill: false,
-            isNegative: false,
-            tags: []
-        };
-
-        modifierData.increasedChanceToObtainShrimpWhileTrainingThuum = {
-            get langDescription() {
-                return getLangString('Thuum_Thuum_Chance_To_Obtain_Shrimp_While_Training_Thuum_Positive');
-            },
-            description: '+${value}% chance to obtain Shrimp while training Thuum',
-            isSkill: false,
-            isNegative: false,
-            tags: []
-        };
-
-        modifierData.decreasedChanceToObtainShrimpWhileTrainingThuum = {
-            get langDescription() {
-                return getLangString('Thuum_Thuum_Chance_To_Obtain_Shrimp_While_Training_Thuum_Negative');
-            },
-            description: '-${value}% chance to obtain Shrimp while training Thuum',
             isSkill: false,
             isNegative: false,
             tags: []
