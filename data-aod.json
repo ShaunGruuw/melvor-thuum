@@ -125,6 +125,8 @@
                   "momentInTimePassive": 10,
                   "decreasedMonsterRespawnTimer": 100,
                   "removeDebuffsFromAgility": 1,
+                  "increasedGlobalPreservationChance": 100,
+                  "increasedChanceToDoubleItemsGlobal": 100,
                   "increasedMasteryXP": [
                     {
                       "skillID":"melvorAoD:Archaeology",
