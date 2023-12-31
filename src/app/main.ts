@@ -153,7 +153,7 @@ export class App {
                 cmim.forceBaseModTypeActive("Dragon");
                 cmim.forceBaseModTypeActive("Undead");
                 cmim.forceBaseModTypeActive("Human");
-                cmim.forceBaseModTypeActive("Beast");
+                cmim.forceBaseModTypeActive("Animal");
                 cmim.forceBaseModTypeActive("Demon");
                 cmim.forceBaseModTypeActive("Elemental");
                 cmim.forceBaseModTypeActive("MythicalCreature");

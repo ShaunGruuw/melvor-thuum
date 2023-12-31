@@ -35,7 +35,7 @@
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedDamageAgainstBeasts",
+                                    "key": "increasedDamageAgainstAnimals",
                                     "value": 20
                                 },
                                 {
@@ -67,7 +67,7 @@
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedDamageAgainstBeasts",
+                                    "key": "increasedDamageAgainstAnimals",
                                     "value": 10
                                 },
                                 {
