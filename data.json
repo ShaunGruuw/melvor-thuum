@@ -751,7 +751,7 @@
                 "id": "Dragon",
                 "name": "Dragon",
                 "media": "assets/dragon.png",
-                "ignoreCompletion": true,
+                "ignoreCompletion": false,
                 "modifiers": {
                     "decreasedSkillInterval": [
                         {
