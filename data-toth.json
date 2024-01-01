@@ -14,7 +14,7 @@
                             }
                         ],
                         "decreasedThuumEquipCost": 10,
-                        "increasedThuumGP": 10,
+                        "decreasedThuumGP": 10,
                         "increasedMasteryXP": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
@@ -35,7 +35,7 @@
                             }
                         ],
                         "decreasedThuumEquipCost": 10,
-                        "increasedThuumGP": 10,
+                        "decreasedThuumGP": 10,
                         "increasedMasteryXP": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
@@ -148,7 +148,7 @@
                         }
                     ],
                     "decreasedThuumEquipCost": 10,
-                    "increasedThuumGP": 10,
+                    "decreasedThuumGP": 10,
                     "increasedMasteryXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",

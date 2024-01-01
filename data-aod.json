@@ -169,7 +169,7 @@
                             "value": 5
                         }
                     ],
-                    "increasedThuumGP": 5,
+                    "decreasedThuumGP": 5,
                     "increasedMagicMaxHit": 10
                 },
                 "consumesOn": [
