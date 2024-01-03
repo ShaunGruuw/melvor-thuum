@@ -84,7 +84,7 @@ export const en = {
     ITEM_NAME_Generous_Gratuity_Potion_III: 'Generous Gratuity Potion III',
     ITEM_NAME_Generous_Gratuity_Potion_IV: 'Generous Gratuity Potion IV',
     ITEM_NAME_Mastery_Token_Thuum: 'Mastery Token (Thuum)',
-    ITEM_NAME_Lesser_Relic: 'An old relic',
+    ITEM_NAME_Thuum_Lesser_Relic: 'An old relic',
     MASTERY_BONUS_Thuum_0: 'Each level increases the teachers cost by 10 GP for this teacher only.',
     MASTERY_BONUS_Thuum_1: 'First Master modifier.',
     MASTERY_BONUS_Thuum_2: 'Ability to unlock the second Master modifier.',
