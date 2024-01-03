@@ -56,16 +56,19 @@ export function MasteryComponent(game: Game, thuum: Thuum, teacher: Teacher) {
             this.modifier = modifier;
 
             if (!this.modifier) {
-                this.unlockGPCost = 100000;
+                this.unlockGPCost = 1000;
                 return;
             }
 
             switch (this.modifier.level) {
                 case 40:
                 default:
+                    this.unlockGPCost = 10000;
+                    break;
+                case 60:
                     this.unlockGPCost = 100000;
                     break;
-                case 75:
+                case 80:
                     this.unlockGPCost = 1000000;
                     break;
                 case 99:

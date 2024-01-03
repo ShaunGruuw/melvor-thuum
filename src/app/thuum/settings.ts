@@ -46,7 +46,7 @@ export class ThuumSettings {
                 name: 'two-mastery',
                 label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_2'),
                 hint: '',
-                default: 100000,
+                default: 10000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
@@ -66,7 +66,7 @@ export class ThuumSettings {
                 name: 'three-mastery',
                 label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_3'),
                 hint: '',
-                default: 1000000,
+                default: 100000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
@@ -86,7 +86,7 @@ export class ThuumSettings {
                 name: 'four-mastery',
                 label: getLangString('Thuum_Thuum_Settings_Base_Shout_Equip_Cost_4'),
                 hint: '',
-                default: 10000000,
+                default: 1000000,
                 min: 100,
                 max: 999999999999,
                 onChange(value: number, previousValue: number) {
