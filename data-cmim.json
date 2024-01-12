@@ -40,11 +40,6 @@
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedDamageAgainstUndead",
-                                    "value": 20
-                                },
-                                {
-                                    "level": 120,
                                     "key": "increasedDamageAgainstElves",
                                     "value": 20
                                 }
@@ -72,11 +67,6 @@
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedDamageAgainstUndead",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 120,
                                     "key": "increasedDamageAgainstElves",
                                     "value": 10
                                 }

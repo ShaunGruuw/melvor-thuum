@@ -195,11 +195,6 @@
                                     "level": 99,
                                     "key": "increasedSummoningCreationCharges",
                                     "value": 15
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedSummoningMaxHit",
-                                    "value": 35
                                 }
                             ],
                             "hardcoreModifiers": [
@@ -224,11 +219,6 @@
                                     "level": 99,
                                     "key": "increasedSummoningCreationCharges",
                                     "value": 3
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedSummoningMaxHit",
-                                    "value": 5
                                 }
                             ]
                         },
@@ -263,12 +253,6 @@
                                     "level": 99,
                                     "key": "increasedThievingAreaUniqueChance",
                                     "value": 15
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedChanceToDoubleItemsSkill",
-                                    "skill": "melvorD:Thieving",
-                                    "value": 20
                                 }
                             ],
                             "hardcoreModifiers": [
@@ -291,12 +275,6 @@
                                 {
                                     "level": 99,
                                     "key": "increasedThievingAreaUniqueChance",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedChanceToDoubleItemsSkill",
-                                    "skill": "melvorD:Thieving",
                                     "value": 2
                                 }
                             ]
@@ -331,11 +309,6 @@
                                     "level": 99,
                                     "key": "increasedTownshipHappiness",
                                     "value": 50
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedChanceDoubleHarvest",
-                                    "value": 25
                                 }
                             ],
                             "hardcoreModifiers": [
@@ -357,11 +330,6 @@
                                 {
                                     "level": 99,
                                     "key": "increasedTownshipHappiness",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedChanceDoubleHarvest",
                                     "value": 5
                                 }
                             ]
@@ -396,11 +364,6 @@
                                     "level": 99,
                                     "key": "decreasedAttackInterval",
                                     "value": 500
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedChanceToApplyDecayCurse",
-                                    "value": 20
                                 }
                             ],
                             "hardcoreModifiers": [
@@ -423,11 +386,6 @@
                                     "level": 99,
                                     "key": "decreasedAttackInterval",
                                     "value": 100
-                                },
-                                {
-                                    "level": 120,
-                                    "key": "increasedChanceToApplyDecayCurse",
-                                    "value": 1
                                 }
                             ]
                         }

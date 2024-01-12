@@ -69,11 +69,11 @@ export class App {
             MONSTER_TYPE_SINGULAR_Elf: "Elf",
             MONSTER_TYPE_PLURAL_Elf: "Elves",
             mod_increasedDragonBreathDamage: "Increase damage taken from dragon breaths by +${value}",
-            mod_wardsave: "+${value}% (MAX: 90%) to take 0 damage from a hit.",
-            mod_increasedFlatDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}.",
-            mod_increasedPercDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}%.",
-            mod_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}.",
-            mod_bypassDamageReduction: "${value} damage, though damage reduction.",
+            mod_wardsave: "+${value}% (MAX: 90%) to take 0 damage from a hit",
+            mod_increasedFlatDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}",
+            mod_increasedPercDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}%",
+            mod_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}",
+            mod_bypassDamageReduction: "${value} damage, though damage reduction",
             PASSIVES_NAME_EventPassive1: "Unusual Passive",
             PASSIVES_NAME_EventPassive2: "Unusual Passive",
             PASSIVES_NAME_EventPassive3: "Unusual Passive",
@@ -90,11 +90,12 @@ export class App {
             MODIFIER_DATA_increasedDeadlyToxinsFromHerblore: 'When creating Lethal Toxins Potions in Herblore, gain +${value} Deadly Toxins Potion(s) as an additional Potion (Cannot be doubled)',
             MODIFIER_DATA_bigRon: '+100% Chance To Double Loot in Combat. For every 2000 base Maximum Hitpoints the enemy has (Capped at 10000): +9% Melee Strength Bonus from Equipment, +3% of Maximum Hit added to Minimum Hit and +1% Damage Reduction. Bonus is doubled if fighting a boss.',
             tes_increasedDragonBreathDamage: "Increase damage taken from dragon breaths by +${value}",
-            tes_wardsave: "+${value}% (MAX: 90%) to take 0 damage from a hit.",
-            tes_increasedFlatDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}.",
-            tes_increasedPercDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}%.",
-            tes_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}.",
-            tes_bypassDamageReduction: "${value} damage, though damage reduction.",
+            tes_wardsave: "+${value}% (MAX: 90%) to take 0 damage from a hit",
+            tes_increasedFlatDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}",
+            tes_increasedPercDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}%",
+            tes_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}",
+            tes_bypassDamageReduction: "${value} damage, though damage reduction",            
+            Profile_Profile_Single_Species_Dragon_Born: "Dragon Born"
         }
         for (const [key, value] of Object.entries(en_data)) {
             // @ts-ignore
@@ -148,9 +149,13 @@ export class App {
             await this.context.gameData.addPackage('data-aod.json');
         }
         const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
+        const profileSkill = mod.manager.getLoadedModList().includes('Class &amp; Species')
         if (kcm) {
             await this.context.gameData.addPackage('data-cmim.json');
         }
+        if (kcm && profileSkill) {
+            await this.context.gameData.addPackage('profile.json');
+          }
 
         this.context.onCharacterLoaded(async () => {
             if (kcm) {
@@ -347,29 +352,7 @@ export class App {
     }
 }
 
-
-// {
-//     "level": 1,
-//     "key": "increasedDamageTakenFromAirSpells",
-//     "value": 20
-// },
-// {
-//     "level": 40,
-//     "key": "increasedDamageAgainstDragons",
-//     "value": 20
-// },
-// {
-//     "level": 75,
-//     "key": "increasedDamageAgainstHumans",
-//     "value": 20
-// },
-// {
-//     "level": 99,
-//     "key": "increasedDamageAgainstUndead",
-//     "value": 20
-// },
-// {
-//     "level": 120,
-//     "key": "increasedDamageAgainstElves",
-//     "value": 20
-// }
+// "level": 99,
+// "key": "increasedSkillXP",
+// "skill": "melvorD:Slayer",
+// "value": 20

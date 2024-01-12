@@ -1,0 +1,94 @@
+{
+    "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+    "namespace": "namespace_thuum",
+    "data": {
+        "skillData": [
+            {
+                "skillID": "namespace_profile:Profile",
+                "data": {
+                    "species": [
+                        {
+                            "id": "Dragon_Born",
+                            "name": "Dragon Born",
+                            "media": "https://i.pinimg.com/originals/f3/8d/d4/f38dd496e89c5c0ee42d0ee98bef4b2f.jpg",
+                            "baseExperience": 25,
+                            "productId": "namespace_profile:Dragon_Born",
+                            "level": 25,
+                            "skills": [
+                                "https://cdn.melvor.net/core/v018/assets/media/monsters/dragon_red.png"
+                            ],
+                            "standardModifiers": [
+                                {
+                                    "level": 0,
+                                    "key": "dragonTraitApplied",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 1,
+                                    "key": "increasedDamageTakenFromSeaCreatures",
+                                    "value": 20
+                                },
+                                {
+                                    "level": 20,
+                                    "key": "decreasedThuumGP",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "decreasedDamageTakenFromDragons",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 60,
+                                    "key": "increasedDamageAgainstDragons",
+                                    "value": 20
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedSkillMasteryXPPerVariel",
+                                    "skill": "namespace_thuum:Thuum",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "decreasedThuumEquipCost",
+                                    "value": 50
+                                }
+                            ],
+                            "hardcoreModifiers": [
+                                {
+                                    "level": 1,
+                                    "key": "decreasedChanceGoldenStardust",
+                                    "value": 50
+                                },
+                                {
+                                    "level": 40,
+                                    "key": "increasedMinBirdNestQuantity",
+                                    "skill": "melvorD:Woodcutting",
+                                    "value": 1
+                                },
+                                {
+                                    "level": 60,
+                                    "key": "increasedMasteryXP",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Firemaking",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 99,
+                                    "key": "increasedMinBirdNestQuantity",
+                                    "value": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

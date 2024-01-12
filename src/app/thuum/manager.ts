@@ -31,7 +31,11 @@ export class ThuumManager {
                     value: modifier.value
                 });
             } else {
-                [description] = printPlayerModifier(modifier.key, modifier.value);
+                try {
+                    [description] = printPlayerModifier(modifier.key, modifier.value);                    
+                } catch (error) {
+                    console.log('Fake modifier ', modifier.key)                    
+                }
             }
 
             return {
