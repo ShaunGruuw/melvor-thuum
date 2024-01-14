@@ -957,7 +957,7 @@
                                     "level": 40,
                                     "key": "doubleItemsSkill",
                                     "skill": "melvorD:Cooking",
-                                    "value": 20
+                                    "value": 1
                                 },
                                 {
                                     "level": 60,
@@ -1040,12 +1040,12 @@
                                 {
                                     "level": 80,
                                     "key": "doubleOresMining",
-                                    "value": 2
+                                    "value": 1
                                 },
                                 {
                                     "level": 99,
                                     "key": "doubleRuneEssenceMining",
-                                    "value": 2
+                                    "value": 1
                                 }
                             ],
                             "hardcoreModifiers": [
@@ -1069,12 +1069,12 @@
                                 {
                                     "level": 80,
                                     "key": "doubleOresMining",
-                                    "value": 1
+                                    "value": 2
                                 },
                                 {
                                     "level": 99,
                                     "key": "doubleRuneEssenceMining",
-                                    "value": 1
+                                    "value": 2
                                 }
                             ]
                         },
@@ -1182,7 +1182,7 @@
                                 {
                                     "level": 99,
                                     "key": "increasedPrayerPointsWhenHit",
-                                    "value": 10
+                                    "value": 2
                                 }
                             ],
                             "hardcoreModifiers": [
