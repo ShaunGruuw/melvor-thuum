@@ -95,7 +95,8 @@ export class App {
             tes_increasedPercDamageWhileTargetHasMaxHP: "Increase damage while target is fully healed by +${value}%",
             tes_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}",
             tes_bypassDamageReduction: "${value} damage, though damage reduction",            
-            Profile_Profile_Single_Species_Dragon_Born: "Dragon Born"
+            Profile_Profile_Single_Species_Dragon_Born: "Dragon Born",
+            Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
         }
         for (const [key, value] of Object.entries(en_data)) {
             // @ts-ignore
@@ -144,12 +145,16 @@ export class App {
             //     })
             //     .add();
         }
+        const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
+        const profileSkill = mod.manager.getLoadedModList().includes('Class &amp; Species')
+        const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
 
         if (cloudManager.hasAoDEntitlement) {
             await this.context.gameData.addPackage('data-aod.json');
         }
-        const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
-        const profileSkill = mod.manager.getLoadedModList().includes('Class &amp; Species')
+        if (mythLoaded) {
+            await this.context.gameData.addPackage('music.json');
+        }
         if (kcm) {
             await this.context.gameData.addPackage('data-cmim.json');
         }
