@@ -119,11 +119,11 @@ export class App {
         if (kcm) {
             await this.context.gameData.addPackage('data-cmim.json');
         }
-        if (kcm && profileSkill) {
-            await this.context.gameData.addPackage('profile.json');
-          }
 
-        this.context.onCharacterLoaded(async () => {
+        this.context.onModsLoaded(async () => {
+            if (kcm && profileSkill) {
+                await this.context.gameData.addPackage('profile.json');
+            }
             if (kcm) {
                 const cmim = mod.api.customModifiersInMelvor;
                 cmim.addMonsters("Dragon", DragonList)
@@ -308,7 +308,9 @@ export class App {
             'SPECIAL_ATTACK_DESCRIPTION',
             'mod_',
             'PASSIVES_NAME_',
-            'MODIFIER_DATA_'
+            'MODIFIER_DATA_',
+            'Profile_',
+            'tes_'
         ];
 
         for (const [key, value] of Object.entries<string>(languages[lang])) {

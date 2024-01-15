@@ -156,5 +156,6 @@ export const en = {
     tes_decreaseFlatDamageWhileTargetHasMaxHP: "Decrease damage taken while you are fully healed by +${value}",
     tes_bypassDamageReduction: "${value} damage, though damage reduction",            
     Profile_Profile_Single_Species_Dragon_Born: "Dragon Born",
+    Profile_Single_Species_Dragon_Born: "Dragon Born",
     Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
 };
