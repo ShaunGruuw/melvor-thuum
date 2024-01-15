@@ -310,7 +310,8 @@ export class App {
             'PASSIVES_NAME_',
             'MODIFIER_DATA_',
             'Profile_',
-            'tes_'
+            'tes_',
+            'Myth_Music_'
         ];
 
         for (const [key, value] of Object.entries<string>(languages[lang])) {
