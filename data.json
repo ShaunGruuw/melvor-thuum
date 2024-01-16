@@ -8,7 +8,7 @@
                 "dropTable": {
                     "add": [
                         {
-                            "itemID": "namespace_thuum:Generous_Gratuity_Potion_I",
+                            "itemID": "namespace_thuum:Dragon_Shout_Potion_I",
                             "minQuantity": 422,
                             "maxQuantity": 422,
                             "weight": 10
@@ -76,10 +76,10 @@
                 "insertAt": "After",
                 "afterID": "melvorF:Farming_Potion_IV",
                 "ids": [
-                    "namespace_thuum:Generous_Gratuity_Potion_I",
-                    "namespace_thuum:Generous_Gratuity_Potion_II",
-                    "namespace_thuum:Generous_Gratuity_Potion_III",
-                    "namespace_thuum:Generous_Gratuity_Potion_IV"
+                    "namespace_thuum:Dragon_Shout_Potion_I",
+                    "namespace_thuum:Dragon_Shout_Potion_II",
+                    "namespace_thuum:Dragon_Shout_Potion_III",
+                    "namespace_thuum:Dragon_Shout_Potion_IV"
                 ]
             },
             {
@@ -266,8 +266,8 @@
                 ]
             },
             {
-                "id": "Generous_Gratuity_Potion_I",
-                "name": "Generous Gratuity Potion I",
+                "id": "Dragon_Shout_Potion_I",
+                "name": "Dragon Shout Potion I",
                 "category": "Herblore",
                 "type": "Potion",
                 "media": "assets/potion/thuum-potion-i.png",
@@ -289,8 +289,8 @@
                 ]
             },
             {
-                "id": "Generous_Gratuity_Potion_II",
-                "name": "Generous Gratuity Potion II",
+                "id": "Dragon_Shout_Potion_II",
+                "name": "Dragon Shout Potion II",
                 "category": "Herblore",
                 "type": "Potion",
                 "media": "assets/potion/thuum-potion-ii.png",
@@ -312,8 +312,8 @@
                 ]
             },
             {
-                "id": "Generous_Gratuity_Potion_III",
-                "name": "Generous Gratuity Potion III",
+                "id": "Dragon_Shout_Potion_III",
+                "name": "Dragon Shout Potion III",
                 "category": "Herblore",
                 "type": "Potion",
                 "media": "assets/potion/thuum-potion-iii.png",
@@ -335,8 +335,8 @@
                 ]
             },
             {
-                "id": "Generous_Gratuity_Potion_IV",
-                "name": "Generous Gratuity Potion IV",
+                "id": "Dragon_Shout_Potion_IV",
+                "name": "Dragon Shout Potion IV",
                 "category": "Herblore",
                 "type": "Potion",
                 "media": "assets/potion/thuum-potion-iv.png",
@@ -464,47 +464,47 @@
         ],
         "itemUpgrades": [
             {
-                "upgradedItemID": "namespace_thuum:Generous_Gratuity_Potion_II",
+                "upgradedItemID": "namespace_thuum:Dragon_Shout_Potion_II",
                 "gpCost": 0,
                 "scCost": 0,
                 "itemCosts": [
                     {
-                        "id": "namespace_thuum:Generous_Gratuity_Potion_I",
+                        "id": "namespace_thuum:Dragon_Shout_Potion_I",
                         "quantity": 3
                     }
                 ],
                 "rootItemIDs": [
-                    "namespace_thuum:Generous_Gratuity_Potion_I"
+                    "namespace_thuum:Dragon_Shout_Potion_I"
                 ],
                 "isDowngrade": false
             },
             {
-                "upgradedItemID": "namespace_thuum:Generous_Gratuity_Potion_III",
+                "upgradedItemID": "namespace_thuum:Dragon_Shout_Potion_III",
                 "gpCost": 0,
                 "scCost": 0,
                 "itemCosts": [
                     {
-                        "id": "namespace_thuum:Generous_Gratuity_Potion_II",
+                        "id": "namespace_thuum:Dragon_Shout_Potion_II",
                         "quantity": 3
                     }
                 ],
                 "rootItemIDs": [
-                    "namespace_thuum:Generous_Gratuity_Potion_II"
+                    "namespace_thuum:Dragon_Shout_Potion_II"
                 ],
                 "isDowngrade": false
             },
             {
-                "upgradedItemID": "namespace_thuum:Generous_Gratuity_Potion_IV",
+                "upgradedItemID": "namespace_thuum:Dragon_Shout_Potion_IV",
                 "gpCost": 0,
                 "scCost": 0,
                 "itemCosts": [
                     {
-                        "id": "namespace_thuum:Generous_Gratuity_Potion_III",
+                        "id": "namespace_thuum:Dragon_Shout_Potion_III",
                         "quantity": 3
                     }
                 ],
                 "rootItemIDs": [
-                    "namespace_thuum:Generous_Gratuity_Potion_III"
+                    "namespace_thuum:Dragon_Shout_Potion_III"
                 ],
                 "isDowngrade": false
             }
@@ -1568,14 +1568,14 @@
                 "data": {
                     "recipes": [
                         {
-                            "id": "Generous_Gratuity_Potion",
-                            "name": "Generous Gratuity Potion",
+                            "id": "Dragon_Shout_Potion",
+                            "name": "Dragon Shout Potion",
                             "level": 80,
                             "potionIDs": [
-                                "namespace_thuum:Generous_Gratuity_Potion_I",
-                                "namespace_thuum:Generous_Gratuity_Potion_II",
-                                "namespace_thuum:Generous_Gratuity_Potion_III",
-                                "namespace_thuum:Generous_Gratuity_Potion_IV"
+                                "namespace_thuum:Dragon_Shout_Potion_I",
+                                "namespace_thuum:Dragon_Shout_Potion_II",
+                                "namespace_thuum:Dragon_Shout_Potion_III",
+                                "namespace_thuum:Dragon_Shout_Potion_IV"
                             ],
                             "baseExperience": 140,
                             "categoryID": "melvorF:SkillPotions",
