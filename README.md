@@ -227,7 +227,7 @@ The Thuum skill also contains a pet: Dragon which provides -0.15s Thuum Interval
 
 ## Herblore
 
-The Generous Gratuity Potion can be brewed using the Herblore skill.
+The Dragon Shout Potion can be brewed using the Herblore skill.
 
 ![Potion](images/potion.png)
 
