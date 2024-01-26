@@ -15,7 +15,7 @@
                             "productId": "namespace_profile:Dragon_Born",
                             "level": 25,
                             "skills": [
-                                "https://cdn.melvor.net/core/v018/assets/media/monsters/dragon_red.png"
+                                "namespace_thuum:Thuum"
                             ],
                             "standardModifiers": [
                                 {
