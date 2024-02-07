@@ -1,15 +1,15 @@
-import { ThuumActionEventMatcher, ThuumActionEventMatcherOptions } from './thuum/event';
-import { Thuum } from './thuum/thuum';
-import { UserInterface } from './thuum/user-interface';
-import { ThuumModifiers } from './thuum/modifiers';
-import { ThuumTownship } from './township/township';
-import { ThuumAgility } from './agility/agility';
-import { ThuumAstrology } from './astrology/astrology';
-import { TinyPassiveIconsCompatibility } from './compatibility/tiny-passive-icons';
-import { ThuumSkillData } from './thuum/thuum.types';
-import { languages } from './language';
-import { ThuumTranslation } from './translation/translation';
-import { ThuumSettings } from './thuum/settings';
+import { ThuumActionEventMatcher, ThuumActionEventMatcherOptions } from "./thuum/event";
+import { Thuum } from "./thuum/thuum";
+import { UserInterface } from "./thuum/user-interface";
+import { ThuumModifiers } from "./thuum/modifiers";
+import { ThuumTownship } from "./township/township";
+import { ThuumAgility } from "./agility/agility";
+import { ThuumAstrology } from "./astrology/astrology";
+import { TinyPassiveIconsCompatibility } from "./compatibility/tiny-passive-icons";
+import { ThuumSkillData } from "./thuum/thuum.types";
+import { languages } from "./language";
+import { ThuumTranslation } from "./translation/translation";
+import { ThuumSettings } from "./thuum/settings";
 
 declare global {
     interface CloudManager {
@@ -20,7 +20,7 @@ declare global {
     const cloudManager: CloudManager;
 
     interface SkillIDDataMap {
-        'namespace_thuum:Thuum': ThuumSkillData;
+        "namespace_thuum:Thuum": ThuumSkillData;
     }
 
     interface SkillValue {
@@ -52,11 +52,11 @@ export class App {
     constructor(private readonly context: Modding.ModContext, private readonly game: Game) { }
 
     public async init() {
-        await this.context.loadTemplates('thuum/thuum.html');
-        await this.context.loadTemplates('thuum/teacher/teacher.html');
-        await this.context.loadTemplates('thuum/shout/shout.html');
-        await this.context.loadTemplates('thuum/mastery/mastery.html');
-        await this.context.loadTemplates('thuum/locked/locked.html');
+        await this.context.loadTemplates("thuum/thuum.html");
+        await this.context.loadTemplates("thuum/teacher/teacher.html");
+        await this.context.loadTemplates("thuum/shout/shout.html");
+        await this.context.loadTemplates("thuum/mastery/mastery.html");
+        await this.context.loadTemplates("thuum/locked/locked.html");
 
         this.initLanguage();
         this.initTranslation();
@@ -64,9 +64,9 @@ export class App {
         this.patchEventManager();
         this.initModifiers();
 
-        this.game.thuum = this.game.registerSkill(this.game.registeredNamespaces.getNamespace('namespace_thuum'), Thuum);
+        this.game.thuum = this.game.registerSkill(this.game.registeredNamespaces.getNamespace("namespace_thuum"), Thuum);
 
-        await this.context.gameData.addPackage('data.json');
+        await this.context.gameData.addPackage("data.json");
 
         const DragonList: any[] = [
             "melvorD:PratTheProtectorOfSecrets",
@@ -83,46 +83,45 @@ export class App {
             "melvorF:GreaterSkeletalDragon",
         ]
 
-        if (cloudManager.hasTotHEntitlement) {
-            await this.context.gameData.addPackage('data-toth.json');
-
-            DragonList.push(
-                "melvorTotH:Kongamato", "melvorTotH:GretYun", "melvorTotH:RaZu",
-            )
-
-            // await this.context.gameData
-            //     .buildPackage(builder => {
-            //         builder.skillData.add({
-            //             skillID: 'namespace_thuum:Thuum',
-            //             data: {
-            //                 minibar: {
-            //                     defaultItems: ['namespace_thuum:Superior_Thuum_Skillcape'],
-            //                     upgrades: [],
-            //                     pets: []
-            //                 },
-            //                 teachers: []
-            //             }
-            //         });
-            //     })
-            //     .add();
-        }
-        const kcm = mod.manager.getLoadedModList().includes('Custom Modifiers in Melvor')
-        const profileSkill = mod.manager.getLoadedModList().includes('Class &amp; Species')
-        const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
-
-        if (cloudManager.hasAoDEntitlement) {
-            await this.context.gameData.addPackage('data-aod.json');
-        }
-        if (mythLoaded) {
-            await this.context.gameData.addPackage('music.json');
-        }
-        if (kcm) {
-            await this.context.gameData.addPackage('data-cmim.json');
-        }
-
         this.context.onModsLoaded(async () => {
+            if (cloudManager.hasTotHEntitlement) {
+                await this.context.gameData.addPackage("data-toth.json");
+    
+                DragonList.push(
+                    "melvorTotH:Kongamato", "melvorTotH:GretYun", "melvorTotH:RaZu",
+                )
+    
+                await this.context.gameData
+                    .buildPackage(builder => {
+                        builder.skillData.add({
+                            skillID: "namespace_thuum:Thuum",
+                            data: {
+                                minibar: {
+                                    defaultItems: ["namespace_thuum:Superior_Thuum_Skillcape"],
+                                    upgrades: [],
+                                    pets: []
+                                },
+                                teachers: []
+                            }
+                        });
+                    })
+                    .add();
+            }
+            const kcm = mod.manager.getLoadedModList().includes("Custom Modifiers in Melvor")
+            const profileSkill = mod.manager.getLoadedModList().includes("Class &amp; Species")
+            const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
+    
+            if (cloudManager.hasAoDEntitlement) {
+                await this.context.gameData.addPackage("data-aod.json");
+            }
+            if (mythLoaded) {
+                await this.context.gameData.addPackage("music.json");
+            }
+            if (kcm) {
+                await this.context.gameData.addPackage("data-cmim.json");
+            }
             if (kcm && profileSkill) {
-                await this.context.gameData.addPackage('profile.json');
+                await this.context.gameData.addPackage("profile.json");
             }
             if (kcm) {
                 const cmim = mod.api.customModifiersInMelvor;
@@ -137,7 +136,7 @@ export class App {
                 cmim.forceBaseModTypeActive("Elemental");
                 cmim.forceBaseModTypeActive("MythicalCreature");
                 cmim.forceBaseModTypeActive("SeaCreature");
-                const cmimDragonList = await cmim.getMonstersOfType('Dragon');
+                const cmimDragonList = await cmim.getMonstersOfType("Dragon");
                 const initialPackage = this.context.gameData.buildPackage(builder => {
                     for (let index = 0; index < cmimDragonList.length; index++) {
                         builder.monsters.modify({
@@ -191,7 +190,7 @@ export class App {
     }
 
     private patchEventManager() {
-        this.context.patch(GameEventSystem, 'constructMatcher').after((_patch, data) => {
+        this.context.patch(GameEventSystem, "constructMatcher").after((_patch, data) => {
             if (this.isThuumEvent(data)) {
                 return new ThuumActionEventMatcher(data, this.game) as any;
             }
@@ -221,7 +220,7 @@ export class App {
     }
 
     private patchUnlock(thuum: Thuum) {
-        this.context.patch(EventManager, 'loadEvents').after(() => {
+        this.context.patch(EventManager, "loadEvents").after(() => {
             if (this.game.currentGamemode.allowDungeonLevelCapIncrease) {
                 thuum.setUnlock(true);
                 thuum.increasedLevelCap = this.game.attack.increasedLevelCap;
@@ -232,7 +231,7 @@ export class App {
     private isThuumEvent(
         data: GameEventMatcherData | ThuumActionEventMatcherOptions
     ): data is ThuumActionEventMatcherOptions {
-        return data.type === 'ThuumAction';
+        return data.type === "ThuumAction";
     }
 
     private initSettings() {
@@ -290,29 +289,29 @@ export class App {
     private initLanguage() {
         let lang = setLang;
 
-        if (lang === 'lemon' || lang === 'carrot') {
-            lang = 'en';
+        if (lang === "lemon" || lang === "carrot") {
+            lang = "en";
         }
 
         const keysToNotPrefix = [
-            'MASTERY_CHECKPOINT',
-            'MASTERY_BONUS',
-            'POTION_NAME',
-            'PET_NAME',
-            'ITEM_NAME',
-            'ITEM_DESCRIPTION',
-            'SHOP_NAME',
-            'SHOP_DESCRIPTION',
-            'MONSTER_NAME',
-            'COMBAT_AREA_NAME',
-            'SPECIAL_ATTACK_NAME',
-            'SPECIAL_ATTACK_DESCRIPTION',
-            'mod_',
-            'PASSIVES_NAME_',
-            'MODIFIER_DATA_',
-            'Profile_',
-            'tes_',
-            'Myth_Music_'
+            "MASTERY_CHECKPOINT",
+            "MASTERY_BONUS",
+            "POTION_NAME",
+            "PET_NAME",
+            "ITEM_NAME",
+            "ITEM_DESCRIPTION",
+            "SHOP_NAME",
+            "SHOP_DESCRIPTION",
+            "MONSTER_NAME",
+            "COMBAT_AREA_NAME",
+            "SPECIAL_ATTACK_NAME",
+            "SPECIAL_ATTACK_DESCRIPTION",
+            "mod_",
+            "PASSIVES_NAME_",
+            "MODIFIER_DATA_",
+            "Profile_",
+            "tes_",
+            "Myth_Music_"
         ];
 
         for (const [key, value] of Object.entries<string>(languages[lang])) {

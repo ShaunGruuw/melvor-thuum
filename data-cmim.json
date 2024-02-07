@@ -20,7 +20,7 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedDamageTakenFromAirSpells",
+                                    "key": "decreasedDamageFlatWhileTargetHasMaxHP",
                                     "value": 20
                                 },
                                 {
@@ -47,8 +47,8 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedDamageTakenFromAirSpells",
-                                    "value": 10
+                                    "key": "decreasedDamageFlatWhileTargetHasMaxHP",
+                                    "value": 30
                                 },
                                 {
                                     "level": 40,
