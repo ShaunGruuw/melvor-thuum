@@ -10,10 +10,6 @@
                         {
                             "id": "Ryuteki",
                             "name": "Ryūteki (龍笛)",
-    Teacher_Soul_Tear: "Soul Tear",
-    Teacher_Drain_Vitality: "Drain Vitality",
-    Teacher_Dragonrend:"Dragonrend",
-    Teacher_Dragon_Aspect:"Dragon Aspect",
                             "media": "https://www.historymuseum.ca/cmc/exhibitions/tresors/immigration/elem/img/im0297b.jpg",
                             "baseInterval": 3000,
                             "baseExperience": 37,

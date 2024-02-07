@@ -175,7 +175,6 @@ export class App {
                     }).add();
                 }
             }
-        
         })
 
         this.patchGamemodes(this.game.thuum);
