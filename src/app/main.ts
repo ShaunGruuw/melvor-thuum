@@ -108,7 +108,7 @@ export class App {
                     .add();
             }
             const kcm = mod.manager.getLoadedModList().includes("Custom Modifiers in Melvor")
-            const profileSkill = mod.manager.getLoadedModList().includes("Class &amp; Species")
+            const profileSkill = mod.manager.getLoadedModList().includes("(Skill) Classes and Species")
             const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
     
             if (cloudManager.hasAoDEntitlement) {
