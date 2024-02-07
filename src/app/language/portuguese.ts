@@ -34,7 +34,6 @@ export const pt = {
     "Teacher_Animal_Allegiance": 'Lealdade Animal',
     "Teacher_Become_Ethereal": 'Tornar-se Etéreo',
     "Teacher_Kynes_Peace": 'Paz de Kynes',
-    "Teacher_Flute": 'Flauta',
     "Teacher_Slow_Time": 'Tempo Lento',
     "Teacher_Whirlwind_Sprint": 'Sprint Redemoinho',
     "Teacher_Throw_Voice": 'Lançar Voz',
@@ -115,5 +114,9 @@ export const pt = {
     "tes_bypassDamageReduction": "${value} de dano, apesar da redução de dano",
     "Profile_Profile_Single_Species_Dragon_Born": "Nascido de Dragão",
     "Profile_Single_Species_Dragon_Born": "Nascido de Dragão",
-    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
+    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

@@ -34,7 +34,6 @@ export const ja = {
     Teacher_Animal_Allegiance: 'Animal Allegiance',
     Teacher_Become_Ethereal: 'Become Ethereal',
     Teacher_Kynes_Peace: 'Kynes Peace',
-    Teacher_Flute: 'Flute',
     Teacher_Slow_Time: 'Slow Time',
     Teacher_Whirlwind_Sprint: 'Whirlwind Sprint',
     Teacher_Throw_Voice: 'Throw Voice',
@@ -116,4 +115,8 @@ export const ja = {
     mod_bypassDamageReduction: "${value}のダメージはダメージ軽減を回避する",
     MODIFIER_DATA_summoningSynergy_Devil_Eagle: "盗みの間 - 50%の確率で基本スキルXPが+10%、40%の確率でGPが2.5倍、10%の確率でアイテムもGPも獲得しない",
     mod_increasedDragonBreathDamage: "ドラゴンブレスから受けるダメージを+${value}増加",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

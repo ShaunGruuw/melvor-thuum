@@ -34,7 +34,6 @@ export const en = {
     Teacher_Animal_Allegiance: 'Animal Allegiance',
     Teacher_Become_Ethereal: 'Become Ethereal',
     Teacher_Kynes_Peace: 'Kynes Peace',
-    Teacher_Flute: 'Flute',
     Teacher_Slow_Time: 'Slow Time',
     Teacher_Whirlwind_Sprint: 'Whirlwind Sprint',
     Teacher_Throw_Voice: 'Throw Voice',
@@ -115,5 +114,9 @@ export const en = {
     tes_bypassDamageReduction: "${value} damage, though damage reduction",
     Profile_Profile_Single_Species_Dragon_Born: "Dragon Born",
     Profile_Single_Species_Dragon_Born: "Dragon Born",
-    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
+    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

@@ -1535,13 +1535,13 @@
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedGPGlobal",
-                                    "value": 10
+                                    "key": "decreasedDamageReduction",
+                                    "value": 20
                                 },
                                 {
                                     "level": 40,
                                     "key": "increasedDamageToSlayerTasks",
-                                    "value": 2
+                                    "value": 5
                                 },
                                 {
                                     "level": 60,
@@ -1556,7 +1556,7 @@
                                 {
                                     "level": 99,
                                     "key": "increasedDamageDealtPerEffect",
-                                    "value": 5
+                                    "value": 1
                                 }
                             ]
                         }

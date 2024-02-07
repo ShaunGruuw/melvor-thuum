@@ -84,7 +84,7 @@ export class App {
         ]
 
         if (cloudManager.hasTotHEntitlement) {
-            // await this.context.gameData.addPackage('data-toth.json');
+            await this.context.gameData.addPackage('data-toth.json');
 
             DragonList.push(
                 "melvorTotH:Kongamato", "melvorTotH:GretYun", "melvorTotH:RaZu",

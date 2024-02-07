@@ -1,52 +1,6 @@
 {
     "$schema": "https://melvoridle.com/assets/schema/gameData.json",
     "namespace": "namespace_thuum",
-    "modifications": {
-        "items": [
-            {
-                "id": "melvorTotH:Superior_Max_Skillcape",
-                "modifiers": {
-                    "add": {
-                        "decreasedSkillInterval": [
-                            {
-                                "skillID": "namespace_thuum:Thuum",
-                                "value": 800
-                            }
-                        ],
-                        "decreasedThuumEquipCost": 10,
-                        "decreasedThuumGP": 10,
-                        "increasedMasteryXP": [
-                            {
-                                "skillID": "namespace_thuum:Thuum",
-                                "value": 10
-                            }
-                        ]
-                    }
-                }
-            },
-            {
-                "id": "melvorTotH:Superior_Cape_Of_Completion",
-                "modifiers": {
-                    "add": {
-                        "decreasedSkillInterval": [
-                            {
-                                "skillID": "namespace_thuum:Thuum",
-                                "value": 800
-                            }
-                        ],
-                        "decreasedThuumEquipCost": 10,
-                        "decreasedThuumGP": 10,
-                        "increasedMasteryXP": [
-                            {
-                                "skillID": "namespace_thuum:Thuum",
-                                "value": 10
-                            }
-                        ]
-                    }
-                }
-            }
-        ]
-    },
     "data": {
         "bankSortOrder": [
             {
@@ -164,26 +118,25 @@
                 "data": {
                     "teachers": [
                         {
-                            "id": "French_Horn",
-                            "name": "French Horn",
-                            "media": "assets/teachers/french-horn.png",
+                            "id": "Dragon_Aspect",
+                            "name": "Dragon Aspect",
+                            "media": "assets/teachers/shout.png",
                             "baseInterval": 3000,
                             "baseExperience": 155,
                             "maxGP": 551,
-                            "productId": "namespace_thuum:French_Horn",
+                            "productId": "namespace_thuum:Dragon_Aspect",
                             "level": 100,
-                            "skills": ["melvorD:Summoning", "melvorD:Astrology"],
+                            "skills": ["melvorD:Summoning"],
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedChanceToFindMeteorite",
-                                    "value": 5
+                                    "key": "decreasedSummoningChargePreservation",
+                                    "value": 50
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Astrology",
-                                    "value": 500
+                                    "key": "increasedSummoningAttackLifesteal",
+                                    "value": 5
                                 },
                                 {
                                     "level": 75,
@@ -193,106 +146,103 @@
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedSummoningCreationCharges",
-                                    "value": 15
+                                    "key": "increasedSummoningMaxHit",
+                                    "value": 10
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedChanceToFindMeteorite",
-                                    "value": 1
+                                    "key": "decreasedSummoningChargePreservation",
+                                    "value": 100
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Astrology",
-                                    "value": 100
+                                    "key": "increasedSummoningAttackLifesteal",
+                                    "value": 2
                                 },
                                 {
                                     "level": 75,
                                     "key": "decreasedSkillInterval",
                                     "skill": "melvorD:Summoning",
-                                    "value": 250
+                                    "value": 500
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedSummoningCreationCharges",
-                                    "value": 3
+                                    "key": "increasedSummoningMaxHit",
+                                    "value": 5
                                 }
                             ]
                         },
                         {
-                            "id": "Harp",
-                            "name": "Harp",
-                            "media": "assets/teachers/harp.png",
+                            "id": "Dragonrend",
+                            "name": "Dragonrend",
+                            "media": "assets/teachers/shout.png",
                             "baseInterval": 3000,
                             "baseExperience": 235,
                             "maxGP": 592,
-                            "productId": "namespace_thuum:Harp",
+                            "productId": "namespace_thuum:Dragonrend",
                             "level": 105,
-                            "skills": ["melvorD:Thieving", "melvorD:Herblore"],
+                            "skills": ["melvorD:Ranged"],
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedChanceRandomPotionHerblore",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedThievingStealth",
+                                    "key": "decreasedAmmoPreservation",
                                     "value": 50
                                 },
                                 {
+                                    "level": 40,
+                                    "key": "increasedRangedCritChance",
+                                    "value": 15
+                                },
+                                {
                                     "level": 75,
-                                    "key": "doubleItemsSkill",
-                                    "skill": "melvorD:Herblore",
-                                    "value": 2
+                                    "key": "increasedRangedMaxHit",
+                                    "value": 10
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedThievingAreaUniqueChance",
-                                    "value": 15
+                                    "key": "increasedRangedStrengthBonusPer8Ranged",
+                                    "value": 1
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedChanceRandomPotionHerblore",
-                                    "value": 2
+                                    "key": "decreasedAmmoPreservation",
+                                    "value": 100
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedThievingStealth",
-                                    "value": 15
+                                    "key": "increasedRangedCritChance",
+                                    "value": 5
                                 },
                                 {
                                     "level": 75,
-                                    "key": "doubleItemsSkill",
-                                    "skill": "melvorD:Herblore",
-                                    "value": 1
+                                    "key": "increasedRangedMaxHit",
+                                    "value": 5
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedThievingAreaUniqueChance",
-                                    "value": 2
+                                    "key": "increasedRangedStrengthBonusPer8Ranged",
+                                    "value": 1
                                 }
                             ]
                         },
                         {
-                            "id": "Tambourine",
-                            "name": "Tambourine",
-                            "media": "assets/teachers/tambourine.png",
+                            "id": "Drain_Vitality",
+                            "name": "Drain Vitality",
+                            "media": "assets/teachers/shout.png",
                             "baseInterval": 3000,
                             "baseExperience": 335,
                             "maxGP": 633,
-                            "productId": "namespace_thuum:Tambourine",
+                            "productId": "namespace_thuum:Drain_Vitality",
                             "level": 110,
-                            "skills": ["melvorD:Township", "melvorD:Farming"],
+                            "skills": ["melvorD:Township", "melvorD:Farming", "melvorD:Astrology"],
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedFarmingYield",
+                                    "key": "increasedGlobalSkillIntervalPercent",
                                     "value": 10
                                 },
                                 {
@@ -307,89 +257,135 @@
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedTownshipHappiness",
-                                    "value": 50
+                                    "key": "doubleModifiersInAstrologyForMaxedConstellations",
+                                    "value": 1
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedFarmingYield",
-                                    "value": 5
+                                    "key": "increasedGlobalSkillIntervalPercent",
+                                    "value": 33
                                 },
                                 {
                                     "level": 40,
                                     "key": "increasedFlatFarmingYield",
-                                    "value": 2
+                                    "value": 5
                                 },
                                 {
                                     "level": 75,
                                     "key": "increasedTownshipGPProduction",
-                                    "value": 2
+                                    "value": 5
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedTownshipHappiness",
-                                    "value": 5
+                                    "key": "doubleModifiersInAstrologyForMaxedConstellations",
+                                    "value": 1
                                 }
                             ]
                         },
                         {
-                            "id": "Trumpet",
-                            "name": "Trumpet",
-                            "media": "assets/teachers/trumpet.png",
+                            "id": "Soul_Tear",
+                            "name": "Soul Tear",
+                            "media": "assets/teachers/shout.png",
                             "baseInterval": 3000,
                             "baseExperience": 475,
                             "maxGP": 680,
-                            "productId": "namespace_thuum:Trumpet",
+                            "productId": "namespace_thuum:Soul_Tear",
                             "level": 115,
-                            "skills": ["melvorD:Attack", "melvorD:Strength", "melvorD:Ranged", "melvorD:Magic"],
+                            "skills": ["melvorD:Magic"],
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalAccuracy",
+                                    "key": "decreasedFlatMagicAccuracyBonusPerAttackInterval",
                                     "value": 5
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedMinHitBasedOnMaxHit",
+                                    "key": "increasedMagicAccuracyBonus",
                                     "value": 5
                                 },
                                 {
                                     "level": 75,
-                                    "key": "increasedMaxHitPercent",
+                                    "key": "increasedRunePreservation",
                                     "value": 10
                                 },
                                 {
                                     "level": 99,
-                                    "key": "decreasedAttackInterval",
-                                    "value": 500
+                                    "key": "increasedMagicMaxHitBonusAgainstMelee",
+                                    "value": 5
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalAccuracy",
-                                    "value": 2
+                                    "key": "decreasedFlatMagicAccuracyBonusPerAttackInterval",
+                                    "value": 10
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedMinHitBasedOnMaxHit",
-                                    "value": 1
-                                },
-                                {
-                                    "level": 75,
-                                    "key": "increasedMaxHitPercent",
+                                    "key": "increasedMagicAccuracyBonus",
                                     "value": 2
                                 },
                                 {
+                                    "level": 75,
+                                    "key": "increasedRunePreservation",
+                                    "value": 5
+                                },
+                                {
                                     "level": 99,
-                                    "key": "decreasedAttackInterval",
-                                    "value": 100
+                                    "key": "increasedMagicMaxHitBonusAgainstMelee",
+                                    "value": 2
                                 }
                             ]
                         }
                     ]
+                }
+            }
+        ]
+    },
+    "modifications": {
+        "items": [
+            {
+                "id": "melvorTotH:Superior_Max_Skillcape",
+                "modifiers": {
+                    "add": {
+                        "decreasedSkillInterval": [
+                            {
+                                "skillID": "namespace_thuum:Thuum",
+                                "value": 800
+                            }
+                        ],
+                        "decreasedThuumEquipCost": 10,
+                        "decreasedThuumGP": 10,
+                        "increasedMasteryXP": [
+                            {
+                                "skillID": "namespace_thuum:Thuum",
+                                "value": 10
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "id": "melvorTotH:Superior_Cape_Of_Completion",
+                "modifiers": {
+                    "add": {
+                        "decreasedSkillInterval": [
+                            {
+                                "skillID": "namespace_thuum:Thuum",
+                                "value": 800
+                            }
+                        ],
+                        "decreasedThuumEquipCost": 10,
+                        "decreasedThuumGP": 10,
+                        "increasedMasteryXP": [
+                            {
+                                "skillID": "namespace_thuum:Thuum",
+                                "value": 10
+                            }
+                        ]
+                    }
                 }
             }
         ]

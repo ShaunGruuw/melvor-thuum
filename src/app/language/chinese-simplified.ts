@@ -34,7 +34,6 @@ export const zhCN = {
     Teacher_Animal_Allegiance: '动物契约',
     Teacher_Become_Ethereal: '成为虚无',
     Teacher_Kynes_Peace: '奇纳斯的宁静',
-    Teacher_Flute: '长笛',
     Teacher_Slow_Time: '减缓时间',
     Teacher_Whirlwind_Sprint: '旋风冲刺',
     Teacher_Throw_Voice: '扔音',
@@ -115,5 +114,9 @@ export const zhCN = {
     tes_bypassDamageReduction: "通过伤害减免造成${value}的伤害",
     Profile_Profile_Single_Species_Dragon_Born: "龙裔",
     Profile_Single_Species_Dragon_Born: "龙裔",
-    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
+    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

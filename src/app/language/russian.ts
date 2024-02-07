@@ -34,7 +34,6 @@ export const ru = {
   "Teacher_Animal_Allegiance": 'Верность Животных',
   "Teacher_Become_Ethereal": 'Становление Эфирным',
   "Teacher_Kynes_Peace": 'Мир Кайна',
-  "Teacher_Flute": 'Флейта',
   "Teacher_Slow_Time": 'Медленное Время',
   "Teacher_Whirlwind_Sprint": 'Спринт Вихря',
   "Teacher_Throw_Voice": 'Бросок Голоса',
@@ -115,5 +114,9 @@ export const ru = {
   "tes_bypassDamageReduction": "${value} урона, несмотря на уменьшение урона",
   "Profile_Profile_Single_Species_Dragon_Born": "Родившийся Драконом",
   "Profile_Single_Species_Dragon_Born": "Родившийся Драконом",
-  Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
+  Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

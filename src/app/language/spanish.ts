@@ -35,7 +35,6 @@ export const es =
   "Teacher_Animal_Allegiance": 'Lealtad Animal',
   "Teacher_Become_Ethereal": 'Volver Etereo',
   "Teacher_Kynes_Peace": 'Paz de Kynes',
-  "Teacher_Flute": 'Flauta',
   "Teacher_Slow_Time": 'Tiempo Lento',
   "Teacher_Whirlwind_Sprint": 'Sprint de Torbellino',
   "Teacher_Throw_Voice": 'Lanzar Voz',
@@ -116,5 +115,9 @@ export const es =
   "tes_bypassDamageReduction": 'Pasa por alto la reducción de daño en ${value}, pero no la evasión de daño',
   "Profile_Profile_Single_Species_Dragon_Born": 'Perfil Nacido de Dragón',
   "Profile_Single_Species_Dragon_Born": 'Nacido de Dragón',
-  "Myth_Music_Instrument_Ryuteki": '(Ryūteki (龍笛)'
+  "Myth_Music_Instrument_Ryuteki": '(Ryūteki (龍笛)',
+  Teacher_Soul_Tear: "Soul Tear",
+  Teacher_Drain_Vitality: "Drain Vitality",
+  Teacher_Dragonrend:"Dragonrend",
+  Teacher_Dragon_Aspect:"Dragon Aspect"
 }

@@ -34,7 +34,6 @@ export const ko = {
     Teacher_Animal_Allegiance: '동물 동맹',
     Teacher_Become_Ethereal: '천상으로 변화',
     Teacher_Kynes_Peace: '카인의 평화',
-    Teacher_Flute: '플루트',
     Teacher_Slow_Time: '시간 감속',
     Teacher_Whirlwind_Sprint: '소용돌이 돌진',
     Teacher_Throw_Voice: '목소리 던지기',
@@ -115,5 +114,9 @@ export const ko = {
     tes_bypassDamageReduction: "${value} 피해, 그러나 피해 감소 적용됨",
     Profile_Profile_Single_Species_Dragon_Born: "용 종족",
     Profile_Single_Species_Dragon_Born: "용 종족",
-    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
+    Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

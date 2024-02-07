@@ -34,7 +34,6 @@ Teacher_Cyclone: 'Zyklon',
 Teacher_Animal_Allegiance: 'Tierische Gefolgschaft',
 Teacher_Become_Ethereal: 'Werde Ätherisch',
 Teacher_Kynes_Peace: 'Kynes Frieden',
-Teacher_Flute: 'Flöte',
 Teacher_Slow_Time: 'Langsamer Zeitraum',
 Teacher_Whirlwind_Sprint: 'Wirbelsturmsprint',
 Teacher_Throw_Voice: 'Stimme werfen',
@@ -115,5 +114,9 @@ tes_decreaseFlatDamageWhileTargetHasMaxHP: "Verringert den erlittenen Schaden, w
 tes_bypassDamageReduction: "${value} Schaden, obwohl Schadensreduktion",
 Profile_Profile_Single_Species_Dragon_Born: "Drachenkind",
 Profile_Single_Species_Dragon_Born: "Drachenkind",
-Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)"
+Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
+    Teacher_Soul_Tear: "Soul Tear",
+    Teacher_Drain_Vitality: "Drain Vitality",
+    Teacher_Dragonrend:"Dragonrend",
+    Teacher_Dragon_Aspect:"Dragon Aspect"
 };

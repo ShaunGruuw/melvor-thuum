@@ -34,7 +34,6 @@ export const tr = {
         "Teacher_Animal_Allegiance": 'Hayvan İttifakı',
         "Teacher_Become_Ethereal": 'Eterik Ol',
         "Teacher_Kynes_Peace": 'Kynes Barışı',
-        "Teacher_Flute": 'Flüt',
         "Teacher_Slow_Time": 'Yavaş Zaman',
         "Teacher_Whirlwind_Sprint": 'Girdap Koşusu',
         "Teacher_Throw_Voice": 'Ses Atma',
@@ -115,5 +114,9 @@ export const tr = {
         "tes_bypassDamageReduction": 'Hasarı ${value} kadar, ancak hasar azalması',
         "Profile_Profile_Single_Species_Dragon_Born": 'Ejderha Doğmuş Profili',
         "Profile_Single_Species_Dragon_Born": 'Ejderha Doğmuş',
-        "Myth_Music_Instrument_Ryuteki": 'Ryūteki (龍笛)'
+        "Myth_Music_Instrument_Ryuteki": 'Ryūteki (龍笛)',
+        Teacher_Soul_Tear: "Soul Tear",
+        Teacher_Drain_Vitality: "Drain Vitality",
+        Teacher_Dragonrend:"Dragonrend",
+        Teacher_Dragon_Aspect:"Dragon Aspect"
 };
