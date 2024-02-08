@@ -139,10 +139,15 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedSkillInterval",
                                     "skill": "melvorD:Summoning",
                                     "value": 1000
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedGPBasedOnSummonDamage",
+                                    "value": 6
                                 },
                                 {
                                     "level": 99,
@@ -162,10 +167,15 @@
                                     "value": 2
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "decreasedSkillInterval",
                                     "skill": "melvorD:Summoning",
                                     "value": 500
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedGPBasedOnSummonDamage",
+                                    "value": 2
                                 },
                                 {
                                     "level": 99,
@@ -196,8 +206,13 @@
                                     "value": 15
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedRangedMaxHit",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedRangedLifesteal",
                                     "value": 10
                                 },
                                 {
@@ -218,8 +233,13 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedRangedMaxHit",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedRangedLifesteal",
                                     "value": 5
                                 },
                                 {
@@ -251,8 +271,14 @@
                                     "value": 15
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedTownshipGPProduction",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Astrology",
                                     "value": 10
                                 },
                                 {
@@ -273,8 +299,14 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedTownshipGPProduction",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "decreasedSkillIntervalPercent",
+                                    "skill": "melvorD:Astrology",
                                     "value": 5
                                 },
                                 {
@@ -306,8 +338,13 @@
                                     "value": 5
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedRunePreservation",
+                                    "value": 10
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedMagicCritChance",
                                     "value": 10
                                 },
                                 {
@@ -328,8 +365,13 @@
                                     "value": 2
                                 },
                                 {
-                                    "level": 75,
+                                    "level": 60,
                                     "key": "increasedRunePreservation",
+                                    "value": 5
+                                },
+                                {
+                                    "level": 80,
+                                    "key": "increasedMagicCritChance",
                                     "value": 5
                                 },
                                 {
