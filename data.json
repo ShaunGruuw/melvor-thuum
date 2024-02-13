@@ -955,9 +955,9 @@
                                 },
                                 {
                                     "level": 40,
-                                    "key": "doubleItemsSkill",
+                                    "key": "increasedChanceAdditionalSkillResource",
                                     "skill": "melvorD:Cooking",
-                                    "value": 1
+                                    "value": 50
                                 },
                                 {
                                     "level": 60,

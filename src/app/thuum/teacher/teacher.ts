@@ -57,7 +57,18 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
 
             minGP = modGp(minGP);
             maxGP = modGp(maxGP);
-
+            if(minGP < 1) {
+                minGP = 1
+            }
+            if(maxGP < 1) {
+                maxGP = 1
+            }
+            if(minGP > 10000000000000) {
+                minGP = 10000000000000
+            }
+            if(maxGP > 10000000000000) {
+                maxGP = 10000000000000
+            }
             this.minGP = minGP;
             this.maxGP = maxGP;
         },

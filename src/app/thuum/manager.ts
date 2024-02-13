@@ -87,7 +87,12 @@ export class ThuumManager {
 
         gpMultiplier *= 1 + increasedGPModifier / 100;
         gpToTake = Math.floor((gpToTake/gpMultiplier)  - this.game.modifiers.increasedGPFlat);
-
+        if(gpToTake > 10000000000000 || typeof gpToTake !== 'number') {
+            gpToTake = 10000000000000
+        }
+        if(gpToTake < 1) {
+            gpToTake = 1
+        }
         return gpToTake;
     }
 

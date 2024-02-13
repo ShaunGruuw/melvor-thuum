@@ -25,7 +25,7 @@
                 "number": 2,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
-                    "increasedMaxAirSpellDmg": 20
+                    "decreasedThuumGP": 20
                 }
             },
             {
@@ -45,7 +45,7 @@
                 "number": 4,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
-                    "increasedGPGlobal": 50
+                    "increasedGPGlobal": 10
                 }
             },
             {
@@ -70,7 +70,7 @@
                 "number": 6,
                 "description": "A relic from the ancient greybeards.",
                 "modifiers": {
-                    "bigRon": 1
+                    "increasedGlobalMasteryXP": 10
                 }
             }
         ],
