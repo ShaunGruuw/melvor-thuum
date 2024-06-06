@@ -20,7 +20,7 @@
                 "id": "melvorD:Aorpheats_Signet_Ring",
                 "modifiers": {
                     "add": {
-                        "decreasedThuumGP": 100
+                    "decreasedThuumGP": 100
                     }
                 }
             },
@@ -28,14 +28,14 @@
                 "id": "melvorF:Max_Skillcape",
                 "modifiers": {
                     "add": {
-                        "decreasedSkillInterval": [
+                        "decreasedThuumEquipCost": 5,
+                        "decreasedThuumGP": 5,
+                        "flatSkillInterval": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
-                                "value": 500
+                                "value": -500
                             }
-                        ],
-                        "decreasedThuumEquipCost": 5,
-                        "decreasedThuumGP": 5
+                        ]
                     }
                 }
             },
@@ -43,14 +43,14 @@
                 "id": "melvorF:Cape_of_Completion",
                 "modifiers": {
                     "add": {
-                        "decreasedSkillInterval": [
+                        "decreasedThuumEquipCost": 5,
+                        "decreasedThuumGP": 5,
+                        "flatSkillInterval": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
-                                "value": 500
+                                "value": -500
                             }
-                        ],
-                        "decreasedThuumEquipCost": 5,
-                        "decreasedThuumGP": 5
+                        ]
                     }
                 }
             }
@@ -141,7 +141,7 @@
                 "equipRequirements": [],
                 "equipmentStats": [],
                 "modifiers": {
-                    "increasedSkillXP": [
+                    "skillXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",
                             "value": 2
@@ -169,7 +169,7 @@
                 "equipRequirements": [],
                 "equipmentStats": [],
                 "modifiers": {
-                    "increasedSkillXP": [
+                    "skillXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",
                             "value": 2
@@ -197,7 +197,7 @@
                 "equipRequirements": [],
                 "equipmentStats": [],
                 "modifiers": {
-                    "increasedSkillXP": [
+                    "skillXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",
                             "value": 2
@@ -225,7 +225,7 @@
                 "equipRequirements": [],
                 "equipmentStats": [],
                 "modifiers": {
-                    "increasedSkillXP": [
+                    "skillXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",
                             "value": 2
@@ -252,7 +252,7 @@
                 "equipRequirements": [],
                 "equipmentStats": [],
                 "modifiers": {
-                    "increasedSkillXP": [
+                    "skillXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",
                             "value": 3
@@ -276,12 +276,12 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 50,
                 "itemType": "Potion",
-                "modifiers": {
-                    "decreasedThuumGP": 10
-                },
                 "charges": 15,
                 "tier": 0,
                 "action": "namespace_thuum:Thuum",
+                "modifiers": {
+                    "decreasedThuumGP": 10
+                },
                 "consumesOn": [
                     {
                         "type": "ThuumAction"
@@ -322,11 +322,11 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 150,
                 "itemType": "Potion",
+                "charges": 35,
+                "tier": 2,
                 "modifiers": {
                     "decreasedThuumGP": 30
                 },
-                "charges": 35,
-                "tier": 2,
                 "action": "namespace_thuum:Thuum",
                 "consumesOn": [
                     {
@@ -368,6 +368,9 @@
                 "obtainFromItemLog": false,
                 "golbinRaidExclusive": false,
                 "sellsFor": 0,
+                "modifiers": {
+                    "decreasedThuumGP": 5
+                },
                 "tier": "Tier 1 Summon",
                 "validSlots": [
                     "Summon1",
@@ -381,9 +384,6 @@
                         "value": 19.2
                     }
                 ],
-                "modifiers": {
-                    "decreasedThuumGP": 5
-                },
                 "consumesOn": [
                     {
                         "type": "ThuumAction"
@@ -403,7 +403,7 @@
                 "obtainFromItemLog": false,
                 "golbinRaidExclusive": false,
                 "sellsFor": 1500,
-                "itemType": "Token",
+                "itemType": "MasteryToken",
                 "modifiers": {
                     "masteryToken": [
                         {
@@ -411,7 +411,10 @@
                             "value": 0.1
                         }
                     ]
-                }
+                },
+                "skill": "namespace_thuum:Thuum",
+                "realm": "melvorD:Melvor",
+                "percent": 0.1
             },
             {
                 "itemType": "Equipment",
@@ -451,10 +454,10 @@
                     }
                 ],
                 "modifiers": {
-                    "decreasedSkillInterval": [
+                    "flatSkillInterval": [
                         {
                             "skillID": "namespace_thuum:Thuum",
-                            "value": 500
+                            "value": -500
                         }
                     ],
                     "decreasedThuumEquipCost": 5,
@@ -465,8 +468,6 @@
         "itemUpgrades": [
             {
                 "upgradedItemID": "namespace_thuum:Dragon_Shout_Potion_II",
-                "gpCost": 0,
-                "scCost": 0,
                 "itemCosts": [
                     {
                         "id": "namespace_thuum:Dragon_Shout_Potion_I",
@@ -480,8 +481,6 @@
             },
             {
                 "upgradedItemID": "namespace_thuum:Dragon_Shout_Potion_III",
-                "gpCost": 0,
-                "scCost": 0,
                 "itemCosts": [
                     {
                         "id": "namespace_thuum:Dragon_Shout_Potion_II",
@@ -495,8 +494,6 @@
             },
             {
                 "upgradedItemID": "namespace_thuum:Dragon_Shout_Potion_IV",
-                "gpCost": 0,
-                "scCost": 0,
                 "itemCosts": [
                     {
                         "id": "namespace_thuum:Dragon_Shout_Potion_III",
@@ -523,19 +520,14 @@
                     ]
                 },
                 "cost": {
-                    "gp": {
-                        "type": "Fixed",
-                        "cost": 1000000
-                    },
-                    "slayerCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    },
-                    "items": [],
-                    "raidCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    }
+                    "currencies": [
+                        {
+                            "currency": "melvorD:GP",
+                            "type": "Fixed",
+                            "cost": 1000000
+                        }
+                    ],
+                    "items": []
                 },
                 "allowQuantityPurchase": false,
                 "unlockRequirements": [],
@@ -563,19 +555,14 @@
                     ]
                 },
                 "cost": {
-                    "gp": {
-                        "type": "Fixed",
-                        "cost": 100000
-                    },
-                    "slayerCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    },
-                    "items": [],
-                    "raidCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    }
+                    "currencies": [
+                        {
+                            "currency": "melvorD:GP",
+                            "type": "Fixed",
+                            "cost": 100000
+                        }
+                    ],
+                    "items": []
                 },
                 "allowQuantityPurchase": false,
                 "unlockRequirements": [],
@@ -607,19 +594,14 @@
                     ]
                 },
                 "cost": {
-                    "gp": {
-                        "type": "Fixed",
-                        "cost": 100000
-                    },
-                    "slayerCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    },
-                    "items": [],
-                    "raidCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    }
+                    "currencies": [
+                        {
+                            "currency": "melvorD:GP",
+                            "type": "Fixed",
+                            "cost": 100000
+                        }
+                    ],
+                    "items": []
                 },
                 "allowQuantityPurchase": false,
                 "unlockRequirements": [],
@@ -651,19 +633,14 @@
                     ]
                 },
                 "cost": {
-                    "gp": {
-                        "type": "Fixed",
-                        "cost": 100000
-                    },
-                    "slayerCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    },
-                    "items": [],
-                    "raidCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    }
+                    "currencies": [
+                        {
+                            "currency": "melvorD:GP",
+                            "type": "Fixed",
+                            "cost": 100000
+                        }
+                    ],
+                    "items": []
                 },
                 "allowQuantityPurchase": false,
                 "unlockRequirements": [],
@@ -695,19 +672,14 @@
                     ]
                 },
                 "cost": {
-                    "gp": {
-                        "type": "Fixed",
-                        "cost": 100000
-                    },
-                    "slayerCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    },
-                    "items": [],
-                    "raidCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    }
+                    "currencies": [
+                        {
+                            "currency": "melvorD:GP",
+                            "type": "Fixed",
+                            "cost": 100000
+                        }
+                    ],
+                    "items": []
                 },
                 "allowQuantityPurchase": false,
                 "unlockRequirements": [],
@@ -753,10 +725,10 @@
                 "media": "assets/dragon.png",
                 "ignoreCompletion": false,
                 "modifiers": {
-                    "decreasedSkillInterval": [
+                    "flatSkillInterval": [
                         {
                             "skillID": "namespace_thuum:Thuum",
-                            "value": 150
+                            "value": -150
                         }
                     ]
                 },
@@ -1585,8 +1557,12 @@
                                     "quantity": 1
                                 }
                             ],
-                            "gpCost": 1000,
-                            "scCost": 0
+                            "currencyCosts": [
+                                {
+                                    "id": "melvorD:GP",
+                                    "quantity": 1000
+                                }
+                            ]
                         }
                     ]
                 }
@@ -1616,8 +1592,12 @@
                                     "quantity": 6
                                 }
                             ],
-                            "gpCost": 1000,
-                            "scCost": 0,
+                            "currencyCosts": [
+                                {
+                                    "id": "melvorD:GP",
+                                    "quantity": 1000
+                                }
+                            ],
                             "markMedia": "assets/summoning/shout-mark.png",
                             "nonShardItemCosts": [],
                             "tier": 3,
@@ -1633,8 +1613,18 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedGPOnEnemyHit": 30,
-                                "increasedGPFromMonstersFlat": 175
+                                "flatCurrencyGainOnEnemyHit": [
+                                    {
+                                        "currencyID": "melvorD:GP",
+                                        "value": 30
+                                    }
+                                ],
+                                "flatCurrencyGainFromMonsterDrops": [
+                                    {
+                                        "currencyID": "melvorD:GP",
+                                        "value": 175
+                                    }
+                                ]
                             },
                             "consumesOn": [
                                 {
@@ -1648,10 +1638,10 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedGlobalEvasion": 10
+                                "evasion": 10
                             },
                             "enemyModifiers": {
-                                "decreasedGlobalEvasion": 10
+                                "evasion": -10
                             },
                             "consumesOn": [
                                 {
@@ -1665,7 +1655,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedLifesteal": 2
+                                "lifesteal": 2
                             },
                             "consumesOn": [
                                 {
@@ -1679,7 +1669,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedChanceAdditionalSkillResource": [
+                                "additionalPrimaryProductChance": [
                                     {
                                         "skillID": "melvorD:Woodcutting",
                                         "value": 30
@@ -1698,7 +1688,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedChanceAdditionalSkillResource": [
+                                "additionalPrimaryProductChance": [
                                     {
                                         "skillID": "melvorD:Mining",
                                         "value": 3
@@ -1717,7 +1707,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedChanceAdditionalSkillResource": [
+                                "additionalPrimaryProductChance": [
                                     {
                                         "skillID": "melvorD:Fishing",
                                         "value": 3
@@ -1736,8 +1726,8 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedMeleeMaxHit": 3,
-                                "increasedMeleeAccuracyBonus": 3
+                                "meleeMaxHit": 3,
+                                "meleeAccuracyRating": 3
                             },
                             "consumesOn": [
                                 {
@@ -1751,8 +1741,8 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedRangedMaxHit": 3,
-                                "increasedRangedAccuracyBonus": 3
+                                "rangedMaxHit": 3,
+                                "rangedAccuracyRating": 3
                             },
                             "consumesOn": [
                                 {
@@ -1766,8 +1756,8 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedMagicMaxHit": 3,
-                                "increasedMagicAccuracyBonus": 3
+                                "magicMaxHit": 3,
+                                "magicAccuracyRating": 3
                             },
                             "consumesOn": [
                                 {
@@ -1781,7 +1771,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedSkillPreservationChance": [
+                                "skillPreservationChance": [
                                     {
                                         "skillID": "melvorD:Cooking",
                                         "value": 25
@@ -1800,7 +1790,13 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedAdditionalRunecraftCountRunes": 2
+                                "flatAdditionalPrimaryProductQuantity": [
+                                    {
+                                        "skillID": "melvorD:Runecrafting",
+                                        "subcategoryID": "melvorF:Runes",
+                                        "value": 2
+                                    }
+                                ]
                             },
                             "consumesOn": [
                                 {
@@ -1814,7 +1810,12 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedGPFromThievingFlat": 50
+                                "flatThievingCurrencyGain": [
+                                    {
+                                        "currencyID": "melvorD:GP",
+                                        "value": 50
+                                    }
+                                ]
                             },
                             "consumesOn": [
                                 {
@@ -1829,7 +1830,12 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedSlayerCoins": 10
+                                "currencyGain": [
+                                    {
+                                        "currencyID": "melvorD:SlayerCoins",
+                                        "value": 10
+                                    }
+                                ]
                             },
                             "consumesOn": [
                                 {
@@ -1843,7 +1849,12 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedDamageReduction": 1
+                                "flatResistance": [
+                                    {
+                                        "damageTypeID": "melvorD:Normal",
+                                        "value": 1
+                                    }
+                                ]
                             },
                             "consumesOn": [
                                 {
@@ -1861,7 +1872,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedHitpointRegeneration": 50
+                                "hitpointRegeneration": 50
                             },
                             "consumesOn": [
                                 {
@@ -1874,9 +1885,14 @@
                                 "melvorF:Dragon",
                                 "namespace_thuum:Shout"
                             ],
-                            "modifiers": {
-                                "increasedChanceToApplyBurn": 10
-                            },
+                            "modifiers": {},
+                            "combatEffects": [
+                                {
+                                    "effectID": "melvorD:Burn",
+                                    "chance": 10,
+                                    "appliesWhen": "PostAttack"
+                                }
+                            ],
                             "consumesOn": [
                                 {
                                     "type": "PlayerSummonAttack"
@@ -1889,7 +1905,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedChanceToDoubleItemsSkill": [
+                                "skillItemDoublingChance": [
                                     {
                                         "skillID": "melvorD:Crafting",
                                         "value": 10
@@ -1908,7 +1924,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedSkillPreservationChance": [
+                                "skillPreservationChance": [
                                     {
                                         "skillID": "melvorD:Smithing",
                                         "value": 25
@@ -1927,7 +1943,7 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "increasedSkillPreservationChance": [
+                                "skillPreservationChance": [
                                     {
                                         "skillID": "melvorD:Herblore",
                                         "value": 5
@@ -1946,10 +1962,10 @@
                                 "namespace_thuum:Shout"
                             ],
                             "modifiers": {
-                                "decreasedSkillIntervalPercent": [
+                                "skillInterval": [
                                     {
                                         "skillID": "melvorD:Firemaking",
-                                        "value": 5
+                                        "value": -5
                                     }
                                 ]
                             },

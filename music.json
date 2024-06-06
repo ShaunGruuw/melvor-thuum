@@ -16,7 +16,9 @@
                             "maxGP": 305,
                             "productId": "mythMusic:Ryuteki",
                             "level": 35,
-                            "skills": ["namespace_thuum:Thuum"],
+                            "skills": [
+                                "namespace_thuum:Thuum"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,

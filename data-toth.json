@@ -6,7 +6,9 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorTotH:Superior_Mining_Skillcape",
-                "ids": ["namespace_thuum:Superior_Thuum_Skillcape"]
+                "ids": [
+                    "namespace_thuum:Superior_Thuum_Skillcape"
+                ]
             }
         ],
         "shopPurchases": [
@@ -23,19 +25,14 @@
                     ]
                 },
                 "cost": {
-                    "gp": {
-                        "type": "Fixed",
-                        "cost": 10000000
-                    },
-                    "slayerCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    },
-                    "items": [],
-                    "raidCoins": {
-                        "type": "Fixed",
-                        "cost": 0
-                    }
+                    "currencies": [
+                        {
+                            "currency": "melvorD:GP",
+                            "type": "Fixed",
+                            "cost": 10000000
+                        }
+                    ],
+                    "items": []
                 },
                 "allowQuantityPurchase": false,
                 "unlockRequirements": [],
@@ -55,7 +52,9 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorTotH:Superior_Mining_Skillcape",
-                "ids": ["namespace_thuum:Superior_Thuum_Skillcape"]
+                "ids": [
+                    "namespace_thuum:Superior_Thuum_Skillcape"
+                ]
             }
         ],
         "items": [
@@ -71,7 +70,9 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 1000000,
                 "tier": "Skillcape",
-                "validSlots": ["Cape"],
+                "validSlots": [
+                    "Cape"
+                ],
                 "occupiesSlots": [],
                 "equipRequirements": [
                     {
@@ -95,15 +96,13 @@
                     }
                 ],
                 "modifiers": {
-                    "decreasedSkillInterval": [
+                    "flatSkillInterval": [
                         {
                             "skillID": "namespace_thuum:Thuum",
-                            "value": 800
+                            "value": -800
                         }
                     ],
-                    "decreasedThuumEquipCost": 10,
-                    "decreasedThuumGP": 10,
-                    "increasedMasteryXP": [
+                    "masteryXP": [
                         {
                             "skillID": "namespace_thuum:Thuum",
                             "value": 10
@@ -126,7 +125,9 @@
                             "maxGP": 551,
                             "productId": "namespace_thuum:Dragon_Aspect",
                             "level": 100,
-                            "skills": ["melvorD:Summoning"],
+                            "skills": [
+                                "melvorD:Summoning"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -193,7 +194,9 @@
                             "maxGP": 592,
                             "productId": "namespace_thuum:Dragonrend",
                             "level": 105,
-                            "skills": ["melvorD:Ranged"],
+                            "skills": [
+                                "melvorD:Ranged"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -258,7 +261,11 @@
                             "maxGP": 633,
                             "productId": "namespace_thuum:Drain_Vitality",
                             "level": 110,
-                            "skills": ["melvorD:Township", "melvorD:Farming", "melvorD:Astrology"],
+                            "skills": [
+                                "melvorD:Township",
+                                "melvorD:Farming",
+                                "melvorD:Astrology"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -325,7 +332,9 @@
                             "maxGP": 680,
                             "productId": "namespace_thuum:Soul_Tear",
                             "level": 115,
-                            "skills": ["melvorD:Magic"],
+                            "skills": [
+                                "melvorD:Magic"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
@@ -392,15 +401,15 @@
                 "id": "melvorTotH:Superior_Max_Skillcape",
                 "modifiers": {
                     "add": {
-                        "decreasedSkillInterval": [
+                        "flatSkillInterval": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
-                                "value": 800
+                                "value": -800
                             }
                         ],
                         "decreasedThuumEquipCost": 10,
                         "decreasedThuumGP": 10,
-                        "increasedMasteryXP": [
+                        "masteryXP": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
                                 "value": 10
@@ -413,15 +422,15 @@
                 "id": "melvorTotH:Superior_Cape_Of_Completion",
                 "modifiers": {
                     "add": {
-                        "decreasedSkillInterval": [
+                        "flatSkillInterval": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
-                                "value": 800
+                                "value": -800
                             }
                         ],
                         "decreasedThuumEquipCost": 10,
                         "decreasedThuumGP": 10,
-                        "increasedMasteryXP": [
+                        "masteryXP": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
                                 "value": 10

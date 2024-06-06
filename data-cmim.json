@@ -16,7 +16,9 @@
                             "maxGP": 551,
                             "productId": "namespace_thuum:cmim_teacher",
                             "level": 99,
-                            "skills": ["namespace_thuum:Thuum"],
+                            "skills": [
+                                "namespace_thuum:Thuum"
+                            ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
