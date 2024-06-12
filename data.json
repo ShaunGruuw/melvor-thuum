@@ -54,6 +54,25 @@
                     }
                 }
             }
+        ],
+        "skillData": [
+            {
+                "skillID": "melvorD:Agility",
+                "data": {
+                    "obstacles": [
+                        {
+                            "id": "melvorF:Waterfall",
+                            "modifiers": {
+                                "add": {
+                                    "decreasedSkillIntervalPercent": [{ "skillID": "namespace_thuum:Thuum", "value": 5 }],
+                                    "increasedSkillXP": [{ "skillID": "namespace_thuum:Thuum", "value": 5 }],
+                                    "increasedMasteryXP": [{ "skillID": "namespace_thuum:Thuum", "value": 5 }]
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
         ]
     },
     "data": {
@@ -1977,6 +1996,135 @@
                         }
                     ]
                 }
+            }
+        ],
+        "modifiers": [
+            {
+                "id": "ThuumGP",
+                "isCombat": false,
+                "allowEnemy": false,
+                "allowedScopes": [
+                    {
+                        "scopes": {},
+                        "descriptions": [
+                            {
+                                "text": "-${value}% Thuum GP",
+                                "lang": "namespace_thuum_Thuum_GP_Negative",
+                                "below": 0,
+                                "includeSign": false
+                            },
+                            {
+                                "text": "+${value}% Thuum GP",
+                                "lang": "namespace_thuum_Thuum_GP_Positive",
+                                "above": 0,
+                                "includeSign": false
+                            }
+                        ],
+                        "posAliases": [
+                            {
+                                "key": "increasedThuumGP"
+                            }
+                        ],
+                        "negAliases": [
+                            {
+                                "key": "decreasedThuumGP"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "thuumEquipCost",
+                "isCombat": false,
+                "allowEnemy": false,
+                "inverted": true,
+                "allowedScopes": [
+                    {
+                        "scopes": {},
+                        "descriptions": [
+                            {
+                                "text": "-${value}% Teacher Equip Cost",
+                                "lang": "namespace_thuum_Shout_Equip_Cost_Negative",
+                                "below": 0,
+                                "includeSign": false
+                            },
+                            {
+                                "text": "+${value}% Teacher Equip Cost",
+                                "lang": "namespace_thuum_Shout_Equip_Cost_Positive",
+                                "above": 0,
+                                "includeSign": false
+                            }
+                        ],
+                        "posAliases": [
+                            {
+                                "key": "increasedThuumEquipCost"
+                            }
+                        ],
+                        "negAliases": [
+                            {
+                                "key": "decreasedThuumEquipCost"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "thuumAdditionalRewardRoll",
+                "isCombat": false,
+                "allowEnemy": false,
+                "allowedScopes": [
+                    {
+                        "scopes": {},
+                        "descriptions": [
+                            {
+                                "text": "-${value} additional reward roll while training Thuum",
+                                "lang": "namespace_thuum_Additional_Reward_Roll_Negative",
+                                "below": 0,
+                                "includeSign": false
+                            },
+                            {
+                                "text": "+${value} additional reward roll while training Thuum",
+                                "lang": "namespace_thuum_Additional_Reward_Roll_Positive",
+                                "above": 0,
+                                "includeSign": false
+                            }
+                        ],
+                        "posAliases": [
+                            {
+                                "key": "increasedThuumAdditionalRewardRoll"
+                            }
+                        ],
+                        "negAliases": [
+                            {
+                                "key": "decreasedThuumAdditionalRewardRoll"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "skillMasteryXPPerVariel",
+                "allowNegative": false,
+                "allowedScopes": [
+                    {
+                        "scopes": {
+                            "skill": true
+                        },
+                        "descriptions": [
+                            {
+                                "text": "+${value}% ${skillName} Mastery XP per maxed Star in Variel constellation in Astrology",
+                                "lang": "namespace_thuum_Increased_Mastery_XP_Per_Variel",
+                                "above": 0,
+                                "includeSign": false
+                            }
+                        ],
+                        "posAliases": [
+                            {
+                                "key": "increasedSkillMasteryXPPerVariel"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }

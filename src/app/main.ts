@@ -3,8 +3,6 @@ import { Thuum } from "./thuum/thuum";
 import { UserInterface } from "./thuum/user-interface";
 import { ThuumModifiers } from "./thuum/modifiers";
 import { ThuumTownship } from "./township/township";
-import { ThuumAgility } from "./agility/agility";
-import { ThuumAstrology } from "./astrology/astrology";
 import { TinyPassiveIconsCompatibility } from "./compatibility/tiny-passive-icons";
 import { ThuumSkillData } from "./thuum/thuum.types";
 import { languages } from "./language";
@@ -13,8 +11,8 @@ import { ThuumSettings } from "./thuum/settings";
 
 declare global {
     interface CloudManager {
-        hasTotHEntitlement: boolean;
-        hasAoDEntitlement: boolean;
+        hasTotHEntitlementAndIsEnabled: boolean;
+        hasAoDEntitlementAndIsEnabled: boolean;
     }
 
     const cloudManager: CloudManager;
@@ -84,7 +82,7 @@ export class App {
         ]
 
         this.context.onModsLoaded(async () => {
-            if (cloudManager.hasTotHEntitlement) {
+            if (cloudManager.hasTotHEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-toth.json");
     
                 DragonList.push(
@@ -101,7 +99,8 @@ export class App {
                                     upgrades: [],
                                     pets: []
                                 },
-                                teachers: []
+                                teachers: [],
+                                upgrades:[]
                             }
                         });
                     })
@@ -111,7 +110,7 @@ export class App {
             const profileSkill = mod.manager.getLoadedModList().includes("(Skill) Classes and Species")
             const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
     
-            if (cloudManager.hasAoDEntitlement) {
+            if (cloudManager.hasAoDEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-aod.json");
             }
             if (mythLoaded) {
@@ -180,8 +179,6 @@ export class App {
         this.patchGamemodes(this.game.thuum);
         this.patchUnlock(this.game.thuum);
         this.initCompatibility(this.game.thuum);
-        this.initAgility(this.game.thuum);
-        this.initAstrology(this.game.thuum);
         this.initTownship();
 
         this.game.thuum.userInterface = this.initInterface(this.game.thuum);
@@ -251,18 +248,6 @@ export class App {
         const township = new ThuumTownship(this.context, this.game);
 
         township.register();
-    }
-
-    private initAgility(thuum: Thuum) {
-        const agility = new ThuumAgility(this.game, thuum);
-
-        agility.register();
-    }
-
-    private initAstrology(thuum: Thuum) {
-        const astrology = new ThuumAstrology(this.game, thuum);
-
-        astrology.register();
     }
 
     private initCompatibility(thuum: Thuum) {

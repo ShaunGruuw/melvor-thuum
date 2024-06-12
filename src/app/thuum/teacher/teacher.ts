@@ -25,11 +25,17 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             this.masteryPoolIcon = new MasteryPoolIcon(grantsContainer, 0, 32);
             this.intervalIcon = new IntervalIcon(grantsContainer, 0, 32);
 
-            const progressBar = document
-                .querySelector(`#${this.localId}`)
-                .querySelector('.progress-bar') as HTMLElement;
+            this.xpIcon = grantsContainer.querySelector('#thruum-xp');
+            this.masteryIcon = grantsContainer.querySelector('#thruum-mastery-xp');
+            this.masteryPoolIcon = grantsContainer.querySelector('#thruum-pool-xp');
+            this.intervalIcon = grantsContainer.querySelector('#thruum-interval');
 
-            this.progressBar = new ProgressBar(progressBar, 'bg-secondary');
+            this.progressBar = document
+                .querySelector(`#${this.localId}`)
+                // @ts-ignore // TODO: TYPES
+                .querySelector<ProgressBar>('progress-bar');
+
+            // this.progressBar = new ProgressBar(progressBar, 'bg-secondary');
         },
         updateGrants: function (
             xp: number,
@@ -37,12 +43,18 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             masteryXP: number,
             baseMasteryXP: number,
             masteryPoolXP: number,
-            interval: number
+            interval: number,
+            // @ts-ignore // TODO: TYPES
+            realm: Realm
         ) {
             this.xpIcon.setXP(xp, baseXP);
             this.masteryIcon.setXP(masteryXP, baseMasteryXP);
             this.masteryPoolIcon.setXP(masteryPoolXP);
-            this.intervalIcon.setInterval(interval);
+            // this.intervalIcon.setInterval(interval);
+            // @ts-ignore // TODO: TYPES
+            game.unlockedRealms.length > 1 ? this.masteryPoolIcon.setRealm(realm) : this.masteryPoolIcon.hideRealms();
+            // @ts-ignore // TODO: TYPES
+            this.intervalIcon.setInterval(interval, music.getIntervalSources(instrument));
         },
         updateGPRange: function () {
             let minGP = this.getMinGPRoll();
@@ -51,22 +63,24 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             const gpModifier = this.getGPModifier();
             const modGp = (gp: number) => {
                 gp *= 1 + gpModifier / 100;
-                gp = Math.floor(gp + game.modifiers.increasedGPFlat);
+                 // @ts-ignore // TODO: TYPES
+                gp = Math.floor(gp + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery));                    
+                    // game.modifiers.increasedGPFlat);
                 return gp;
             };
 
             minGP = modGp(minGP);
             maxGP = modGp(maxGP);
-            if(minGP < 1) {
+            if (minGP < 1) {
                 minGP = 1
             }
-            if(maxGP < 1) {
+            if (maxGP < 1) {
                 maxGP = 1
             }
-            if(minGP > 10000000000000) {
+            if (minGP > 10000000000000) {
                 minGP = 10000000000000
             }
-            if(maxGP > 10000000000000) {
+            if (maxGP > 10000000000000) {
                 maxGP = 10000000000000
             }
             this.minGP = minGP;

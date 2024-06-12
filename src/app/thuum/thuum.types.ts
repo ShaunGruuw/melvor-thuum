@@ -6,23 +6,37 @@ export interface ShoutModifier {
     level: number;
 }
 
-export type TeacherModifier = TeacherSkillModifier | TeacherStandardModifier;
-
-export interface TeacherSkillModifier {
-    level: number;
-    key: SkillModifierKeys;
-    value: number;
-    skill: string | AnySkill;
+export interface UpgradeData {
+    itemId: string;
+    modifiers: TeacherModifier[];
 }
 
-export interface TeacherStandardModifier {
+export class UpgradeModifier {
+    itemId: string;
+    // @ts-ignore // TODO: TYPES
+    modifiers: StatObject[];
+
+    constructor(private readonly data: UpgradeData, private readonly game: Game) {
+        this.itemId = this.data.itemId;
+        // @ts-ignore // TODO: TYPES
+        this.modifiers = new StatObject(this.data, this.game, `${UpgradeModifier.name} with id ${this.itemId}`);
+
+        // @ts-ignore // TODO: TYPES
+        this.modifiers.registerSoftDependencies(this.data, this.game);
+    }
+}
+
+export interface TeacherModifier {
     level: number;
-    key: StandardModifierKeys;
-    value: number;
+    modifiers?: {};
+    enemyModifiers?: {};
+    conditionalModifiers?: [];
+    combatEffects?: [];
 }
 
 export interface ThuumSkillData extends MasterySkillData {
     teachers: TeacherData[];
+    upgrades: UpgradeData[];
 }
 
 export interface TeacherData extends BasicSkillRecipeData {
@@ -30,8 +44,10 @@ export interface TeacherData extends BasicSkillRecipeData {
     media: string;
     baseInterval: number;
     maxGP: number;
-    standardModifiers: TeacherModifier[];
-    hardcoreModifiers: TeacherModifier[];
+    // @ts-ignore 
+    standardModifiers: StatObject[];
+    // @ts-ignore 
+    hardcoreModifiers: StatObject[];
     skills: string[];
 }
 

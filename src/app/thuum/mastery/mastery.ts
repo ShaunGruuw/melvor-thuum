@@ -102,6 +102,7 @@ export function MasteryComponent(game: Game, thuum: Thuum, teacher: Teacher) {
             };
         },
         completeUpgrade: function () {
+            // @ts-ignore // TODO: TYPES
             thuum.computeProvidedStats(true);
             thuum.renderQueue.shoutModifiers = true;
             thuum.renderQueue.gpRange = true;

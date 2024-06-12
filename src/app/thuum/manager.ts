@@ -1,5 +1,5 @@
 import { Thuum } from './thuum';
-import { ShoutModifier, Teacher, TeacherModifier, TeacherSkillModifier } from './thuum.types';
+import { ShoutModifier, Teacher, TeacherModifier } from './thuum.types';
 
 export class ThuumManager {
     public get elements() {
@@ -7,7 +7,7 @@ export class ThuumManager {
 
         fragment.append(getTemplateNode('thuum'));
 
-        return [...fragment.children];
+        return [...Array.from(fragment.children)];
     }
 
     public get essenceOfThuumIcon() {
@@ -23,20 +23,8 @@ export class ThuumManager {
         }
 
         return teacher.modifiers(this.thuum.settings.modifierType).map(modifier => {
-            let description = '';
-
-            if (this.isSkillModifier(modifier)) {
-                [description] = printPlayerModifier(modifier.key, {
-                    skill: this.game.skills.find(skill => skill.id === modifier.skill),
-                    value: modifier.value
-                });
-            } else {
-                try {
-                    [description] = printPlayerModifier(modifier.key, modifier.value);                    
-                } catch (error) {
-                    console.log('Fake modifier ', modifier.key)                    
-                }
-            }
+            // @ts-ignore // TODO: TYPES
+            let description = modifier.describePlain();
 
             return {
                 description,
@@ -53,26 +41,7 @@ export class ThuumManager {
         }
 
         return teacher
-            .modifiers(this.thuum.settings.modifierType)
-            .filter(modifier => this.isModifierActive(teacher, modifier))
-            .map(modifier => {
-                if ('skill' in modifier) {
-                    return {
-                        key: modifier.key,
-                        values: [
-                            {
-                                skill: this.game.skills.find(skill => skill.id === modifier.skill),
-                                value: modifier.value
-                            }
-                        ]
-                    } as SkillModifierArrayElement;
-                } else {
-                    return {
-                        key: modifier.key,
-                        value: modifier.value
-                    } as StandardModifierArrayElement;
-                }
-            });
+            .modifiers(this.thuum.settings.modifierType).filter(modifier => this.isModifierActive(teacher, modifier));
     }
 
     public getGoldToTake(teacher: Teacher) {
@@ -86,7 +55,8 @@ export class ThuumManager {
         const increasedGPModifier = component.getGPModifier();
 
         gpMultiplier *= 1 + increasedGPModifier / 100;
-        gpToTake = Math.floor((gpToTake/gpMultiplier)  - this.game.modifiers.increasedGPFlat);
+        // @ts-ignore // TODO: TYPES
+        gpToTake = Math.floor((gpToTake/gpMultiplier)  - this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery));
         if(gpToTake > 10000000000000 || typeof gpToTake !== 'number') {
             gpToTake = 10000000000000
         }
@@ -107,7 +77,8 @@ export class ThuumManager {
         const increasedGPModifier = component.getGPModifier();
 
         gpMultiplier *= 1 + increasedGPModifier / 100;
-        gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.increasedGPFlat);
+        // @ts-ignore // TODO: TYPES
+        gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery))
 
         return gpToAdd;
     }
@@ -127,17 +98,8 @@ export class ThuumManager {
     }
 
     public getEquipCostModifier(teacher: Teacher) {
-        let modifier = this.game.modifiers.increasedThuumEquipCost - this.game.modifiers.decreasedThuumEquipCost;
-
-        if (this.thuum.isPoolTierActive(3)) {
-            modifier -= 5;
-        }
-
-        const masteryLevel = this.thuum.getMasteryLevel(teacher);
-
-        if (masteryLevel >= 90) {
-            modifier -= 5;
-        }
+        // @ts-ignore // TODO: TYPES
+        let modifier = this.game.modifiers.increasedThuumEquipCost - this.game.modifiers.getValue('melvorD:decreasedThuumEquipCost', this.game.gp.modQuery);
 
         return Math.max(modifier, -95);
     }
@@ -152,12 +114,8 @@ export class ThuumManager {
         const validModifierLevels = teacher
             .modifiers(this.thuum.settings.modifierType)
             .filter((modifier, index) => unlockedMasteries[index])
-            .map(teacher => teacher.level);
+            .map(modifier => modifier.level);
 
         return validModifierLevels.includes(modifier.level);
-    }
-
-    private isSkillModifier(modifier: TeacherModifier): modifier is TeacherSkillModifier {
-        return 'skill' in modifier;
     }
 }
