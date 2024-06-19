@@ -3,9 +3,9 @@
         <div class="text-center mb-1">
             <div class="row gutters-tiny">
                 <div class="col-12 pt-3 font-size-lg mb-3" v-if="shout">
-                    <img class="teacher-icon" v-bind:src="shout.teacher.media" />
+                    <img class="teacher-icon" v-bind:src="media" />
                     <span>
-                        {{ templateLangString('Thuum_Thuum_Shout_Title', { name: shout.teacher.name }) }}
+                        {{ templateLangString('Thuum_Thuum_Shout_Title', { name: name }) }}
                     </span>
                 </div>
 

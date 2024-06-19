@@ -3,26 +3,27 @@ import { ShoutModifier, MasteredShout } from '../thuum.types';
 
 import './shout.scss';
 
-export function ShoutComponent(thuum: Thuum) {
-    let shout: MasteredShout = undefined;
+export interface ShoutContext {
+    media: string;
+    name: string;
+    teacherId: string;
+}
 
+export function ShoutComponent(thuum: Thuum) {
+    let MasteredShout: MasteredShout = undefined;
+    // thuum-shout
     return {
+        $template: '#thuum-shout',
+        shout: undefined as ShoutContext,
         get media() {
-            return shout?.teacher?.media;
+            return this.shout?.teacher?.media;
         },
         get name() {
-            return shout?.teacher?.name;
+            return this.shout?.teacher?.name;
         },
-        get hasBard() {
-            return shout !== undefined;
+        get hasShout() {
+            return this.shout !== undefined;
         },
-        get socket() {
-            return shout?.socket !== undefined;
-        },
-        get utility() {
-            return shout?.utility !== undefined;
-        },
-        $template: '#thuum-shout',
         isEnabled: false,
         modifiers: [] as ShoutModifier[],
         currentMasteryLevel: 1,
@@ -30,12 +31,21 @@ export function ShoutComponent(thuum: Thuum) {
             return thuum.manager.essenceOfThuumIcon;
         },
         setShout: function (shout: MasteredShout) {
-            shout = shout;
+            MasteredShout = shout;
+            if (!shout) {
+                this.shout = undefined;
+            } else {
+                this.shout = {
+                    instrumentId: shout.teacher?.id,
+                    media: shout.teacher?.media,
+                    name: shout.teacher?.name
+                };
+            }
             this.updateCurrentMasteryLevel();
         },
         updateCurrentMasteryLevel: function () {
-            if (shout) {
-                const teacher = shout.teacher;
+            if (this.shout) {
+                const teacher = this.shout.teacher;
                 const teacherRef = thuum.actions.allObjects.find(action => action.id === teacher.id);
 
                 this.currentMasteryLevel = thuum.getMasteryLevel(teacherRef);
@@ -47,8 +57,10 @@ export function ShoutComponent(thuum: Thuum) {
         updateModifiers: function () {
             this.modifiers = [];
 
-            if (shout) {
-                this.modifiers = thuum.manager.getModifiers(shout.teacher);
+            if (this.shout) {
+                const teacherRef = thuum.actions.allObjects.find(action => action.id === this.shout.teacherId);
+
+                this.modifiers = thuum.manager.getModifiers(teacherRef);
             }
         }
     };

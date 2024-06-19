@@ -849,6 +849,74 @@
                             "description": "Ability to unlock the fourth Master modifier."
                         }
                     ],
+                    "masteryLevelBonuses":[
+                        {
+                            "modifiers": {
+                                "currencyGain": [
+                                    {
+                                        "currencyID": "melvorD:GP",
+                                        "skillID": "namespace_thuum:Thuum",
+                                        "actionID": "namespace_thuum:Unrelenting_Force",
+                                        "value": -1
+                                    }
+                                ]
+                            },
+                            "level": 1,
+                            "levelScalingSlope": 1,
+                            "levelScalingMax": 99
+                        },
+                        {
+                            "modifiers": {
+                                "namespace_thuum:thuumEquipCost": -5
+                            },
+                            "level": 90
+                        }
+                    ],
+                    "masteryPoolBonuses": [
+                        {
+                            "realm": "melvorD:Melvor",
+                            "modifiers": {
+                                "increasedSkillXP": [
+                                    {
+                                        "skillID": "namespace_thuum:Thuum",
+                                        "value": -10
+                                    }
+                                ]
+                            },
+                            "percent": 10
+                        },
+                        {
+                            "realm": "melvorD:Melvor",
+                            "modifiers": {
+                                "increasedMasteryXP": [
+                                    {
+                                        "skillID": "namespace_thuum:Thuum",
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            "percent": 25
+                        },
+                        {
+                            "realm": "melvorD:Melvor",
+                            "modifiers": {
+                                "decreasedSkillInterval": [
+                                    {
+                                        "skillID": "namespace_thuum:Thuum",
+                                        "value": 250
+                                    }
+                                ]
+                            },
+                            "percent": 50
+                        },
+                        {
+                            "realm": "melvorD:Melvor",
+                            "modifiers": {
+                                "namespace_thuum:thuumEquipCost": -5
+                            },
+                            "percent": 95
+                        }
+                    ],
                     "teachers": [
                         {
                             "id": "Unrelenting_Force",
@@ -866,62 +934,75 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "halvedWoodcuttingDoubleChance",
-                                    "value": 1
+                                    "modifiers": {
+                                        "halvedWoodcuttingDoubleChance": 1 
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedChanceForAshInWoodcutting",
-                                    "skill": "melvorD:Woodcutting",
-                                    "value": 20
+                                    "modifiers": {
+                                        "increasedChanceForAshInWoodcutting": 5 
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedMasteryXP",
-                                    "skill": "melvorD:Firemaking",
-                                    "value": 15
+                                    "modifiers": {
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Firemaking"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedFiremakingCoalChance",
-                                    "skill": "melvorD:Firemaking",
-                                    "value": 10
+                                    "modifiers": {
+                                        "increasedFiremakingCoalChance": 5 
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedWoodcuttingGemChance",
-                                    "skill": "melvorD:Woodcutting",
-                                    "value": 5
+                                    "modifiers": {
+                                        "increasedWoodcuttingGemChance": 5 
+                                    }
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedChanceGoldenStardust",
-                                    "value": 50
+                                    "modifiers": {
+                                        "halvedWoodcuttingDoubleChance": 1 
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedMinBirdNestQuantity",
-                                    "skill": "melvorD:Woodcutting",
-                                    "value": 1
+                                    "modifiers": {
+                                        "increasedChanceForAshInWoodcutting": 1 
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedMasteryXP",
-                                    "skill": "melvorD:Firemaking",
-                                    "value": 5
+                                    "modifiers": {
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 1,
+                                                "skillID": "melvorD:Firemaking"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "decreasedSkillIntervalPercent",
-                                    "skill": "melvorD:Firemaking",
-                                    "value": 5
+                                    "modifiers": {
+                                        "increasedFiremakingCoalChance": 1 
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedMinBirdNestQuantity",
-                                    "value": 1
+                                    "modifiers": {
+                                        "increasedWoodcuttingGemChance": 1
+                                    }
                                 }
                             ]
                         },
@@ -941,59 +1022,85 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedCookingSuccessCap",
-                                    "value": 10
+                                    "modifiers": {
+                                        "decreasedCookingSuccessCap": 10
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedChanceAdditionalSkillResource",
-                                    "skill": "melvorD:Cooking",
-                                    "value": 50
+                                    "modifiers": {
+                                        "increasedChanceAdditionalSkillResource": [
+                                            {
+                                                "skillID": "melvorD:Cooking",
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "decreasedPassiveCookInterval",
-                                    "value": 30
+                                    "modifiers": {
+                                        "decreasedPassiveCookInterval": 10
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Fishing",
-                                    "value": 500
+                                    "modifiers": {
+                                        "decreasedSkillInterval": [
+                                            {
+                                                "value": 200,
+                                                "skillID": "melvorD:Fishing"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedFishingCookedChance",
-                                    "value": 25
+                                    "modifiers": {
+                                        "increasedFishingCookedChance": 5
+                                    }
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedChanceForAshInWoodcutting",
-                                    "value": 50
+                                    "modifiers": {
+                                        "decreasedCookingSuccessCap": 10
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillIntervalPercent",
-                                    "skill": "melvorD:Cooking",
-                                    "value": 5
+                                    "modifiers": {
+                                        "increasedChanceAdditionalSkillResource": [
+                                            {
+                                                "skillID": "melvorD:Cooking",
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "decreasedPassiveCookInterval",
-                                    "value": 10
+                                    "modifiers": {
+                                        "decreasedPassiveCookInterval": 10
+                                    }
+                                },
+                                {
+                                    "level": 80,
+                                    "modifiers": {
+                                        "decreasedSkillInterval": [
+                                            {
+                                                "value": 200,
+                                                "skillID": "melvorD:Fishing"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Fishing",
-                                    "value": 200
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedFishingCookedChance",
-                                    "value": 5
+                                    "modifiers": {
+                                        "increasedFishingCookedChance": 5
+                                    }
                                 }
                             ]
                         },

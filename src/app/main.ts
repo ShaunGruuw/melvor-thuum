@@ -1,7 +1,6 @@
 import { ThuumActionEventMatcher, ThuumActionEventMatcherOptions } from "./thuum/event";
 import { Thuum } from "./thuum/thuum";
 import { UserInterface } from "./thuum/user-interface";
-import { ThuumModifiers } from "./thuum/modifiers";
 import { ThuumTownship } from "./township/township";
 import { TinyPassiveIconsCompatibility } from "./compatibility/tiny-passive-icons";
 import { ThuumSkillData } from "./thuum/thuum.types";
@@ -60,7 +59,6 @@ export class App {
         this.initTranslation();
         const settings = this.initSettings();
         this.patchEventManager();
-        this.initModifiers();
 
         this.game.thuum = this.game.registerSkill(this.game.registeredNamespaces.getNamespace("namespace_thuum"), Thuum);
 
@@ -82,6 +80,10 @@ export class App {
         ]
 
         this.context.onModsLoaded(async () => {
+            // const combatSim = mod.manager.getLoadedModList().includes("[Myth] Combat Simulator")
+            // if (combatSim) {
+            //     mod.api.mythCombatSimulator?.registerNamespace('namespace_thuum');
+            // }
             if (cloudManager.hasTotHEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-toth.json");
     
@@ -236,12 +238,6 @@ export class App {
         settings.init();
 
         return settings;
-    }
-
-    private initModifiers() {
-        const modifiers = new ThuumModifiers();
-
-        modifiers.registerModifiers();
     }
 
     private initTownship() {

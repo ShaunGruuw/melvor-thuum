@@ -20,15 +20,10 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
                 .querySelector(`#${this.localId}`)
                 .querySelector('#grants-container') as HTMLElement;
 
-            this.xpIcon = new XPIcon(grantsContainer, 0, 0, 32);
-            this.masteryIcon = new MasteryXPIcon(grantsContainer, 0, 0, 32);
-            this.masteryPoolIcon = new MasteryPoolIcon(grantsContainer, 0, 32);
-            this.intervalIcon = new IntervalIcon(grantsContainer, 0, 32);
-
-            this.xpIcon = grantsContainer.querySelector('#thruum-xp');
-            this.masteryIcon = grantsContainer.querySelector('#thruum-mastery-xp');
-            this.masteryPoolIcon = grantsContainer.querySelector('#thruum-pool-xp');
-            this.intervalIcon = grantsContainer.querySelector('#thruum-interval');
+            this.xpIcon = grantsContainer.querySelector('#thuum-xp');
+            this.masteryIcon = grantsContainer.querySelector('#thuum-mastery-xp');
+            this.masteryPoolIcon = grantsContainer.querySelector('#thuum-pool-xp');
+            this.intervalIcon = grantsContainer.querySelector('#thuum-interval');
 
             this.progressBar = document
                 .querySelector(`#${this.localId}`)
@@ -54,7 +49,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             // @ts-ignore // TODO: TYPES
             game.unlockedRealms.length > 1 ? this.masteryPoolIcon.setRealm(realm) : this.masteryPoolIcon.hideRealms();
             // @ts-ignore // TODO: TYPES
-            this.intervalIcon.setInterval(interval, music.getIntervalSources(instrument));
+            this.intervalIcon.setInterval(interval, thuum.getIntervalSources(teacher));
         },
         updateGPRange: function () {
             let minGP = this.getMinGPRoll();
@@ -111,10 +106,12 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             return teacher.maxGP + thuum.getMasteryLevel(teacher) * 10;
         },
         getGPModifier: function () {
-            let increasedGPModifier = game.modifiers.increasedGPGlobal - game.modifiers.decreasedGPGlobal;
-            increasedGPModifier += game.modifiers.increasedThuumGP - game.modifiers.decreasedThuumGP;
-
-            return increasedGPModifier;
+                        // @ts-ignore // TODO: TYPES
+                        let increasedGPModifier = game.thuum.getCurrencyModifier(game.gp);
+                        // @ts-ignore // TODO: TYPES
+                        increasedGPModifier += game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery);
+            
+                        return increasedGPModifier;
         }
     };
 }

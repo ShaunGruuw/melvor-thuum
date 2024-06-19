@@ -99,8 +99,7 @@ export class ThuumManager {
 
     public getEquipCostModifier(teacher: Teacher) {
         // @ts-ignore // TODO: TYPES
-        let modifier = this.game.modifiers.increasedThuumEquipCost - this.game.modifiers.getValue('melvorD:decreasedThuumEquipCost', this.game.gp.modQuery);
-
+        let modifier = this.game.modifiers.getValue('namespace_thuum:thuumEquipCost', this.thuum.getActionModifierQuery(teacher));
         return Math.max(modifier, -95);
     }
 
@@ -109,7 +108,7 @@ export class ThuumManager {
 
         let unlockedMasteries = this.thuum.masteriesUnlocked.get(teacher);
 
-        const shout = this.thuum.shouts.get(teacher);
+        // const shout = this.thuum.shouts.get(teacher);
 
         const validModifierLevels = teacher
             .modifiers(this.thuum.settings.modifierType)

@@ -10,7 +10,7 @@ import { ChangeType, ThuumSettings } from './settings';
 import './thuum.scss';
 
 export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
-    public readonly version = 4;
+    public readonly version = 0;
     public readonly _media = 'https://cdn.melvor.net/core/v018/assets/media/monsters/dragon_red.png';
     public readonly _events = window.mitt();
     public readonly on = this._events.on;
@@ -38,7 +38,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
 
         if (data.teachers) {
             for (const teacher of data.teachers) {
-                this.actions.registerObject(new Teacher(namespace, teacher));
+                this.actions.registerObject(new Teacher(namespace, teacher, this.game));
             }
         }
         // if (data.upgrades) {
@@ -195,9 +195,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
 
                                 const masteredShout: MasteredShout = {
                                     teacher,
-                                    slot: shout?.slot ?? index + 1,
-                                    socket: undefined,
-                                    utility: undefined
+                                    slot: shout?.slot ?? index + 1
                                 };
 
                                 this.shouts.set(teacher, masteredShout);
@@ -562,22 +560,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         writer.writeComplexMap(this.shouts.shouts, (key, value, writer) => {
             writer.writeNamespacedObject(key);
             writer.writeUint32(value.slot);
-
-            writer.writeBoolean(value.socket !== undefined);
-
-            if (value.socket) {
-                const socket = this.game.items.getObjectByID(value.socket.id);
-
-                writer.writeNamespacedObject(socket);
-            }
-
-            writer.writeBoolean(value.utility !== undefined);
-
-            if (value.utility) {
-                const utility = this.game.items.getObjectByID(value.utility.id);
-
-                writer.writeNamespacedObject(utility);
-            }
         });
 
         return writer;

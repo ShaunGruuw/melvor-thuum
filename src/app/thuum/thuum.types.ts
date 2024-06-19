@@ -28,8 +28,8 @@ export class UpgradeModifier {
 
 export interface TeacherModifier {
     level: number;
-    modifiers?: {};
-    enemyModifiers?: {};
+    modifiers?: PlayerModifiers;
+    enemyModifiers?: PlayerModifiers;
     conditionalModifiers?: [];
     combatEffects?: [];
 }
@@ -54,8 +54,6 @@ export interface TeacherData extends BasicSkillRecipeData {
 export interface MasteredShout {
     teacher: Teacher;
     slot: number;
-    socket: Item;
-    utility: Item;
 }
 
 export class Teacher extends BasicSkillRecipe {
@@ -83,13 +81,27 @@ export class Teacher extends BasicSkillRecipe {
         }
     }
 
-    constructor(namespace: DataNamespace, private readonly data: TeacherData) {
-        super(namespace, data);
+    constructor(namespace: DataNamespace, private readonly data: TeacherData, game: Game) {
+        // @ts-ignore // TODO: TYPES
+        super(namespace, data, game);
 
         this.baseInterval = data.baseInterval;
         this.maxGP = data.maxGP;
-        this.standardModifiers = data.standardModifiers;
-        this.hardcoreModifiers = data.hardcoreModifiers;
+
+        this.baseInterval = data.baseInterval;
+        this.maxGP = data.maxGP;
+        this.standardModifiers = data.standardModifiers.map(modifier => {
+            // @ts-ignore // TODO: TYPES
+            const stats = new StatObject(modifier, game, `${Teacher.name}`);
+            stats.level = modifier.level;
+            return stats;
+        });
+        this.hardcoreModifiers = data.hardcoreModifiers.map(modifier => {
+            // @ts-ignore // TODO: TYPES
+            const stats = new StatObject(modifier, game, `${Teacher.name}`);
+            stats.level = modifier.level;
+            return stats;
+        });
         this.skills = data.skills;
     }
 }
