@@ -36,7 +36,7 @@ export function ShoutComponent(thuum: Thuum) {
                 this.shout = undefined;
             } else {
                 this.shout = {
-                    instrumentId: shout.teacher?.id,
+                    teacherId: shout.teacher?.id,
                     media: shout.teacher?.media,
                     name: shout.teacher?.name
                 };
@@ -59,7 +59,7 @@ export function ShoutComponent(thuum: Thuum) {
 
             if (this.shout) {
                 const teacherRef = thuum.actions.allObjects.find(action => action.id === this.shout.teacherId);
-
+                console.log(this.shout, teacherRef, thuum.manager.getModifiers(teacherRef))
                 this.modifiers = thuum.manager.getModifiers(teacherRef);
             }
         }
