@@ -13,6 +13,7 @@ export class Version0 implements DecodeVersion {
         }
         console.log(version, reader.getNamespacedObject(this.thuum.actions), this.thuum.shouts)
         // get teacher
+        console.log('decode get teacher')
         if (reader.getBoolean()) {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
             if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
@@ -22,6 +23,7 @@ export class Version0 implements DecodeVersion {
             }
         }
         // get masteries
+        console.log('decode get masteries')
         reader.getArray(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
 
@@ -34,9 +36,13 @@ export class Version0 implements DecodeVersion {
                 });
 
                 this.thuum.masteriesUnlocked.set(teacher, masteriesUnlocked);
+            } else {
+                reader.getArray(reader => reader.getBoolean());
             }
         });
+        this.thuum.shouts.clear()
         // get shouts
+        console.log('decode get shouts')
         reader.getComplexMap(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
             const slot = reader.getUint32();
@@ -57,9 +63,17 @@ export class Version0 implements DecodeVersion {
                 value: masteredShout
             };
         });
-
+        console.log('decode shout1')
         const shout1 = this.thuum.shouts.get(1);
-
+        console.log('decode setShout')
         this.thuum.userInterface.shout1.setShout(shout1);
+
+        this.thuum.userInterface.teachers.forEach(component => {
+            component.updateDisabled();
+        });
+
+        if (this.thuum.shouldResetAction) {
+            this.thuum.resetActionState();
+        }
     }
 }
