@@ -11,11 +11,12 @@ export class Version0 implements DecodeVersion {
         if (version !== 0) {
             throw new Error(`Did not read correct version number: ${version} - trying version 0`);
         }
-        console.log(version, reader.getNamespacedObject(this.thuum.actions), this.thuum.shouts)
+        console.log(version, this.thuum.shouts)
         // get teacher
         console.log('decode get teacher')
         if (reader.getBoolean()) {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
+            console.log('teacher', teacher)
             if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
                 this.thuum.shouldResetAction = true;
             } else {
@@ -26,7 +27,7 @@ export class Version0 implements DecodeVersion {
         console.log('decode get masteries')
         reader.getArray(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
-
+            console.log('masteries', reader, teacher, typeof teacher !== 'string')
             if (typeof teacher !== 'string') {
                 const masteriesUnlocked: boolean[] = [];
 
@@ -34,7 +35,7 @@ export class Version0 implements DecodeVersion {
                     const isUnlocked = reader.getBoolean();
                     masteriesUnlocked.push(isUnlocked);
                 });
-
+                console.log(masteriesUnlocked)
                 this.thuum.masteriesUnlocked.set(teacher, masteriesUnlocked);
             } else {
                 reader.getArray(reader => reader.getBoolean());

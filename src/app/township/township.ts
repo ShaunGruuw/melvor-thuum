@@ -94,8 +94,11 @@ export class ThuumTownship {
 
             builder.itemUpgrades.add({
                 upgradedItemID: itemUpgrade.upgradedItem.id,
-                gpCost: itemUpgrade.gpCost,
-                scCost: itemUpgrade.scCost,
+                // @ts-ignore // TODO: TYPES
+                currencyCosts: itemUpgrade.currencyCosts.map(currency => ({
+                    id: currency.currency.id,
+                    quantity: currency.quantity
+                })),
                 itemCosts: [
                     ...itemUpgrade.itemCosts.map(cost => ({ id: cost.item.id, quantity: 1 })),
                     {

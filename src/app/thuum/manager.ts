@@ -1,5 +1,5 @@
 import { Thuum } from './thuum';
-import { ShoutModifier, Teacher, TeacherModifier } from './thuum.types';
+import { ShoutModifier, Teacher } from './thuum.types';
 
 export class ThuumManager {
     public get elements() {
@@ -75,7 +75,7 @@ export class ThuumManager {
         let gpMultiplier = 1;
 
         const increasedGPModifier = component.getGPModifier();
-
+        
         gpMultiplier *= 1 + increasedGPModifier / 100;
         // @ts-ignore // TODO: TYPES
         gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery))
@@ -103,7 +103,7 @@ export class ThuumManager {
         return Math.max(modifier, -95);
     }
 
-    private isModifierActive(teacher: Teacher, modifier: TeacherModifier) {
+    private isModifierActive(teacher: Teacher, modifier: StatObject) {
         teacher = this.thuum.actions.find(action => action.id === teacher.id);
 
         let unlockedMasteries = this.thuum.masteriesUnlocked.get(teacher);

@@ -8,7 +8,7 @@ export interface ShoutModifier {
 
 export interface UpgradeData {
     itemId: string;
-    modifiers: TeacherModifier[];
+    modifiers: StatObject[];
 }
 
 export class UpgradeModifier {
@@ -24,14 +24,6 @@ export class UpgradeModifier {
         // @ts-ignore // TODO: TYPES
         this.modifiers.registerSoftDependencies(this.data, this.game);
     }
-}
-
-export interface TeacherModifier {
-    level: number;
-    modifiers?: PlayerModifiers;
-    enemyModifiers?: PlayerModifiers;
-    conditionalModifiers?: [];
-    combatEffects?: [];
 }
 
 export interface ThuumSkillData extends MasterySkillData {
@@ -61,8 +53,8 @@ export class Teacher extends BasicSkillRecipe {
     maxGP: number;
     skills: string[];
 
-    private standardModifiers: TeacherModifier[];
-    private hardcoreModifiers: TeacherModifier[];
+    private standardModifiers: StatObject[];
+    private hardcoreModifiers: StatObject[];
 
     public get name() {
         return getLangString(`Thuum_Thuum_Teacher_${this.localID}`);

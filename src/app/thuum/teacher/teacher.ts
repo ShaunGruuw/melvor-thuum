@@ -13,8 +13,8 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
         localId: teacher.localID.toLowerCase(),
         minGP: 0,
         maxGP: 0,
-        disabled: false,
-        progressBar: {} as ProgressBar,
+        disabled: false, // @ts-ignore // TODO: TYPES
+        progressBar: {} as ProgressBarElement,
         mounted: function () {
             const grantsContainer = document
                 .querySelector(`#${this.localId}`)
@@ -28,7 +28,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             this.progressBar = document
                 .querySelector(`#${this.localId}`)
                 // @ts-ignore // TODO: TYPES
-                .querySelector<ProgressBar>('progress-bar');
+                .querySelector<ProgressBarElement>('progress-bar');
 
             // this.progressBar = new ProgressBar(progressBar, 'bg-secondary');
         },
@@ -42,8 +42,10 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             // @ts-ignore // TODO: TYPES
             realm: Realm
         ) {
-            this.xpIcon.setXP(xp, baseXP);
-            this.masteryIcon.setXP(masteryXP, baseMasteryXP);
+            this.xpIcon.setXP(xp, baseXP); // @ts-ignore // TODO: TYPES
+            this.xpIcon.setSources(game.thuum.getXPSources(teacher));
+            this.masteryIcon.setXP(masteryXP, baseMasteryXP); // @ts-ignore // TODO: TYPES
+            this.masteryIcon.setSources(game.thuum.getMasteryXPSources(teacher));
             this.masteryPoolIcon.setXP(masteryPoolXP);
             // this.intervalIcon.setInterval(interval);
             // @ts-ignore // TODO: TYPES
@@ -54,12 +56,13 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
         updateGPRange: function () {
             let minGP = this.getMinGPRoll();
             let maxGP = this.getMaxGPRoll();
-
+            
             const gpModifier = this.getGPModifier();
             const modGp = (gp: number) => {
-                gp *= 1 + gpModifier / 100;
+                let gpMultiplier = 1;
+                gpMultiplier *= 1 + gpModifier / 100;
                 // @ts-ignore // TODO: TYPES
-                gp = Math.floor(gp + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery));
+                gp = Math.floor((gp/gpMultiplier)  - game.modifiers.getValue('melvorD:increasedGPFlat', game.gp.modQuery));
                 return gp;
             };
 
@@ -109,7 +112,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             let increasedGPModifier = game.thuum.getCurrencyModifier(game.gp);
             // @ts-ignore // TODO: TYPES
             increasedGPModifier += game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery);
-
+            // game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery)
             return increasedGPModifier;
         }
     };

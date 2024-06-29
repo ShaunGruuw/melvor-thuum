@@ -8,6 +8,7 @@ import { MasteredShouts } from './mastered-shouts';
 import { ChangeType, ThuumSettings } from './settings';
 
 import './thuum.scss';
+// @ts-ignore // TODO: TYPES
 
 export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public readonly version = 0;
@@ -22,8 +23,8 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public settings: ThuumSettings;
     public masteriesUnlocked = new Map<Teacher, boolean[]>();
     public changesMade: any;
-
-    private renderedProgressBar?: ProgressBar;
+    // @ts-ignore // TODO: TYPES
+    private renderedProgressBar?: ProgressBarElement;
 
     public readonly manager: ThuumManager;
     public upgradeModifiers: UpgradeModifier[] = [];
@@ -112,7 +113,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                     <span>
                         (<img class="skill-icon-xxs mr-1"
                                src="${// @ts-ignore // TODO: TYPES
-                                assets.getURI('assets/media/main/mastery_header.svg')}" />
+                        assets.getURI('assets/media/main/mastery_header.svg')}" />
                                ${modifier.level})
                     </span>`;
                 }
@@ -144,7 +145,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                     <span>
                         (<img class="skill-icon-xxs mr-1"
                         src="${// @ts-ignore // TODO: TYPES
-                            assets.getURI('assets/media/main/mastery_header.svg')}" />
+                        assets.getURI('assets/media/main/mastery_header.svg')}" />
                         ${modifier.level})
                     </span>`;
                 }
@@ -383,7 +384,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         // rewards.addGP(this.manager.getGoldToAward(this.activeTeacher));
         costs.addGP(this.manager.getGoldToTake(this.activeTeacher))
         costs.consumeCosts()
-// @ts-ignore // TODO: TYPES
+        // @ts-ignore // TODO: TYPES
         this.addCommonRewards(rewards, this.activeTeacher);
 
         actionEvent.interval = this.currentActionInterval;
@@ -517,10 +518,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         this.renderQueue.visibleTeachers = false;
     }
 
-    public getTotalUnlockedMasteryActions() {
-        return this.actions.reduce(levelUnlockSum(this), 0);
-    }
-
     // @ts-ignore // TODO: TYPES
     public getRegistry(type: ScopeSourceType) {
         switch (type) {
@@ -544,7 +541,8 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         writer.writeBoolean(this.activeTeacher !== undefined); // true:false is activeTeacher
         // Save teacher
         if (this.activeTeacher) {
-            writer.writeNamespacedObject(this.activeTeacher); // write an object of active teacher if one is active
+            console.log(this.activeTeacher, 'this.activeTeacher')
+            writer.writeNamespacedObject(this.activeTeacher); // write an object of active teacher if one is active            
         }
         // Save masteries
         writer.writeArray(this.actions.allObjects, action => {

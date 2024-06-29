@@ -2129,13 +2129,13 @@
                         "descriptions": [
                             {
                                 "text": "-${value}% Teacher Equip Cost",
-                                "lang": "namespace_thuum_Shout_Equip_Cost_Negative",
+                                "lang": "Shout_Equip_Cost_Negative",
                                 "below": 0,
                                 "includeSign": false
                             },
                             {
                                 "text": "+${value}% Teacher Equip Cost",
-                                "lang": "namespace_thuum_Shout_Equip_Cost_Positive",
+                                "lang": "Shout_Equip_Cost_Positive",
                                 "above": 0,
                                 "includeSign": false
                             }
