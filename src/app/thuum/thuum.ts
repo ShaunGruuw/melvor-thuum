@@ -383,8 +383,8 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         // rewards.addGP(this.manager.getGoldToAward(this.activeTeacher));
         costs.addGP(this.manager.getGoldToTake(this.activeTeacher))
         costs.consumeCosts()
-
-        this.addCommonRewards(rewards);
+// @ts-ignore // TODO: TYPES
+        this.addCommonRewards(rewards, this.activeTeacher);
 
         actionEvent.interval = this.currentActionInterval;
         this._events.emit('action', actionEvent);

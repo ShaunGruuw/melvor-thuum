@@ -93,6 +93,11 @@
         "bankSortOrder": [
             {
                 "insertAt": "After",
+                "afterID": "melvorF:Mastery_Token_Astrology",
+                "ids": ["namespace_thuum:Mastery_Token_Thuum"]
+            },
+            {
+                "insertAt": "After",
                 "afterID": "melvorF:Farming_Potion_IV",
                 "ids": [
                     "namespace_thuum:Dragon_Shout_Potion_I",
