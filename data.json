@@ -821,45 +821,18 @@
                         {
                             "level": "1",
                             "descriptionID": 0,
-                            "description": "Each level increases the teachers cost by 10 GP for this teacher only."
-                        },
-                        {
-                            "level": "1",
-                            "descriptionID": 1,
-                            "description": "First Master modifier."
-                        },
-                        {
-                            "level": "40",
-                            "descriptionID": 2,
-                            "description": "Ability to unlock the second Master modifier."
-                        },
-                        {
-                            "level": "60",
-                            "descriptionID": 3,
-                            "description": "Ability to unlock the third Master modifier."
+                            "description": "Each level increases the cost to learn this shout."
                         },
                         {
                             "level": "80",
-                            "descriptionID": 4,
+                            "descriptionID": 1,
                             "description": "-5% Shout Equip Cost for this teacher only."
-                        },
-                        {
-                            "level": "99",
-                            "descriptionID": 5,
-                            "description": "Ability to unlock the fourth Master modifier."
                         }
                     ],
                     "masteryLevelBonuses":[
                         {
                             "modifiers": {
-                                "currencyGain": [
-                                    {
-                                        "currencyID": "melvorD:GP",
-                                        "skillID": "namespace_thuum:Thuum",
-                                        "actionID": "namespace_thuum:Unrelenting_Force",
-                                        "value": -1
-                                    }
-                                ]
+                                "namespace_thuum:ThuumGP": -1
                             },
                             "level": 1,
                             "levelScalingSlope": 1,
@@ -879,7 +852,7 @@
                                 "increasedSkillXP": [
                                     {
                                         "skillID": "namespace_thuum:Thuum",
-                                        "value": -10
+                                        "value": 10
                                     }
                                 ]
                             },

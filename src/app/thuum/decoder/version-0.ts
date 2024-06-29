@@ -11,7 +11,8 @@ export class Version0 implements DecodeVersion {
         if (version !== 0) {
             throw new Error(`Did not read correct version number: ${version} - trying version 0`);
         }
-
+        console.log(version, reader.getNamespacedObject(this.thuum.actions), this.thuum.shouts)
+        // get teacher
         if (reader.getBoolean()) {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
             if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
@@ -20,7 +21,7 @@ export class Version0 implements DecodeVersion {
                 this.thuum.activeTeacher = teacher;
             }
         }
-
+        // get masteries
         reader.getArray(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
 
@@ -35,7 +36,7 @@ export class Version0 implements DecodeVersion {
                 this.thuum.masteriesUnlocked.set(teacher, masteriesUnlocked);
             }
         });
-
+        // get shouts
         reader.getComplexMap(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
             const slot = reader.getUint32();

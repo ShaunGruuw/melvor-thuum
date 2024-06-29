@@ -41,11 +41,11 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                 this.actions.registerObject(new Teacher(namespace, teacher, this.game));
             }
         }
-        // if (data.upgrades) {
-        //     for (const upgrade of data.upgrades) {
-        //         this.upgradeModifiers.push(new UpgradeModifier(upgrade, this.game));
-        //     }
-        // }
+        if (data.upgrades) {
+            for (const upgrade of data.upgrades) {
+                this.upgradeModifiers.push(new UpgradeModifier(upgrade, this.game));
+            }
+        }
     }
 
     public get name() {
@@ -540,26 +540,26 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public encode(writer: SaveWriter): SaveWriter {
         super.encode(writer);
 
-        writer.writeUint32(this.version);
-        writer.writeBoolean(this.activeTeacher !== undefined);
-
+        writer.writeUint32(this.version); // writes save version
+        writer.writeBoolean(this.activeTeacher !== undefined); // true:false is activeTeacher
+        // Save teacher
         if (this.activeTeacher) {
-            writer.writeNamespacedObject(this.activeTeacher);
+            writer.writeNamespacedObject(this.activeTeacher); // write an object of active teacher if one is active
         }
-
+        // Save masteries
         writer.writeArray(this.actions.allObjects, action => {
-            writer.writeNamespacedObject(action);
+            writer.writeNamespacedObject(action); // write object of all actions
 
             const masteriesUnlocked = this.masteriesUnlocked.get(action);
 
             writer.writeArray(masteriesUnlocked, value => {
-                writer.writeBoolean(value);
+                writer.writeBoolean(value); // write the mastery values, [true, false, false, false]
             });
         });
-
+        // Save shouts progress
         writer.writeComplexMap(this.shouts.shouts, (key, value, writer) => {
-            writer.writeNamespacedObject(key);
-            writer.writeUint32(value.slot);
+            writer.writeNamespacedObject(key); // write shouts keys
+            writer.writeUint32(value.slot); // write shouts values
         });
 
         return writer;

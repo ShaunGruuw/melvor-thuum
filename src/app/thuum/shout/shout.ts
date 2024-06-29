@@ -6,7 +6,7 @@ import './shout.scss';
 export interface ShoutContext {
     media: string;
     name: string;
-    teacherId: string;
+    shoutId: string;
 }
 
 export function ShoutComponent(thuum: Thuum) {
@@ -16,10 +16,10 @@ export function ShoutComponent(thuum: Thuum) {
         $template: '#thuum-shout',
         shout: undefined as ShoutContext,
         get media() {
-            return this.shout?.teacher?.media;
+            return this.shout?.media;
         },
         get name() {
-            return this.shout?.teacher?.name;
+            return this.shout?.name;
         },
         get hasShout() {
             return this.shout !== undefined;
@@ -36,7 +36,7 @@ export function ShoutComponent(thuum: Thuum) {
                 this.shout = undefined;
             } else {
                 this.shout = {
-                    teacherId: shout.teacher?.id,
+                    shoutId: shout.teacher?.id,
                     media: shout.teacher?.media,
                     name: shout.teacher?.name
                 };
@@ -45,8 +45,7 @@ export function ShoutComponent(thuum: Thuum) {
         },
         updateCurrentMasteryLevel: function () {
             if (this.shout) {
-                const teacher = this.shout.teacher;
-                const teacherRef = thuum.actions.allObjects.find(action => action.id === teacher.id);
+                const teacherRef = thuum.actions.allObjects.find(action => action.id === this.shout.shoutId);
 
                 this.currentMasteryLevel = thuum.getMasteryLevel(teacherRef);
             }
@@ -58,7 +57,7 @@ export function ShoutComponent(thuum: Thuum) {
             this.modifiers = [];
 
             if (this.shout) {
-                const teacherRef = thuum.actions.allObjects.find(action => action.id === this.shout.teacherId);
+                const teacherRef = thuum.actions.allObjects.find(action => action.id === this.shout.shoutId);
                 console.log(this.shout, teacherRef, thuum.manager.getModifiers(teacherRef))
                 this.modifiers = thuum.manager.getModifiers(teacherRef);
             }

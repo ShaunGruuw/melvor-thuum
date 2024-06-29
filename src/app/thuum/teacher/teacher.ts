@@ -58,9 +58,8 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             const gpModifier = this.getGPModifier();
             const modGp = (gp: number) => {
                 gp *= 1 + gpModifier / 100;
-                 // @ts-ignore // TODO: TYPES
-                gp = Math.floor(gp + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery));                    
-                    // game.modifiers.increasedGPFlat);
+                // @ts-ignore // TODO: TYPES
+                gp = Math.floor(gp + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery));
                 return gp;
             };
 
@@ -106,12 +105,12 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             return teacher.maxGP + thuum.getMasteryLevel(teacher) * 10;
         },
         getGPModifier: function () {
-                        // @ts-ignore // TODO: TYPES
-                        let increasedGPModifier = game.thuum.getCurrencyModifier(game.gp);
-                        // @ts-ignore // TODO: TYPES
-                        increasedGPModifier += game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery);
-            
-                        return increasedGPModifier;
+            // @ts-ignore // TODO: TYPES
+            let increasedGPModifier = game.thuum.getCurrencyModifier(game.gp);
+            // @ts-ignore // TODO: TYPES
+            increasedGPModifier += game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery);
+
+            return increasedGPModifier;
         }
     };
 }
