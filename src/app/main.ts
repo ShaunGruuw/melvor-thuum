@@ -304,8 +304,3 @@ export class App {
         }
     }
 }
-
-// "level": 99,
-// "key": "increasedSkillXP",
-// "skill": "melvorD:Slayer",
-// "value": 20

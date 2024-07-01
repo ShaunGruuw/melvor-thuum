@@ -1,7 +1,7 @@
 import { ModifierType } from './settings';
 
 export interface ShoutModifier {
-    description: string;
+    description: any[];
     isActive: boolean;
     level: number;
 }
@@ -39,7 +39,7 @@ export interface TeacherData extends BasicSkillRecipeData {
     // @ts-ignore 
     standardModifiers: StatObject[];
     // @ts-ignore 
-    hardcoreModifiers: StatObject[];
+    // hardcoreModifiers: StatObject[];
     skills: string[];
 }
 
@@ -54,7 +54,7 @@ export class Teacher extends BasicSkillRecipe {
     skills: string[];
 
     private standardModifiers: StatObject[];
-    private hardcoreModifiers: StatObject[];
+    // private hardcoreModifiers: StatObject[];
 
     public get name() {
         return getLangString(`Thuum_Thuum_Teacher_${this.localID}`);
@@ -68,8 +68,8 @@ export class Teacher extends BasicSkillRecipe {
         switch (type) {
             case ModifierType.Standard:
                 return this.standardModifiers;
-            case ModifierType.Hardcore:
-                return this.hardcoreModifiers;
+            // case ModifierType.Hardcore:
+            //     return this.hardcoreModifiers;
         }
     }
 
@@ -88,12 +88,12 @@ export class Teacher extends BasicSkillRecipe {
             stats.level = modifier.level;
             return stats;
         });
-        this.hardcoreModifiers = data.hardcoreModifiers.map(modifier => {
-            // @ts-ignore // TODO: TYPES
-            const stats = new StatObject(modifier, game, `${Teacher.name}`);
-            stats.level = modifier.level;
-            return stats;
-        });
+        // this.hardcoreModifiers = data.hardcoreModifiers.map(modifier => {
+        //     // @ts-ignore // TODO: TYPES
+        //     const stats = new StatObject(modifier, game, `${Teacher.name}`);
+        //     stats.level = modifier.level;
+        //     return stats;
+        // });
         this.skills = data.skills;
     }
 }

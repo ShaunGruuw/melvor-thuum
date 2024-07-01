@@ -22,7 +22,9 @@
                             </span>
                             )
                         </span>
-                        <span v-html="modifier.description"></span>
+                        <span v-for="mod in modifier.description">
+                            <span :class="{ 'text-danger' : mod.isNegative, 'text-success': modifier.isActive, 'thuum-text-grey': !modifier.isActive }"  v-html="mod.description"></span>
+                        </span>
                     </div>
                 </div>
 

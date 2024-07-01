@@ -20,7 +20,7 @@
                 "id": "melvorD:Aorpheats_Signet_Ring",
                 "modifiers": {
                     "add": {
-                    "decreasedThuumGP": 100
+                        "decreasedThuumGP": 100
                     }
                 }
             },
@@ -64,9 +64,24 @@
                             "id": "melvorF:Waterfall",
                             "modifiers": {
                                 "add": {
-                                    "decreasedSkillIntervalPercent": [{ "skillID": "namespace_thuum:Thuum", "value": 5 }],
-                                    "increasedSkillXP": [{ "skillID": "namespace_thuum:Thuum", "value": 5 }],
-                                    "increasedMasteryXP": [{ "skillID": "namespace_thuum:Thuum", "value": 5 }]
+                                    "decreasedSkillIntervalPercent": [
+                                        {
+                                            "skillID": "namespace_thuum:Thuum",
+                                            "value": 5
+                                        }
+                                    ],
+                                    "increasedSkillXP": [
+                                        {
+                                            "skillID": "namespace_thuum:Thuum",
+                                            "value": 5
+                                        }
+                                    ],
+                                    "increasedMasteryXP": [
+                                        {
+                                            "skillID": "namespace_thuum:Thuum",
+                                            "value": 5
+                                        }
+                                    ]
                                 }
                             }
                         }
@@ -94,7 +109,9 @@
             {
                 "insertAt": "After",
                 "afterID": "melvorF:Mastery_Token_Astrology",
-                "ids": ["namespace_thuum:Mastery_Token_Thuum"]
+                "ids": [
+                    "namespace_thuum:Mastery_Token_Thuum"
+                ]
             },
             {
                 "insertAt": "After",
@@ -834,7 +851,7 @@
                             "description": "-5% Shout Equip Cost for this teacher only."
                         }
                     ],
-                    "masteryLevelBonuses":[
+                    "masteryLevelBonuses": [
                         {
                             "modifiers": {
                                 "namespace_thuum:ThuumGP": -1
@@ -913,13 +930,24 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "halvedWoodcuttingDoubleChance": 1 
+                                        "halvedWoodcuttingDoubleChance": 1,
+                                        "woodcuttingXPAddedAsFiremakingXP": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
                                     }
                                 },
                                 {
                                     "level": 40,
                                     "modifiers": {
-                                        "increasedChanceForAshInWoodcutting": 5 
+                                        "increasedChanceForAshInWoodcutting": 10,
+                                        "firemakingLogCurrencyGain": [
+                                            {
+                                                "value": -5,
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
@@ -929,43 +957,10 @@
                                             {
                                                 "value": 5,
                                                 "skillID": "melvorD:Firemaking"
-                                            }
-                                        ]
-                                    }
-                                },
-                                {
-                                    "level": 80,
-                                    "modifiers": {
-                                        "increasedFiremakingCoalChance": 5 
-                                    }
-                                },
-                                {
-                                    "level": 99,
-                                    "modifiers": {
-                                        "increasedWoodcuttingGemChance": 5 
-                                    }
-                                }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "modifiers": {
-                                        "halvedWoodcuttingDoubleChance": 1 
-                                    }
-                                },
-                                {
-                                    "level": 40,
-                                    "modifiers": {
-                                        "increasedChanceForAshInWoodcutting": 1 
-                                    }
-                                },
-                                {
-                                    "level": 60,
-                                    "modifiers": {
-                                        "increasedMasteryXP": [
+                                            },
                                             {
-                                                "value": 1,
-                                                "skillID": "melvorD:Firemaking"
+                                                "value": 5,
+                                                "skillID": "melvorD:Woodcutting"
                                             }
                                         ]
                                     }
@@ -973,13 +968,25 @@
                                 {
                                     "level": 80,
                                     "modifiers": {
-                                        "increasedFiremakingCoalChance": 1 
+                                        "increasedFiremakingCoalChance": 5,
+                                        "skillXP": [
+                                            {
+                                                "skillID": "melvorD:Woodcutting",
+                                                "value": -3
+                                            }
+                                        ]
                                     }
                                 },
                                 {
                                     "level": 99,
                                     "modifiers": {
-                                        "increasedWoodcuttingGemChance": 1
+                                        "increasedWoodcuttingGemChance": 5,
+                                        "flatSkillInterval": [
+                                            {
+                                                "skillID": "melvorD:Firemaking",
+                                                "value": -500
+                                            }
+                                        ]
                                     }
                                 }
                             ]
@@ -998,48 +1005,6 @@
                                 "melvorD:Cooking"
                             ],
                             "standardModifiers": [
-                                {
-                                    "level": 1,
-                                    "modifiers": {
-                                        "decreasedCookingSuccessCap": 10
-                                    }
-                                },
-                                {
-                                    "level": 40,
-                                    "modifiers": {
-                                        "increasedChanceAdditionalSkillResource": [
-                                            {
-                                                "skillID": "melvorD:Cooking",
-                                                "value": 5
-                                            }
-                                        ]
-                                    }
-                                },
-                                {
-                                    "level": 60,
-                                    "modifiers": {
-                                        "decreasedPassiveCookInterval": 10
-                                    }
-                                },
-                                {
-                                    "level": 80,
-                                    "modifiers": {
-                                        "decreasedSkillInterval": [
-                                            {
-                                                "value": 200,
-                                                "skillID": "melvorD:Fishing"
-                                            }
-                                        ]
-                                    }
-                                },
-                                {
-                                    "level": 99,
-                                    "modifiers": {
-                                        "increasedFishingCookedChance": 5
-                                    }
-                                }
-                            ],
-                            "hardcoreModifiers": [
                                 {
                                     "level": 1,
                                     "modifiers": {
@@ -1123,35 +1088,6 @@
                                     "key": "doubleRuneEssenceMining",
                                     "value": 1
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "key": "decreasedSkillPreservationChance",
-                                    "skill": "melvorD:Herblore",
-                                    "value": 40
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Smithing",
-                                    "value": 100
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Mining",
-                                    "value": 200
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "doubleOresMining",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "doubleRuneEssenceMining",
-                                    "value": 2
-                                }
                             ]
                         },
                         {
@@ -1193,33 +1129,6 @@
                                     "key": "increasedMaxHitpoints",
                                     "value": 5
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedDamageToAllMonsters",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedAutoEatEfficiency",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedDamageReduction",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedAutoEatThreshold",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedMaxHitpoints",
-                                    "value": 2
-                                }
                             ]
                         },
                         {
@@ -1259,33 +1168,6 @@
                                     "level": 99,
                                     "key": "increasedPrayerPointsWhenHit",
                                     "value": 2
-                                }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedGlobalPreservationChance",
-                                    "value": 20
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedGPGlobal",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedChanceToDoubleItemsGlobal",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedOffItemChance",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedGPFlat",
-                                    "value": 25
                                 }
                             ]
                         },
@@ -1331,36 +1213,6 @@
                                     "key": "increasedChanceForGoldFromCrafting30",
                                     "value": 2
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedAltMagicRunePreservation",
-                                    "value": 25
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedSkillXP",
-                                    "skill": "melvorD:Fletching",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "doubleItemsSkill",
-                                    "skill": "melvorD:Fletching",
-                                    "value": 1
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "doubleItemsSkill",
-                                    "skill": "melvorD:Crafting",
-                                    "value": 1
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedJavelinProduction",
-                                    "value": 1
-                                }
                             ]
                         },
                         {
@@ -1402,34 +1254,6 @@
                                     "key": "increasedGPFromAgilityPerActiveObstacle",
                                     "value": 10
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedGPGlobal",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedGPFromAgility",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "decreasedSkillIntervalPercent",
-                                    "skill": "melvorD:Agility",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "decreasedAgilityPillarCost",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedGPFromAgilityPerActiveObstacle",
-                                    "value": 5
-                                }
                             ]
                         },
                         {
@@ -1469,33 +1293,6 @@
                                     "level": 99,
                                     "key": "increasedGPFromThievingFlat",
                                     "value": 5
-                                }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedMaxHitpoints",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedThievingStealth",
-                                    "value": 25
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedGPFromThieving",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedThievingAreaUniqueChance",
-                                    "value": 1
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedGPFromThievingFlat",
-                                    "value": 1
                                 }
                             ]
                         },
@@ -1538,33 +1335,6 @@
                                     "key": "increasedChanceForElementalRune",
                                     "value": 50
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedGlobalPreservationChance",
-                                    "value": 20
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedChanceRandomPotionHerblore",
-                                    "value": 1
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedAdditionalRunecraftCountRunes",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedPotionsHerblore",
-                                    "value": 1
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedChanceForElementalRune",
-                                    "value": 5
-                                }
                             ]
                         },
                         {
@@ -1606,33 +1376,6 @@
                                     "level": 99,
                                     "key": "increasedDamageDealtPerEffect",
                                     "value": 5
-                                }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedDamageReduction",
-                                    "value": 20
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedDamageToSlayerTasks",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedSlayerCoins",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedMeleeStrengthBonus",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedDamageDealtPerEffect",
-                                    "value": 1
                                 }
                             ]
                         }

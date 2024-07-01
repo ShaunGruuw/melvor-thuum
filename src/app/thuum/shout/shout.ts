@@ -58,7 +58,6 @@ export function ShoutComponent(thuum: Thuum) {
 
             if (this.shout) {
                 const teacherRef = thuum.actions.allObjects.find(action => action.id === this.shout.shoutId);
-                console.log(this.shout, teacherRef, thuum.manager.getModifiers(teacherRef))
                 this.modifiers = thuum.manager.getModifiers(teacherRef);
             }
         }

@@ -45,33 +45,6 @@
                                     "key": "increasedDamageAgainstElves",
                                     "value": 20
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedDamageFlatWhileTargetHasMaxHP",
-                                    "value": 30
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedDamageAgainstDragons",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedDamageAgainstHumans",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedDamageAgainstAnimals",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedDamageAgainstElves",
-                                    "value": 10
-                                }
                             ]
                         }
                     ]

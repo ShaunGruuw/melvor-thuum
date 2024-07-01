@@ -24,7 +24,13 @@ export class ThuumManager {
 
         return teacher.modifiers(this.thuum.settings.modifierType).map(modifier => {
             // @ts-ignore // TODO: TYPES
-            let description = modifier.describePlain();
+            // let description = modifier.describePlain();
+            let description: any[] = []
+            // @ts-ignore // TODO: TYPES
+            for (let index = 0; index <  modifier.modifiers.length; index++) {
+                // @ts-ignore // TODO: TYPES
+                description.push(modifier.modifiers[index].getDescription())
+            }
 
             return {
                 description,
@@ -107,8 +113,6 @@ export class ThuumManager {
         teacher = this.thuum.actions.find(action => action.id === teacher.id);
 
         let unlockedMasteries = this.thuum.masteriesUnlocked.get(teacher);
-
-        // const shout = this.thuum.shouts.get(teacher);
 
         const validModifierLevels = teacher
             .modifiers(this.thuum.settings.modifierType)

@@ -11,12 +11,9 @@ export class Version0 implements DecodeVersion {
         if (version !== 0) {
             throw new Error(`Did not read correct version number: ${version} - trying version 0`);
         }
-        console.log(version, this.thuum.shouts)
         // get teacher
-        console.log('decode get teacher')
         if (reader.getBoolean()) {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
-            console.log('teacher', teacher)
             if (typeof teacher === 'string' || teacher.level > this.thuum.level) {
                 this.thuum.shouldResetAction = true;
             } else {
@@ -24,10 +21,8 @@ export class Version0 implements DecodeVersion {
             }
         }
         // get masteries
-        console.log('decode get masteries')
         reader.getArray(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
-            console.log('masteries', reader, teacher, typeof teacher !== 'string')
             if (typeof teacher !== 'string') {
                 const masteriesUnlocked: boolean[] = [];
 
@@ -35,7 +30,6 @@ export class Version0 implements DecodeVersion {
                     const isUnlocked = reader.getBoolean();
                     masteriesUnlocked.push(isUnlocked);
                 });
-                console.log(masteriesUnlocked)
                 this.thuum.masteriesUnlocked.set(teacher, masteriesUnlocked);
             } else {
                 reader.getArray(reader => reader.getBoolean());
@@ -43,7 +37,6 @@ export class Version0 implements DecodeVersion {
         });
         this.thuum.shouts.clear()
         // get shouts
-        console.log('decode get shouts')
         reader.getComplexMap(reader => {
             const teacher = reader.getNamespacedObject(this.thuum.actions);
             const slot = reader.getUint32();
@@ -64,9 +57,7 @@ export class Version0 implements DecodeVersion {
                 value: masteredShout
             };
         });
-        console.log('decode shout1')
         const shout1 = this.thuum.shouts.get(1);
-        console.log('decode setShout')
         this.thuum.userInterface.shout1.setShout(shout1);
 
         this.thuum.userInterface.teachers.forEach(component => {

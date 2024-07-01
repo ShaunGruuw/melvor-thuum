@@ -155,34 +155,6 @@
                                     "key": "increasedSummoningMaxHit",
                                     "value": 10
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedSummoningChargePreservation",
-                                    "value": 100
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedSummoningAttackLifesteal",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Summoning",
-                                    "value": 500
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedGPBasedOnSummonDamage",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedSummoningMaxHit",
-                                    "value": 5
-                                }
                             ]
                         },
                         {
@@ -217,33 +189,6 @@
                                     "level": 80,
                                     "key": "increasedRangedLifesteal",
                                     "value": 10
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedRangedStrengthBonusPer8Ranged",
-                                    "value": 1
-                                }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedAmmoPreservation",
-                                    "value": 100
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedRangedCritChance",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedRangedMaxHit",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedRangedLifesteal",
-                                    "value": 5
                                 },
                                 {
                                     "level": 99,
@@ -293,34 +238,6 @@
                                     "key": "doubleModifiersInAstrologyForMaxedConstellations",
                                     "value": 1
                                 }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "increasedGlobalSkillIntervalPercent",
-                                    "value": 33
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedFlatFarmingYield",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedTownshipGPProduction",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "decreasedSkillIntervalPercent",
-                                    "skill": "melvorD:Astrology",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "doubleModifiersInAstrologyForMaxedConstellations",
-                                    "value": 1
-                                }
                             ]
                         },
                         {
@@ -360,33 +277,6 @@
                                     "level": 99,
                                     "key": "increasedMagicMaxHitBonusAgainstMelee",
                                     "value": 5
-                                }
-                            ],
-                            "hardcoreModifiers": [
-                                {
-                                    "level": 1,
-                                    "key": "decreasedFlatMagicAccuracyBonusPerAttackInterval",
-                                    "value": 10
-                                },
-                                {
-                                    "level": 40,
-                                    "key": "increasedMagicAccuracyBonus",
-                                    "value": 2
-                                },
-                                {
-                                    "level": 60,
-                                    "key": "increasedRunePreservation",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 80,
-                                    "key": "increasedMagicCritChance",
-                                    "value": 5
-                                },
-                                {
-                                    "level": 99,
-                                    "key": "increasedMagicMaxHitBonusAgainstMelee",
-                                    "value": 2
                                 }
                             ]
                         }

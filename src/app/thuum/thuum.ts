@@ -106,7 +106,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
             </h5>`;
 
             for (const modifier of this.manager.getModifiers(teacher)) {
-                html += `<small class="${modifier.level === 1 ? 'text-danger' : modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
+                html += `<small class="${modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
 
                 if (!modifier.isActive) {
                     html += `
@@ -118,7 +118,10 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                     </span>`;
                 }
 
-                html += `<span>${modifier.description}</span></small><br />`;
+                for (let index = 0; index < modifier.description.length; index++) {
+                    html += `<span class="${modifier.isActive ? modifier.description[index].isNegative ? 'text-danger' : 'text-success' : 'thuum-text-grey'}">${modifier.description[index].description}</span>`;
+                }
+                html += `</small><br />`
             }
 
             SwalLocale.fire({
@@ -139,7 +142,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
             </h5>`;
 
             for (const modifier of this.manager.getModifiers(teacher)) {
-                html += `<small class="${modifier.level === 1 ? 'text-danger' : modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
+                html += `<small class="${modifier.isActive ? 'text-success' : 'thuum-text-grey'}">`;
                 if (!modifier.isActive) {
                     html += `
                     <span>
@@ -149,8 +152,12 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                         ${modifier.level})
                     </span>`;
                 }
-
-                html += `<span>${modifier.description}</span></small><br />`;
+                for (let index = 0; index < modifier.description.length; index++) {
+                    html += `<span class="${modifier.isActive ? modifier.description[index].isNegative ? 'text-danger' : 'text-success' : 'thuum-text-grey'}">
+                    ${modifier.description[index].description}
+                    </span>`;
+                }
+                html += `</small><br />`
             }
 
             html += `<h5 class="font-w600 text-danger font-size-sm mt-3 mb-1">${getLangString(
@@ -541,7 +548,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         writer.writeBoolean(this.activeTeacher !== undefined); // true:false is activeTeacher
         // Save teacher
         if (this.activeTeacher) {
-            console.log(this.activeTeacher, 'this.activeTeacher')
             writer.writeNamespacedObject(this.activeTeacher); // write an object of active teacher if one is active            
         }
         // Save masteries

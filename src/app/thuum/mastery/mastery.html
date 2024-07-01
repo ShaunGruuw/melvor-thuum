@@ -7,31 +7,24 @@
         </h5>
 
         <div class="manage" v-if="state === 'view'">
-            <div
-                class="manage-section upgrade"
-                v-for="(modifier, index) in unlockableModifiers"
-                :class="{ 'with-border': index + 1 !== unlockableModifiers.length, 'with-bottom-border': index + 1 === unlockableModifiers.length }"
-            >
-                <div
-                    class="thuum-info font-size-sm"
-                    :class="{ 'text-danger': modifier.level === 1, 'text-success': isUnlocked(index), 'thuum-text-grey': !isUnlocked(index) }"
-                >
+            <div class="manage-section upgrade" v-for="(modifier, index) in unlockableModifiers"
+                :class="{ 'with-border': index + 1 !== unlockableModifiers.length, 'with-bottom-border': index + 1 === unlockableModifiers.length }">
+                <div class="thuum-info font-size-sm"
+                    :class="{ 'text-danger': modifier.level === 1, 'text-success': isUnlocked(index), 'thuum-text-grey': !isUnlocked(index) }">
                     <span v-if="!isUnlocked(index)">
                         (<img class="skill-icon-xxs mr-1" :src="cdnMedia('assets/media/main/mastery_header.svg')" />
                         <span :class="{ 'text-success': currentMasteryLevel >= modifier.level }">
-                            {{ modifier.level }} </span
-                        >)
+                            {{ modifier.level }} </span>)
                     </span>
-                    <span v-html="modifier.description"></span>
+                    <span v-for="mod in modifier.description">
+                        <span
+                            :class="{ 'text-danger' : mod.isNegative, 'text-success': modifier.isActive, 'thuum-text-grey': !modifier.isActive }"
+                            v-html="mod.description"></span>
+                    </span>
                 </div>
 
-                <button
-                    type="button"
-                    class="btn btn-lg btn-success ml-2"
-                    @click="setState('unlock', modifier)"
-                    v-if="!isUnlocked(index)"
-                    :disabled="!canUnlock(modifier)"
-                >
+                <button type="button" class="btn btn-lg btn-success ml-2" @click="setState('unlock', modifier)"
+                    v-if="!isUnlocked(index)" :disabled="!canUnlock(modifier)">
                     {{ getLangString('Thuum_Thuum_Unlock') }}
                 </button>
             </div>
@@ -51,10 +44,11 @@
             </h5>
 
             <div>
-                <small
-                    :class="essenceOfThuum.quantity > 0 ? 'text-success' : 'thuum-text-grey'"
-                    v-html="modifier.description"
-                ></small>
+                <span v-for="mod in modifier.description">
+                    <small
+                        :class="{ essenceOfThuum.quantity > 0 ? 'thuum-text-grey' : mod.isNegative ? 'text-danger' : 'text-success' }"
+                        v-html="mod.description"></small>
+                </span>
             </div>
 
             <div class="mt-3">
@@ -77,12 +71,8 @@
             </div>
 
             <div class="thuum-footer-buttons mt-4">
-                <button
-                    type="button"
-                    class="btn btn-lg btn-primary mr-2"
-                    @click="unlock(modifier)"
-                    v-if="essenceOfThuum.quantity > 0 && game.gp.amount >= unlockGPCost"
-                >
+                <button type="button" class="btn btn-lg btn-primary mr-2" @click="unlock(modifier)"
+                    v-if="essenceOfThuum.quantity > 0 && game.gp.amount >= unlockGPCost">
                     {{ getLangString('Thuum_Thuum_Unlock') }}
                 </button>
                 <button type="button" class="btn btn-lg btn-danger" @click="setState('view')">
