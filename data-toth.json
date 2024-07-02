@@ -131,8 +131,16 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedSummoningChargePreservation",
-                                    "value": 50
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Summoning"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,
@@ -214,8 +222,20 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalSkillIntervalPercent",
-                                    "value": 10
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Farming"
+                                                },
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Astrology"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,

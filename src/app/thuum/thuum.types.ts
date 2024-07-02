@@ -69,7 +69,7 @@ export class Teacher extends BasicSkillRecipe {
             case ModifierType.Standard:
                 return this.standardModifiers;
             // case ModifierType.Hardcore:
-            //     return this.hardcoreModifiers;
+            //     return this.standardModifiers;
         }
     }
 

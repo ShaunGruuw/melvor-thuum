@@ -14,7 +14,7 @@ export class ThuumManager {
         return this.game.items.getObjectByID('namespace_thuum:Dragon_Soul')?.media;
     }
 
-    constructor(private readonly thuum: Thuum, private readonly game: Game) {}
+    constructor(private readonly thuum: Thuum, private readonly game: Game) { }
 
     /** Gets modifier metadata. */
     public getModifiers(teacher: Teacher) {
@@ -27,11 +27,10 @@ export class ThuumManager {
             // let description = modifier.describePlain();
             let description: any[] = []
             // @ts-ignore // TODO: TYPES
-            for (let index = 0; index <  modifier.modifiers.length; index++) {
+            for (let index = 0; index < modifier.modifiers.length; index++) {
                 // @ts-ignore // TODO: TYPES
                 description.push(modifier.modifiers[index].getDescription())
             }
-
             return {
                 description,
                 isActive: this.isModifierActive(teacher, modifier),
@@ -62,11 +61,11 @@ export class ThuumManager {
 
         gpMultiplier *= 1 + increasedGPModifier / 100;
         // @ts-ignore // TODO: TYPES
-        gpToTake = Math.floor((gpToTake/gpMultiplier)  - this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery));
-        if(gpToTake > 10000000000000 || typeof gpToTake !== 'number') {
+        gpToTake = Math.floor((gpToTake * gpMultiplier) - this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery));
+        if (gpToTake > 10000000000000 || typeof gpToTake !== 'number') {
             gpToTake = 10000000000000
         }
-        if(gpToTake < 1) {
+        if (gpToTake < 1) {
             gpToTake = 1
         }
         return gpToTake;
@@ -81,7 +80,7 @@ export class ThuumManager {
         let gpMultiplier = 1;
 
         const increasedGPModifier = component.getGPModifier();
-        
+
         gpMultiplier *= 1 + increasedGPModifier / 100;
         // @ts-ignore // TODO: TYPES
         gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery))

@@ -62,7 +62,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
                 let gpMultiplier = 1;
                 gpMultiplier *= 1 + gpModifier / 100;
                 // @ts-ignore // TODO: TYPES
-                gp = Math.floor((gp/gpMultiplier)  - game.modifiers.getValue('melvorD:increasedGPFlat', game.gp.modQuery));
+                gp = Math.floor((gp * gpMultiplier)  - game.modifiers.getValue('melvorD:increasedGPFlat', game.gp.modQuery));
                 return gp;
             };
 

@@ -5,7 +5,7 @@ export enum ChangeType {
 
 export enum ModifierType {
     Standard = 'standard',
-    Hardcore = 'hardcore'
+    // Hardcore = 'hardcore'
 }
 
 export type ShoutEquipCostCallback = (value: number, previousValue: number) => void;
@@ -133,11 +133,11 @@ export class ThuumSettings {
                 {
                     value: ModifierType.Standard,
                     display: getLangString('Thuum_Thuum_Settings_Modifier_Standard')
-                },
-                {
-                    value: ModifierType.Hardcore,
-                    display: getLangString('Thuum_Thuum_Settings_Modifier_Hardcore')
                 }
+                // {
+                //     value: ModifierType.Hardcore,
+                //     display: getLangString('Thuum_Thuum_Settings_Modifier_Hardcore')
+                // }
             ],
             onChange(value, previousValue) {
                 that.emitChange(ChangeType.Modifiers, value, previousValue);

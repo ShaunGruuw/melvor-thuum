@@ -22,8 +22,16 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedDamageFlatWhileTargetHasMaxHP",
-                                    "value": 20
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "namespace_thuum:Thuum"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,

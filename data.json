@@ -854,7 +854,7 @@
                     "masteryLevelBonuses": [
                         {
                             "modifiers": {
-                                "namespace_thuum:ThuumGP": -1
+                                "decreasedThuumGP": 1
                             },
                             "level": 1,
                             "levelScalingSlope": 1,
@@ -862,7 +862,7 @@
                         },
                         {
                             "modifiers": {
-                                "namespace_thuum:thuumEquipCost": -5
+                                "decreasedThuumEquipCost": 5
                             },
                             "level": 90
                         }
@@ -907,7 +907,7 @@
                         {
                             "realm": "melvorD:Melvor",
                             "modifiers": {
-                                "namespace_thuum:thuumEquipCost": -5
+                                "decreasedThuumEquipCost": 5
                             },
                             "percent": 95
                         }
@@ -930,10 +930,14 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "halvedWoodcuttingDoubleChance": 1,
-                                        "woodcuttingXPAddedAsFiremakingXP": [
+                                        "increasedMasteryXP": [
                                             {
-                                                "value": 5
+                                                "value": 5,
+                                                "skillID": "melvorD:Firemaking"
+                                            },
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Woodcutting"
                                             }
                                         ]
                                     }
@@ -953,22 +957,11 @@
                                 {
                                     "level": 60,
                                     "modifiers": {
-                                        "increasedMasteryXP": [
+                                        "woodcuttingXPAddedAsFiremakingXP": [
                                             {
-                                                "value": 5,
-                                                "skillID": "melvorD:Firemaking"
-                                            },
-                                            {
-                                                "value": 5,
-                                                "skillID": "melvorD:Woodcutting"
+                                                "value": 5
                                             }
-                                        ]
-                                    }
-                                },
-                                {
-                                    "level": 80,
-                                    "modifiers": {
-                                        "increasedFiremakingCoalChance": 5,
+                                        ],
                                         "skillXP": [
                                             {
                                                 "skillID": "melvorD:Woodcutting",
@@ -978,15 +971,26 @@
                                     }
                                 },
                                 {
-                                    "level": 99,
+                                    "level": 80,
                                     "modifiers": {
-                                        "increasedWoodcuttingGemChance": 5,
                                         "flatSkillInterval": [
                                             {
                                                 "skillID": "melvorD:Firemaking",
                                                 "value": -500
+                                            },
+                                            {
+                                                "skillID": "melvorD:Woodcutting",
+                                                "value": 500
                                             }
                                         ]
+                                    }
+                                },
+                                {
+                                    "level": 99,
+                                    "modifiers": {
+                                        "halvedWoodcuttingDoubleChance": 1,
+                                        "increasedFiremakingCoalChance": 5,
+                                        "increasedWoodcuttingGemChance": 10
                                     }
                                 }
                             ]
@@ -1008,7 +1012,16 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "decreasedCookingSuccessCap": 10
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Fishing"
+                                            },
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Cooking"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
@@ -1019,18 +1032,31 @@
                                                 "skillID": "melvorD:Cooking",
                                                 "value": 5
                                             }
+                                        ],
+                                        "increasedSkillInterval": [
+                                            {
+                                                "value": 200,
+                                                "skillID": "melvorD:Cooking"
+                                            }
                                         ]
                                     }
                                 },
                                 {
                                     "level": 60,
                                     "modifiers": {
+                                        "decreasedCookingSuccessCap": 10,
                                         "decreasedPassiveCookInterval": 10
                                     }
                                 },
                                 {
                                     "level": 80,
                                     "modifiers": {
+                                        "skillXP": [
+                                            {
+                                                "skillID": "melvorD:Fishing",
+                                                "value": -10
+                                            }
+                                        ],
                                         "decreasedSkillInterval": [
                                             {
                                                 "value": 200,
@@ -1042,7 +1068,8 @@
                                 {
                                     "level": 99,
                                     "modifiers": {
-                                        "increasedFishingCookedChance": 5
+                                        "increasedFishingCookedChance": 5,
+                                        "decreasedFishingSpecialChance": 5
                                     }
                                 }
                             ]
@@ -1063,14 +1090,31 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedGlobalSkillIntervalPercent",
-                                    "value": 20
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Mining"
+                                                },
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Smithing"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Smithing",
-                                    "value": 200
+                                    "modifiers": {
+                                        "decreasedSkillInterval": [
+                                            {
+                                                "value": 200,
+                                                "skillID": "melvorD:Smithing"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
@@ -1187,8 +1231,20 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedNonCombatSkillXP",
-                                    "value": 10
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Fletching"
+                                                },
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Crafting"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,
@@ -1230,8 +1286,16 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedGPGlobal",
-                                    "value": 10
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Agility"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,
@@ -1271,8 +1335,16 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedMaxHitpoints",
-                                    "value": 5
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Thieving"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,
@@ -1312,8 +1384,20 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedGlobalPreservationChance",
-                                    "value": 10
+                                    "modifiers": {
+                                        "modifiers": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Runecrafting"
+                                                },
+                                                {
+                                                    "value": 5,
+                                                    "skillID": "melvorD:Herblore"
+                                                }
+                                            ]
+                                        }
+                                    }
                                 },
                                 {
                                     "level": 40,

@@ -69,21 +69,6 @@ export function MasteryComponent(game: Game, thuum: Thuum, teacher: Teacher) {
                 return Math.floor(cost); // Round down to the nearest integer
             }
             this.unlockGPCost = getUnlockGPCost(this.modifier.level);
-            // switch (this.modifier.level) {
-            //     case 40:
-            //     default:
-            //         this.unlockGPCost = 10000;
-            //         break;
-            //     case 60:
-            //         this.unlockGPCost = 100000;
-            //         break;
-            //     case 80:
-            //         this.unlockGPCost = 1000000;
-            //         break;
-            //     case 99:
-            //         this.unlockGPCost = 10000000;
-            //         break;
-            // }
         },
         unlock: function (modifier: ShoutModifier) {
             game.bank.removeItemQuantityByID('namespace_thuum:Dragon_Soul', 1, true);
