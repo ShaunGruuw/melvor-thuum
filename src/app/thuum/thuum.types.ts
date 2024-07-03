@@ -84,9 +84,31 @@ export class Teacher extends BasicSkillRecipe {
         this.maxGP = data.maxGP;
         this.standardModifiers = data.standardModifiers.map(modifier => {
             // @ts-ignore // TODO: TYPES
-            const stats = new StatObject(modifier, game, `${Teacher.name}`);
-            stats.level = modifier.level;
-            return stats;
+            if (modifier.value) {
+                const newModifier = {
+                    level: modifier.level,
+                    // @ts-ignore // TODO: TYPES
+                    modifiers: {
+                        modifiers: {
+                            "increasedMasteryXP": [
+                                {
+                                    "value": 5,
+                                    "skillID": "melvorD:Firemaking"
+                                }
+                            ]
+                        }
+                    }
+                }
+                // @ts-ignore // TODO: TYPES
+                const stats = new StatObject(newModifier, game, `${Teacher.name}`);
+                stats.level = modifier.level;
+                return stats;
+            } else {
+                // @ts-ignore // TODO: TYPES
+                const stats = new StatObject(modifier, game, `${Teacher.name}`);
+                stats.level = modifier.level;
+                return stats;
+            }
         });
         // this.hardcoreModifiers = data.hardcoreModifiers.map(modifier => {
         //     // @ts-ignore // TODO: TYPES
