@@ -61,14 +61,12 @@ export class ThuumManager {
 
         gpMultiplier *= 1 + increasedGPModifier / 100;
         // @ts-ignore // TODO: TYPES
-        gpToTake = Math.floor((gpToTake * gpMultiplier) - this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery));
-        if (gpToTake > 10000000000000 || typeof gpToTake !== 'number') {
-            gpToTake = 10000000000000
+        gpToTake = Math.floor(gpMultiplier * gpToTake + this.game.modifiers.getValue('melvorD:flatCurrencyGain', this.game.gp.modQuery));
+        if (typeof gpToTake !== 'number') {
+            gpToTake = 0
         }
-        if (gpToTake < 1) {
-            gpToTake = 1
-        }
-        return gpToTake;
+        // @ts-ignore // TODO: TYPES
+        return gpToTake * -1;
     }
 
     public getGoldToAward(teacher: Teacher) {
@@ -83,7 +81,7 @@ export class ThuumManager {
 
         gpMultiplier *= 1 + increasedGPModifier / 100;
         // @ts-ignore // TODO: TYPES
-        gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.getValue('melvorD:increasedGPFlat', this.game.gp.modQuery))
+        gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.getValue('melvorD:flatCurrencyGain', this.game.gp.modQuery))
 
         return gpToAdd;
     }

@@ -22,7 +22,6 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "modifiers": {
                                         "modifiers": {
                                             "increasedMasteryXP": [
                                                 {
@@ -31,27 +30,31 @@
                                                 }
                                             ]
                                         }
-                                    }
+                                    
                                 },
                                 {
                                     "level": 40,
-                                    "key": "increasedDamageAgainstDragons",
-                                    "value": 20
+                                    "modifiers": {
+                                        "increasedDamageAgainstDragons": 20
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedDamageAgainstHumans",
-                                    "value": 20
+                                    "modifiers": {
+                                        "increasedDamageAgainstHumans": 20
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedDamageAgainstAnimals",
-                                    "value": 20
+                                    "modifiers": {
+                                        "increasedDamageAgainstAnimals": 20
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedDamageAgainstElves",
-                                    "value": 20
+                                    "modifiers": {
+                                        "increasedDamageAgainstElves": 20
+                                    }
                                 }
                             ]
                         }

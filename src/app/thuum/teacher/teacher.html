@@ -1,8 +1,7 @@
 <template id="thuum-teacher">
     <div class="col-6 col-lg-3" :id="localId" @vue:mounted="mounted">
         <div
-            class="block block-content block-content-full block-rounded-extra block-link-pop border-top border-thuum border-4x text-center"
-        >
+            class="block block-content block-content-full block-rounded-extra block-link-pop border-top border-thuum border-4x text-center">
             <div class="row gutters-tiny">
                 <div class="col-12 p-2">
                     <img class="teacher-img" v-bind:src="media" />
@@ -13,10 +12,8 @@
                 <div class="col-12 thuum-skill-icon-container">
                     <img class="skill-icon-xs m-2" v-for="skillIcon in getSkillIcons()" :src="skillIcon" />
                 </div>
-                <div
-                    class="col-12 row justify-content-center gutters-tiny text-center icon-size-48"
-                    id="grants-container"
-                >
+                <div class="col-12 row justify-content-center gutters-tiny text-center icon-size-48"
+                    id="grants-container">
                     <xp-icon id="thuum-xp"></xp-icon>
                     <mastery-xp-icon id="thuum-mastery-xp"></mastery-xp-icon>
                     <mastery-pool-icon id="thuum-pool-xp"></mastery-pool-icon>
@@ -41,20 +38,18 @@
                     </button>
                 </div>
                 <div class="col-12">
-                    <small class="text-danger"
-                        ><img
-                            class="skill-icon-xs mr-2"
-                            src="https://cdn.melvor.net/core/v018/assets/media/main/coins.svg"
-                        />
-                        {{ numberWithCommas(minGP) }}-{{ numberWithCommas(maxGP) }} GP</small
-                    >
+                    <small><img class="skill-icon-xs mr-2"
+                            src="https://cdn.melvor.net/core/v018/assets/media/main/coins.svg" />
+                        <span class="text-danger" v-if="minGP < 1">{{numberWithCommas(displayMinGP)}} GP</span>
+                        <span class="text-success" v-if="minGP > 1">{{numberWithCommas(displayMinGP)}} GP</span>
+                        <span> - </span>
+                        <span class="text-danger" v-if="maxGP < 1">{{numberWithCommas(displayMaxGP)}} GP</span>
+                        <span class="text-success" v-if="maxGP > 1">{{numberWithCommas(displayMaxGP)}} GP</span>
+                    </small>
                 </div>
                 <div class="col-12">
-                    <mastery-display
-                        class="mastery-6"
-                        data-skill-id="namespace_thuum:Thuum"
-                        v-bind:data-action-id="id"
-                    ></mastery-display>
+                    <mastery-display class="mastery-6" data-skill-id="namespace_thuum:Thuum"
+                        v-bind:data-action-id="id"></mastery-display>
                 </div>
             </div>
         </div>

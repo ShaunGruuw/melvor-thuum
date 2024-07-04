@@ -132,36 +132,45 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Summoning"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Summoning"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedSummoningAttackLifesteal",
-                                    "value": 5
+                                    "level": 30,
+                                    "modifiers": {
+                                        "summoningAttackLifesteal": 5
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "melvorD:Summoning",
-                                    "value": 1000
+                                    "modifiers": {
+                                        "flatSkillInterval": [
+                                            {
+                                                "skillID": "melvorD:Summoning",
+                                                "value": -1000
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedGPBasedOnSummonDamage",
-                                    "value": 6
+                                    "modifiers": {
+                                        "currencyGainBasedOnSummonDamage": [{
+                                            "value": 6,
+                                            "currencyID":"melvorD:GP"
+                                        }]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedSummoningMaxHit",
-                                    "value": 10
+                                    "modifiers": {
+                                        "summoningMaxHit": 10
+                                    }
                                 }
                             ]
                         },
@@ -180,28 +189,49 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedAmmoPreservation",
-                                    "value": 50
+                                    "modifiers": {
+                                        "ammoPreservationChance": [
+                                            {
+                                                "value": -50
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedRangedCritChance",
-                                    "value": 15
+                                    "level": 30,
+                                    "modifiers": {
+                                        "rangedCritChance": [
+                                            {
+                                                "value": 15
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedRangedMaxHit",
-                                    "value": 10
+                                    "modifiers": {
+                                        "rangedMaxHit": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedRangedLifesteal",
-                                    "value": 10
+                                    "modifiers": {
+                                        "rangedLifesteal": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedRangedStrengthBonusPer8Ranged",
-                                    "value": 1
+                                    "modifiers": {
+                                        "rangedStrengthBonusPer8Ranged": 1
+                                    }
                                 }
                             ]
                         },
@@ -223,40 +253,59 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Farming"
-                                                },
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Astrology"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Farming"
+                                            },
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Astrology"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedFlatFarmingYield",
-                                    "value": 15
+                                    "level": 30,
+                                    "modifiers": {
+                                        "flatAdditionalPrimaryProductQuantity": [
+                                            {
+                                                "skillID": "melvorD:Farming",
+                                                "value": 15
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedTownshipGPProduction",
-                                    "value": 10
+                                    "modifiers": {
+                                        "townshipGPProduction": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "decreasedSkillIntervalPercent",
-                                    "skill": "melvorD:Astrology",
-                                    "value": 10
+                                    "modifiers": {
+                                        "skillInterval": [
+                                            {
+                                                "skillID": "melvorD:Astrology",
+                                                "value": -10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "doubleModifiersInAstrologyForMaxedConstellations",
-                                    "value": 1
+                                    "modifiers": {
+                                        "doubleModifiersInAstrologyForMaxedConstellations": [
+                                            {
+                                                "value": 1
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -275,28 +324,53 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedFlatMagicAccuracyBonusPerAttackInterval",
-                                    "value": 5
+                                    "modifiers": {
+                                        "flatMagicAccuracyBonusPerAttackInterval": [
+                                            {
+                                                "value": -5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedMagicAccuracyBonus",
-                                    "value": 5
+                                    "level": 30,
+                                    "modifiers": {
+                                        "magicAccuracyRating": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedRunePreservation",
-                                    "value": 10
+                                    "modifiers": {
+                                        "runePreservationChance": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedMagicCritChance",
-                                    "value": 10
+                                    "modifiers": {
+                                        "magicCritChance": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedMagicMaxHitBonusAgainstMelee",
-                                    "value": 5
+                                    "modifiers": {
+                                        "magicMaxHitAgainstMelee": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         }
@@ -347,6 +421,67 @@
                             }
                         ]
                     }
+                }
+            }
+        ],
+        "skillData": [
+            {
+                "skillID": "melvorD:Astrology",
+                "data": {
+                    "recipes": [
+                        {
+                            "id": "melvorTotH:Variel",
+                            "skillIDs": {
+                                "add": [
+                                    "namespace_thuum:Thuum"
+                                ]
+                            },
+                            "masteryXPModifier": "namespace_thuum:skillMasteryXPPerVariel",
+                            "standardModifiers": [
+                                {
+                                    "index": 0,
+                                    "modifiers": {
+                                        "add": {
+                                            "increasedSkillXP": [
+                                                {
+                                                    "skillID": "namespace_thuum:Thuum",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                {
+                                    "index": 1,
+                                    "modifiers": {
+                                        "add": {
+                                            "increasedMasteryXP": [
+                                                {
+                                                    "skillID": "namespace_thuum:Thuum",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ],
+                            "uniqueModifiers": [
+                                {
+                                    "index": 0,
+                                    "modifiers": {
+                                        "add": {
+                                            "skillInterval": [
+                                                {
+                                                    "skillID": "namespace_thuum:Thuum",
+                                                    "value": 1
+                                                }
+                                            ]
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 }
             }
         ]

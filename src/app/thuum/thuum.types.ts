@@ -88,7 +88,6 @@ export class Teacher extends BasicSkillRecipe {
                 const newModifier = {
                     level: modifier.level,
                     // @ts-ignore // TODO: TYPES
-                    modifiers: {
                         modifiers: {
                             "increasedMasteryXP": [
                                 {
@@ -97,7 +96,6 @@ export class Teacher extends BasicSkillRecipe {
                                 }
                             ]
                         }
-                    }
                 }
                 // @ts-ignore // TODO: TYPES
                 const stats = new StatObject(newModifier, game, `${Teacher.name}`);

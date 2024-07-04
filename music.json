@@ -22,61 +22,95 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedThuumGP",
-                                    "value": 5
+                                    "modifiers": {
+                                        "decreasedThuumGP": 5
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 500
+                                    "modifiers": {
+                                        "flatSkillInterval": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": -500
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 75,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 1000
+                                    "modifiers": {
+                                        "skillInterval": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": -5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedSkillMasteryXPPerVariel",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 10
+                                    "modifiers": {
+                                        "increasedSkillMasteryXPPerVariel": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": 1.5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 999,
-                                    "key": "decreasedThuumEquipCost",
-                                    "value": 10
+                                    "modifiers": {
+                                        "decreasedThuumEquipCost": 5
+                                    }
                                 }
                             ],
                             "hardcoreModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedThuumGP",
-                                    "value": 1
+                                    "modifiers": {
+                                        "decreasedThuumGP": 5
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 100
+                                    "modifiers": {
+                                        "flatSkillInterval": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": -500
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 75,
-                                    "key": "decreasedSkillInterval",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 200
+                                    "modifiers": {
+                                        "skillInterval": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": -5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedSkillMasteryXPPerVariel",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 1
+                                    "modifiers": {
+                                        "increasedSkillMasteryXPPerVariel": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": 1.5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 999,
-                                    "key": "decreasedThuumEquipCost",
-                                    "value": 1
+                                    "modifiers": {
+                                        "decreasedThuumEquipCost": 5
+                                    }
                                 }
                             ]
                         }

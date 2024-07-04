@@ -13,6 +13,8 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
         localId: teacher.localID.toLowerCase(),
         minGP: 0,
         maxGP: 0,
+        displayMinGP: 0,
+        displayMaxGP: 0,
         disabled: false, // @ts-ignore // TODO: TYPES
         progressBar: {} as ProgressBarElement,
         mounted: function () {
@@ -61,27 +63,16 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             const modGp = (gp: number) => {
                 let gpMultiplier = 1;
                 gpMultiplier *= 1 + gpModifier / 100;
-                // @ts-ignore // TODO: TYPES
-                gp = Math.floor((gp * gpMultiplier)  - game.modifiers.getValue('melvorD:increasedGPFlat', game.gp.modQuery));
+                // @ts-ignore // TODO: TYPESd
+                gp = Math.floor(gp * gpMultiplier + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery));
                 return gp;
             };
-
             minGP = modGp(minGP);
             maxGP = modGp(maxGP);
-            if (minGP < 1) {
-                minGP = 1
-            }
-            if (maxGP < 1) {
-                maxGP = 1
-            }
-            if (minGP > 10000000000000) {
-                minGP = 10000000000000
-            }
-            if (maxGP > 10000000000000) {
-                maxGP = 10000000000000
-            }
             this.minGP = minGP;
             this.maxGP = maxGP;
+            this.displayMinGP = Math.abs(minGP);
+            this.displayMaxGP = Math.abs(maxGP);
         },
         train: function () {
             thuum.train(teacher);
@@ -104,7 +95,6 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             return Math.max(1, Math.floor(this.getMaxGPRoll() / 100));
         },
         getMaxGPRoll: function () {
-            // Each levels provides + 10 GP is here [thuum.getMasteryLevel(teacher) * 10;]
             return teacher.maxGP + thuum.getMasteryLevel(teacher) * 10;
         },
         getGPModifier: function () {

@@ -29,24 +29,24 @@ export class ThuumTownship {
                     }
                 });
 
-                this.updateSkillingOutfitItemUpgrade(builder);
+                // this.updateSkillingOutfitItemUpgrade(builder);
 
-                builder.itemSynergies.add({
-                    itemIDs: [
-                        'namespace_thuum:Shouts_Hat',
-                        'namespace_thuum:Shouts_Body',
-                        'namespace_thuum:Shouts_Leggings',
-                        'namespace_thuum:Shouts_Boots'
-                    ],
-                    playerModifiers: {
-                        increasedMasteryXP: [
-                            {
-                                skillID: 'namespace_thuum:Thuum',
-                                value: 8
-                            }
-                        ]
-                    }
-                });
+                // builder.itemSynergies.add({
+                //     itemIDs: [
+                //         'namespace_thuum:Shouts_Hat',
+                //         'namespace_thuum:Shouts_Body',
+                //         'namespace_thuum:Shouts_Leggings',
+                //         'namespace_thuum:Shouts_Boots'
+                //     ],
+                //     playerModifiers: {
+                //         increasedMasteryXP: [
+                //             {
+                //                 skillID: 'namespace_thuum:Thuum',
+                //                 value: 8
+                //             }
+                //         ]
+                //     }
+                // });
             })
             .add();
 
@@ -68,8 +68,6 @@ export class ThuumTownship {
 
     private updateSkillingOutfitItemUpgrade(builder: Modding.GameDataPackageBuilder) {
         for (const type of this.itemType) {
-            // Get the item upgrade from woodcutters, all outfits share the same item upgrade so this will modify
-            // all of them.
             const itemUpgrades = this.game.bank.itemUpgrades.get(
                 this.game.items.getObjectByID(`melvorF:Woodcutters_${type}`)
             );

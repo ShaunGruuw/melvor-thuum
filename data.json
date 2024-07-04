@@ -689,7 +689,7 @@
                     {
                         "type": "SkillLevel",
                         "skillID": "melvorD:Township",
-                        "level": 40
+                        "level": 30
                     },
                     {
                         "type": "TownshipTask",
@@ -943,7 +943,7 @@
                                     }
                                 },
                                 {
-                                    "level": 40,
+                                    "level": 30,
                                     "modifiers": {
                                         "increasedChanceForAshInWoodcutting": 10,
                                         "firemakingLogCurrencyGain": [
@@ -1025,7 +1025,7 @@
                                     }
                                 },
                                 {
-                                    "level": 40,
+                                    "level": 30,
                                     "modifiers": {
                                         "increasedChanceAdditionalSkillResource": [
                                             {
@@ -1091,22 +1091,20 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Mining"
-                                                },
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Smithing"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Mining"
+                                            },
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Smithing"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
+                                    "level": 30,
                                     "modifiers": {
                                         "decreasedSkillInterval": [
                                             {
@@ -1118,19 +1116,36 @@
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedChanceAdditionalBarSmithing",
-                                    "skill": "melvorD:Smithing",
-                                    "value": 10
+                                    "modifiers": {
+                                        "additionalPrimaryProductChance": [
+                                            {
+                                                "value": 10,
+                                                "skillID": "melvorD:Smithing"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "doubleOresMining",
-                                    "value": 1
+                                    "modifiers": {
+                                        "doubleItemsSkill": [
+                                            {
+                                                "value": 1,
+                                                "skillID": "melvorD:Mining"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "doubleRuneEssenceMining",
-                                    "value": 1
+                                    "modifiers": {
+                                        "doubleItemsSkill": [
+                                            {
+                                                "value": 1,
+                                                "skillID": "melvorD:Runecrafting"
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1150,28 +1165,63 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedDamageToAllMonsters",
-                                    "value": 10
+                                    "modifiers": {
+                                        "damageDealtToAllMonsters": [
+                                            {
+                                                "value": -10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedAutoEatEfficiency",
-                                    "value": 10
+                                    "level": 30,
+                                    "modifiers": {
+                                        "autoEatEfficiency": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedDamageReduction",
-                                    "value": 10
+                                    "modifiers": {
+                                        "flatMeleeDefenceBonus": [
+                                            {
+                                                "value": 2
+                                            }
+                                        ],
+                                        "flatRangedDefenceBonus": [
+                                            {
+                                                "value": 2
+                                            }
+                                        ],
+                                        "flatMagicDefenceBonus": [
+                                            {
+                                                "value": 2
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedAutoEatThreshold",
-                                    "value": 5
+                                    "modifiers": {
+                                        "autoEatThreshold": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedMaxHitpoints",
-                                    "value": 5
+                                    "modifiers": {
+                                        "maxHitpoints": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1183,35 +1233,60 @@
                             "baseExperience": 37,
                             "maxGP": 305,
                             "productId": "namespace_thuum:Kynes_Peace",
-                            "level": 40,
+                            "level": 30,
                             "skills": [
                                 "melvorD:Prayer"
                             ],
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "increasedPrayerCost",
-                                    "value": 50
+                                    "modifiers": {
+                                        "prayerPointCost": [
+                                            {
+                                                "value": 50
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedChanceToPreservePrayerPoints",
-                                    "value": 20
+                                    "level": 30,
+                                    "modifiers": {
+                                        "prayerPointPreservationChance": [
+                                            {
+                                                "value": 20
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedMaxHitBasedOnPrayerCost",
-                                    "value": 10
+                                    "modifiers": {
+                                        "maxHitBasedOnPrayerCost": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedPrayerPointsFromBuryingPercent",
-                                    "value": 20
+                                    "modifiers": {
+                                        "prayerPointsFromBurying": [
+                                            {
+                                                "value": 20
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedPrayerPointsWhenHit",
-                                    "value": 2
+                                    "modifiers": {
+                                        "flatPrayerPointsWhenHit": [
+                                            {
+                                                "value": 2
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1232,42 +1307,61 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Fletching"
-                                                },
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Crafting"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Fletching"
+                                            },
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Crafting"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedFletchingBoltQuantity",
-                                    "skill": "melvorD:Fletching",
-                                    "value": 2
+                                    "level": 30,
+                                    "modifiers": {
+                                        "flatBasePrimaryProductQuantity": [
+                                            {
+                                                "skillID":"melvorD:Fletching",
+                                                "value": 2
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "doubleItemsSkill",
-                                    "skill": "melvorD:Fletching",
-                                    "value": 2
+                                    "modifiers": {
+                                        "doubleItemsSkill": [
+                                            {
+                                                "value": 1,
+                                                "skillID": "melvorD:Fletching"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "doubleItemsSkill",
-                                    "skill": "melvorD:Crafting",
-                                    "value": 2
+                                    "modifiers": {
+                                        "doubleItemsSkill": [
+                                            {
+                                                "value": 1,
+                                                "skillID": "melvorD:Crafting"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedChanceForGoldFromCrafting30",
-                                    "value": 2
+                                    "modifiers": {
+                                        "crafting30CurrencyGainChance": [
+                                            {
+                                                "value": 1,
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1287,36 +1381,58 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Agility"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Agility"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedGPFromAgility",
-                                    "value": 10
+                                    "level": 30,
+                                    "modifiers": {
+                                        "currencyGain": [
+                                            {
+                                                "value": 10,
+                                                "skillID": "melvorD:Agility",
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "decreasedSkillIntervalPercent",
-                                    "skill": "melvorD:Agility",
-                                    "value": 10
+                                    "modifiers": {
+                                        "skillInterval": [
+                                            {
+                                                "value": -10,
+                                                "skillID": "melvorD:Agility"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "decreasedAgilityPillarCost",
-                                    "value": 10
+                                    "modifiers": {
+                                        "agilityPillarCost": [
+                                            {
+                                                "value": 10,
+                                                "realmID":"melvorD:Melvor"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedGPFromAgilityPerActiveObstacle",
-                                    "value": 10
+                                    "modifiers": {
+                                        "currencyGainFromAgilityPerActiveObstacle": [
+                                            {
+                                                "value": 10,
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1336,35 +1452,56 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Thieving"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Thieving"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedThievingStealth",
-                                    "value": 50
+                                    "level": 30,
+                                    "modifiers": {
+                                        "thievingStealth": [
+                                            {
+                                                "value": 50
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedGPFromThieving",
-                                    "value": 5
+                                    "modifiers": {
+                                        "currencyGain": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Thieving",
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedThievingAreaUniqueChance",
-                                    "value": 5
+                                    "modifiers": {
+                                        "thievingAreaUniqueChance": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedGPFromThievingFlat",
-                                    "value": 5
+                                    "modifiers": {
+                                        "flatThievingCurrencyGain": [
+                                            {
+                                                "value": 5,
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1385,39 +1522,57 @@
                                 {
                                     "level": 1,
                                     "modifiers": {
-                                        "modifiers": {
-                                            "increasedMasteryXP": [
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Runecrafting"
-                                                },
-                                                {
-                                                    "value": 5,
-                                                    "skillID": "melvorD:Herblore"
-                                                }
-                                            ]
-                                        }
+                                        "increasedMasteryXP": [
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Runecrafting"
+                                            },
+                                            {
+                                                "value": 5,
+                                                "skillID": "melvorD:Herblore"
+                                            }
+                                        ]
                                     }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedChanceRandomPotionHerblore",
-                                    "value": 10
+                                    "level": 30,
+                                    "modifiers": {
+                                        "randomHerblorePotionChance": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedAdditionalRunecraftCountRunes",
-                                    "value": 6
+                                    "modifiers": {
+                                        "flatAdditionalPrimaryProductQuantity": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedPotionsHerblore",
-                                    "value": 3
+                                    "modifiers": {
+                                        "flatAdditionalPrimaryProductQuantity": [
+                                            {
+                                                "value": 2
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedChanceForElementalRune",
-                                    "value": 50
+                                    "modifiers": {
+                                        "elementalRuneChance": [
+                                            {
+                                                "value": 50
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         },
@@ -1438,28 +1593,55 @@
                             "standardModifiers": [
                                 {
                                     "level": 1,
-                                    "key": "decreasedDamageReduction",
-                                    "value": 10
+                                    "modifiers": {
+                                        "flatResistance": [
+                                            {
+                                                "damageTypeID": "melvorD:Normal",
+                                                "value": -10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
-                                    "level": 40,
-                                    "key": "increasedDamageToSlayerTasks",
-                                    "value": 10
+                                    "level": 30,
+                                    "modifiers": {
+                                        "damageDealtToSlayerTasks": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedSlayerCoins",
-                                    "value": 10
+                                    "modifiers": {
+                                        "currencyGain": [
+                                            {
+                                                "value": 10,
+                                                "currencyID": "melvorD:SlayerCoins"
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedMeleeStrengthBonus",
-                                    "value": 10
+                                    "modifiers": {
+                                        "meleeStrengthBonus": [
+                                            {
+                                                "value": 10
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "increasedDamageDealtPerEffect",
-                                    "value": 5
+                                    "modifiers": {
+                                        "damageDealtPerEffect": [
+                                            {
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 }
                             ]
                         }
@@ -1921,13 +2103,13 @@
                         "descriptions": [
                             {
                                 "text": "-${value}% Thuum GP",
-                                "lang": "namespace_thuum_Thuum_GP_Negative",
+                                "lang": "Thuum_Thuum_Thuum_GP_Negative",
                                 "below": 0,
                                 "includeSign": false
                             },
                             {
                                 "text": "+${value}% Thuum GP",
-                                "lang": "namespace_thuum_Thuum_GP_Positive",
+                                "lang": "Thuum_Thuum_Thuum_GP_Positive",
                                 "above": 0,
                                 "includeSign": false
                             }
@@ -1956,13 +2138,13 @@
                         "descriptions": [
                             {
                                 "text": "-${value}% Teacher Equip Cost",
-                                "lang": "Shout_Equip_Cost_Negative",
+                                "lang": "Thuum_Thuum_Shout_Equip_Cost_Negative",
                                 "below": 0,
                                 "includeSign": false
                             },
                             {
                                 "text": "+${value}% Teacher Equip Cost",
-                                "lang": "Shout_Equip_Cost_Positive",
+                                "lang": "Thuum_Thuum_Shout_Equip_Cost_Positive",
                                 "above": 0,
                                 "includeSign": false
                             }
@@ -1990,13 +2172,13 @@
                         "descriptions": [
                             {
                                 "text": "-${value} additional reward roll while training Thuum",
-                                "lang": "namespace_thuum_Additional_Reward_Roll_Negative",
+                                "lang": "Thuum_Thuum_Additional_Reward_Roll_Negative",
                                 "below": 0,
                                 "includeSign": false
                             },
                             {
                                 "text": "+${value} additional reward roll while training Thuum",
-                                "lang": "namespace_thuum_Additional_Reward_Roll_Positive",
+                                "lang": "Thuum_Thuum_Additional_Reward_Roll_Positive",
                                 "above": 0,
                                 "includeSign": false
                             }
@@ -2025,7 +2207,7 @@
                         "descriptions": [
                             {
                                 "text": "+${value}% ${skillName} Mastery XP per maxed Star in Variel constellation in Astrology",
-                                "lang": "namespace_thuum_Increased_Mastery_XP_Per_Variel",
+                                "lang": "Thuum_Thuum_Increased_Mastery_XP_Per_Variel",
                                 "above": 0,
                                 "includeSign": false
                             }
@@ -2036,6 +2218,24 @@
                             }
                         ]
                     }
+                ]
+            }
+        ],
+        "itemSynergies": [
+            {
+                "playerModifiers": {
+                    "masteryXP": [
+                        {
+                            "skillID": "namespace_thuum:Thuum",
+                            "value": 8
+                        }
+                    ]
+                },
+                "itemIDs": [
+                    "namespace_thuum:Shouts_Hat",
+                    "namespace_thuum:Shouts_Body",
+                    "namespace_thuum:Shouts_Leggings",
+                    "namespace_thuum:Shouts_Boots"
                 ]
             }
         ]

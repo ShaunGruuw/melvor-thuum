@@ -50,6 +50,7 @@ export class App {
     constructor(private readonly context: Modding.ModContext, private readonly game: Game) { }
 
     public async init() {
+        // mod.api.mythCombatSimulator?.registerNamespace('namespace_thuum');
         await this.context.loadTemplates("thuum/thuum.html");
         await this.context.loadTemplates("thuum/teacher/teacher.html");
         await this.context.loadTemplates("thuum/shout/shout.html");
@@ -81,17 +82,13 @@ export class App {
         ]
 
         this.context.onModsLoaded(async () => {
-            // const combatSim = mod.manager.getLoadedModList().includes("[Myth] Combat Simulator")
-            // if (combatSim) {
-            //     mod.api.mythCombatSimulator?.registerNamespace('namespace_thuum');
-            // }
             if (cloudManager.hasTotHEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-toth.json");
-    
+
                 DragonList.push(
                     "melvorTotH:Kongamato", "melvorTotH:GretYun", "melvorTotH:RaZu",
                 )
-    
+
                 await this.context.gameData
                     .buildPackage(builder => {
                         builder.skillData.add({
@@ -103,16 +100,16 @@ export class App {
                                     pets: []
                                 },
                                 teachers: [],
-                                upgrades:[]
+                                upgrades: []
                             }
                         });
                     })
                     .add();
             }
             const kcm = mod.manager.getLoadedModList().includes("Custom Modifiers in Melvor")
-            const profileSkill = mod.manager.getLoadedModList().includes("(Skill) Classes and Species")
+            const profileSkill = false // mod.manager.getLoadedModList().includes("(Skill) Classes and Species")
             const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
-    
+
             if (cloudManager.hasAoDEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-aod.json");
             }
@@ -128,8 +125,9 @@ export class App {
             if (kcm) {
                 const cmim = mod.api.customModifiersInMelvor;
                 cmim.addMonsters("Dragon", DragonList)
-                cmim.registerOrUpdateType("Elf", "Elves", "https://cdn.melvor.net/core/v018/assets/media/pets/elf_rock.png", [], true);
+                cmim.addMonsters("Elf", [])
                 cmim.registerOrUpdateType("Goblin", "Goblins", "https://cdn.melvor.net/core/v018/assets/media/monsters/goblin.png", [], true);
+                cmim.forceBaseModTypeActive("Elf");
                 cmim.forceBaseModTypeActive("Dragon");
                 cmim.forceBaseModTypeActive("Undead");
                 cmim.forceBaseModTypeActive("Human");

@@ -9,7 +9,7 @@
         <div class="manage" v-if="state === 'view'">
             <div class="manage-section upgrade" v-for="(modifier, index) in unlockableModifiers"
                 :class="{ 'with-border': index + 1 !== unlockableModifiers.length, 'with-bottom-border': index + 1 === unlockableModifiers.length }">
-                <div class="thuum-info font-size-sm"
+                <div class="thuum-info font-size-sm" style="text-align:left"
                     :class="{ 'text-danger': modifier.level === 1, 'text-success': isUnlocked(index), 'thuum-text-grey': !isUnlocked(index) }">
                     <span v-if="!isUnlocked(index)">
                         (<img class="skill-icon-xxs mr-1" :src="cdnMedia('assets/media/main/mastery_header.svg')" />
@@ -18,7 +18,7 @@
                     </span>
                     <span v-for="mod in modifier.description">
                         <span
-                            :class="{ 'text-danger' : mod.isNegative, 'text-success': modifier.isActive, 'thuum-text-grey': !modifier.isActive }"
+                            :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }"
                             v-html="mod.description"></span>
                     </span>
                 </div>
@@ -45,9 +45,11 @@
 
             <div>
                 <span v-for="mod in modifier.description">
-                    <small
-                        :class="{ essenceOfThuum.quantity > 0 ? 'thuum-text-grey' : mod.isNegative ? 'text-danger' : 'text-success' }"
-                        v-html="mod.description"></small>
+                    <small v-if="essenceOfThuum.quantity > 0" class="'thuum-text-grey'" v-html="mod.description">
+                    </small>
+                    <small v-else :class="{ 'text-danger': mod.isNegative, 'text-success': !mod.isNegative }"
+                        v-html="mod.description">
+                    </small>
                 </span>
             </div>
 
