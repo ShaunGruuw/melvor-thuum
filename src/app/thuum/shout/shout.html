@@ -23,7 +23,11 @@
                             )
                         </span>
                         <span v-for="mod in modifier.description">
-                            <span :class="{ 'text-danger' : mod.isNegative, 'text-success': modifier.isActive, 'thuum-text-grey': !modifier.isActive }"  v-html="mod.description"></span>
+                            <span v-if="!mod.description.includes('Error')"
+                                :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }"
+                                v-html="mod.description"></span>
+                            <span v-else
+                                :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }">Malcs forgot the description for this modifier</span>
                         </span>
                     </div>
                 </div>

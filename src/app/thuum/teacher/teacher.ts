@@ -95,7 +95,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             return Math.max(1, Math.floor(this.getMaxGPRoll() / 100));
         },
         getMaxGPRoll: function () {
-            return teacher.maxGP + thuum.getMasteryLevel(teacher) * 10;
+            return teacher.maxGP + thuum.getMasteryLevel(teacher);
         },
         getGPModifier: function () {
             // @ts-ignore // TODO: TYPES

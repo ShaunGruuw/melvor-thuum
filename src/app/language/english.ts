@@ -11,7 +11,7 @@ export const en = {
     Locked: 'Locked',
     Level: 'Level ${level}',
     Unlock: 'Unlock',
-    Unlock_Mastery: 'Unlock Mastery:',
+    Unlock_Mastery: 'Shout:',
     Would_You_Like_To_Unlock: 'Would you like to unlock this mastery?',
     You_Do_Not_Have_Enough_Materials_Mastery: 'You do not have enough materials to unlock this mastery.',
     The_Cost_Of_Hiring: 'The cost of equipping this shout will increase to ${cost} GP',
@@ -118,5 +118,6 @@ export const en = {
     Teacher_Soul_Tear: "Soul Tear",
     Teacher_Drain_Vitality: "Drain Vitality",
     Teacher_Dragonrend:"Dragonrend",
-    Teacher_Dragon_Aspect:"Dragon Aspect"
+    Teacher_Dragon_Aspect:"Dragon Aspect",
+    lock: "Lock"
 };

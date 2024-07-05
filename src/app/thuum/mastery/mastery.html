@@ -17,15 +17,22 @@
                             {{ modifier.level }} </span>)
                     </span>
                     <span v-for="mod in modifier.description">
-                        <span
+                        <span v-if="!mod.description.includes('Error')"
                             :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }"
                             v-html="mod.description"></span>
+                        <span v-else
+                            :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }">Malcs forgot the description for this modifier</span>
                     </span>
                 </div>
 
                 <button type="button" class="btn btn-lg btn-success ml-2" @click="setState('unlock', modifier)"
                     v-if="!isUnlocked(index)" :disabled="!canUnlock(modifier)">
                     {{ getLangString('Thuum_Thuum_Unlock') }}
+                </button>
+
+                <button type="button" class="btn btn-lg btn-danger ml-2" @click="setState('lock', modifier)"
+                    v-if="modifier.level !== 1 && isUnlocked(index)">
+                    {{ getLangString('Thuum_Thuum_lock') }}
                 </button>
             </div>
 
@@ -47,9 +54,11 @@
                 <span v-for="mod in modifier.description">
                     <small v-if="essenceOfThuum.quantity > 0" class="'thuum-text-grey'" v-html="mod.description">
                     </small>
-                    <small v-else :class="{ 'text-danger': mod.isNegative, 'text-success': !mod.isNegative }"
+                    <small v-else-if="!mod.description.includes('Error')" :class="{ 'text-danger': mod.isNegative, 'text-success': !mod.isNegative }"
                         v-html="mod.description">
                     </small>
+                    <small v-else
+                            :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }">Malcs forgot the description for this modifier</small>
                 </span>
             </div>
 
@@ -76,6 +85,27 @@
                 <button type="button" class="btn btn-lg btn-primary mr-2" @click="unlock(modifier)"
                     v-if="essenceOfThuum.quantity > 0 && game.gp.amount >= unlockGPCost">
                     {{ getLangString('Thuum_Thuum_Unlock') }}
+                </button>
+                <button type="button" class="btn btn-lg btn-danger" @click="setState('view')">
+                    {{ getLangString('Thuum_Thuum_Back') }}
+                </button>
+            </div>
+        </div>
+        <!-- Lock -->
+        <div class="lock" v-if="state === 'lock'">
+            <div>
+                <span v-for="mod in modifier.description">
+                    <small v-if="!mod.description.includes('Error')"
+                        :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }"
+                        v-html="mod.description"></small>
+                    <small v-else
+                        :class="{ 'thuum-text-grey': !modifier.isActive, 'text-danger' : modifier.isActive && mod.isNegative, 'text-success': !mod.isNegative && modifier.isActive }">Malcs forgot the description for this modifier</small>
+                </span>
+            </div>
+
+            <div class="thuum-footer-buttons mt-4">
+                <button type="button" class="btn btn-lg btn-primary mr-2" @click="lock(modifier)">
+                    {{ getLangString('Thuum_Thuum_lock') }}
                 </button>
                 <button type="button" class="btn btn-lg btn-danger" @click="setState('view')">
                     {{ getLangString('Thuum_Thuum_Back') }}

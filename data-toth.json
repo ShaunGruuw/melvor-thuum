@@ -95,7 +95,7 @@
                         "value": 9
                     }
                 ],
-                "modifiers": {
+                "modifiers": {                   
                     "flatSkillInterval": [
                         {
                             "skillID": "namespace_thuum:Thuum",
@@ -160,10 +160,12 @@
                                 {
                                     "level": 80,
                                     "modifiers": {
-                                        "currencyGainBasedOnSummonDamage": [{
-                                            "value": 6,
-                                            "currencyID":"melvorD:GP"
-                                        }]
+                                        "currencyGainBasedOnSummonDamage": [
+                                            {
+                                                "value": 6,
+                                                "currencyID": "melvorD:GP"
+                                            }
+                                        ]
                                     }
                                 },
                                 {

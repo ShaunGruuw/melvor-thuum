@@ -119,5 +119,6 @@ export const es =
   Teacher_Soul_Tear: "Soul Tear",
   Teacher_Drain_Vitality: "Drain Vitality",
   Teacher_Dragonrend:"Dragonrend",
-  Teacher_Dragon_Aspect:"Dragon Aspect"
+  Teacher_Dragon_Aspect:"Dragon Aspect",
+lock: "Lock"
 }

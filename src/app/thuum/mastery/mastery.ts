@@ -5,7 +5,8 @@ import './mastery.scss';
 
 enum State {
     View = 'view',
-    Unlock = 'unlock'
+    Unlock = 'unlock',
+    lock = 'lock'
 }
 
 interface EssenceOfThuum {
@@ -69,6 +70,23 @@ export function MasteryComponent(game: Game, thuum: Thuum, teacher: Teacher) {
                 return Math.floor(cost); // Round down to the nearest integer
             }
             this.unlockGPCost = getUnlockGPCost(this.modifier.level);
+        },
+        lock: function (modifier: ShoutModifier) {
+            // game.bank.removeItemQuantityByID('namespace_thuum:Dragon_Soul', 1, true);
+            // game.gp.remove(this.unlockGPCost);
+
+            const teacherRef = thuum.actions.find(action => action.id === teacher.id);
+            const index = teacherRef
+                .modifiers(thuum.settings.modifierType)
+                .findIndex(mod => mod.level === modifier.level);
+            const unlockedMasteries = thuum.masteriesUnlocked.get(teacherRef);
+
+            unlockedMasteries[index] = false;
+
+            thuum.masteriesUnlocked.set(teacherRef, unlockedMasteries);
+
+            this.updateCosts();
+            this.completeUpgrade();
         },
         unlock: function (modifier: ShoutModifier) {
             game.bank.removeItemQuantityByID('namespace_thuum:Dragon_Soul', 1, true);

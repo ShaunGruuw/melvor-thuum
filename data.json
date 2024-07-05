@@ -1111,6 +1111,12 @@
                                                 "value": 200,
                                                 "skillID": "melvorD:Smithing"
                                             }
+                                        ],
+                                        "skillItemDoublingChance": [
+                                            {
+                                                "skillID": "melvorD:Smithing",
+                                                "value": -5
+                                            }
                                         ]
                                     }
                                 },
@@ -1120,6 +1126,12 @@
                                         "additionalPrimaryProductChance": [
                                             {
                                                 "value": 10,
+                                                "skillID": "melvorD:Smithing"
+                                            }
+                                        ],
+                                        "skillPreservationCap": [
+                                            {
+                                                "value": -3,
                                                 "skillID": "melvorD:Smithing"
                                             }
                                         ]
@@ -1133,6 +1145,12 @@
                                                 "value": 1,
                                                 "skillID": "melvorD:Mining"
                                             }
+                                        ],
+                                        "skillInterval": [
+                                            {
+                                                "value": 20,
+                                                "skillID": "melvorD:Mining"
+                                            }
                                         ]
                                     }
                                 },
@@ -1142,7 +1160,12 @@
                                         "doubleItemsSkill": [
                                             {
                                                 "value": 1,
-                                                "skillID": "melvorD:Runecrafting"
+                                                "skillID": "melvorD:Smithing"
+                                            }
+                                        ],
+                                        "smithingCoalCost": [
+                                            {
+                                                "value": 1
                                             }
                                         ]
                                     }
@@ -1324,8 +1347,14 @@
                                     "modifiers": {
                                         "flatBasePrimaryProductQuantity": [
                                             {
-                                                "skillID":"melvorD:Fletching",
+                                                "skillID": "melvorD:Fletching",
                                                 "value": 2
+                                            }
+                                        ],
+                                        "skillInterval": [
+                                            {
+                                                "value": 500,
+                                                "skillID": "melvorD:Fletching"
                                             }
                                         ]
                                     }
@@ -1336,6 +1365,12 @@
                                         "doubleItemsSkill": [
                                             {
                                                 "value": 1,
+                                                "skillID": "melvorD:Fletching"
+                                            }
+                                        ],
+                                        "skillInterval": [
+                                            {
+                                                "value": 50,
                                                 "skillID": "melvorD:Fletching"
                                             }
                                         ]
@@ -1349,6 +1384,12 @@
                                                 "value": 1,
                                                 "skillID": "melvorD:Crafting"
                                             }
+                                        ],
+                                        "skillInterval": [
+                                            {
+                                                "value": 50,
+                                                "skillID": "melvorD:Crafting"
+                                            }
                                         ]
                                     }
                                 },
@@ -1359,6 +1400,12 @@
                                             {
                                                 "value": 1,
                                                 "currencyID": "melvorD:GP"
+                                            }
+                                        ],
+                                        "skillPreservationCap": [
+                                            {
+                                                "value": -1,
+                                                "skillID": "melvorD:Crafting"
                                             }
                                         ]
                                     }
@@ -1398,6 +1445,12 @@
                                                 "skillID": "melvorD:Agility",
                                                 "currencyID": "melvorD:GP"
                                             }
+                                        ],
+                                        "agilityPillarCost": [
+                                            {
+                                                "value": 20,
+                                                "realmID": "melvorD:Melvor"
+                                            }
                                         ]
                                     }
                                 },
@@ -1409,6 +1462,13 @@
                                                 "value": -10,
                                                 "skillID": "melvorD:Agility"
                                             }
+                                        ],
+                                        "currencyGain": [
+                                            {
+                                                "value": -5,
+                                                "skillID": "melvorD:Agility",
+                                                "currencyID": "melvorD:GP"
+                                            }
                                         ]
                                     }
                                 },
@@ -1417,8 +1477,14 @@
                                     "modifiers": {
                                         "agilityPillarCost": [
                                             {
-                                                "value": 10,
-                                                "realmID":"melvorD:Melvor"
+                                                "value": -10,
+                                                "realmID": "melvorD:Melvor"
+                                            }
+                                        ],
+                                        "skillMasteryXPPerKo": [
+                                            {
+                                                "skillID": "melvorD:Agility",
+                                                "value": -5
                                             }
                                         ]
                                     }
@@ -1430,6 +1496,12 @@
                                             {
                                                 "value": 10,
                                                 "currencyID": "melvorD:GP"
+                                            }
+                                        ],
+                                        "agilityObstacleCurrencyCost": [
+                                            {
+                                                "currencyID": "melvorD:GP",
+                                                "value": 2
                                             }
                                         ]
                                     }
@@ -1479,6 +1551,11 @@
                                                 "skillID": "melvorD:Thieving",
                                                 "currencyID": "melvorD:GP"
                                             }
+                                        ],
+                                        "thievingStunInterval": [
+                                            {
+                                                "value": -3
+                                            }
                                         ]
                                     }
                                 },
@@ -1488,6 +1565,12 @@
                                         "thievingAreaUniqueChance": [
                                             {
                                                 "value": 5
+                                            }
+                                        ],
+                                        "thievingStunAvoidanceChance": [
+                                            {   
+                                                "realmID":"melvorD:Melvor",
+                                                "value": -5
                                             }
                                         ]
                                     }
@@ -1499,6 +1582,11 @@
                                             {
                                                 "value": 5,
                                                 "currencyID": "melvorD:GP"
+                                            }
+                                        ],
+                                        "ignoreThievingDamageChance": [
+                                            {
+                                                "value": -5
                                             }
                                         ]
                                     }
@@ -1539,7 +1627,12 @@
                                     "modifiers": {
                                         "randomHerblorePotionChance": [
                                             {
-                                                "value": 10
+                                                "value": 4
+                                            }
+                                        ],
+                                        "skillPetLocationChance": [
+                                            {
+                                                "value": -2
                                             }
                                         ]
                                     }
@@ -1549,7 +1642,14 @@
                                     "modifiers": {
                                         "flatAdditionalPrimaryProductQuantity": [
                                             {
+                                                "skillID": "melvorD:Herblore",
                                                 "value": 5
+                                            }
+                                        ],
+                                        "skillPreservationChance": [
+                                            {
+                                                "skillID": "melvorD:Herblore",
+                                                "value": -4
                                             }
                                         ]
                                     }
@@ -1559,7 +1659,14 @@
                                     "modifiers": {
                                         "flatAdditionalPrimaryProductQuantity": [
                                             {
-                                                "value": 2
+                                                "skillID": "melvorD:Runecrafting",
+                                                "value": 5
+                                            }
+                                        ],
+                                        "skillInterval": [
+                                            {
+                                                "skillID": "melvorD:Runecrafting",
+                                                "value": 3
                                             }
                                         ]
                                     }
@@ -1570,6 +1677,11 @@
                                         "elementalRuneChance": [
                                             {
                                                 "value": 50
+                                            }
+                                        ],
+                                        "elementalRuneQuantity": [
+                                            {
+                                                "value": -1
                                             }
                                         ]
                                     }
@@ -1636,8 +1748,9 @@
                                 {
                                     "level": 99,
                                     "modifiers": {
-                                        "damageDealtPerEffect": [
+                                        "flatHiddenSkillLevel": [
                                             {
+                                                "skillID": "melvorD:Attack",
                                                 "value": 5
                                             }
                                         ]
