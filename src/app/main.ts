@@ -80,7 +80,12 @@ export class App {
             "melvorF:MalcsTheLeaderOfDragons",
             "melvorF:GreaterSkeletalDragon",
         ]
-
+        if (cloudManager.hasAoDEntitlementAndIsEnabled) {
+            await this.context.gameData.addPackage("data-aod.json");
+            if(!game.skills.getObjectByID('namespace_thuum:Thuum')._unlocked) {  
+                game.skills.getObjectByID('namespace_thuum:Thuum').setUnlock(true)
+            }
+        }
         this.context.onModsLoaded(async () => {
             if (cloudManager.hasTotHEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-toth.json");
@@ -110,9 +115,6 @@ export class App {
             const profileSkill = false // mod.manager.getLoadedModList().includes("(Skill) Classes and Species")
             const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")
 
-            if (cloudManager.hasAoDEntitlementAndIsEnabled) {
-                await this.context.gameData.addPackage("data-aod.json");
-            }
             if (mythLoaded) {
                 await this.context.gameData.addPackage("music.json");
             }
@@ -176,8 +178,8 @@ export class App {
                 }
             }
         })
-
-        this.patchGamemodes(this.game.thuum);
+        await this.initGamemodes();
+        // this.patchGamemodes(this.game.thuum);
         this.patchUnlock(this.game.thuum);
         this.initCompatibility(this.game.thuum);
         this.initTownship();
@@ -194,27 +196,27 @@ export class App {
         });
     }
 
-    private patchGamemodes(thuum: Thuum) {
-        this.game.gamemodes.forEach(gamemode => {
-            if (gamemode.allowDungeonLevelCapIncrease) {
-                if (!gamemode.startingSkills) {
-                    gamemode.startingSkills = new Set();
-                }
+    // private patchGamemodes(thuum: Thuum) {
+    //     this.game.gamemodes.forEach(gamemode => {
+    //         if (gamemode.allowDungeonLevelCapIncrease) {
+    //             if (!gamemode.startingSkills) {
+    //                 gamemode.startingSkills = new Set();
+    //             }
 
-                if (!gamemode.autoLevelSkillsPre99) {
-                    gamemode.autoLevelSkillsPre99 = [];
-                }
+    //             if (!gamemode.autoLevelSkillsPre99) {
+    //                 gamemode.autoLevelSkillsPre99 = [];
+    //             }
 
-                if (!gamemode.autoLevelSkillsPost99) {
-                    gamemode.autoLevelSkillsPost99 = [];
-                }
+    //             if (!gamemode.autoLevelSkillsPost99) {
+    //                 gamemode.autoLevelSkillsPost99 = [];
+    //             }
 
-                gamemode.startingSkills.add(thuum);
-                gamemode.autoLevelSkillsPre99.push({ skill: thuum, value: 5 });
-                gamemode.autoLevelSkillsPost99.push({ skill: thuum, value: 3 });
-            }
-        });
-    }
+    //             gamemode.startingSkills.add(thuum);
+    //             gamemode.autoLevelSkillsPre99.push({ skill: thuum, value: 5 });
+    //             gamemode.autoLevelSkillsPost99.push({ skill: thuum, value: 3 });
+    //         }
+    //     });
+    // }
 
     private patchUnlock(thuum: Thuum) {
         this.context.patch(EventManager, "loadEvents").after(() => {
@@ -229,6 +231,47 @@ export class App {
         data: GameEventMatcherData | ThuumActionEventMatcherOptions
     ): data is ThuumActionEventMatcherOptions {
         return data.type === "ThuumAction";
+    }
+
+    private async initGamemodes() {
+        if (cloudManager.hasAoDEntitlementAndIsEnabled) {
+            const levelCapIncreases = ['namespace_thuum:Pre99Dungeons', 'namespace_thuum:ImpendingDarknessSet100'];
+
+            if (cloudManager.hasTotHEntitlementAndIsEnabled) {
+                levelCapIncreases.push(...['namespace_thuum:Post99Dungeons', 'namespace_thuum:ThroneOfTheHeraldSet120']);
+            }
+
+            const gamemodes = this.game.gamemodes.filter(gamemode => gamemode.allowAncientRelicDrops);
+
+            await this.context.gameData.addPackage({
+                $schema: '',
+                namespace: 'namespace_thuum:Thuum',
+                modifications: {
+                    // @ts-ignore // TODO: TYPES
+                    gamemodes: gamemodes.map(gamemode => ({
+                        id: gamemode.id,
+                        levelCapIncreases: {
+                            add: levelCapIncreases
+                        },
+                        startingSkills: {
+                            add: ['namespace_thuum:Thuum']
+                        },
+                        skillUnlockRequirements: [
+                            {
+                                skillID: 'namespace_thuum:Thuum',
+                                requirements: [
+                                    {
+                                        type: 'SkillLevel',
+                                        skillID: 'melvorD:Attack',
+                                        level: 1
+                                    }
+                                ]
+                            }
+                        ]
+                    }))
+                }
+            });
+        }
     }
 
     private initSettings() {

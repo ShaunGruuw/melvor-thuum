@@ -102,7 +102,6 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             let increasedGPModifier = game.thuum.getCurrencyModifier(game.gp);
             // @ts-ignore // TODO: TYPES
             increasedGPModifier += game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery);
-            // game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery)
             return increasedGPModifier;
         }
     };
