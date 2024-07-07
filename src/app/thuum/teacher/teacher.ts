@@ -31,8 +31,6 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
                 .querySelector(`#${this.localId}`)
                 // @ts-ignore // TODO: TYPES
                 .querySelector<ProgressBarElement>('progress-bar');
-
-            // this.progressBar = new ProgressBar(progressBar, 'bg-secondary');
         },
         updateGrants: function (
             xp: number,
