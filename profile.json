@@ -20,39 +20,55 @@
                             "standardModifiers": [
                                 {
                                     "level": 0,
-                                    "key": "dragonTraitApplied",
-                                    "value": 10
+                                    "modifiers": {
+                                        "customModifiersInMelvor:dragonTraitApplied": 1
+                                    }
                                 },
                                 {
                                     "level": 1,
-                                    "key": "increasedDamageTakenFromSeaCreatures",
-                                    "value": 20
+                                    "modifiers": {
+                                        "customModifiersInMelvor:damageTakenSeaCreature": 20
+                                    }
                                 },
                                 {
                                     "level": 20,
-                                    "key": "decreasedThuumGP",
-                                    "value": 10
+                                    "modifiers": {
+                                        "decreasedThuumGP": 10
+                                    }
                                 },
                                 {
                                     "level": 40,
-                                    "key": "decreasedDamageTakenFromDragons",
-                                    "value": 10
+                                    "modifiers": {
+                                        "skillInterval": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 60,
-                                    "key": "increasedDamageAgainstDragons",
-                                    "value": 20
+                                    "modifiers": {
+                                        "customModifiersInMelvor:damageDealtDragon": 20
+                                    }
                                 },
                                 {
                                     "level": 80,
-                                    "key": "increasedSkillMasteryXPPerVariel",
-                                    "skill": "namespace_thuum:Thuum",
-                                    "value": 5
+                                    "modifiers": {
+                                        "increasedSkillMasteryXPPerVariel": [
+                                            {
+                                                "skillID": "namespace_thuum:Thuum",
+                                                "value": 5
+                                            }
+                                        ]
+                                    }
                                 },
                                 {
                                     "level": 99,
-                                    "key": "decreasedThuumEquipCost",
-                                    "value": 50
+                                    "modifiers": {
+                                        "decreasedThuumEquipCost": 50
+                                    }
                                 }
                             ]
                         }
