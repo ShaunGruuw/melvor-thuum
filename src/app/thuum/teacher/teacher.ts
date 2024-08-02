@@ -62,20 +62,25 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             return this.modGP(gpToTake)
         },
         modGP: function (gp: number) {
-            let gpToTake = 0
+            let gpToTake = 0;
+        
             // Calculate the GP modifier multiplier
-            const increasedGPModifier = this.getGPModifier(); // -109
-            let gpMultiplier = 1 + increasedGPModifier / 100; //2.09
-
+            const increasedGPModifier = this.getGPModifier();
+            
+            let gpMultiplier = increasedGPModifier / 100;
+        
             // Apply the multiplier to the rolled GP value
-            // @ts-ignore // TODO: TYPES
-            gpToTake = Math.floor(gpMultiplier * gp + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery)); // ~ 2 * gp + 0 ~~ 200
-
-            if (typeof gpToTake !== 'number') {
-                gpToTake = 0
+            // @ts-ignore
+            const flatCurrencyGain = game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery);
+        
+            gpToTake = Math.floor(gpMultiplier * gp + flatCurrencyGain); 
+        
+            if (!gpToTake || typeof gpToTake !== 'number') {
+                gpToTake = 1;
             }
-            return gpToTake
-        },
+        
+            return gpToTake * -1;
+        },        
         updateGPRange: function () {
             let minGP = this.getMinGPRoll();
             let maxGP = this.getMaxGPRoll();
