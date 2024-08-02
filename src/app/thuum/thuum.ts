@@ -388,7 +388,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
 
         rewards.setActionInterval(this.actionInterval);
         rewards.addXP(this, this.activeTeacher.baseExperience);
-        // rewards.addGP(this.manager.getGoldToAward(this.activeTeacher));
         costs.addGP(this.manager.getGoldToTake(this.activeTeacher))
         costs.consumeCosts()
         // @ts-ignore // TODO: TYPES

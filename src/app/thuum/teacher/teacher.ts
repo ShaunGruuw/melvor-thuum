@@ -47,31 +47,45 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             this.masteryIcon.setXP(masteryXP, baseMasteryXP); // @ts-ignore // TODO: TYPES
             this.masteryIcon.setSources(game.thuum.getMasteryXPSources(teacher));
             this.masteryPoolIcon.setXP(masteryPoolXP);
-            // this.intervalIcon.setInterval(interval);
             // @ts-ignore // TODO: TYPES
             game.unlockedRealms.length > 1 ? this.masteryPoolIcon.setRealm(realm) : this.masteryPoolIcon.hideRealms();
             // @ts-ignore // TODO: TYPES
             this.intervalIcon.setInterval(interval, thuum.getIntervalSources(teacher));
         },
+        goldToTake: function () {
+            let minGP = this.getMinGPRoll();
+            let maxGP = this.getMaxGPRoll();
+
+            // Roll a value between min and max
+            let gpToTake = rollInteger(minGP, maxGP);
+
+            return this.modGP(gpToTake)
+        },
+        modGP: function (gp: number) {
+            let gpToTake = 0
+            // Calculate the GP modifier multiplier
+            const increasedGPModifier = this.getGPModifier(); // -109
+            let gpMultiplier = 1 + increasedGPModifier / 100; //2.09
+
+            // Apply the multiplier to the rolled GP value
+            // @ts-ignore // TODO: TYPES
+            gpToTake = Math.floor(gpMultiplier * gp + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery)); // ~ 2 * gp + 0 ~~ 200
+
+            if (typeof gpToTake !== 'number') {
+                gpToTake = 0
+            }
+            return gpToTake
+        },
         updateGPRange: function () {
             let minGP = this.getMinGPRoll();
             let maxGP = this.getMaxGPRoll();
-            
-            const gpModifier = this.getGPModifier();
-            const modGp = (gp: number) => {
-                let gpMultiplier = 1;
-                gpMultiplier *= 1 + gpModifier / 100;
-                // @ts-ignore // TODO: TYPESd
-                gp = Math.floor(gp * gpMultiplier + game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery));
-                return gp;
-            };
-            minGP = modGp(minGP);
-            maxGP = modGp(maxGP);
+            minGP = -this.modGP(minGP); // Negate the result of modGP(minGP)
+            maxGP = -this.modGP(maxGP); // Negate the result of modGP(maxGP)
             this.minGP = minGP;
             this.maxGP = maxGP;
-            this.displayMinGP = Math.abs(minGP);
-            this.displayMaxGP = Math.abs(maxGP);
-        },
+            this.displayMinGP = minGP;
+            this.displayMaxGP = maxGP;
+        },        
         train: function () {
             thuum.train(teacher);
         },

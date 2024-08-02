@@ -42,7 +42,7 @@
                                         "skillInterval": [
                                             {
                                                 "skillID": "namespace_thuum:Thuum",
-                                                "value": 5
+                                                "value": -5
                                             }
                                         ]
                                     }

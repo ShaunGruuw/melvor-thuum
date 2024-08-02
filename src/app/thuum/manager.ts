@@ -51,40 +51,13 @@ export class ThuumManager {
 
     public getGoldToTake(teacher: Teacher) {
         const component = this.thuum.userInterface.teachers.get(teacher);
-        const minRoll = component.getMinGPRoll();
-        const maxRoll = component.getMaxGPRoll();
-
-        let gpToTake = rollInteger(minRoll, maxRoll);
-        let gpMultiplier = 1;
-
-        const increasedGPModifier = component.getGPModifier();
-
-        gpMultiplier *= 1 + increasedGPModifier / 100;
-        // @ts-ignore // TODO: TYPES
-        gpToTake = Math.floor(gpMultiplier * gpToTake + this.game.modifiers.getValue('melvorD:flatCurrencyGain', this.game.gp.modQuery));
-        if (typeof gpToTake !== 'number') {
-            gpToTake = 0
-        }
-        // @ts-ignore // TODO: TYPES
-        return gpToTake * -1;
+        return component.goldToTake();
     }
 
-    public getGoldToAward(teacher: Teacher) {
-        const component = this.thuum.userInterface.teachers.get(teacher);
-        const minRoll = component.getMinGPRoll();
-        const maxRoll = component.getMaxGPRoll();
 
-        let gpToAdd = rollInteger(minRoll, maxRoll);
-        let gpMultiplier = 1;
-
-        const increasedGPModifier = component.getGPModifier();
-
-        gpMultiplier *= 1 + increasedGPModifier / 100;
-        // @ts-ignore // TODO: TYPES
-        gpToAdd = Math.floor(gpMultiplier * gpToAdd + this.game.modifiers.getValue('melvorD:flatCurrencyGain', this.game.gp.modQuery))
-
-        return gpToAdd;
-    }
+    // if (typeof gpToTake !== 'number') {
+    //     gpToTake = 0
+    // }
 
     public calculateEquipCost(teacher: Teacher) {
         const MasterCostMap = [

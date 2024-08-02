@@ -400,7 +400,7 @@
                 "skillID": "namespace_thuum:Thuum",
                 "number": 2,
                 "modifiers": {
-                    "decreasedThuumGP": 20
+                    "increasedThuumGP": 20
                 }
             },
             {
@@ -486,7 +486,7 @@
                         }
                     ],
                     "magicMaxHit": 10,
-                    "decreasedThuumGP": 5
+                    "increasedThuumGP": 5
                 },
                 "consumesOn": [
                     {

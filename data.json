@@ -20,7 +20,7 @@
                 "id": "melvorD:Aorpheats_Signet_Ring",
                 "modifiers": {
                     "add": {
-                        "decreasedThuumGP": 100
+                        "increasedThuumGP": 100
                     }
                 }
             },
@@ -29,7 +29,7 @@
                 "modifiers": {
                     "add": {
                         "decreasedThuumEquipCost": 5,
-                        "decreasedThuumGP": 5,
+                        "increasedThuumGP": 5,
                         "flatSkillInterval": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
@@ -44,7 +44,7 @@
                 "modifiers": {
                     "add": {
                         "decreasedThuumEquipCost": 5,
-                        "decreasedThuumGP": 5,
+                        "increasedThuumGP": 5,
                         "flatSkillInterval": [
                             {
                                 "skillID": "namespace_thuum:Thuum",
@@ -321,7 +321,7 @@
                 "tier": 0,
                 "action": "namespace_thuum:Thuum",
                 "modifiers": {
-                    "decreasedThuumGP": 10
+                    "increasedThuumGP": 10
                 },
                 "consumesOn": [
                     {
@@ -341,7 +341,7 @@
                 "sellsFor": 100,
                 "itemType": "Potion",
                 "modifiers": {
-                    "decreasedThuumGP": 20
+                    "increasedThuumGP": 20
                 },
                 "charges": 25,
                 "tier": 1,
@@ -366,7 +366,7 @@
                 "charges": 35,
                 "tier": 2,
                 "modifiers": {
-                    "decreasedThuumGP": 30
+                    "increasedThuumGP": 30
                 },
                 "action": "namespace_thuum:Thuum",
                 "consumesOn": [
@@ -387,7 +387,7 @@
                 "sellsFor": 200,
                 "itemType": "Potion",
                 "modifiers": {
-                    "decreasedThuumGP": 50
+                    "increasedThuumGP": 50
                 },
                 "charges": 50,
                 "tier": 3,
@@ -410,7 +410,7 @@
                 "golbinRaidExclusive": false,
                 "sellsFor": 0,
                 "modifiers": {
-                    "decreasedThuumGP": 5
+                    "increasedThuumGP": 5
                 },
                 "tier": "Tier 1 Summon",
                 "validSlots": [
@@ -502,7 +502,7 @@
                         }
                     ],
                     "decreasedThuumEquipCost": 5,
-                    "decreasedThuumGP": 5
+                    "increasedThuumGP": 5
                 }
             }
         ],
