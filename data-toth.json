@@ -444,10 +444,10 @@
                                     "index": 0,
                                     "modifiers": {
                                         "add": {
-                                            "increasedSkillXP": [
+                                            "skillXP": [
                                                 {
                                                     "skillID": "namespace_thuum:Thuum",
-                                                    "value": 1
+                                                    "value": 2
                                                 }
                                             ]
                                         }
@@ -457,7 +457,7 @@
                                     "index": 1,
                                     "modifiers": {
                                         "add": {
-                                            "increasedMasteryXP": [
+                                            "masteryXP": [
                                                 {
                                                     "skillID": "namespace_thuum:Thuum",
                                                     "value": 1
