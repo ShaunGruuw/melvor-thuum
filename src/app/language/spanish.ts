@@ -1,4 +1,4 @@
-export const es = 
+export const es =
 {
   "Teacher": "Maestro",
   "Shout_Title": "Grito: ${name}",
@@ -118,7 +118,8 @@ export const es =
   "Myth_Music_Instrument_Ryuteki": '(Ryūteki (龍笛)',
   Teacher_Soul_Tear: "Soul Tear",
   Teacher_Drain_Vitality: "Drain Vitality",
-  Teacher_Dragonrend:"Dragonrend",
-  Teacher_Dragon_Aspect:"Dragon Aspect",
-lock: "Lock"
+  Teacher_Dragonrend: "Dragonrend",
+  Teacher_Dragon_Aspect: "Dragon Aspect",
+  Teacher_abyss: "Dismay",
+  lock: "Lock"
 }

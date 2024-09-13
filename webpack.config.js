@@ -31,6 +31,7 @@ module.exports = {
                 { from: 'manifest.json', to: 'manifest.json', noErrorOnMissing: true },
                 { from: 'data.json', to: 'data.json', noErrorOnMissing: true },
                 { from: 'data-toth.json', to: 'data-toth.json', noErrorOnMissing: true },
+                { from: 'data-abyss.json', to: 'data-abyss.json', noErrorOnMissing: true },
                 { from: 'profile.json', to: 'profile.json', noErrorOnMissing: true },
                 { from: 'music.json', to: 'music.json', noErrorOnMissing: true },
                 { from: 'data-aod.json', to: 'data-aod.json', noErrorOnMissing: true },

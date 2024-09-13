@@ -52,6 +52,7 @@ export class Teacher extends BasicSkillRecipe {
     baseInterval: number;
     maxGP: number;
     skills: string[];
+    abyssalLevel?: number;
 
     private standardModifiers: StatObject[];
     // private hardcoreModifiers: StatObject[];

@@ -25,6 +25,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public changesMade: any;
     // @ts-ignore // TODO: TYPES
     private renderedProgressBar?: ProgressBarElement;
+    public abyssalMilestones?: Teacher[];
 
     public readonly manager: ThuumManager;
     public upgradeModifiers: UpgradeModifier[] = [];
@@ -322,8 +323,16 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public postDataRegistration() {
         super.postDataRegistration();
 
+
         this.sortedMasteryActions = this.actions.allObjects.sort((a, b) => a.level - b.level);
-        this.milestones.push(...this.actions.allObjects);
+        this.actions.forEach( (action) => {
+            if (action.abyssalLevel > 0)
+                this.abyssalMilestones.push(action);
+            else
+                this.milestones.push(action);
+        }
+        );
+        // this.milestones.push(...this.actions.allObjects);
 
         this.sortMilestones();
 
@@ -385,6 +394,8 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         const rewards = new Rewards(this.game);
         const actionEvent = new ThuumActionEvent(this, this.activeTeacher);
         const costs = new Costs(this.game);
+        // @ts-ignore (exsists)
+        rewards.addAbyssalXP(this, this.activeTeacher.baseAbyssalExperience, actionEvent);
 
         rewards.setActionInterval(this.actionInterval);
         rewards.addXP(this, this.activeTeacher.baseExperience);

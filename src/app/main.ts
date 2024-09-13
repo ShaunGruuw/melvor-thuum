@@ -111,6 +111,9 @@ export class App {
                     })
                     .add();
             }
+            if (cloudManager.hasTotHEntitlementAndIsEnabled) {
+                await this.context.gameData.addPackage("data-abyss.json");
+            }
             const kcm = mod.manager.getLoadedModList().includes("Custom Modifiers in Melvor")
             const profileSkill = mod.manager.getLoadedModList().includes("(Skill) Classes and Species")
             const mythLoaded = mod.manager.getLoadedModList().includes("[Myth] Music")

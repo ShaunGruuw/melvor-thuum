@@ -105,7 +105,16 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
         },
         getSkillIcons: function () {
             return teacher.skills.map(skillId => {
-                return game.skills.find(skill => skill.id === skillId)?.media;
+                try {
+                    if (!/(jpg|gif|png|JPG|GIF|PNG|JPEG|jpeg|svg)$/.test(skillId)) {
+                        return game.skills.find(skill => skill.id === skillId)?.media;
+                    } else {
+                        return skillId
+                    }
+                } catch (error) {
+                    return "https://cdn2-main.melvor.net/assets/april/images/lemon.jpg"
+                }
+                // return game.skills.find(skill => skill.id === skillId)?.media;
             });
         },
         getMinGPRoll: function () {

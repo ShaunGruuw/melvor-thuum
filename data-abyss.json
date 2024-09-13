@@ -1,0 +1,116 @@
+{
+    "$schema": "https://melvoridle.com/assets/schema/gameData.json",
+    "namespace": "namespace_thuum",
+    "data": {
+        "skillData": [
+            {
+                "skillID": "namespace_thuum:Thuum",
+                "data": {
+                    "abyssalLevelRealm": "melvorItA:Abyssal",
+                    "hasAbyssalLevels": true,
+                    "standardLevelRealm": "melvorD:Melvor",
+                    "masteryPoolBonuses": [
+                        {
+                            "realm": "melvorItA:Abyssal",
+                            "percent": 10,
+                            "modifiers": {
+                                "abyssalSkillXP": 3
+                            }
+                        },
+                        {
+                            "realm": "melvorItA:Abyssal",
+                            "modifiers": {
+                                "masteryXP": [
+                                    {
+                                        "realmID": "melvorItA:Abyssal",
+                                        "value": 3
+                                    }
+                                ]
+                            },
+                            "percent": 25
+                        },
+                        {
+                            "realm": "melvorItA:Abyssal",
+                            "modifiers": {
+                                "skillInterval": [
+                                    {
+                                        "realmID": "melvorItA:Abyssal",
+                                        "value": -3
+                                    }
+                                ]
+                            },
+                            "percent": 50
+                        },
+                        {
+                            "realm": "melvorItA:Abyssal",
+                            "modifiers": {
+                                "abyssalCombatSkillXP": 3
+                            },
+                            "percent": 95
+                        }
+                    ],
+                    "teachers": [
+                        {
+                            "id": "abyss",
+                            "name": "Abyss",
+                            "media": "https://images1.wikia.nocookie.net/__cb20120513120107/elderscrolls/images/thumb/e/e6/TESV_Shout_Trick.png/256px-TESV_Shout_Trick.png",
+                            "baseInterval": 3000,
+                            "baseExperience": 0,
+                            "maxGP": 141,
+                            "productId": "namespace_thuum:abyss",
+                            "level": 1,
+                            "abyssalLevel": 1,
+                            "baseAbyssalExperience": 302,
+                            "realm": "melvorItA:Abyssal",
+                            "skills": [
+                                "https://cdn2-main.melvor.net/assets/media/skills/combat/abyssal_damage.png"
+                            ],
+                            "standardModifiers": [
+                                {
+                                    "level": 1,
+                                    "modifiers": {
+                                        "abyssalSkillXP": 3
+                                    }
+                                },
+                                {
+                                    "level": 30,
+                                    "modifiers": {
+                                        "masteryXP": [
+                                            {
+                                                "realmID": "melvorItA:Abyssal",
+                                                "value": 3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "level": 60,
+                                    "modifiers": {
+                                        "skillInterval": [
+                                            {
+                                                "realmID": "melvorItA:Abyssal",
+                                                "value": -3
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "level": 80,
+                                    "modifiers": {
+                                        "abyssalCombatSkillXP": 3
+                                    }
+                                },
+                                {
+                                    "level": 99,
+                                    "modifiers": {
+                                        "bonusCorruptionChance": 3
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -117,7 +117,8 @@ export const en = {
     Myth_Music_Instrument_Ryuteki: "Ryūteki (龍笛)",
     Teacher_Soul_Tear: "Soul Tear",
     Teacher_Drain_Vitality: "Drain Vitality",
-    Teacher_Dragonrend:"Dragonrend",
-    Teacher_Dragon_Aspect:"Dragon Aspect",
+    Teacher_Dragonrend: "Dragonrend",
+    Teacher_Dragon_Aspect: "Dragon Aspect",
+    Teacher_abyss: "Dismay",
     lock: "Lock"
 };
