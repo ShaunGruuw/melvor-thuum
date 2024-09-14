@@ -111,7 +111,7 @@ export class App {
                     })
                     .add();
             }
-            if (cloudManager.hasTotHEntitlementAndIsEnabled) {
+            if (cloudManager.hasItAEntitlementAndIsEnabled) {
                 await this.context.gameData.addPackage("data-abyss.json");
             }
             const kcm = mod.manager.getLoadedModList().includes("Custom Modifiers in Melvor")
