@@ -51,13 +51,13 @@
                     ],
                     "teachers": [
                         {
-                            "id": "abyss",
-                            "name": "Abyss",
+                            "id": "Evil_Mist",
+                            "name": "Evil Mist",
                             "media": "https://images1.wikia.nocookie.net/__cb20120513120107/elderscrolls/images/thumb/e/e6/TESV_Shout_Trick.png/256px-TESV_Shout_Trick.png",
                             "baseInterval": 3000,
                             "baseExperience": 0,
                             "maxGP": 141,
-                            "productId": "namespace_thuum:abyss",
+                            "productId": "namespace_thuum:Evil_Mist",
                             "level": 1,
                             "abyssalLevel": 1,
                             "baseAbyssalExperience": 302,

@@ -27,7 +27,6 @@ export class ThuumActionEventMatcher extends SkillActionEventMatcher<ThuumAction
 
         if (options.actionIDs !== undefined) {
             const thuum = game.skills.find(skill => skill.id === 'namespace_thuum:Thuum') as Thuum;
-            // @ts-ignore // TODO: TYPES
             this.actions = thuum.actions.getSetFromIds(options.actionIDs);
         }
     }

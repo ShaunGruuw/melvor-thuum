@@ -8,7 +8,6 @@ import { MasteredShouts } from './mastered-shouts';
 import { ChangeType, ThuumSettings } from './settings';
 
 import './thuum.scss';
-// @ts-ignore // TODO: TYPES
 
 export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public readonly version = 0;
@@ -23,9 +22,8 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public settings: ThuumSettings;
     public masteriesUnlocked = new Map<Teacher, boolean[]>();
     public changesMade: any;
-    // @ts-ignore // TODO: TYPES
     private renderedProgressBar?: ProgressBarElement;
-    public abyssalMilestones?: Teacher[];
+    public abyssalMilestones: Teacher[];
 
     public readonly manager: ThuumManager;
     public upgradeModifiers: UpgradeModifier[] = [];
@@ -113,8 +111,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                     html += `
                     <span>
                         (<img class="skill-icon-xxs mr-1"
-                               src="${// @ts-ignore // TODO: TYPES
-                        assets.getURI('assets/media/main/mastery_header.svg')}" />
+                               src="${assets.getURI('assets/media/main/mastery_header.svg')}" />
                                ${modifier.level})
                     </span>`;
                 }
@@ -148,8 +145,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                     html += `
                     <span>
                         (<img class="skill-icon-xxs mr-1"
-                        src="${// @ts-ignore // TODO: TYPES
-                        assets.getURI('assets/media/main/mastery_header.svg')}" />
+                        src="${assets.getURI('assets/media/main/mastery_header.svg')}" />
                         ${modifier.level})
                     </span>`;
                 }
@@ -210,7 +206,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
                                 this.shouts.set(teacher, masteredShout);
 
                                 (<any>this.userInterface)[`shout${masteredShout.slot}`].setShout(masteredShout);
-                                // @ts-ignore // TODO: TYPES
                                 this.computeProvidedStats(true);
 
                                 this.userInterface.teachers.forEach(component => {
@@ -257,7 +252,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         for (const teacher of this.actions.registeredObjects.values()) {
             this.renderQueue.actionMastery.add(teacher);
         }
-        // @ts-ignore // TODO: TYPES
         this.computeProvidedStats(false);
 
         this.renderQueue.grants = true;
@@ -278,7 +272,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
 
         this.settings.onChange(ChangeType.Modifiers, () => {
             setTimeout(() => {
-                // @ts-ignore // TODO: TYPES
                 this.computeProvidedStats(true);
             }, 10);
         });
@@ -294,7 +287,6 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         super.onMasteryLevelUp(action, oldLevel, newLevel);
 
         if (newLevel >= action.level) {
-            // @ts-ignore // TODO: TYPES
             this.computeProvidedStats(true);
         }
 
@@ -325,7 +317,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
 
 
         this.sortedMasteryActions = this.actions.allObjects.sort((a, b) => a.level - b.level);
-        this.actions.forEach( (action) => {
+        this.actions.forEach((action) => {
             if (action.abyssalLevel > 0)
                 this.abyssalMilestones.push(action);
             else
@@ -372,20 +364,17 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
     public onEquipmentChange() { }
 
     public addProvidedStats() {
-        // @ts-ignore // TODO: TYPES
         super.addProvidedStats();
 
         for (const shout of this.shouts.all()) {
             const modifiers = this.manager.getModifiersForApplication(shout.teacher);
             for (const modifier of modifiers) {
-                // @ts-ignore // TODO: TYPES
                 this.providedStats.addStatObject(shout.teacher, modifier);
             }
         }
     }
 
     public isMasteryActionUnlocked(action: Teacher) {
-        // @ts-ignore // TODO: TYPES
         return this.isBasicSkillRecipeUnlocked(action);
     }
 
@@ -394,14 +383,14 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         const rewards = new Rewards(this.game);
         const actionEvent = new ThuumActionEvent(this, this.activeTeacher);
         const costs = new Costs(this.game);
-        // @ts-ignore (exsists)
-        rewards.addAbyssalXP(this, this.activeTeacher.baseAbyssalExperience, actionEvent);
 
-        rewards.setActionInterval(this.actionInterval);
+        if (this.activeTeacher.baseAbyssalExperience) {
+            rewards.addAbyssalXP(this, this.activeTeacher.baseAbyssalExperience);
+        }
         rewards.addXP(this, this.activeTeacher.baseExperience);
+        rewards.setActionInterval(this.actionInterval);
         costs.addGP(this.manager.getGoldToTake(this.activeTeacher))
         costs.consumeCosts()
-        // @ts-ignore // TODO: TYPES
         this.addCommonRewards(rewards, this.activeTeacher);
 
         actionEvent.interval = this.currentActionInterval;
@@ -426,7 +415,7 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         if (!this.renderQueue.grants) {
             return;
         }
-
+        console.log('renderGrants')
         for (const component of this.userInterface.teachers.values()) {
             const masteryXP = this.getMasteryXPToAddForAction(
                 component.teacher,
@@ -439,19 +428,31 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
             );
 
             const poolXP = this.getMasteryXPToAddToPool(masteryXP);
-
-            component.updateGrants(
-                this.modifyXP(component.teacher.baseExperience, component.teacher),
-                component.teacher.baseExperience,
-                masteryXP,
-                baseMasteryXP,
-                poolXP,
-                this.getTeacherInterval(component.teacher),
-                // @ts-ignore // TODO: TYPES
-                this.game.defaultRealm
-            );
+            console.log('Starting')
+            console.log(`Component is abyss? ${component.teacher.abyssalLevel > 0}. poolXP ${poolXP}, baseMasteryXP ${baseMasteryXP}, masteryXP, ${masteryXP}, intervial ${this.getTeacherInterval(component.teacher)}`)
+            console.log('Done')
+            if (component.teacher.abyssalLevel > 0) {
+                component.updateGrants(
+                    this.modifyAbyssalXP(component.teacher.baseAbyssalExperience, component.teacher),
+                    component.teacher.baseAbyssalExperience,
+                    masteryXP,
+                    baseMasteryXP,
+                    poolXP,
+                    this.getTeacherInterval(component.teacher),
+                    this.game.realms.getObjectByID('melvorItA:Abyssal')
+                );
+            } else {
+                component.updateGrants(
+                    this.modifyXP(component.teacher.baseExperience, component.teacher),
+                    component.teacher.baseExperience,
+                    masteryXP,
+                    baseMasteryXP,
+                    poolXP,
+                    this.getTeacherInterval(component.teacher),
+                    this.game.defaultRealm
+                );
+            }
         }
-
         this.renderQueue.grants = false;
     }
 
@@ -535,10 +536,8 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         this.renderQueue.visibleTeachers = false;
     }
 
-    // @ts-ignore // TODO: TYPES
     public getRegistry(type: ScopeSourceType) {
         switch (type) {
-            // @ts-ignore // TODO: TYPES
             case ScopeSourceType.Action:
                 return this.actions;
         }

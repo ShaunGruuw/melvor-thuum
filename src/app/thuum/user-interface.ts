@@ -53,7 +53,7 @@ export class UserInterface {
     private modifySkillInfoClass(mainContainer: HTMLElement) {
         // The isMobile function is bugged as it doesn't actually call isAndroid???
         const isMobile = isIOS() || isAndroid() || location.pathname.includes('index_mobile.php');
-
+        
         if (!isMobile) {
             return;
         }

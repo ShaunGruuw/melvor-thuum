@@ -15,7 +15,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
         maxGP: 0,
         displayMinGP: 0,
         displayMaxGP: 0,
-        disabled: false, // @ts-ignore // TODO: TYPES
+        disabled: false,
         progressBar: {} as ProgressBarElement,
         mounted: function () {
             const grantsContainer = document
@@ -29,7 +29,6 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
 
             this.progressBar = document
                 .querySelector(`#${this.localId}`)
-                // @ts-ignore // TODO: TYPES
                 .querySelector<ProgressBarElement>('progress-bar');
         },
         updateGrants: function (
@@ -39,18 +38,19 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             baseMasteryXP: number,
             masteryPoolXP: number,
             interval: number,
-            // @ts-ignore // TODO: TYPES
             realm: Realm
         ) {
-            this.xpIcon.setXP(xp, baseXP); // @ts-ignore // TODO: TYPES
-            this.xpIcon.setSources(game.thuum.getXPSources(teacher));
-            this.masteryIcon.setXP(masteryXP, baseMasteryXP); // @ts-ignore // TODO: TYPES
-            this.masteryIcon.setSources(game.thuum.getMasteryXPSources(teacher));
-            this.masteryPoolIcon.setXP(masteryPoolXP);
-            // @ts-ignore // TODO: TYPES
-            game.unlockedRealms.length > 1 ? this.masteryPoolIcon.setRealm(realm) : this.masteryPoolIcon.hideRealms();
-            // @ts-ignore // TODO: TYPES
-            this.intervalIcon.setInterval(interval, thuum.getIntervalSources(teacher));
+            try {
+                this.xpIcon.setXP(xp, baseXP);
+                this.xpIcon.setSources(game.thuum.getXPSources(teacher));
+                this.masteryIcon.setXP(masteryXP, baseMasteryXP);
+                this.masteryIcon.setSources(game.thuum.getMasteryXPSources(teacher));
+                this.masteryPoolIcon.setXP(masteryPoolXP);
+                game.unlockedRealms.length > 1 ? this.masteryPoolIcon.setRealm(realm) : this.masteryPoolIcon.hideRealms();
+                this.intervalIcon.setInterval(interval, thuum.getIntervalSources(teacher))
+            } catch (error) {
+                console.error('updateGrants', error)
+            }
         },
         goldToTake: function () {
             let minGP = this.getMinGPRoll();
@@ -70,7 +70,6 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             let gpMultiplier = increasedGPModifier / 100;
         
             // Apply the multiplier to the rolled GP value
-            // @ts-ignore
             const flatCurrencyGain = game.modifiers.getValue('melvorD:flatCurrencyGain', game.gp.modQuery);
         
             gpToTake = Math.floor(gpMultiplier * gp + flatCurrencyGain); 
@@ -124,9 +123,7 @@ export function TeacherComponent(thuum: Thuum, teacher: Teacher, game: Game) {
             return teacher.maxGP + thuum.getMasteryLevel(teacher);
         },
         getGPModifier: function () {
-            // @ts-ignore // TODO: TYPES
             let increasedGPModifier = game.thuum.getCurrencyModifier(game.gp);
-            // @ts-ignore // TODO: TYPES
             increasedGPModifier += game.modifiers.getValue('namespace_thuum:ThuumGP', game.gp.modQuery);
             return increasedGPModifier;
         }

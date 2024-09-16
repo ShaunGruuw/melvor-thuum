@@ -119,6 +119,6 @@ export const tr = {
         Teacher_Drain_Vitality: "Drain Vitality",
         Teacher_Dragonrend:"Dragonrend",
         Teacher_Dragon_Aspect:"Dragon Aspect",
-    Teacher_abyss: "Dismay",
+    Teacher_Evil_Mist: 'Evil Mist',
 lock: "Lock"
 };

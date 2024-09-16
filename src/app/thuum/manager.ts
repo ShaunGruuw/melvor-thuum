@@ -23,12 +23,9 @@ export class ThuumManager {
         }
 
         return teacher.modifiers(this.thuum.settings.modifierType).map(modifier => {
-            // @ts-ignore // TODO: TYPES
             // let description = modifier.describePlain();
             let description: any[] = []
-            // @ts-ignore // TODO: TYPES
             for (let index = 0; index < modifier.modifiers.length; index++) {
-                // @ts-ignore // TODO: TYPES
                 description.push(modifier.modifiers[index].getDescription())
             }
             return {
@@ -74,7 +71,6 @@ export class ThuumManager {
     }
 
     public getEquipCostModifier(teacher: Teacher) {
-        // @ts-ignore // TODO: TYPES
         let modifier = this.game.modifiers.getValue('namespace_thuum:thuumEquipCost', this.thuum.getActionModifierQuery(teacher));
         return Math.max(modifier, -95);
     }

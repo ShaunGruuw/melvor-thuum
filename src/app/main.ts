@@ -96,14 +96,14 @@ export class App {
 
                 await this.context.gameData
                     .buildPackage(builder => {
-                        builder.skillData.add({
+                        builder.skillData.add({ // @ts-ignore
                             skillID: "namespace_thuum:Thuum",
                             data: {
                                 minibar: {
                                     defaultItems: ["namespace_thuum:Superior_Thuum_Skillcape"],
                                     upgrades: [],
                                     pets: []
-                                },
+                                }, // @ts-ignore
                                 teachers: [],
                                 upgrades: []
                             }
@@ -223,9 +223,9 @@ export class App {
 
     private patchUnlock(thuum: Thuum) {
         this.context.patch(EventManager, "loadEvents").after(() => {
-            if (this.game.currentGamemode.allowDungeonLevelCapIncrease) {
+            if(this.game.currentGamemode.allowSkillUnlock) {
                 thuum.setUnlock(true);
-                thuum.increasedLevelCap = this.game.attack.increasedLevelCap;
+                thuum.increaseLevelCap = this.game.attack.increaseLevelCap
             }
         });
     }
@@ -250,7 +250,6 @@ export class App {
                 $schema: '',
                 namespace: 'namespace_thuum:Thuum',
                 modifications: {
-                    // @ts-ignore // TODO: TYPES
                     gamemodes: gamemodes.map(gamemode => ({
                         id: gamemode.id,
                         levelCapIncreases: {
