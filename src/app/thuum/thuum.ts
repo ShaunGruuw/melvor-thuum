@@ -415,22 +415,18 @@ export class Thuum extends GatheringSkill<Teacher, ThuumSkillData> {
         if (!this.renderQueue.grants) {
             return;
         }
-        console.log('renderGrants')
         for (const component of this.userInterface.teachers.values()) {
-            const masteryXP = this.getMasteryXPToAddForAction(
+            const masteryXP = Math.max(1, this.getMasteryXPToAddForAction(
                 component.teacher,
                 this.getTeacherInterval(component.teacher)
-            );
+            ));
 
-            const baseMasteryXP = this.getBaseMasteryXPToAddForAction(
+            const baseMasteryXP = Math.max(1, this.getBaseMasteryXPToAddForAction(
                 component.teacher,
                 this.getTeacherInterval(component.teacher)
-            );
+            ));
 
             const poolXP = this.getMasteryXPToAddToPool(masteryXP);
-            console.log('Starting')
-            console.log(`Component is abyss? ${component.teacher.abyssalLevel > 0}. poolXP ${poolXP}, baseMasteryXP ${baseMasteryXP}, masteryXP, ${masteryXP}, intervial ${this.getTeacherInterval(component.teacher)}`)
-            console.log('Done')
             if (component.teacher.abyssalLevel > 0) {
                 component.updateGrants(
                     this.modifyAbyssalXP(component.teacher.baseAbyssalExperience, component.teacher),
